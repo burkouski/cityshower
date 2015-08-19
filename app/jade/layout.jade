@@ -1,0 +1,197 @@
+doctype
+html.no-js.html
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        title
+        meta(name='description', content='')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic,600,600italic&subset=latin,cyrillic' rel='stylesheet' type='text/css')
+        //build:css ./css/vendor.css
+        //bower:css
+        link(rel='stylesheet', href='./bower_components/normalize.css/normalize.css')
+        //endbower
+        // endbuild
+        //build:css ./css/combined.css
+        link(rel='stylesheet', href='./css/global.css')
+        link(rel='stylesheet', href='./css/blocks.css')
+        // endbuild
+        script(src='javascripts/vendor/modernizr-2.7.1.min.js')
+    body.body
+        <!--[if lt IE 8]>
+        p.browsehappy
+            | You are using an <strong>outdated</strong> browser.
+            | Please <a href="http://browsehappy.com/">upgrade your browser</a>
+            | to improve your experience.
+        <![endif]-->
+        .wrapper
+            header.header
+                .header__top.clearfix
+                    .container
+                        .f-left
+                            nav.add-menu
+                                ul.add-menu__list.unstyled-list
+                                    li.add-menu__item
+                                        a.add-menu__lnk(href='') О магазине
+                                    li.add-menu__item
+                                        a.add-menu__lnk(href='') Сервисный центр
+                                    li.add-menu__item
+                                        a.add-menu__lnk(href='') Оплата / Доставка
+                                    li.add-menu__item
+                                        a.add-menu__lnk(href='') Сотрудничество
+                                    li.add-menu__item
+                                        a.add-menu__lnk(href='') Форум
+                                    li.add-menu__item
+                                        a.add-menu__lnk(href='') FAQ
+                                    li.add-menu__item
+                                        a.add-menu__lnk(href='') Вакансии
+                                    li.add-menu__item
+                                        a.add-menu__lnk(href='') Размещение рекламы
+                        .f-right
+                            ul.auth-list.unstyled-list
+                                li.auth-list__item
+                                    a.auth-list__lnk.auth-list__lnk--login.bs-icon.bs-icon--login(href='#') Войти
+                                li.auth-list__item
+                                    a.auth-list__lnk.auth-list__lnk--registration(href='#') Регистрация
+                .header__center.clearfix
+                    .container
+                        .header__item.header__item--item1.f-left
+                            .logo
+                                a.logo__lnk(href='/')
+                                    img(src='./img/logo.png', alt='Город душевых кабин')
+                        .header__item.header__item--item2.f-left
+                            .dept.js-tabs
+                                .dept__item.clearfix
+                                    a.dept__lnk(href='/') Интернет магазин:
+                                    span.dept__work-time с 9.00 до 20.00
+                                .dept__item
+                                    .dept__phone.js-tabs__content +375 (29) 577 - 22 - 33
+                                    .dept__phone.js-tabs__content +375 (33) 577 - 22 - 33
+                                    .dept__phone.js-tabs__content +375 (25) 577 - 22 - 33
+                                    .dept__phone.js-tabs__content +375 (17) 577 - 22 - 33
+                                    .dept__phone.js-tabs__content mail@mail.ru
+                                    .dept__phone.js-tabs__content skype
+                                .dept__item
+                                    ul.dept__phone-list.unstyled-list
+                                        li.dept__phone-icon
+                                            i.s-icon.s-icon--velcom
+                                        li.dept__phone-icon
+                                            i.s-icon.s-icon--mts
+                                        li.dept__phone-icon
+                                            i.s-icon.s-icon--life
+                                        li.dept__phone-icon
+                                            i.s-icon.s-icon--phone
+                                        li.dept__phone-icon
+                                            i.s-icon.s-icon--mail
+                                        li.dept__phone-icon
+                                            i.s-icon.s-icon--skype
+                        .header__item.header__item--item3.f-left
+                            .dept
+                                .dept__item.clearfix
+                                    a.dept__lnk(href='/') Служба мастеров:
+                                    span.dept__work-time с 9.00 до 20.00
+                                .dept__item
+                                    .dept__phone +375 (26) 577 - 22 - 33
+                                .dept__item
+                                    a.callback-btn(href='/') Заказать звонок
+                        .header__item.header__item--item4.f-right
+                            .cart
+                                a.cart__lnk.bs-icon.bs-icon--cart
+                                    .cart__label Корзина
+                                    .cart__counter 3 товара
+                                    .cart__total 14 797 000 руб.
+                nav.main-nav.clearfix
+                    .container
+                        ul.main-nav__list.unstyled-list
+                            li.main-nav__item
+                                a.main-nav__lnk.main-nav__lnk--home.bs-icon.bs-icon--home(href='#')
+                            li.main-nav__item
+                                a.main-nav__lnk(href='#') Каталог
+                            li.main-nav__item
+                                a.main-nav__lnk(href='#') Служба мастеров
+                            li.main-nav__item
+                                a.main-nav__lnk(href='#') Услуги
+                            li.main-nav__item
+                                a.main-nav__lnk(href='#') Акции
+                            li.main-nav__item
+                                a.main-nav__lnk(href='#') Новости
+                            li.main-nav__item
+                                a.main-nav__lnk(href='#') Наша сеть
+                block header_bottom
+            main.main
+                block main
+            .footer-push
+        footer.footer.clearfix
+            .container
+                .footer__item.footer__item--item1.f-left
+                    .footer__logo
+                        a.footer__logo-lnk
+                            img.footer__logo-img(src='./img/footer-logo.png')
+                    .footer__desc Город душевых кабин - продажа душевых кабин, а так же услуги по сантехническим работам
+                    .footer__cprg © Город душевых кабин 2014-2015
+                .footer__item.footer__item--item2.f-left
+                    h4.footer__title Контакты:
+                    .contacts-blk
+                        .contacts-blk__item
+                            .contacts-blk__label Интернет - магазин:
+                            .contacts-blk__phone
+                                span.contacts-blk__phone-label Velcom
+                                span +375 (29) 777 - 22 - 33
+                            .contacts-blk__phone
+                                span.contacts-blk__phone-label Velcom
+                                span +375 (29) 777 - 22 - 33
+                        .contacts-blk__item
+                            .contacts-blk__label Служба мастеров:
+                            .contacts-blk__phone
+                                span.contacts-blk__phone-label Velcom
+                                span +375 (29) 777 - 22 - 33
+                            .contacts-blk__phone
+                                span.contacts-blk__phone-label Velcom
+                                span +375 (29) 777 - 22 - 33
+                .footer__item.footer__item--item3.f-left
+                    h4.footer__title Клиенту:
+                    ul.footer-list.unstyled-list
+                        li.footer-list__item
+                            a.footer-list__lnk(href='') Каталог
+                        li.footer-list__item
+                            a.footer-list__lnk(href='') Служба доставки
+                        li.footer-list__item
+                            a.footer-list__lnk(href='') Акции
+                        li.footer-list__item
+                            a.footer-list__lnk(href='') Доставка
+                        li.footer-list__item
+                            a.footer-list__lnk(href='') Гарантия обслуживания
+                        li.footer-list__item
+                            a.footer-list__lnk(href='') Ремонт душевых кабин
+                        li.footer-list__item
+                            a.footer-list__lnk(href='') Замена запчастей по гарантии
+                        li.footer-list__item
+                            a.footer-list__lnk(href='') FAQ
+                .footer__item.footer__item--item4.f-right
+                    h4.footer__title О компании:
+                    ul.footer-list.unstyled-list
+                        li.footer-list__item
+                            a.footer-list__lnk(href='') О магазине
+                        li.footer-list__item
+                            a.footer-list__lnk(href='') Наша сеть
+                        li.footer-list__item
+                            a.footer-list__lnk(href='') Сотрудничество
+                        li.footer-list__item
+                            a.footer-list__lnk(href='') Вакансии
+                        li.footer-list__item
+                            a.footer-list__lnk(href='') Размещение рекламы
+                        li.footer-list__item
+                            a.footer-list__lnk(href='') Новости
+    //build:js ./js/vendor.js
+        //bower:js
+        script(src='./bower_components/jquery/jquery.js')
+        //endbower
+        // endbuild
+        //build:js ./js/combined.js
+        script(src='./js/main.js')
+        script(src='./js/plugins.js')
+        // endbuild
+    //[if lt IE 10]
+    script (src="/js/vendor/jquery-placeholder.js")
+    //[endif]
+

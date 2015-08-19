@@ -1,0 +1,34 @@
+$s-blabel = 0px 0px 0px 0px 128px 28px 141px 128px 'sprite.png';
+$s-carousel = 70px 28px -70px -28px 48px 12px 141px 128px 'sprite.png';
+$s-cart = 0px 28px 0px -28px 70px 44px 141px 128px 'sprite.png';
+$s-ctrll = 128px 44px -128px -44px 9px 16px 141px 128px 'sprite.png';
+$s-ctrlr = 128px 28px -128px -28px 9px 16px 141px 128px 'sprite.png';
+$s-glabel = 0px 72px 0px -72px 109px 28px 141px 128px 'sprite.png';
+$s-home = 70px 40px -70px -40px 21px 21px 141px 128px 'sprite.png';
+$s-instock = 128px 60px -128px -60px 8px 8px 141px 128px 'sprite.png';
+$s-life = 109px 72px -109px -72px 15px 15px 141px 128px 'sprite.png';
+$s-mail = 70px 61px -70px -61px 16px 11px 141px 128px 'sprite.png';
+$s-mts = 106px 40px -106px -40px 15px 15px 141px 128px 'sprite.png';
+$s-nstar = 128px 0px -128px 0px 13px 14px 141px 128px 'sprite.png';
+$s-outstock = 128px 68px -128px -68px 8px 8px 141px 128px 'sprite.png';
+$s-phone = 102px 100px -102px -100px 15px 14px 141px 128px 'sprite.png';
+$s-pstar = 128px 14px -128px -14px 13px 14px 141px 128px 'sprite.png';
+$s-rlabel = 0px 100px 0px -100px 87px 28px 141px 128px 'sprite.png';
+$s-skype = 87px 100px -87px -100px 15px 15px 141px 128px 'sprite.png';
+$s-velcom = 91px 40px -91px -40px 15px 15px 141px 128px 'sprite.png';
+spriteWidth($sprite)
+    width $sprite[4]
+
+spriteHeight($sprite)
+    height $sprite[5]
+
+spritePosition($sprite)
+    background-position $sprite[2] $sprite[3]
+
+spriteImage($sprite)
+    background-image url(../img/bg/$sprite[8])
+
+sprite($sprite)
+    spritePosition($sprite)
+    spriteWidth($sprite)
+    spriteHeight($sprite)

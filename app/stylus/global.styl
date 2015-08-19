@@ -1,0 +1,106 @@
+@import '/mixins/mixins'
+@import '/mixins/sprite'
+
+/*Переменные настройки*/
+headerHeight = auto
+footerHeight = 380px
+placeholderColor = #000
+containerWidth = 1240px
+
+
+*
+  box-sizing border-box
+  inline-box-align align-content
+
+/*Стилизация placeholder*/
+input
+  placeholder(#ffffff)
+
+/*Скрытие текста*/
+.replace-text
+  text-hide()
+
+/*иконки*/
+.s-icon
+  display inline-block
+  background url("../img/bg/sprite.png") no-repeat
+.bs-icon
+  &:before
+    content ''
+    display inline-block
+    background url("../img/bg/sprite.png") no-repeat
+.s-icon--velcom
+  sprite($s-velcom)
+.s-icon--mts
+  sprite($s-mts)
+.s-icon--life
+  sprite($s-life)
+.s-icon--phone
+  sprite($s-phone)
+.s-icon--mail
+  sprite($s-mail)
+.s-icon--skype
+  sprite($s-skype)
+.s-icon--pstar
+  sprite($s-pstar)
+.s-icon--nstar
+  sprite($s-nstar)
+.s-icon--blabel
+  sprite($s-blabel)
+.s-icon--glabel
+  sprite($s-glabel)
+.s-icon--rlabel
+  sprite($s-rlabel)
+.s-icon--ctrll
+  sprite($s-ctrll)
+.s-icon--ctrlr
+  sprite($s-ctrlr)
+.bs-icon--cart
+  &:before
+    sprite($s-cart)
+.bs-icon--home
+  &:before
+    sprite($s-home)
+.bs-icon--instock
+  &:before
+    sprite($s-instock)
+.bs-icon--outstock
+  &:before
+    sprite($s-outstock)
+/*Футер к низу страницы*/
+html
+body
+  height 100%
+  font normal 14px 'Open Sans', sans-serif
+.wrapper
+  min-height: 100%
+  height auto !important
+  height 100%
+  margin 0 auto - footerHeight
+.footer-push
+  height footerHeight
+.footer
+  height footerHeight
+.container
+  width containerWidth
+  margin 0 auto
+.f-left
+  float left
+.f-right
+  float right
+.t-center
+  text-align center
+.t-right
+  text-align right
+.unstyled-list
+  margin 0
+  padding 0
+  list-style none
+.clearfix
+  clearfix()
+
+
+.js-tabs__content
+  display none
+  &:first-child
+    display block

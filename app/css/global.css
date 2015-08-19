@@ -1,0 +1,199 @@
+/*Переменные настройки*/
+* {
+  box-sizing: border-box;
+  inline-box-align: align-content;
+}
+/*Стилизация placeholder*/
+input::-webkit-input-placeholder {
+  color: #fff !important;
+  text-indent: 0px;
+  -webkit-transition: text-indent 0.3s ease;
+          transition: text-indent 0.3s ease;
+}
+input::-moz-placeholder {
+  color: #fff !important;
+  text-indent: 0px;
+  transition: text-indent 0.3s ease;
+}
+input:-moz-placeholder {
+  color: #fff !important;
+  text-indent: 0px;
+  transition: text-indent 0.3s ease;
+}
+input:-ms-input-placeholder {
+  color: #fff !important;
+  text-indent: 0px;
+  transition: text-indent 0.3s ease;
+}
+input:-ms-input-placeholder:focus::-webkit-input-placeholder {
+  text-indent: 500px;
+  transition: text-indent 0.3s ease;
+}
+input:-ms-input-placeholder:focus::-moz-placeholder {
+  text-indent: 500px;
+  transition: text-indent 0.3s ease;
+}
+input:-ms-input-placeholder:focus:-moz-placeholder {
+  text-indent: 500px;
+  transition: text-indent 0.3s ease;
+}
+input:-ms-input-placeholder:focus:-ms-input-placeholder {
+  text-indent: 500px;
+  transition: text-indent 0.3s ease;
+}
+/*Скрытие текста*/
+.replace-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+/*иконки*/
+.s-icon {
+  display: inline-block;
+  background: url("../img/bg/sprite.png") no-repeat;
+}
+.bs-icon:before {
+  content: '';
+  display: inline-block;
+  background: url("../img/bg/sprite.png") no-repeat;
+}
+.s-icon--velcom {
+  background-position: -91px -40px;
+  width: 15px;
+  height: 15px;
+}
+.s-icon--mts {
+  background-position: -106px -40px;
+  width: 15px;
+  height: 15px;
+}
+.s-icon--life {
+  background-position: -109px -72px;
+  width: 15px;
+  height: 15px;
+}
+.s-icon--phone {
+  background-position: -102px -100px;
+  width: 15px;
+  height: 14px;
+}
+.s-icon--mail {
+  background-position: -70px -61px;
+  width: 16px;
+  height: 11px;
+}
+.s-icon--skype {
+  background-position: -87px -100px;
+  width: 15px;
+  height: 15px;
+}
+.s-icon--pstar {
+  background-position: -128px -14px;
+  width: 13px;
+  height: 14px;
+}
+.s-icon--nstar {
+  background-position: -128px 0px;
+  width: 13px;
+  height: 14px;
+}
+.s-icon--blabel {
+  background-position: 0px 0px;
+  width: 128px;
+  height: 28px;
+}
+.s-icon--glabel {
+  background-position: 0px -72px;
+  width: 109px;
+  height: 28px;
+}
+.s-icon--rlabel {
+  background-position: 0px -100px;
+  width: 87px;
+  height: 28px;
+}
+.s-icon--ctrll {
+  background-position: -128px -44px;
+  width: 9px;
+  height: 16px;
+}
+.s-icon--ctrlr {
+  background-position: -128px -28px;
+  width: 9px;
+  height: 16px;
+}
+.bs-icon--cart:before {
+  background-position: 0px -28px;
+  width: 70px;
+  height: 44px;
+}
+.bs-icon--home:before {
+  background-position: -70px -40px;
+  width: 21px;
+  height: 21px;
+}
+.bs-icon--instock:before {
+  background-position: -128px -60px;
+  width: 8px;
+  height: 8px;
+}
+.bs-icon--outstock:before {
+  background-position: -128px -68px;
+  width: 8px;
+  height: 8px;
+}
+/*Футер к низу страницы*/
+html,
+body {
+  height: 100%;
+  font: normal 14px 'Open Sans', sans-serif;
+}
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -380px;
+}
+.footer-push {
+  height: 380px;
+}
+.footer {
+  height: 380px;
+}
+.container {
+  width: 1240px;
+  margin: 0 auto;
+}
+.f-left {
+  float: left;
+}
+.f-right {
+  float: right;
+}
+.t-center {
+  text-align: center;
+}
+.t-right {
+  text-align: right;
+}
+.unstyled-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.js-tabs__content {
+  display: none;
+}
+.js-tabs__content:first-child {
+  display: block;
+}

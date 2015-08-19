@@ -1,0 +1,178 @@
+extends ./layout.jade
+
+block header_bottom
+    .header__bottom
+        .container
+            .maze.clearfix
+                .maze__item.maze__item.f-left
+                    .maze__blk(style='background-image: url(./img/maze/maze1.jpg)')
+                        .maze__text.maze__text--med.f-right
+                            h3.maze__title.maze__title--big Взгляд в будущее
+                            .maze__desc.maze__desc--big На нашем сайте теперь вы может
+                                |заказать самые новые модели
+                                |душевых кабин
+                            a.maze__btn.maze__btn--usual(href='#') Заказать
+                .maze__item.maze__item.f-right
+                    .clearfix
+                        .maze__blk.maze__blk--hh.maze__blk--hw.maze__blk--sp.f-left(style='background-image: url(./img/maze/maze2.jpg)')
+                            .maze__text.maze__text--small.f-left
+                                h3.maze__title Wasserfalle W-9802
+                                .maze__desc На нашем сайте теперь
+                                    |вы может заказать...
+                                a.maze__btn.maze__btn--small.maze__btn--usual(href='#') Заказать
+                        .maze__blk.maze__blk--hh.maze__blk--hw.maze__blk--sp.f-left(style='background-image: url(./img/maze/maze3.jpg)')
+                            .maze__text.maze__text--small.f-right.t-right
+                                h3.maze__title IMPRESE W664018
+                                .maze__desc Ручной душ 116мм, IMPRESE W664018
+                                a.maze__btn.maze__btn--small.maze__btn--usual(href='#') Заказать
+                    .maze__blk.maze__blk--hh.maze__blk--sp(style='background-image: url(./img/maze/maze4.jpg)')
+                        .maze__text.maze__text--big.f-left
+                            h3.maze__title Душевой бокс Grandehome WS118/S6
+                            .maze__desc Полная высота гидробокса: 217 см.
+                                |Материал профиля: металл
+                                |Цвет профиля: хром
+                                |Передние двери: каленое ударопрочное стекло
+                                |Цвет дверей: графит
+                                |Задние стенки: каленое ударопрочное стекло
+                                |Цвет задних стенок: черный
+                            a.maze__btn.maze__btn--small.maze__btn--usual(href='#') Заказать
+block main
+    section.popular.carousel.js-bvs__carousel
+        .container
+            h3.populat__title Популярные товары
+            .popular__bar.clearfix
+                .popular__bar-item.f-left
+                    .popular__sort-btn Хиты продаж
+                .popular__bar-item.f-left
+                    .popular__sort-btn Новинки
+                .popular__bar-item.f-left
+                    .popular__sort-btn Акционные
+                .popular__bar-item.f-right
+                    .carousel__ctrl-wrap
+                        span.carousel__ctrl.carousel__ctrl--left
+                            i.carousel__ctrl-ico.s-icon.s-icon--ctrll.js-carousel__ctrl--left
+                        span.carousel__ctrl.carousel__ctrl--right
+                            i.carousel__ctrl-ico.s-icon.s-icon--ctrlr.js-carousel__ctrl--right
+            .carousel__wrap
+                .carousel__items-wrap.clearfix
+                    for item in [1,2,3]
+                        .popular__item.js-carousel__slide.js-sort-tab__content(data-label='hit')
+                            .product-preview.t-center
+                                span.product-label.product-preview__status-label.s-icon.s-icon--blabel Хиты продаж
+                                .product-preview__img-wrap
+                                    a(href='')
+                                        img.product-preview__img(src='./img/product/product1.jpg')
+                                .product-preview__meta.clearfix
+                                    span.product-stock.product-stock--instock.bs-icon.bs-icon--instock.f-left В наличии
+                                    .product-compare
+                                        .pseudo-check
+                                            input#compare1.pseudo-check__input(type='checkbox')
+                                            label.pseudo-check__label(for='#compare1') Сравнить
+                                                .pseudo-check__bg
+                                h3.product-preview__title
+                                    a.product-preview__lnk(href='/') Охладители Symphony Ice cube
+                                .product-preview__rating
+                                    i.product-star.s-icon.s-icon--pstar
+                                    i.product-star.s-icon.s-icon--pstar
+                                    i.product-star.s-icon.s-icon--pstar
+                                    i.product-star.s-icon.s-icon--pstar
+                                    i.product-star.s-icon.s-icon--nstar
+                                .product-preview__feature.product-feature
+                                    img.product-feature__img(src='./img/feature/f1.png', title='Особенность')
+                                    img.product-feature__img(src='./img/feature/f2.png', title='Особенность')
+                                    img.product-feature__img(src='./img/feature/f3.png', title='Особенность')
+                                    img.product-feature__img(src='./img/feature/f4.png', title='Особенность')
+                                    img.product-feature__img(src='./img/feature/f5.png', title='Особенность')
+                                .product-preview__price 17 270 000 руб.
+                                .product-preview__btn-wrap
+                                    a.product-btn.product-preview__btn(href='/') Купить.
+                                .product-preview__review-wrap
+                                    a.product-preview__review-lnk(href='#') 25 отзывов
+                    for item in [1,2,3]
+                        .popular__item.js-carousel__slide.js-sort-tab__content(data-label='new')
+                            .product-preview.t-center
+                                span.product-labelproduct-preview__status-label.s-icon.s-icon--glabel Новинка
+                                .product-preview__img-wrap
+                                    a(href='')
+                                        img.product-preview__img(src='./img/product/product2.jpg')
+                                h3.product-preview__title
+                                    a.product-preview__lnk(href='/') Охладители Symphony Ice cube
+                                .product-preview__rating
+                                    i.product-star.s-icon.s-icon--pstar
+                                    i.product-star.s-icon.s-icon--pstar
+                                    i.product-star.s-icon.s-icon--pstar
+                                    i.product-star.s-icon.s-icon--pstar
+                                    i.product-star.s-icon.s-icon--nstar
+                                .product-preview__meta
+                                .product-preview__price 17 270 000 руб.
+                                a.product-btn(href='/') Купить.
+                                .product-preview__review 25 отзывов
+                    for item in [1,2,3]
+                        .popular__item.js-carousel__slide.js-sort-tab__content(data-label='discount')
+                            .product-preview.t-center
+                                span.product-label.product-preview__status-label.s-icon.s-icon--rlabel Акция
+                                .product-preview__img-wrap
+                                    a(href='')
+                                        img.product-preview__img(src='./img/product/product3.jpg')
+                                h3.product-preview__title
+                                    a.product-preview__lnk(href='/') Охладители Symphony Ice cube
+                                .product-preview__rating
+                                    i.product-star.s-icon.s-icon--pstar
+                                    i.product-star.s-icon.s-icon--pstar
+                                    i.product-star.s-icon.s-icon--pstar
+                                    i.product-star.s-icon.s-icon--pstar
+                                    i.product-star.s-icon.s-icon--nstar
+                                .product-preview__meta
+                                .product-preview__price 17 270 000 руб.
+                                a.product-btn(href='/') Купить.
+                                .product-preview__review 25 отзывов
+            .popular__readmore-wrap.t-right
+                a.readmore(href='#') Весь каталог
+    section.masters.carousel.js-bvs__carousel
+        .container
+            .masters-wrap.carousel__wrap
+                .masters__bar.clearfix
+                    h3.masters__title.f-left Служба мастеров
+                    .carousel__ctrl-wrap.f-right
+                        span.carousel__ctrl.carousel__ctrl--left
+                            i.carousel__ctrl-ico.s-icon.s-icon--ctrll.js-carousel__ctrl--left
+                        span.carousel__ctrl.carousel__ctrl--right
+                            i.carousel__ctrl-ico.s-icon.s-icon--ctrlr.js-carousel__ctrl--right
+                .carousel__items-wrap
+                    for item in [1,2,3,4]
+                        .masters__item
+                            .master-preview
+                                .master-preview__img-wrap
+                                    img.master-preview__img(src='./img/masters/master1.jpg')
+                                .master-preview__review-bar.clearfix
+                                    .product-preview__rating.f-left
+                                        i.product-star.s-icon.s-icon--pstar
+                                        i.product-star.s-icon.s-icon--pstar
+                                        i.product-star.s-icon.s-icon--pstar
+                                        i.product-star.s-icon.s-icon--pstar
+                                        i.product-star.s-icon.s-icon--nstar
+                                    a.product-preview__review-lnk.f-right(href='#') 25 отзывов
+                                .master-preview__desc Идейные соображения высшего порядка, а также укрепление и развитие структуры требуют от нас анализа системы обучения кадров, соответствует...
+                                .master-preview__btn-wrap.clearfix
+                                    a.master-preview__callbtn.f-left(href='#') Оставить заявку
+                                    a.master-preview__readmore.f-right(href='#') Подробнее
+    section.benefits
+        .container
+            h3.benefits__title Преимущества
+            ul.benefits__list.unstyled-list
+                li.benefits__item.f-left.clearfix
+                    .benefits__img-wrap
+                        img.benefits__img(src='./img/benefits/benefits1.png')
+                    .benefits__desc  Удобная и быстрая доставка
+                li.benefits__item.f-left.clearfix
+                    .benefits__img-wrap
+                        img.benefits__img(src='./img/benefits/benefits1.png')
+                    .benefits__desc  Удобная и быстрая доставка
+                li.benefits__item.f-left.clearfix
+                    .benefits__img-wrap
+                        img.benefits__img(src='./img/benefits/benefits1.png')
+                    .benefits__desc  Удобная и быстрая доставка
+                li.benefits__item.f-left.clearfix
+                    .benefits__img-wrap
+                        img.benefits__img(src='./img/benefits/benefits1.png')
+                    .benefits__desc  Удобная и быстрая доставка
