@@ -59,6 +59,7 @@
   &.active
     .footer-list__lnk
       color #ffffff
+
 .add-menu__item
   display inline-block
   margin-right 27px
@@ -66,7 +67,50 @@
   &.active
     .add-menu__lnk
       color #ffffff
+.add-menu__sub-item
+  &.active
+    .add-menu__sub-lnk
+      color #ffffff
+.add-menu__item--parent
+  position relative
+  padding 0 20px 0 0
+  &:after,
+  &:before
+    content ''
+    position: absolute
+    top 50%
+    right 0
+    margin -1px 0 0 0
+    border-left 5px solid transparent
+    border-right 5px solid transparent
+    border-top 5px solid #d6d6d6
+  .add-menu__lnk
+    padding 0 6px 0 0
+    border-right 1px solid #d6d6d6
+  &:hover
+    &:after,
+    &:before
+      border-left 5px solid transparent
+      border-right 5px solid transparent
+      border-top 5px solid white
+    .add-menu__sub-list
+      display block
+  &.active
+    &:after,
+    &:before
+      border-left 5px solid transparent
+      border-right 5px solid transparent
+      border-top 5px solid white
+.add-menu__sub-list
+  display none
+  position absolute
+  left -10px
+  z-index 2
+  width 150%
+  padding 10px
+  background #739ac5
 .add-menu__lnk
+.add-menu__sub-lnk
   color #d4dfec
   font-size 13px
   text-decoration none
@@ -487,6 +531,9 @@
   &:hover
     text-decoration none
 
+
+.benefits
+  margin 0 0 0 20px
 .benefits__title
   margin 0 0 45px 0
   padding 0 0 18px 0
@@ -494,3 +541,167 @@
   color #44444d
   font-size 20px
   text-transform uppercase
+
+.benefits__item
+  width 287px
+  margin 0 0 0 10px
+  padding 24px 0
+  border 1px solid #b8b8b8
+  border-radius 5px
+  &:first-child
+    margin 0 0 65px 0
+.benefits__img-wrap
+  width 50%
+  padding 0 5px
+  text-align center
+.benefits__desc
+  width 50%
+  padding 0 10px
+  border-left 1px solid #5787bd
+  color #5787bd
+  font-size 16px
+  font-weight 30
+  text-transform uppercase
+
+.seo
+  margin 0 0 20px 0
+.seo__text
+  margin 0 0 60px 0
+
+.seo__readmore-lnk
+  display inline-block
+  height 55px
+  padding 0 50px
+  border 1px solid #b8b8b8
+  border-radius 5px
+  text-transform uppercase
+  line-height 55px
+  font-weight 300
+
+
+.modal
+  padding 0 28px 14px 28px
+  background white
+.modal__bar
+  margin 0 0 13px 0
+.modal__btn
+  padding 0 25px
+  color #739ac5
+  font-size 13px
+  font-weight 300
+  line-height 42px
+  text-transform uppercase
+  text-decoration underline
+  &:hover
+  &.active
+    border-radius 0 0 5px 5px
+    background #739ac5
+    color #ffffff
+    text-decoration none
+
+.wform__group
+  margin 13px 0 0 0
+  &:first-child
+    margin 0
+.wform__group--bid
+  margin 25px 0 0 0
+.wform--login
+  width 405px
+.wform--registration
+  width 890px
+.wform__part
+  width 48%
+.wform__input
+.wform__select
+  width 100%
+  height 35px
+  padding 0 10px
+  border 1px solid #7b7b7b
+.wform__textarea
+  width 100%
+  height 75px
+  padding 10px
+  border 1px solid #7b7b7b
+  resize vertical
+.wform__submit
+  width 100%
+  height 42px
+  background #739ac5
+  border none
+  border-radius 5px
+  outline none
+  color #fff
+  text-transform uppercase
+.wform__submit--static
+  width 188px
+.wform__rules
+  margin 0 0 5px 0
+  color #a0a0a0
+  font-size 13px
+.wform__rules-lnk
+  margin 0 0 0 4px
+  color #739ac5
+  text-decoration underline
+  &:hover
+    text-decoration none
+.wform__label
+  display block
+  margin 0 0 5px 0
+  font-size 13px
+  font-weight 300
+.wform__notice
+  color #a0a0a0
+  font-size 13px
+  font-style italic
+.wform__check-item
+  display inline-block
+  width 48%
+  padding 4px 20px 4px 0
+.wform__toggle
+  display inline-block
+  height 37px
+  padding 0 30px
+  border 1px solid #739ac5
+  color #739ac5
+  font-size 13px
+  text-decoration underline
+  line-height 37px
+  &:hover
+    background #739ac5
+    color #ffffff
+    text-decoration none
+
+.pseudo-check__label
+  position relative
+  display inline-block
+  padding 0 0 0 19px
+  color #888
+  font-size 13px
+.pseudo-check__bg
+  position absolute
+  top 50%
+  left 0
+  border 1px solid #b8b8b8
+  &:before
+    content ''
+    position absolute
+    top 50%
+    left 50%
+    display none
+    background #007dc5
+.pseudo-check__bg--big
+  width 14px
+  height 14px
+  margin -7px 0 0 0
+  &:before
+    width 8px
+    height 8px
+    margin -4px 0 0 -4px
+.pseudo-check__input
+  display none
+.pseudo-check__input:checked + .pseudo-check__label .pseudo-check__bg:before {
+                                      display block
+                                  }
+
+
+

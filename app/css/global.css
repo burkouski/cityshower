@@ -5,23 +5,23 @@
 }
 /*Стилизация placeholder*/
 input::-webkit-input-placeholder {
-  color: #fff !important;
+  color: #888 !important;
   text-indent: 0px;
   -webkit-transition: text-indent 0.3s ease;
           transition: text-indent 0.3s ease;
 }
 input::-moz-placeholder {
-  color: #fff !important;
+  color: #888 !important;
   text-indent: 0px;
   transition: text-indent 0.3s ease;
 }
 input:-moz-placeholder {
-  color: #fff !important;
+  color: #888 !important;
   text-indent: 0px;
   transition: text-indent 0.3s ease;
 }
 input:-ms-input-placeholder {
-  color: #fff !important;
+  color: #888 !important;
   text-indent: 0px;
   transition: text-indent 0.3s ease;
 }
@@ -148,6 +148,7 @@ input:-ms-input-placeholder:focus:-ms-input-placeholder {
 html,
 body {
   height: 100%;
+  color: #555;
   font: normal 14px 'Open Sans', sans-serif;
 }
 .wrapper {
@@ -194,6 +195,6 @@ body {
 .js-tabs__content {
   display: none;
 }
-.js-tabs__content:first-child {
+.js-tabs__content.active {
   display: block;
 }
