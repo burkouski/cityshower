@@ -20,4 +20,7 @@ $(function(){
     $('.js-tabs').on('click', function(){
         $.fancybox.update();
     })
+    $('.js-select').CustomSelect({
+        visRows: 6
+    });
 })

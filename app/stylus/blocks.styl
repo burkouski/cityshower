@@ -39,6 +39,16 @@
   margin 0 0 20px 0
   color #ffffff
   text-transform uppercase
+
+.page__aside
+  width 301px
+.page__content--right
+  width 909px
+.page__aside-item
+  margin 0 0 36px 0
+.page__title
+  margin 0 0 13px 0
+  font-size 20px
 .contacts-blk__item
   margin 10px 0 0 0
   &:first-child
@@ -703,5 +713,205 @@
                                       display block
                                   }
 
+.breadcrumbs
+  padding 10px 0
+.breadcrumbs__item
+  display inline-block
+  font-size 11px
+.breadcrumbs__lnk
+  color #888
+  text-decoration none
+  &:hover
+    color #010002
+.breadcrumbs__lnk--active
+    color #010002
 
 
+.cat-menu__heading
+  position relative
+  margin 0
+  padding 0 45px 0 15px
+  background #739ac5
+  color #ffffff
+  font-weight bold
+  font-size 13px
+  text-transform uppercase
+  text-decoration underline
+  line-height 40px
+  text-decoration none
+  &:after
+    position absolute
+    top 50%
+    right 13px
+    margin -15px 0 0
+.cat-menu__list
+  border-right 1px solid #d0d0d0
+  border-bottom 1px solid #d0d0d0
+  border-left 1px solid #d0d0d0
+.cat-menu__item
+  border-top 1px solid #d0d0d0
+  &:first-child
+    border none
+  &.active
+    .cat-menu__link
+      color #739ac5
+.cat-menu__item--parent
+  position relative
+  &:before
+    content ''
+    position absolute
+    top 12px
+    left 16px
+    display block
+    background url("../img/bg/sprite.png") no-repeat
+    sprite($s-plus)
+  &.active
+    &:before
+      sprite($s-minus)
+    .cat-menu__sublist
+      height auto
+      padding 13px 15px 13px 45px
+      border-top 1px solid #d0d0d0
+
+.cat-menu__link
+  display block
+  padding 0 15px 0 45px
+  color #000000
+  line-height 38px
+  text-decoration none
+  &:hover
+    color #739ac5
+.cat-menu__sublist
+  height 0
+  padding 0 15px 0 45px
+  overflow hidden
+.cat-menu__subitem
+  margin 6px 0 0 0
+  &:first-child
+    margin 0
+  &.active
+    .cat-menu__sublink
+      color #739ac5
+      &:before
+        background #739ac5
+.cat-menu__sublink
+  position relative
+  display inline-block
+  padding 0 0 0 9px
+  color #555555
+  font-size 12px
+  text-decoration none
+  &:before
+    content ''
+    position absolute
+    top 8px
+    left 0px
+    display block
+    width 3px
+    height 3px
+    background #d0d0d0
+  &:hover
+    color #739ac5
+    &:before
+      background #739ac5
+
+.filter
+  padding 15px 17px
+  border 1px solid #d0d0d0
+.filter__item
+  margin 12px 0 0 0
+  &:first-child
+    margin 0
+.filter__label
+  margin 0 0 12px 0
+  color #000000
+  font-size 14px
+  font-weight 300
+  text-transform uppercase
+.filter__input
+  width 107px
+  height 40px
+  padding 0 10px
+  border 1px solid #d0d0d0
+  outline none
+  color #888888
+.filter__group
+  word-spacing -3px
+.filter__input-label
+  display inline-block
+  padding 0 4px
+.filter__select-add
+  margin 3px 0 0 0
+  color #888888
+  font-size 12px
+.filter__showall
+  padding 10px 0 0 0
+  border-top 2px solid #d0d0d0
+.filter__showall-lnk
+  text-transform uppercase
+
+.sort-bar
+  margin 0 0 16px 0
+.sort-bar__wrap
+  margin 0 0 13px 0
+  padding 8px 0
+  border-top 1px solid #b8b8b8
+  border-bottom 1px solid #b8b8b8
+.sort-bar__label
+  margin 0 20px 0 0
+  font-size 13px
+.sort-bar__btn
+  position relative
+  display inline-block
+  margin 0 6px 0 0
+  padding 0 33px 0 14px
+  border 1px solid #b8b8b8
+  font-size 13px
+  line-height 37px
+  text-decoration none
+  text-transform uppercase
+  &:after
+    content ''
+    position absolute
+    top 50%
+    right 15px
+    margin -4px 0 0 0
+    background url("../img/bg/sprite.png") no-repeat
+    sprite($s-tickup)
+  &:hover
+  &.active
+    border 1px solid #739ac5
+    background #739ac5
+    color #ffffff
+  &.active
+    &:after
+      sprite($s-tickd)
+.sort-bar__param
+  position relative
+  display inline-block
+  margin 0 7px 0 0
+  padding 0 33px 0 12px
+  border 1px solid #dcdcdc
+  border-radius 5px
+  color #acacac
+  font-size 13px
+  line-height 35px
+  text-decoration none
+  text-transform uppercase
+.sort-bar__param-lnk
+  position absolute
+  top 50%
+  right 10px
+  display block
+  margin -5px 0 0 0
+  background url("../img/bg/sprite.png") no-repeat
+  sprite($s-cross)
+  &:hover
+    sprite($s-crossr)
+.sort-bar__param--clear
+  padding 0 18px
+  border-color #ed532d
+  color #ed532d
+  &:hover
+    background #ed532d
+    color #ffffff

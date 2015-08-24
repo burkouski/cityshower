@@ -19,13 +19,22 @@ input
 /*Скрытие текста*/
 .replace-text
   text-hide()
-
+a
+  color #739ac5
+  &:hover
+  &:visited
+    text-decoration none
 /*иконки*/
 .s-icon
   display inline-block
   background url("../img/bg/sprite.png") no-repeat
 .bs-icon
   &:before
+    content ''
+    display inline-block
+    background url("../img/bg/sprite.png") no-repeat
+.as-icon
+  &:after
     content ''
     display inline-block
     background url("../img/bg/sprite.png") no-repeat
@@ -67,6 +76,9 @@ input
 .bs-icon--outstock
   &:before
     sprite($s-outstock)
+.as-icon--toggle
+  &:after
+    sprite($s-toggle)
 /*Футер к низу страницы*/
 html
 body

@@ -49,6 +49,13 @@ input:-ms-input-placeholder:focus:-ms-input-placeholder {
   background-color: transparent;
   border: 0;
 }
+a {
+  color: #739ac5;
+}
+a:hover,
+a:visited {
+  text-decoration: none;
+}
 /*иконки*/
 .s-icon {
   display: inline-block;
@@ -59,43 +66,48 @@ input:-ms-input-placeholder:focus:-ms-input-placeholder {
   display: inline-block;
   background: url("../img/bg/sprite.png") no-repeat;
 }
+.as-icon:after {
+  content: '';
+  display: inline-block;
+  background: url("../img/bg/sprite.png") no-repeat;
+}
 .s-icon--velcom {
-  background-position: -91px -40px;
-  width: 15px;
-  height: 15px;
-}
-.s-icon--mts {
-  background-position: -106px -40px;
-  width: 15px;
-  height: 15px;
-}
-.s-icon--life {
-  background-position: -109px -72px;
-  width: 15px;
-  height: 15px;
-}
-.s-icon--phone {
-  background-position: -102px -100px;
-  width: 15px;
-  height: 14px;
-}
-.s-icon--mail {
-  background-position: -70px -61px;
-  width: 16px;
-  height: 11px;
-}
-.s-icon--skype {
   background-position: -87px -100px;
   width: 15px;
   height: 15px;
 }
+.s-icon--mts {
+  background-position: -102px -100px;
+  width: 15px;
+  height: 15px;
+}
+.s-icon--life {
+  background-position: -128px 0px;
+  width: 15px;
+  height: 15px;
+}
+.s-icon--phone {
+  background-position: -128px -45px;
+  width: 15px;
+  height: 14px;
+}
+.s-icon--mail {
+  background-position: -109px -87px;
+  width: 16px;
+  height: 11px;
+}
+.s-icon--skype {
+  background-position: -109px -72px;
+  width: 15px;
+  height: 15px;
+}
 .s-icon--pstar {
-  background-position: -128px -14px;
+  background-position: -128px -73px;
   width: 13px;
   height: 14px;
 }
 .s-icon--nstar {
-  background-position: -128px 0px;
+  background-position: -128px -59px;
   width: 13px;
   height: 14px;
 }
@@ -115,12 +127,12 @@ input:-ms-input-placeholder:focus:-ms-input-placeholder {
   height: 28px;
 }
 .s-icon--ctrll {
-  background-position: -128px -44px;
+  background-position: -128px -103px;
   width: 9px;
   height: 16px;
 }
 .s-icon--ctrlr {
-  background-position: -128px -28px;
+  background-position: -128px -87px;
   width: 9px;
   height: 16px;
 }
@@ -130,19 +142,24 @@ input:-ms-input-placeholder:focus:-ms-input-placeholder {
   height: 44px;
 }
 .bs-icon--home:before {
-  background-position: -70px -40px;
+  background-position: -99px -28px;
   width: 21px;
   height: 21px;
 }
 .bs-icon--instock:before {
-  background-position: -128px -60px;
+  background-position: -120px -36px;
   width: 8px;
   height: 8px;
 }
 .bs-icon--outstock:before {
-  background-position: -128px -68px;
+  background-position: -120px -28px;
   width: 8px;
   height: 8px;
+}
+.as-icon--toggle:after {
+  background-position: -70px -28px;
+  width: 29px;
+  height: 30px;
 }
 /*Футер к низу страницы*/
 html,

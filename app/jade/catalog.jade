@@ -1,0 +1,261 @@
+extends ./layout.jade
+
+block main
+    section.page
+        .container
+            .page__two-columns.clearfix
+                .breadcrumbs
+                    ul.breadcrumbs__list.unstyled-list
+                        li.breadcrumbs__item
+                            a.breadcrumbs__lnk(href='/') Главная
+                        li.breadcrumbs__item
+                            span.breadcrumbs__sep >
+                        li.breadcrumbs__item
+                            a.breadcrumbs__lnk(href='/')  Климатическая техника
+                        li.breadcrumbs__item
+                            span.breadcrumbs__sep >
+                        li.breadcrumbs__item
+                            span.breadcrumbs__lnk.breadcrumbs__lnk--active  Охладители
+                aside.page__aside.f-left
+                    .page__aside-item
+                        .cat-menu
+                            h3.cat-menu__heading.as-icon.as-icon--toggle Каталог продукции
+                        ul.cat-menu__list.unstyled-list
+                            li.cat-menu__item.cat-menu__item--parent.active
+                                a.cat-menu__link(href='#') Душевые кабины, боксы и уголки
+                                ul.cat-menu__sublist.unstyled-list
+                                    li.cat-menu__subitem
+                                        a.cat-menu__sublink(href='#') Душевые кабины
+                                    li.cat-menu__subitem
+                                        a.cat-menu__sublink(href='#') Душевые боксы
+                                    li.cat-menu__subitem
+                                        a.cat-menu__sublink(href='#') Душевые уголки
+                            li.cat-menu__item
+                                a.cat-menu__link(href='#') Душевые двери
+                            li.cat-menu__item
+                                a.cat-menu__link(href='#') Душевые поддоны
+                            li.cat-menu__item.cat-menu__item--parent
+                                a.cat-menu__link(href='#') Аксессуары к душевым кабинам
+                                ul.cat-menu__sublist.unstyled-list
+                                    li.cat-menu__subitem
+                                        a.cat-menu__sublink(href='#') Душевые кабины
+                                    li.cat-menu__subitem
+                                        a.cat-menu__sublink(href='#') Душевые боксы
+                                    li.cat-menu__subitem
+                                        a.cat-menu__sublink(href='#') Душевые уголки
+                    .page__aside-item
+                        .filter
+                            .filter__item
+                                h5.filter__label Производитель
+                                .filter__wrap
+                                    .filter__select-wrap
+                                        .filter__select-item
+                                            select.filter__select.js-select(name='')
+                                                option(value="1") Любой
+                                                option(value="2") Grado
+                                                option(value="3") Akvali
+                                                option(value="4") Radawei
+                                                option(value="2") Grado
+                                                option(value="3") Akvali
+                                                option(value="4") Radawei
+                                                option(value="2") Grado
+                                                option(value="3") Akvali
+                                                option(value="4") Radawei
+                                        .filter__select-add Нужно несколько?
+                                            a(href='#') Добавить
+
+                            .filter__item
+                                h5.filter__label Цена
+                                .filter__wrap
+                                    .filter__group
+                                        span.filter__input-label от
+                                        input.filter__input(type='text')
+                                        span.filter__input-label до
+                                        input.filter__input(type='text')
+                            .filter__item
+                                h5.filter__label Вид
+                                .filter__wrap
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                            .filter__item
+                                h5.filter__label Форма поддона
+                                .filter__wrap
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                            .filter__item
+                                h5.filter__label Тип поддона
+                                .filter__wrap
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                            .filter__item
+                                h5.filter__label Конструкция дверей
+                                .filter__wrap
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                            .filter__item
+                                h5.filter__label Исполнение стекла
+                                .filter__wrap
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                            .filter__item
+                                h5.filter__label Монтаж
+                                .filter__wrap
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                            .filter__item
+                                h5.filter__label Материал стенок
+                                .filter__wrap
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                            .filter__item
+                                h5.filter__label Высота
+                                .filter__wrap
+                                    .filter__group
+                                        input.filter__input(type='text')
+                                        span.filter__input-label -
+                                        input.filter__input(type='text')
+                                        span.filter__input-label см
+                            .filter__item
+                                h5.filter__label Ширин
+                                .filter__wrap
+                                    .filter__group
+                                        input.filter__input(type='text')
+                                        span.filter__input-label -
+                                        input.filter__input(type='text')
+                                        span.filter__input-label см
+                            .filter__item
+                                h5.filter__label Глубина
+                                .filter__wrap
+                                    .filter__group
+                                        input.filter__input(type='text')
+                                        span.filter__input-label -
+                                        input.filter__input(type='text')
+                                        span.filter__input-label см
+                            .filter__item
+                                .filter__showall.t-center
+                                    a.filter__showall-lnk(href='#') Показать все параметры
+                    .page__aside-item
+                .page__content.page__content--right.f-right
+                    h1.page__title Душевые кабины, боксы и уголки
+                    .seo
+                        .seo__text
+                            p Душевая кабина – относительно новый сантехнический продукт, который предлагает нам отечественный рынок. На западе душевая кабина, как правило, является не столько заменой ванны, как ее дополнением. В большинстве же российских квартир с небольшими метражами ванных комнат, возможности установить и ванну, и душевую кабину, к сожалению, практически нет. Поэтому многие принимают решение заменить ванну душевой кабиной, что позволит освободить дополнительное полезное пространство. Хотелось бы отметить, что в этом случае Вам необходимо учесть предпочтения всех членов вашей семьи, а также свыкнутся с мыслью, что понежиться в теплой водичке более не придется, но зато у Вас будет возможность комфортно принять душ, да не простой, а массажный, а то даже попариться в баньке или сауне – возможностей и разнообразных функций у современных кабин предостаточно.
+                            p Практически все душевые кабины оснащены системой гидромассажа, который осуществляется благодаря встроенными гидромассажными панелями. Эти прямоугольные стойки во все “рост” душевой кабины оснащены специальными форсунками – небольшими отверстиями, которые точечно распыляют воду с определенной интенсивностью. Эффект массажа достигается благодаря попеременным автоматическим включением и выключениям форсунок.
+                        .seo__readmore-wrap.t-center
+                            a.seo__readmore-lnk Подробнее
+                    .catalog
+                        .sort-bar
+                            .sort-bar__wrap.clearfix
+                                .sort-bar__item.f-left
+                                    span.sort-bar__label Сортировать:
+                                    a.sort-bar__btn.active(href='#') По цене
+                                    a.sort-bar__btn(href='#') По популярности
+                                    a.sort-bar__btn(href='#') По отзывам
+                                .sort-bar__item.f-right
+                            .sort-bar__param-bar.clearfix
+                                .sort-bar__param-wrap.f-left
+                                    .sort-bar__param ALBATROS
+                                        a.sort-bar__param-lnk(href='#')
+                                    .sort-bar__param ПРОЗРАЧНОЕ
+                                        a.sort-bar__param-lnk(href='#')
+                                .sort-bar__clear.f-right
+                                    a.sort-bar__param.sort-bar__param--clear(href='#') Сбросить всё
+                        .catalog__wrap
