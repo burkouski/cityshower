@@ -91,10 +91,17 @@ block main
                     for item in [1,2,3]
                         .popular__item.js-carousel__slide.js-sort-tab__content(data-label='new')
                             .product-preview.t-center
-                                span.product-labelproduct-preview__status-label.s-icon.s-icon--glabel Новинка
+                                span.product-label.product-preview__status-label.s-icon.s-icon--glabel Хиты продаж
                                 .product-preview__img-wrap
                                     a(href='')
-                                        img.product-preview__img(src='./img/product/product2.jpg')
+                                        img.product-preview__img(src='./img/product/product1.jpg')
+                                .product-preview__meta.clearfix
+                                    span.product-stock.product-stock--instock.bs-icon.bs-icon--instock.f-left В наличии
+                                    .product-compare
+                                        .pseudo-check
+                                            input#compare1.pseudo-check__input(type='checkbox')
+                                            label.pseudo-check__label(for='#compare1') Сравнить
+                                                .pseudo-check__bg
                                 h3.product-preview__title
                                     a.product-preview__lnk(href='/') Охладители Symphony Ice cube
                                 .product-preview__rating
@@ -103,17 +110,31 @@ block main
                                     i.product-star.s-icon.s-icon--pstar
                                     i.product-star.s-icon.s-icon--pstar
                                     i.product-star.s-icon.s-icon--nstar
-                                .product-preview__meta
+                                .product-preview__feature.product-feature
+                                    img.product-feature__img(src='./img/feature/f1.png', title='Особенность')
+                                    img.product-feature__img(src='./img/feature/f2.png', title='Особенность')
+                                    img.product-feature__img(src='./img/feature/f3.png', title='Особенность')
+                                    img.product-feature__img(src='./img/feature/f4.png', title='Особенность')
+                                    img.product-feature__img(src='./img/feature/f5.png', title='Особенность')
                                 .product-preview__price 17 270 000 руб.
-                                a.product-btn(href='/') Купить.
-                                .product-preview__review 25 отзывов
+                                .product-preview__btn-wrap
+                                    a.product-btn.product-preview__btn(href='/') Купить.
+                                .product-preview__review-wrap
+                                    a.product-preview__review-lnk(href='#') 25 отзывов
                     for item in [1,2,3]
                         .popular__item.js-carousel__slide.js-sort-tab__content(data-label='discount')
                             .product-preview.t-center
-                                span.product-label.product-preview__status-label.s-icon.s-icon--rlabel Акция
+                                span.product-label.product-preview__status-label.s-icon.s-icon--rlabel Хиты продаж
                                 .product-preview__img-wrap
                                     a(href='')
-                                        img.product-preview__img(src='./img/product/product3.jpg')
+                                        img.product-preview__img(src='./img/product/product1.jpg')
+                                .product-preview__meta.clearfix
+                                    span.product-stock.product-stock--instock.bs-icon.bs-icon--instock.f-left В наличии
+                                    .product-compare
+                                        .pseudo-check
+                                            input#compare1.pseudo-check__input(type='checkbox')
+                                            label.pseudo-check__label(for='#compare1') Сравнить
+                                                .pseudo-check__bg
                                 h3.product-preview__title
                                     a.product-preview__lnk(href='/') Охладители Symphony Ice cube
                                 .product-preview__rating
@@ -122,10 +143,17 @@ block main
                                     i.product-star.s-icon.s-icon--pstar
                                     i.product-star.s-icon.s-icon--pstar
                                     i.product-star.s-icon.s-icon--nstar
-                                .product-preview__meta
+                                .product-preview__feature.product-feature
+                                    img.product-feature__img(src='./img/feature/f1.png', title='Особенность')
+                                    img.product-feature__img(src='./img/feature/f2.png', title='Особенность')
+                                    img.product-feature__img(src='./img/feature/f3.png', title='Особенность')
+                                    img.product-feature__img(src='./img/feature/f4.png', title='Особенность')
+                                    img.product-feature__img(src='./img/feature/f5.png', title='Особенность')
                                 .product-preview__price 17 270 000 руб.
-                                a.product-btn(href='/') Купить.
-                                .product-preview__review 25 отзывов
+                                .product-preview__btn-wrap
+                                    a.product-btn.product-preview__btn(href='/') Купить.
+                                .product-preview__review-wrap
+                                    a.product-preview__review-lnk(href='#') 25 отзывов
             .popular__readmore-wrap.t-right
                 a.readmore(href='#') Весь каталог
     section.masters.carousel.js-bvs__carousel

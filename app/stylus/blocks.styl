@@ -40,6 +40,8 @@
   color #ffffff
   text-transform uppercase
 
+.page
+  padding 0 0 48px 0
 .page__aside
   width 301px
 .page__content--right
@@ -49,6 +51,34 @@
 .page__title
   margin 0 0 13px 0
   font-size 20px
+.pagination
+  padding 15px 0 0 0
+  border-top 1px solid #dedede
+.pagination__list
+  display block
+  text-align center
+.pagination__item
+  display inline-block
+  margin 0 0 0 16px
+  &:first-child
+    margin 0
+  &.active
+    .pagination__link
+      color #739ac5
+      text-decoration none
+.pagination__link
+  color #555555
+  font-size 16px
+  text-decoration none
+  &:hover
+    color #739ac5
+    text-decoration none
+.pagination__link--pn
+  width auto
+  margin 0 15px
+  &:hover
+    background none
+    color #739ac5
 .contacts-blk__item
   margin 10px 0 0 0
   &:first-child
@@ -370,6 +400,11 @@
   float left
   width 403px
   margin 0 15px 0 0
+.carousel__ctrl-wrap
+  position relative
+  top 1px
+  padding 0 0 0 5px
+  background #ffffff
 .carousel__ctrl
   display inline-block
   width 37px
@@ -382,7 +417,10 @@
   &:hover
     background #739ac5
     border 1px solid #739ac5
-
+.carousel__ctrl--long
+  height 78px
+  margin 0
+  line-height 78px
 .product-feature__img
   margin 0 5px
   cursor pointer
@@ -428,7 +466,9 @@
 .product-preview
   position relative
   padding 12px
-  border 1px solid #b8b8b8
+  border 1px solid #fff
+  &:hover
+    border 1px solid #b8b8b8
 .product-preview__img-wrap
   height 238px
   margin 0 0 8px 0
@@ -915,3 +955,175 @@
   &:hover
     background #ed532d
     color #ffffff
+
+
+.catalog
+  overflow hidden
+.catalog__wrap
+  margin 0 0 0 -11px
+.catalog__item
+  display inline-block
+  vertical-align top
+  width 304px
+  margin 0 0 23px 0
+  padding 0 11px 0 13px
+  border-left 1px solid #b8b8b8
+
+
+.shower__aside
+  width 597px
+.shower__aside-item
+  margin 0 0 20px 0
+.shower__content
+  width 622px
+.shower__title
+  margin 0 0 11px 0
+  padding-bottom 6px
+  border-bottom 1px solid #b8b8b8
+  font-size 20px
+  font-weight 600
+.shower__title-label
+  left 8px
+.shower__meta-item
+  display inline-block
+  vertical-align top
+  margin 0 32px 0 0
+.shower__code
+  font-size 12px
+.shower__bar
+.shower__desc
+  margin 0 0 30px 0
+.shower__price-new
+  margin 0 28px 0 0
+  color #739ac5
+  font-size 24px
+.shower__price-old
+  color #acacac
+  font-size 16px
+  text-decoration line-through
+.shower__review-item
+  display inline-block
+  vertical-align top
+  margin 0 0 0 10px
+.shower__btnbar-item
+  margin 20px 0 0 0
+.shower__pricebar-item
+  margin 0 0 30px 0
+.shower__price
+  margin 0 0 15px 0
+.shower__size-label
+  margin 0 0 10px 0
+  font-size 13px
+  text-transform uppercase
+.shower__size-item
+  display inline-block
+  vertical-align top
+.shower__size-btn
+  display block
+  padding 0 15px
+  border 1px solid #b8b8b8
+  font-size 13px
+  line-height 37px
+  text-decoration none
+  &:hover
+  &.active
+    border 1px solid #739ac5
+    background #739ac5
+    color #ffffff
+.shower__cond-item
+  padding 10px 0
+.shower__cond-label
+.shower__cond-desc
+  display inline-block
+  vertical-align top
+.shower__cond-label
+  position relative
+  width 127px
+  padding 0 0 0 42px
+.shower__cond-desc
+  width 490px
+.gallery__img-wrap
+  height 512px
+  line-height 512px
+.gallery__img
+  max-width 100%
+  max-height 100%
+.gallery__corusel-wrap
+  float left
+  width 513px
+  margin 0 5px
+  padding 0 0 4px 0
+  border-bottom 1px solid #b8b8b8
+.gallery__thumb
+  float left
+  width 85px
+  height 73px
+  margin 0 5px 0 0
+  overflow hidden
+.gallery__thumb-img
+  max-width 100%
+
+.similar
+  overflow hidden
+.similar__item-wrap
+  margin 0 0 0 -12px
+.similar__item
+  float left
+  width 305px
+  padding 0 11px 0 13px
+  border-left 1px solid #b8b8b8
+.similar__title
+  margin 0 0 12px 0
+  border-bottom 1px solid #b8b8b8
+  color #739ac5
+  font-size 20px
+  font-weight 600
+  text-transform uppercase
+
+.review-btn
+  display inline-block
+  padding 0 11px
+  border 1px solid #739ac5
+  border-radius 5px
+  color #739ac5
+  font-size 12px
+  line-height 24px
+  text-transform uppercase
+  text-decoration none
+  &:hover
+    background #739ac5
+    color #ffffff
+.addcart-btn
+  position relative
+  display block
+  padding 0 11px 0 54px
+  border 2px solid #555555
+  border-radius 5px
+  color #555555
+  font-size 13px
+  font-weight bold
+  line-height 37px
+  text-transform uppercase
+  text-decoration none
+  &:before
+    position absolute
+    top 50%
+    left 7px
+    margin -12px 0 0 0
+.click-btn
+  position relative
+  display block
+  padding 0 11px 0 54px
+  border 1px solid #739ac5
+  border-radius 5px
+  color #739ac5
+  font-size 13px
+  font-weight bold
+  line-height 37px
+  text-transform uppercase
+  text-decoration underline
+  &:before
+    position absolute
+    top 50%
+    left 7px
+    margin -12px 0 0 0

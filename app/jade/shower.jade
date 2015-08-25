@@ -1,0 +1,143 @@
+extends ./layout.jade
+block main
+    section.page
+        .container
+            .page__one-column
+                .breadcrumbs
+                    ul.breadcrumbs__list.unstyled-list
+                        li.breadcrumbs__item
+                            a.breadcrumbs__lnk(href='/') Главная
+                        li.breadcrumbs__item
+                            span.breadcrumbs__sep >
+                        li.breadcrumbs__item
+                            a.breadcrumbs__lnk(href='/')  Климатическая техника
+                        li.breadcrumbs__item
+                            span.breadcrumbs__sep >
+                        li.breadcrumbs__item
+                            span.breadcrumbs__lnk.breadcrumbs__lnk--active  Охладители
+                .shower
+                    .shower__wrap.clearfix
+                        aside.shower__aside.f-left
+                            .shower__aside-item
+                                .shower__gallery.gallery
+                                    .gallery__img-wrap
+                                        img.gallery__img(src='./img/gallery/gal1.jpg')
+                                    .gallery__corusel
+                                        .carousel__wrap
+                                            span.carousel__ctrl.carousel__ctrl--long.f-left
+                                                i.carousel__ctrl-ico.s-icon.s-icon--ctrll.js-carousel__ctrl--left
+                                            .gallery__corusel-wrap
+                                                .carousel__items-wrap.clearfix
+                                                    .gallery__thumb
+                                                        img.gallery__thumb-img(src='./img/gallery/gal1.jpg')
+                                                    .gallery__thumb
+                                                        img.gallery__thumb-img(src='./img/gallery/gal1.jpg')
+                                                    .gallery__thumb
+                                                        img.gallery__thumb-img(src='./img/gallery/gal1.jpg')
+                                            span.carousel__ctrl.carousel__ctrl--long.f-right
+                                                i.carousel__ctrl-ico.s-icon.s-icon--ctrlr.js-carousel__ctrl--right
+                            .shower__aside-item
+                                .similar
+                                    .similar__wrap.carousel.js-bvs__carousel
+                                        .similar__title.clearfix ПОХОЖИЕ ТОВАРЫ
+                                            .carousel__ctrl-wrap.f-right
+                                                span.carousel__ctrl.carousel__ctrl--left
+                                                    i.carousel__ctrl-ico.s-icon.s-icon--ctrll.js-carousel__ctrl--left
+                                                span.carousel__ctrl.carousel__ctrl--right
+                                                    i.carousel__ctrl-ico.s-icon.s-icon--ctrlr.js-carousel__ctrl--right
+                                        .carousel__wrap.similar__item-wrap
+                                            .carousel__items-wrap.clearfix
+                                                for item in [1,2,3]
+                                                    .similar__item.js-carousel__slide.js-sort-tab__content(data-label='hit')
+                                                        .product-preview.t-center
+                                                            span.product-label.product-preview__status-label.s-icon.s-icon--blabel Хиты продаж
+                                                            .product-preview__img-wrap
+                                                                a(href='')
+                                                                    img.product-preview__img(src='./img/product/product1.jpg')
+                                                            .product-preview__meta.clearfix
+                                                                span.product-stock.product-stock--instock.bs-icon.bs-icon--instock.f-left В наличии
+                                                                .product-compare
+                                                                    .pseudo-check
+                                                                        input#compare1.pseudo-check__input(type='checkbox')
+                                                                        label.pseudo-check__label(for='#compare1') Сравнить
+                                                                            .pseudo-check__bg
+                                                            h3.product-preview__title
+                                                                a.product-preview__lnk(href='/') Охладители Symphony Ice cube
+                                                            .product-preview__rating
+                                                                i.product-star.s-icon.s-icon--pstar
+                                                                i.product-star.s-icon.s-icon--pstar
+                                                                i.product-star.s-icon.s-icon--pstar
+                                                                i.product-star.s-icon.s-icon--pstar
+                                                                i.product-star.s-icon.s-icon--nstar
+                                                            .product-preview__feature.product-feature
+                                                                img.product-feature__img(src='./img/feature/f1.png', title='Особенность')
+                                                                img.product-feature__img(src='./img/feature/f2.png', title='Особенность')
+                                                                img.product-feature__img(src='./img/feature/f3.png', title='Особенность')
+                                                                img.product-feature__img(src='./img/feature/f4.png', title='Особенность')
+                                                                img.product-feature__img(src='./img/feature/f5.png', title='Особенность')
+                                                            .product-preview__price 17 270 000 руб.
+                                                            .product-preview__btn-wrap
+                                                                a.product-btn.product-preview__btn(href='/') Купить.
+                                                            .product-preview__review-wrap
+                                                                a.product-preview__review-lnk(href='#') 25 отзывов
+                        .shower__content.f-right
+                            h1.shower__title Уголок душевой Iddis квадратный
+                                span.shower__title-label.product-label.s-icon.s-icon--blabel Хиты продаж
+                            .shower__bar.clearfix
+                                .shower__bar-item.f-left
+                                    .shower__meta
+                                        .shower__meta-item
+                                            span.shower__code Код: 3109139
+                                        .shower__meta-item
+                                            span.product-stock.product-stock--instock.bs-icon.bs-icon--instock.f-left В наличии
+                                        .shower__meta-item
+                                            .product-preview__rating
+                                                i.product-star.s-icon.s-icon--pstar
+                                                i.product-star.s-icon.s-icon--pstar
+                                                i.product-star.s-icon.s-icon--pstar
+                                                i.product-star.s-icon.s-icon--pstar
+                                                i.product-star.s-icon.s-icon--nstar
+                                .shower__bar-item.f-right
+                                    .shower__review
+                                        .shower__review-item
+                                            a.product-preview__review-lnk(href='#') 25 отзывов
+                                        .shower__review-item
+                                            a.review-btn(href='#') Оставить отзыв
+                            .shower__desc Душевая кабина – относительно новый сантехнический продукт, который предлагает нам отечественный рынок. На западе душевая кабина, как правило, является не столько заменой ванны, как ее дополнением. В большинстве же российских квартир с небольшими метражами ванных комнат, возможности установить и ванну, и душевую кабину, к сожалению, практически нет. Поэтому
+                            .shower__pricebar.clearfix
+                                .shower__pricebar-item.f-left
+                                    .shower__price
+                                        span.shower__price-new 8 500 000 руб.
+                                        span.shower__price-old 10 500 000 руб.
+                                    .shower__size
+                                        .shower__size-label Выберите размер, см
+                                        .shower__size-wrap
+                                            .shower__size-item
+                                                a.shower__size-btn(href='#') 90*90
+                                            .shower__size-item
+                                                a.shower__size-btn(href='#') 100*100
+                                .shower__pricebar-item.f-right
+                                    .shower__btnbar
+                                        .shower__btnbar-item
+                                            a.addcart-btn.bs-icon.bs-icon--addcart(href='#') Добавить в корзину
+                                        .shower__btnbar-item
+                                            a.click-btn.bs-icon.bs-icon--click(href='#') Купить в один клик
+                            .shower__cond-bar
+                                .shower__cond-item
+                                    .shower__cond-label.bs-icon.bs-icon--delivery Доставка
+                                    .shower__cond-desc Курьером в квартиру - завтра, бесплатно. Самовывоз со склада - сегодня бесплатно. Экспресс-доставка - за 3 часа, 75 000 руб.
+                                .shower__cond-item
+                                    .shower__cond-label.bs-icon.bs-icon--garanty Гарантия
+                                    .shower__cond-desc  3 года
+                                .shower__cond-item
+                                    .shower__cond-label.bs-icon.bs-icon--service Услуги
+                                    .shower__cond-desc
+                                        a(href='#') Установка и подключение
+                            .shower__features
+                                .shower__features-label Особенности этой модели
+                                .product-feature
+                                    img.product-feature__img(src='./img/feature/f1.png', title='Особенность')
+                                    img.product-feature__img(src='./img/feature/f2.png', title='Особенность')
+                                    img.product-feature__img(src='./img/feature/f3.png', title='Особенность')
+                                    img.product-feature__img(src='./img/feature/f4.png', title='Особенность')
+                                    img.product-feature__img(src='./img/feature/f5.png', title='Особенность')

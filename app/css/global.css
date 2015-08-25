@@ -72,22 +72,22 @@ a:visited {
   background: url("../img/bg/sprite.png") no-repeat;
 }
 .s-icon--velcom {
-  background-position: -87px -100px;
+  background-position: -30px -140px;
   width: 15px;
   height: 15px;
 }
 .s-icon--mts {
-  background-position: -102px -100px;
+  background-position: -60px -140px;
   width: 15px;
   height: 15px;
 }
 .s-icon--life {
-  background-position: -128px 0px;
+  background-position: -15px -140px;
   width: 15px;
   height: 15px;
 }
 .s-icon--phone {
-  background-position: -128px -45px;
+  background-position: -105px -49px;
   width: 15px;
   height: 14px;
 }
@@ -102,12 +102,12 @@ a:visited {
   height: 15px;
 }
 .s-icon--pstar {
-  background-position: -128px -73px;
+  background-position: -88px -140px;
   width: 13px;
   height: 14px;
 }
 .s-icon--nstar {
-  background-position: -128px -59px;
+  background-position: -75px -140px;
   width: 13px;
   height: 14px;
 }
@@ -127,12 +127,12 @@ a:visited {
   height: 28px;
 }
 .s-icon--ctrll {
-  background-position: -128px -103px;
+  background-position: -163px 0px;
   width: 9px;
   height: 16px;
 }
 .s-icon--ctrlr {
-  background-position: -128px -87px;
+  background-position: -118px -100px;
   width: 9px;
   height: 16px;
 }
@@ -142,22 +142,47 @@ a:visited {
   height: 44px;
 }
 .bs-icon--home:before {
-  background-position: -99px -28px;
+  background-position: -105px -28px;
   width: 21px;
   height: 21px;
 }
 .bs-icon--instock:before {
-  background-position: -120px -36px;
+  background-position: -163px -34px;
   width: 8px;
   height: 8px;
 }
 .bs-icon--outstock:before {
-  background-position: -120px -28px;
+  background-position: -163px -42px;
   width: 8px;
   height: 8px;
 }
-.as-icon--toggle:after {
+.bs-icon--addcart:before {
+  background-position: -128px -100px;
+  width: 33px;
+  height: 25px;
+}
+.bs-icon--click:before {
+  background-position: -87px -100px;
+  width: 31px;
+  height: 25px;
+}
+.bs-icon--delivery:before {
+  background-position: -128px 0px;
+  width: 35px;
+  height: 35px;
+}
+.bs-icon--garanty:before {
+  background-position: -128px -35px;
+  width: 35px;
+  height: 35px;
+}
+.bs-icon--service:before {
   background-position: -70px -28px;
+  width: 35px;
+  height: 35px;
+}
+.as-icon--toggle:after {
+  background-position: -128px -70px;
   width: 29px;
   height: 30px;
 }

@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html class="no-js html">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic,600,600italic&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <!--build:css ./css/vendor.css-->
+    <!--bower:css-->
+    <link rel="stylesheet" href="./bower_components/normalize.css/normalize.css">
+    <!--endbower-->
+    <link rel="stylesheet" href="./css/fancybox.css">
+    <link rel="stylesheet" href="./css/custom-select.css">
+    <!-- endbuild-->
+    <!--build:css ./css/combined.css-->
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/blocks.css">
+    <!-- endbuild-->
+    <script src="javascripts/vendor/modernizr-2.7.1.min.js"></script>
+  </head>
+  <body class="body"><!--[if lt IE 8]>
+    <p class="browsehappy">
+      You are using an <strong>outdated</strong> browser.
+      Please <a href="http://browsehappy.com/">upgrade your browser</a>
+      to improve your experience.
+    </p><![endif]-->
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__top clearfix">
+          <div class="container">
+            <div class="f-left">
+              <nav class="add-menu">
+                <ul class="add-menu__list unstyled-list">
+                  <li class="add-menu__item"><a href="" class="add-menu__lnk">О магазине</a></li>
+                  <li class="add-menu__item add-menu__item--parent"><a href="" class="add-menu__lnk">Сервисный центр</a>
+                    <ul class="add-menu__sub-list unstyled-list">
+                      <li class="add-menu__sub-item"><a href="" class="add-menu__sub-lnk">Сервисный центр</a></li>
+                      <li class="add-menu__sub-item"><a href="" class="add-menu__sub-lnk">Сервисный центр</a></li>
+                      <li class="add-menu__sub-item"><a href="" class="add-menu__sub-lnk">Сервисный центр</a></li>
+                    </ul>
+                  </li>
+                  <li class="add-menu__item add-menu__item--parent"><a href="" class="add-menu__lnk">Оплата / Доставка</a>
+                    <ul class="add-menu__sub-list unstyled-list">
+                      <li class="add-menu__sub-item"><a href="" class="add-menu__sub-lnk">Сервисный центр</a></li>
+                      <li class="add-menu__sub-item"><a href="" class="add-menu__sub-lnk">Сервисный центр</a></li>
+                      <li class="add-menu__sub-item"><a href="" class="add-menu__sub-lnk">Сервисный центр</a></li>
+                    </ul>
+                  </li>
+                  <li class="add-menu__item"><a href="" class="add-menu__lnk">Сотрудничество</a></li>
+                  <li class="add-menu__item"><a href="" class="add-menu__lnk">Форум</a></li>
+                  <li class="add-menu__item"><a href="" class="add-menu__lnk">FAQ</a></li>
+                  <li class="add-menu__item"><a href="" class="add-menu__lnk">Вакансии</a></li>
+                  <li class="add-menu__item"><a href="" class="add-menu__lnk">Размещение рекламы</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="f-right">
+              <ul class="auth-list unstyled-list">
+                <li class="auth-list__item"><a href="#user-modal" class="auth-list__lnk auth-list__lnk--login bs-icon bs-icon--login js-modal">Войти</a></li>
+                <li class="auth-list__item"><a href="#user-modal" class="auth-list__lnk auth-list__lnk--registration js-modal">Регистрация</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="header__center clearfix">
+          <div class="container">
+            <div class="header__item header__item--item1 f-left">
+              <div class="logo"><a href="/" class="logo__lnk"><img src="./img/logo.png" alt="Город душевых кабин"></a></div>
+            </div>
+            <div class="header__item header__item--item2 f-left">
+              <div class="dept js-tabs">
+                <div class="dept__item clearfix"><a href="/" class="dept__lnk">Интернет магазин:</a><span class="dept__work-time">с 9.00 до 20.00</span></div>
+                <div class="dept__item">
+                  <div class="dept__phone js-tabs__content">+375 (29) 577 - 22 - 33</div>
+                  <div class="dept__phone js-tabs__content">+375 (33) 577 - 22 - 33</div>
+                  <div class="dept__phone js-tabs__content">+375 (25) 577 - 22 - 33</div>
+                  <div class="dept__phone js-tabs__content">+375 (17) 577 - 22 - 33</div>
+                  <div class="dept__phone js-tabs__content">mail@mail.ru</div>
+                  <div class="dept__phone js-tabs__content">skype</div>
+                </div>
+                <div class="dept__item">
+                  <ul class="dept__phone-list unstyled-list">
+                    <li class="dept__phone-icon"><i class="s-icon s-icon--velcom"></i></li>
+                    <li class="dept__phone-icon"><i class="s-icon s-icon--mts"></i></li>
+                    <li class="dept__phone-icon"><i class="s-icon s-icon--life"></i></li>
+                    <li class="dept__phone-icon"><i class="s-icon s-icon--phone"></i></li>
+                    <li class="dept__phone-icon"><i class="s-icon s-icon--mail"></i></li>
+                    <li class="dept__phone-icon"><i class="s-icon s-icon--skype"></i></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="header__item header__item--item3 f-left">
+              <div class="dept">
+                <div class="dept__item clearfix"><a href="/" class="dept__lnk">Служба мастеров:</a><span class="dept__work-time">с 9.00 до 20.00</span></div>
+                <div class="dept__item">
+                  <div class="dept__phone">+375 (26) 577 - 22 - 33</div>
+                </div>
+                <div class="dept__item"><a href="/" class="callback-btn">Заказать звонок</a></div>
+              </div>
+            </div>
+            <div class="header__item header__item--item4 f-right">
+              <div class="cart"><a class="cart__lnk bs-icon bs-icon--cart">
+                  <div class="cart__label">Корзина</div>
+                  <div class="cart__counter">3 товара</div>
+                  <div class="cart__total">14 797 000 руб.</div></a></div>
+            </div>
+          </div>
+        </div>
+        <nav class="main-nav clearfix">
+          <div class="container">
+            <ul class="main-nav__list unstyled-list">
+              <li class="main-nav__item"><a href="#" class="main-nav__lnk main-nav__lnk--home bs-icon bs-icon--home"></a></li>
+              <li class="main-nav__item"><a href="#" class="main-nav__lnk">Каталог</a></li>
+              <li class="main-nav__item"><a href="#" class="main-nav__lnk">Служба мастеров</a></li>
+              <li class="main-nav__item"><a href="#" class="main-nav__lnk">Услуги</a></li>
+              <li class="main-nav__item"><a href="#" class="main-nav__lnk">Акции</a></li>
+              <li class="main-nav__item"><a href="#" class="main-nav__lnk">Новости</a></li>
+              <li class="main-nav__item"><a href="#" class="main-nav__lnk">Наша сеть</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main class="main">
+        <section class="page">
+          <div class="container">
+            <div class="page__one-column">
+              <div class="breadcrumbs">
+                <ul class="breadcrumbs__list unstyled-list">
+                  <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__lnk">Главная</a></li>
+                  <li class="breadcrumbs__item"><span class="breadcrumbs__sep">></span></li>
+                  <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__lnk"> Климатическая техника</a></li>
+                  <li class="breadcrumbs__item"><span class="breadcrumbs__sep">></span></li>
+                  <li class="breadcrumbs__item"><span class="breadcrumbs__lnk breadcrumbs__lnk--active"> Охладители</span></li>
+                </ul>
+              </div>
+              <div class="shower">
+                <div class="shower__wrap clearfix">
+                  <aside class="shower__aside f-left">
+                    <div class="shower__aside-item">
+                      <div class="shower__gallery gallery">
+                        <div class="gallery__img-wrap"><img src="./img/gallery/gal1.jpg" class="gallery__img"></div>
+                        <div class="gallery__corusel">
+                          <div class="carousel__wrap"><span class="carousel__ctrl carousel__ctrl--long f-left"><i class="carousel__ctrl-ico s-icon s-icon--ctrll js-carousel__ctrl--left"></i></span>
+                            <div class="gallery__corusel-wrap">
+                              <div class="carousel__items-wrap clearfix">
+                                <div class="gallery__thumb"><img src="./img/gallery/gal1.jpg" class="gallery__thumb-img"></div>
+                                <div class="gallery__thumb"><img src="./img/gallery/gal1.jpg" class="gallery__thumb-img"></div>
+                                <div class="gallery__thumb"><img src="./img/gallery/gal1.jpg" class="gallery__thumb-img"></div>
+                              </div>
+                            </div><span class="carousel__ctrl carousel__ctrl--long f-right"><i class="carousel__ctrl-ico s-icon s-icon--ctrlr js-carousel__ctrl--right"></i></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="shower__aside-item">
+                      <div class="similar">
+                        <div class="similar__wrap carousel js-bvs__carousel">
+                          <div class="similar__title clearfix">ПОХОЖИЕ ТОВАРЫ
+                            <div class="carousel__ctrl-wrap f-right"><span class="carousel__ctrl carousel__ctrl--left"><i class="carousel__ctrl-ico s-icon s-icon--ctrll js-carousel__ctrl--left"></i></span><span class="carousel__ctrl carousel__ctrl--right"><i class="carousel__ctrl-ico s-icon s-icon--ctrlr js-carousel__ctrl--right"></i></span></div>
+                          </div>
+                          <div class="carousel__wrap similar__item-wrap">
+                            <div class="carousel__items-wrap clearfix">
+                              <div data-label="hit" class="similar__item js-carousel__slide js-sort-tab__content">
+                                <div class="product-preview t-center"><span class="product-label product-preview__status-label s-icon s-icon--blabel">Хиты продаж</span>
+                                  <div class="product-preview__img-wrap"><a href=""><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
+                                  <div class="product-preview__meta clearfix"><span class="product-stock product-stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
+                                    <div class="product-compare">
+                                      <div class="pseudo-check">
+                                        <input id="compare1" type="checkbox" class="pseudo-check__input">
+                                        <label for="#compare1" class="pseudo-check__label">Сравнить
+                                          <div class="pseudo-check__bg"></div>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <h3 class="product-preview__title"><a href="/" class="product-preview__lnk">Охладители Symphony Ice cube</a></h3>
+                                  <div class="product-preview__rating"><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--nstar"></i></div>
+                                  <div class="product-preview__feature product-feature"><img src="./img/feature/f1.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f2.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f3.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f4.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f5.png" title="Особенность" class="product-feature__img"></div>
+                                  <div class="product-preview__price">17 270 000 руб.</div>
+                                  <div class="product-preview__btn-wrap"><a href="/" class="product-btn product-preview__btn">Купить.</a></div>
+                                  <div class="product-preview__review-wrap"><a href="#" class="product-preview__review-lnk">25 отзывов</a></div>
+                                </div>
+                              </div>
+                              <div data-label="hit" class="similar__item js-carousel__slide js-sort-tab__content">
+                                <div class="product-preview t-center"><span class="product-label product-preview__status-label s-icon s-icon--blabel">Хиты продаж</span>
+                                  <div class="product-preview__img-wrap"><a href=""><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
+                                  <div class="product-preview__meta clearfix"><span class="product-stock product-stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
+                                    <div class="product-compare">
+                                      <div class="pseudo-check">
+                                        <input id="compare1" type="checkbox" class="pseudo-check__input">
+                                        <label for="#compare1" class="pseudo-check__label">Сравнить
+                                          <div class="pseudo-check__bg"></div>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <h3 class="product-preview__title"><a href="/" class="product-preview__lnk">Охладители Symphony Ice cube</a></h3>
+                                  <div class="product-preview__rating"><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--nstar"></i></div>
+                                  <div class="product-preview__feature product-feature"><img src="./img/feature/f1.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f2.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f3.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f4.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f5.png" title="Особенность" class="product-feature__img"></div>
+                                  <div class="product-preview__price">17 270 000 руб.</div>
+                                  <div class="product-preview__btn-wrap"><a href="/" class="product-btn product-preview__btn">Купить.</a></div>
+                                  <div class="product-preview__review-wrap"><a href="#" class="product-preview__review-lnk">25 отзывов</a></div>
+                                </div>
+                              </div>
+                              <div data-label="hit" class="similar__item js-carousel__slide js-sort-tab__content">
+                                <div class="product-preview t-center"><span class="product-label product-preview__status-label s-icon s-icon--blabel">Хиты продаж</span>
+                                  <div class="product-preview__img-wrap"><a href=""><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
+                                  <div class="product-preview__meta clearfix"><span class="product-stock product-stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
+                                    <div class="product-compare">
+                                      <div class="pseudo-check">
+                                        <input id="compare1" type="checkbox" class="pseudo-check__input">
+                                        <label for="#compare1" class="pseudo-check__label">Сравнить
+                                          <div class="pseudo-check__bg"></div>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <h3 class="product-preview__title"><a href="/" class="product-preview__lnk">Охладители Symphony Ice cube</a></h3>
+                                  <div class="product-preview__rating"><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--nstar"></i></div>
+                                  <div class="product-preview__feature product-feature"><img src="./img/feature/f1.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f2.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f3.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f4.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f5.png" title="Особенность" class="product-feature__img"></div>
+                                  <div class="product-preview__price">17 270 000 руб.</div>
+                                  <div class="product-preview__btn-wrap"><a href="/" class="product-btn product-preview__btn">Купить.</a></div>
+                                  <div class="product-preview__review-wrap"><a href="#" class="product-preview__review-lnk">25 отзывов</a></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </aside>
+                  <div class="shower__content f-right">
+                    <h1 class="shower__title">Уголок душевой Iddis квадратный<span class="shower__title-label product-label s-icon s-icon--blabel">Хиты продаж</span></h1>
+                    <div class="shower__bar clearfix">
+                      <div class="shower__bar-item f-left">
+                        <div class="shower__meta">
+                          <div class="shower__meta-item"><span class="shower__code">Код: 3109139</span></div>
+                          <div class="shower__meta-item"><span class="product-stock product-stock--instock bs-icon bs-icon--instock f-left">В наличии</span></div>
+                          <div class="shower__meta-item">
+                            <div class="product-preview__rating"><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--nstar"></i></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="shower__bar-item f-right">
+                        <div class="shower__review">
+                          <div class="shower__review-item"><a href="#" class="product-preview__review-lnk">25 отзывов</a></div>
+                          <div class="shower__review-item"><a href="#" class="review-btn">Оставить отзыв</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="shower__desc">Душевая кабина – относительно новый сантехнический продукт, который предлагает нам отечественный рынок. На западе душевая кабина, как правило, является не столько заменой ванны, как ее дополнением. В большинстве же российских квартир с небольшими метражами ванных комнат, возможности установить и ванну, и душевую кабину, к сожалению, практически нет. Поэтому</div>
+                    <div class="shower__pricebar clearfix">
+                      <div class="shower__pricebar-item f-left">
+                        <div class="shower__price"><span class="shower__price-new">8 500 000 руб.</span><span class="shower__price-old">10 500 000 руб.</span></div>
+                        <div class="shower__size">
+                          <div class="shower__size-label">Выберите размер, см</div>
+                          <div class="shower__size-wrap">
+                            <div class="shower__size-item"><a href="#" class="shower__size-btn">90*90</a></div>
+                            <div class="shower__size-item"><a href="#" class="shower__size-btn">100*100</a></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="shower__pricebar-item f-right">
+                        <div class="shower__btnbar">
+                          <div class="shower__btnbar-item"><a href="#" class="addcart-btn bs-icon bs-icon--addcart">Добавить в корзину</a></div>
+                          <div class="shower__btnbar-item"><a href="#" class="click-btn bs-icon bs-icon--click">Купить в один клик</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="shower__cond-bar">
+                      <div class="shower__cond-item">
+                        <div class="shower__cond-label bs-icon bs-icon--delivery">Доставка</div>
+                        <div class="shower__cond-desc">Курьером в квартиру - завтра, бесплатно. Самовывоз со склада - сегодня бесплатно. Экспресс-доставка - за 3 часа, 75 000 руб.</div>
+                      </div>
+                      <div class="shower__cond-item">
+                        <div class="shower__cond-label bs-icon bs-icon--garanty">Гарантия</div>
+                        <div class="shower__cond-desc"> 3 года</div>
+                      </div>
+                      <div class="shower__cond-item">
+                        <div class="shower__cond-label bs-icon bs-icon--service">Услуги</div>
+                        <div class="shower__cond-desc"><a href="#">Установка и подключение</a></div>
+                      </div>
+                    </div>
+                    <div class="shower__features">
+                      <div class="shower__features-label">Особенности этой модели</div>
+                      <div class="product-feature"><img src="./img/feature/f1.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f2.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f3.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f4.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f5.png" title="Особенность" class="product-feature__img"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <div class="footer-push"></div>
+    </div>
+    <footer class="footer clearfix">
+      <div class="container">
+        <div class="footer__item footer__item--item1 f-left">
+          <div class="footer__logo"><a class="footer__logo-lnk"><img src="./img/footer-logo.png" class="footer__logo-img"></a></div>
+          <div class="footer__desc">Город душевых кабин - продажа душевых кабин, а так же услуги по сантехническим работам</div>
+          <div class="footer__cprg">© Город душевых кабин 2014-2015</div>
+        </div>
+        <div class="footer__item footer__item--item2 f-left">
+          <h4 class="footer__title">Контакты:</h4>
+          <div class="contacts-blk">
+            <div class="contacts-blk__item">
+              <div class="contacts-blk__label">Интернет - магазин:</div>
+              <div class="contacts-blk__phone"><span class="contacts-blk__phone-label">Velcom</span><span>+375 (29) 777 - 22 - 33</span></div>
+              <div class="contacts-blk__phone"><span class="contacts-blk__phone-label">Velcom</span><span>+375 (29) 777 - 22 - 33</span></div>
+            </div>
+            <div class="contacts-blk__item">
+              <div class="contacts-blk__label">Служба мастеров:</div>
+              <div class="contacts-blk__phone"><span class="contacts-blk__phone-label">Velcom</span><span>+375 (29) 777 - 22 - 33</span></div>
+              <div class="contacts-blk__phone"><span class="contacts-blk__phone-label">Velcom</span><span>+375 (29) 777 - 22 - 33</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__item footer__item--item3 f-left">
+          <h4 class="footer__title">Клиенту:</h4>
+          <ul class="footer-list unstyled-list">
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">Каталог</a></li>
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">Служба доставки</a></li>
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">Акции</a></li>
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">Доставка</a></li>
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">Гарантия обслуживания</a></li>
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">Ремонт душевых кабин</a></li>
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">Замена запчастей по гарантии</a></li>
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer__item footer__item--item4 f-right">
+          <h4 class="footer__title">О компании:</h4>
+          <ul class="footer-list unstyled-list">
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">О магазине</a></li>
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">Наша сеть</a></li>
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">Сотрудничество</a></li>
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">Вакансии</a></li>
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">Размещение рекламы</a></li>
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">Новости</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div id="user-modal" class="modal">
+      <div class="js-tabs">
+        <div class="modal__bar clearfix"><a href="#" data-index="0" class="modal__btn js-tabs__tab f-left active">Вход</a><a href="#" data-index="1" class="modal__btn js-tabs__tab f-left">Регистрация</a></div>
+        <div class="js-tabs__wrap">
+          <div class="js-tabs__content active">
+            <div class="wform wform--login">
+              <form id="login-form">
+                <div class="wform__wrap">
+                  <div class="wform__group">
+                    <input type="text" placeholder="Ник или E-mail" class="wform__input">
+                  </div>
+                  <div class="wform__group">
+                    <input type="password" placeholder="Пароль" class="wform__input">
+                  </div>
+                  <div class="wform__group">
+                    <input type="submit" placeholder="Войти" class="wform__submit wform__submit--static">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="js-tabs__content">
+            <div class="wform wform--registration">
+              <form id="registration-form">
+                <div class="wform__wrap clearfix">
+                  <div class="wform__part f-left">
+                    <div class="wform__group">
+                      <label class="wform__label">Зарегестрироваться в качестве:</label>
+                      <select class="wform__select">
+                        <option>Специалист</option>
+                        <option>Пользователь</option>
+                      </select>
+                    </div>
+                    <div class="wform__group">
+                      <label class="wform__label">Ваши фамилия и имя (или название компании):</label>
+                      <input type="text" placeholder="Пароль" name="name" class="wform__input">
+                      <div class="wform__notice">Используется как заголовок вашей карточки</div>
+                    </div>
+                    <div class="wform__group">
+                      <label class="wform__label">Ваши преимущества:</label>
+                      <textarea placeholder="Текст описания" name="desc" class="wform__textarea"></textarea>
+                    </div>
+                    <div class="wform__group">
+                      <label class="wform__label">*Ваш номер телефона:</label>
+                      <input type="text" placeholder="+375 28 895-39-12" name="phone" class="wform__input">
+                    </div>
+                    <div class="wform__group">
+                      <label class="wform__label">*Ваш e-mail:</label>
+                      <input type="text" placeholder="goroddushevihkabin@gmail.com" class="wform__input">
+                    </div>
+                    <div class="wform__group">
+                      <label class="wform__label">*Пароль:</label>
+                      <input type="password" placeholder="*****************" name="pass" class="wform__input">
+                    </div>
+                    <div class="wform__group">
+                      <label class="wform__label">*Пароль ещё раз:</label>
+                      <input type="password" placeholder="*****************" name="pass2" class="wform__input">
+                    </div>
+                    <div class="wform__group">
+                      <div class="wform__part f-left"><img src="./img/captcha.png"></div>
+                      <div class="wform__part f-right">
+                        <label class="wform__label">* Введите текст с картинки:</label>
+                        <input type="text" name="captcha" class="wform__input">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wform__part f-right">
+                    <div class="wform__group wform__group--bid">
+                      <label class="wform__label">* Выберите город в котором вы работаете:</label>
+                      <ul class="wform__check-list unstyled-list">
+                        <li class="wform__check-item">
+                          <div class="pseudo-check">
+                            <input id="compare1" type="checkbox" class="pseudo-check__input">
+                            <label for="compare1" class="pseudo-check__label">Минск (Центральный р-н)
+                              <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="wform__check-item">
+                          <div class="pseudo-check">
+                            <input id="compare2" type="checkbox" class="pseudo-check__input">
+                            <label for="compare2" class="pseudo-check__label">Минск (Центральный р-н)
+                              <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="wform__check-item">
+                          <div class="pseudo-check">
+                            <input id="compare3" type="checkbox" class="pseudo-check__input">
+                            <label for="compare3" class="pseudo-check__label">Минск (Центральный р-н)
+                              <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="wform__check-item">
+                          <div class="pseudo-check">
+                            <input id="compare4" type="checkbox" class="pseudo-check__input">
+                            <label for="compare4" class="pseudo-check__label">Минск (Центральный р-н)
+                              <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="wform__check-item">
+                          <div class="pseudo-check">
+                            <input id="compare1" type="checkbox" class="pseudo-check__input">
+                            <label for="compare1" class="pseudo-check__label">Минск (Центральный р-н)
+                              <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="wform__check-item">
+                          <div class="pseudo-check">
+                            <input id="compare1" type="checkbox" class="pseudo-check__input">
+                            <label for="compare1" class="pseudo-check__label">Минск (Центральный р-н)
+                              <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="wform__check-item">
+                          <div class="pseudo-check">
+                            <input id="compare1" type="checkbox" class="pseudo-check__input">
+                            <label for="compare1" class="pseudo-check__label">Минск (Центральный р-н)
+                              <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="wform__check-item">
+                          <div class="pseudo-check">
+                            <input id="compare1" type="checkbox" class="pseudo-check__input">
+                            <label for="compare1" class="pseudo-check__label">Минск (Центральный р-н)
+                              <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="wform__check-item">
+                          <div class="pseudo-check">
+                            <input id="compare1" type="checkbox" class="pseudo-check__input">
+                            <label for="#compare1" class="pseudo-check__label">Минск (Центральный р-н)
+                              <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="wform__check-item">
+                          <div class="pseudo-check">
+                            <input id="compare1" type="checkbox" class="pseudo-check__input">
+                            <label for="compare1" class="pseudo-check__label">Минск (Центральный р-н)
+                              <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="wform__group wform__group--bid t-center"><a href="#" class="wform__toggle">Другие города</a></div>
+                    <div class="wform__group wform__group--bid">
+                      <label class="wform__label">* Выберите услуги, которые Вы оказываете:</label>
+                      <ul class="wform__check-list unstyled-list">
+                        <li class="wform__check-item">
+                          <div class="pseudo-check">
+                            <input id="compare1" type="checkbox" class="pseudo-check__input">
+                            <label for="compare1" class="pseudo-check__label">Услуга 1
+                              <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="wform__check-item">
+                          <div class="pseudo-check">
+                            <input id="compare1" type="checkbox" class="pseudo-check__input">
+                            <label for="compare1" class="pseudo-check__label">Услуга 1
+                              <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="wform__check-item">
+                          <div class="pseudo-check">
+                            <input id="compare1" type="checkbox" class="pseudo-check__input">
+                            <label for="#compare1" class="pseudo-check__label">Услуга 1
+                              <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="wform__check-item">
+                          <div class="pseudo-check">
+                            <input id="compare1" type="checkbox" class="pseudo-check__input">
+                            <label for="compare1" class="pseudo-check__label">Услуга 1
+                              <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="wform__check-item">
+                          <div class="pseudo-check">
+                            <input id="compare1" type="checkbox" class="pseudo-check__input">
+                            <label for="compare1" class="pseudo-check__label">Услуга 1
+                              <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="wform__check-item">
+                          <div class="pseudo-check">
+                            <input id="compare1" type="checkbox" class="pseudo-check__input">
+                            <label for="compare1" class="pseudo-check__label">Услуга 1
+                              <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="wform__check-item">
+                          <div class="pseudo-check">
+                            <input id="compare1" type="checkbox" class="pseudo-check__input">
+                            <label for="compare1" class="pseudo-check__label">Услуга 1
+                              <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="wform__check-item">
+                          <div class="pseudo-check">
+                            <input id="compare1" type="checkbox" class="pseudo-check__input">
+                            <label for="compare1" class="pseudo-check__label">Услуга 1
+                              <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="wform__check-item">
+                          <div class="pseudo-check">
+                            <input id="compare1" type="checkbox" class="pseudo-check__input">
+                            <label for="compare1" class="pseudo-check__label">Услуга 1
+                              <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="wform__check-item">
+                          <div class="pseudo-check">
+                            <input id="compare1" type="checkbox" class="pseudo-check__input">
+                            <label for="compare1" class="pseudo-check__label">Услуга 1
+                              <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="wform__group wform__group--bid t-center"><a href="#" class="wform__toggle">Другие города</a></div>
+                    <div class="wform__group wform__group--bid">
+                      <div class="wform__rules t-center"><span>Регестрируясь, вы соглашаетесь с</span><a href="#" class="wform__rules-lnk">правилами</a></div>
+                      <input type="submit" value="Зарегистрироваться" class="wform__submit wform__submit">
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!--build:js ./js/vendor.js-->
+  <!--bower:js-->
+  <script src="./bower_components/jquery/jquery.js"></script>
+  <!--endbower-->
+  <script src="./js/vendor/fancybox.js"></script>
+  <script src="./js/vendor/bvsTabs.js"></script>
+  <script src="./js/vendor/jquery.custom-select.min.js"></script>
+  <script src="./js/vendor/jquery.validate.js"></script>
+  <!-- endbuild-->
+  <!--build:js ./js/combined.js-->
+  <script src="./js/main.js"></script>
+  <script src="./js/plugins.js"></script>
+  <!-- endbuild-->
+  <!--[if lt IE 10]-->
+  <script>(src="/js/vendor/jquery-placeholder.js")</script>
+  <!--[endif]-->
+</html>
