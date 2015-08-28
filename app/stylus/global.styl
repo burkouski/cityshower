@@ -64,6 +64,12 @@ a
   sprite($s-ctrll)
 .s-icon--ctrlr
   sprite($s-ctrlr)
+.s-icon--question
+  sprite($s-question)
+.s-icon--plus
+  sprite($s-plus)
+.s-icon--minus
+  sprite($s-minus)
 .bs-icon--cart
   &:before
     sprite($s-cart)
@@ -82,7 +88,9 @@ a
 .bs-icon--click
   &:before
     sprite($s-click)
-
+.bs-icon--calendar
+  &:before
+    sprite($s-calendar)
 .bs-icon--delivery
   &:before
     sprite($s-delivery)
@@ -95,6 +103,9 @@ a
 .as-icon--toggle
   &:after
     sprite($s-toggle)
+.as-icon--close
+  &:after
+    sprite($s-close)
 /*Футер к низу страницы*/
 html
 body
@@ -133,3 +144,26 @@ body
   display none
   &.active
     display block
+
+table
+ width 100%
+tr
+  background #f3f3f3
+  &:nth-child(2n)
+    background #fff
+td
+  padding 4px
+
+input.error
+textarea.error
+  border-color red
+  outline none
+label.error
+  color #ff0000
+
+.fixed
+  width 100%
+  position fixed
+  top 0
+  z-index 2
+  box-shadow 0 0 10px rgba(0,0,0,0.5)

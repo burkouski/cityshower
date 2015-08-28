@@ -17,6 +17,8 @@ $(function(){
             }
         }
     );
+    $('.js-carousel').bvsCarousel();
+
     $('.js-tabs').on('click', function(){
         $.fancybox.update();
     })

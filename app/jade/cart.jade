@@ -1,0 +1,80 @@
+extends ./layout.jade
+block main
+    section.page
+        .container
+            .page__one-column.page__static
+                .cart-page
+                    .page__heading
+                        h1.page__title Корзина
+                    .cart-page__wrap
+                        table.cart-page__table
+                            tbody
+                                tr
+                                    td.t-center
+                                        img.cart-page__img(src='./img/product/product1.jpg')
+                                    td
+                                        .cart-page__product-name Душевая кабина Домани Light High
+                                            span.product-label.cart-page__label.s-icon.s-icon--blabel Хиты продаж
+                                        .cart-page__product-size 120 х 80 см
+                                        .cart-page__product-code Код товара:
+                                            span.blue 100548
+                                    td.t-center
+                                        .cart-page__counter.counter
+                                            span.counter__minus.s-icon.s-icon--minus
+                                            span.counter__count 1
+                                            span.counter__plus.s-icon.s-icon--plus
+                                        a.cart-page__delete-lnk(href='#') Удалить товар
+                                    td.t-right
+                                        .cart-page__price 16 500 000
+                                            span.cart-page__curency руб
+                        .cart-page__total.t-right
+                            .cart-page__total-label Итого:
+                            .cart-page__price 16 500 000
+                                span.cart-page__curency руб
+                    .checkout
+                        .checkout__wrap.clearfix
+                            h3.wform__title Контактные данные
+                            form#checkout
+                                .checkout__part-left.f-left
+                                    .checkout__inline-group
+                                        .checkout__group-inline
+                                            label.wform__label Ваши фамилия и имя:
+                                            input.wform__input(type='text', placeholder='Петр Петрович', name='name')
+                                        .checkout__group-inline
+                                            label.wform__label *Ваш номер телефона:
+                                            input.wform__input(type='text', placeholder='+375 28 895-39-12', name='phone')
+                                        .checkout__group-inline
+                                            label.wform__label *Ваш e-mail:
+                                            input.wform__input(type='text', placeholder='goroddushevihkabin@gmail.com')
+                                    .checkout__group
+                                        label.wform__label Если у Вас есть какие либо пожелания, напишите их в коментарии:
+                                        textarea.wform__textarea(placeholder='Текст описания', name='desc')
+                                .checkout__part-right.f-right
+                                    .checkout__group
+                                        h3.wform__title Доставка
+                                        .wform__group
+                                            .pseudo-check
+                                                input#compare1.pseudo-check__input(type='checkbox')
+                                                label.pseudo-check__label(for='compare1') Курьером -
+                                                    span.blue  0 руб
+                                                    .pseudo-check__bg.pseudo-check__bg--big
+                                        .wform__group
+                                            label.wform__label Адрес доставки:
+                                            input.wform__input(type='text', placeholder='Улица, дом, квартира', name='address')
+                                        .wform__group
+                                            .pseudo-check
+                                                input#compare1.pseudo-check__input(type='checkbox')
+                                                label.pseudo-check__label(for='compare1') Самовывоз со склада -
+                                                    span.blue  0 руб
+                                                    .pseudo-check__bg.pseudo-check__bg--big
+                                    .checkout__group
+                                        h3.wform__title Способы оплаты
+                                        .wform__group
+                                            .pseudo-check
+                                                input#compare1.pseudo-check__input(type='checkbox')
+                                                label.pseudo-check__label(for='compare1') Минск (Центральный р-н)
+                                                    .pseudo-check__bg.pseudo-check__bg--big
+                                        .wform__group
+                                            span Общая стоимость заказа: 16 500 000 руб.
+                                    .checkout__group
+                                        input.wform__submit(type='submit', value='Оформить заказ')

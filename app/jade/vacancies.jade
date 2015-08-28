@@ -1,0 +1,113 @@
+extends ./layout.jade
+block main
+    section.page
+        .container
+            .page__one-column.page__static
+                .vacancies
+                    .page__heading
+                        h1.page__title Купить душевую кабинку со скидкой на распрадаже
+                    .page__content
+                        p Город душевых кабин , крупная компания. Мы всегда рады новым целеустремленным сотрудникам. На данный момент у нас открыт следующие вакансии:
+                    .vacancies__wrap
+                        .vacancies__item
+                            .vacancies__item-wrap
+                                h5.vacancies__title Директор направления
+                                span Обязанности:
+                                ul.unstyled-list
+                                    li - Руководство торговой командой (супервайзеры, торговые представители, маркировщики, менеджеры по продажам)
+                                    li - Работа с таможенными органами, оформление таможенных деклараций, контроль отгрузки товара.
+                            .vacancies__more-wrap.t-center
+                                a.vacancies__more-lnk(href='#') подробнее
+                        .vacancies__item
+                            .vacancies__item-wrap
+                                h5.vacancies__title Директор направления
+                                span Обязанности:
+                                ul.unstyled-list
+                                    li - Руководство торговой командой (супервайзеры, торговые представители, маркировщики, менеджеры по продажам)
+                                    li - Работа с таможенными органами, оформление таможенных деклараций, контроль отгрузки товара.
+                            .vacancies__more-wrap.t-center
+                                a.vacancies__more-lnk(href='#') подробнее
+                    .wform
+                        form#vacancies-form
+                            h3.wform__title Оставить заявку
+                            .wform__wrap.clearfix
+                                .wform__part.f-left
+                                    .wform__group
+                                        label.wform__label Ваши фамилия и имя:
+                                        input.wform__input(type='text', placeholder='Пароль', name='name')
+                                    .wform__group
+                                        .wform__group
+                                            label.wform__label *Ваш номер телефона:
+                                            input.wform__input(type='text', placeholder='+375 28 895-39-12', name='phone')
+                                    .wform__group
+                                        .wform__group
+                                            label.wform__label *Ваш e-mail:
+                                            input.wform__input(type='text', placeholder='goroddushevihkabin@gmail.com')
+                                    .wform__group
+                                        .wform__upload-wrap
+                                            label.wform__label.wform__label--inline Загрузите файл с вашим резюме:
+                                            label.wform__upload-label.wform__upload-label--inline(for='upload') Загрузить
+                                                input#upload.wform__upload(type='file')
+                                    .wform__group
+                                        label.wform__label Ваши преимущества:
+                                        textarea.wform__textarea(placeholder='Текст описания', name='desc')
+                                .wform__part.f-right
+                                    .wform__group
+                                        label.wform__label * Выберите город в котором вы работаете:
+                                        ul.wform__check-list.unstyled-list
+                                            li.wform__check-item
+                                                .pseudo-check
+                                                    input#compare1.pseudo-check__input(type='checkbox')
+                                                    label.pseudo-check__label(for='compare1') Минск (Центральный р-н)
+                                                        .pseudo-check__bg.pseudo-check__bg--big
+                                            li.wform__check-item
+                                                .pseudo-check
+                                                    input#compare2.pseudo-check__input(type='checkbox')
+                                                    label.pseudo-check__label(for='compare2') Минск (Центральный р-н)
+                                                        .pseudo-check__bg.pseudo-check__bg--big
+                                            li.wform__check-item
+                                                .pseudo-check
+                                                    input#compare3.pseudo-check__input(type='checkbox')
+                                                    label.pseudo-check__label(for='compare3') Минск (Центральный р-н)
+                                                        .pseudo-check__bg.pseudo-check__bg--big
+                                            li.wform__check-item
+                                                .pseudo-check
+                                                    input#compare4.pseudo-check__input(type='checkbox')
+                                                    label.pseudo-check__label(for='compare4') Минск (Центральный р-н)
+                                                        .pseudo-check__bg.pseudo-check__bg--big
+                                            li.wform__check-item
+                                                .pseudo-check
+                                                    input#compare1.pseudo-check__input(type='checkbox')
+                                                    label.pseudo-check__label(for='compare1') Минск (Центральный р-н)
+                                                        .pseudo-check__bg.pseudo-check__bg--big
+                                            li.wform__check-item
+                                                .pseudo-check
+                                                    input#compare1.pseudo-check__input(type='checkbox')
+                                                    label.pseudo-check__label(for='compare1') Минск (Центральный р-н)
+                                                        .pseudo-check__bg.pseudo-check__bg--big
+                                            li.wform__check-item
+                                                .pseudo-check
+                                                    input#compare1.pseudo-check__input(type='checkbox')
+                                                    label.pseudo-check__label(for='compare1') Минск (Центральный р-н)
+                                                        .pseudo-check__bg.pseudo-check__bg--big
+                                            li.wform__check-item
+                                                .pseudo-check
+                                                    input#compare1.pseudo-check__input(type='checkbox')
+                                                    label.pseudo-check__label(for='compare1') Минск (Центральный р-н)
+                                                        .pseudo-check__bg.pseudo-check__bg--big
+                                            li.wform__check-item
+                                                .pseudo-check
+                                                    input#compare1.pseudo-check__input(type='checkbox')
+                                                    label.pseudo-check__label(for='#compare1') Минск (Центральный р-н)
+                                                        .pseudo-check__bg.pseudo-check__bg--big
+                                            li.wform__check-item
+                                                .pseudo-check
+                                                    input#compare1.pseudo-check__input(type='checkbox')
+                                                    label.pseudo-check__label(for='compare1') Минск (Центральный р-н)
+                                                        .pseudo-check__bg.pseudo-check__bg--big
+                                    .wform__group
+                                        .wform__notice Проверте правильность заполнения полей. После отправления Вашей заявки наши
+                                            |операторы свяжутся с Вами.
+                                    .wform__group
+                                        input.wform__submit.wform__submit(type='submit', value='ОСТАВИТЬ ЗАЯВКУ НА ВАКАНСИЮ')
+

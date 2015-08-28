@@ -1,0 +1,153 @@
+extends ./layout.jade
+block main
+    section.page
+        .container
+            .page__two-columns.clearfix
+                .breadcrumbs
+                    ul.breadcrumbs__list.unstyled-list
+                        li.breadcrumbs__item
+                            a.breadcrumbs__lnk(href='/') Главная
+                        li.breadcrumbs__item
+                            span.breadcrumbs__sep >
+                        li.breadcrumbs__item
+                            a.breadcrumbs__lnk(href='/')  Климатическая техника
+                        li.breadcrumbs__item
+                            span.breadcrumbs__sep >
+                        li.breadcrumbs__item
+                            span.breadcrumbs__lnk.breadcrumbs__lnk--active  Охладители
+                aside.page__aside.f-left
+                    .page__aside-item
+                        .cat-menu
+                            h3.cat-menu__heading.as-icon.as-icon--toggle Служба мастеров
+                            .filter
+                                .filter__item
+                                    h5.filter__label Производитель
+                                    .filter__wrap
+                                        .filter__select-wrap
+                                            .filter__select-item
+                                                select.filter__select.js-select(name='')
+                                                    option(value="1") Любой
+                                                    option(value="2") Grado
+                                                    option(value="3") Akvali
+                                                    option(value="4") Radawei
+                                                    option(value="2") Grado
+                                                    option(value="3") Akvali
+                                                    option(value="4") Radawei
+                                                    option(value="2") Grado
+                                                    option(value="3") Akvali
+                                                    option(value="4") Radawei
+                                .filter__item
+                                    h5.filter__label Производитель:
+                            h3.cat-menu__heading Служба мастеров
+                            .filter
+                                .filter__wrap
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                            h3.cat-menu__heading Служба мастеров
+                            .filter
+                                .filter__wrap
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                            h3.cat-menu__heading Служба мастеров
+                            .filter
+                                .filter__wrap
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                                    .pseudo-check.filter__check
+                                        input#compare1.pseudo-check__input(type='checkbox')
+                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
+                                            .pseudo-check__bg.pseudo-check__bg--big
+                .page__content.page__content--right.f-right
+                    .masters-page
+                        .masters-page__bar.clearfix
+                            .masters-page__search-wrap.f-left
+                                input.masters-page__search(type='text', placeholder='поиск мастера')
+                                input.masters-page__search-submit(type='submit')
+                            .masters-page__add-wrap.f-right
+                                a.addmaster-btn(href='#') Добавить мастера
+                        .sort-bar
+                            .sort-bar__wrap.sort-bar__wrap--noborder
+                                .sort-bar__item
+                                    span.sort-bar__label Сортировать:
+                                    a.sort-bar__btn.active(href='#') По цене
+                                    a.sort-bar__btn(href='#') По популярности
+                                    a.sort-bar__btn(href='#') По отзывам
+                        .masters-page__wrap.clearfix
+                            for item in [1,2,3]
+                                .masters-page__item
+                                    .master-preview.master-preview--special
+                                        h3.master-preview__title
+                                            a.master-preview__title-lnk(href='#') Иванов Иван Иванович
+                                        .master-preview__img-wrap
+                                            img.master-preview__img(src='./img/masters/master1.jpg')
+                                        .master-preview__review-bar.clearfix
+                                            .product-preview__rating.f-left
+                                                i.product-star.s-icon.s-icon--pstar
+                                                i.product-star.s-icon.s-icon--pstar
+                                                i.product-star.s-icon.s-icon--pstar
+                                                i.product-star.s-icon.s-icon--pstar
+                                                i.product-star.s-icon.s-icon--nstar
+                                            a.product-preview__review-lnk.f-right(href='#') 25 отзывов
+                                        .master-preview__desc Идейные соображения высшего порядка, а также укрепление и развитие структуры требуют от нас анализа системы обучения кадров, соответствует...
+                                        .master-preview__btn-wrap.clearfix
+                                            a.master-preview__callbtn.f-left(href='#') Оставить заявку
+                                            a.master-preview__readmore.f-right(href='#') Подробнее
+                            for item in [1,2,3,4,5,6,7,8,9]
+                                .masters-page__item
+                                    .master-preview
+                                        h3.master-preview__title
+                                            a.master-preview__title-lnk(href='#') Иванов Иван Иванович
+                                        .master-preview__img-wrap
+                                            img.master-preview__img(src='./img/masters/master1.jpg')
+                                        .master-preview__review-bar.clearfix
+                                            .product-preview__rating.f-left
+                                                i.product-star.s-icon.s-icon--pstar
+                                                i.product-star.s-icon.s-icon--pstar
+                                                i.product-star.s-icon.s-icon--pstar
+                                                i.product-star.s-icon.s-icon--pstar
+                                                i.product-star.s-icon.s-icon--nstar
+                                            a.product-preview__review-lnk.f-right(href='#') 25 отзывов
+                                        .master-preview__desc Идейные соображения высшего порядка, а также укрепление и развитие структуры требуют от нас анализа системы обучения кадров, соответствует...
+                                        .master-preview__btn-wrap.clearfix
+                                            a.master-preview__callbtn.f-left(href='#') Оставить заявку
+                                            a.master-preview__readmore.f-right(href='#') Подробнее
+                        include ./include/pagination.jade
+

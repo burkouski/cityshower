@@ -40,7 +40,7 @@ block main
                                 .similar
                                     .similar__wrap.carousel.js-bvs__carousel
                                         .similar__title.clearfix ПОХОЖИЕ ТОВАРЫ
-                                            .carousel__ctrl-wrap.f-right
+                                            .similar__ctrl-wrap.f-right
                                                 span.carousel__ctrl.carousel__ctrl--left
                                                     i.carousel__ctrl-ico.s-icon.s-icon--ctrll.js-carousel__ctrl--left
                                                 span.carousel__ctrl.carousel__ctrl--right
@@ -83,25 +83,25 @@ block main
                         .shower__content.f-right
                             h1.shower__title Уголок душевой Iddis квадратный
                                 span.shower__title-label.product-label.s-icon.s-icon--blabel Хиты продаж
-                            .shower__bar.clearfix
-                                .shower__bar-item.f-left
-                                    .shower__meta
-                                        .shower__meta-item
+                            .meta-bar.shower__bar.clearfix
+                                .meta-bar-item.f-left
+                                    .meta-bar__meta
+                                        .meta-bar__meta-item
                                             span.shower__code Код: 3109139
-                                        .shower__meta-item
-                                            span.product-stock.product-stock--instock.bs-icon.bs-icon--instock.f-left В наличии
-                                        .shower__meta-item
-                                            .product-preview__rating
-                                                i.product-star.s-icon.s-icon--pstar
-                                                i.product-star.s-icon.s-icon--pstar
-                                                i.product-star.s-icon.s-icon--pstar
-                                                i.product-star.s-icon.s-icon--pstar
-                                                i.product-star.s-icon.s-icon--nstar
-                                .shower__bar-item.f-right
-                                    .shower__review
-                                        .shower__review-item
-                                            a.product-preview__review-lnk(href='#') 25 отзывов
-                                        .shower__review-item
+                                        .meta-bar__meta-item
+                                            span.stock.stock--instock.bs-icon.bs-icon--instock.f-left В наличии
+                                        .meta-bar__meta-item
+                                            .rating
+                                                i.rating__star.s-icon.s-icon--pstar
+                                                i.rating__star.s-icon.s-icon--pstar
+                                                i.rating__star.s-icon.s-icon--pstar
+                                                i.rating__star.s-icon.s-icon--pstar
+                                                i.rating__star.s-icon.s-icon--nstar
+                                .meta-bar__bar-item.f-right
+                                    .review-bar
+                                        .review-bar__item
+                                            a.review-lnk(href='#') 25 отзывов
+                                        .review-bar__item
                                             a.review-btn(href='#') Оставить отзыв
                             .shower__desc Душевая кабина – относительно новый сантехнический продукт, который предлагает нам отечественный рынок. На западе душевая кабина, как правило, является не столько заменой ванны, как ее дополнением. В большинстве же российских квартир с небольшими метражами ванных комнат, возможности установить и ванну, и душевую кабину, к сожалению, практически нет. Поэтому
                             .shower__pricebar.clearfix
@@ -134,10 +134,101 @@ block main
                                     .shower__cond-desc
                                         a(href='#') Установка и подключение
                             .shower__features
-                                .shower__features-label Особенности этой модели
-                                .product-feature
+                                .shower__features-label Особенности этой модели:
+                                .product-feature.shower__features-list
                                     img.product-feature__img(src='./img/feature/f1.png', title='Особенность')
                                     img.product-feature__img(src='./img/feature/f2.png', title='Особенность')
                                     img.product-feature__img(src='./img/feature/f3.png', title='Особенность')
                                     img.product-feature__img(src='./img/feature/f4.png', title='Особенность')
                                     img.product-feature__img(src='./img/feature/f5.png', title='Особенность')
+                            .shower__detail
+                                .js-tabs
+                                    .modal__bar.clearfix
+                                        a.modal__btn.js-tabs__tab.f-left.active(href='#', data-index='0') Характеристики
+                                        a.modal__btn.js-tabs__tab.f-left(href='#', data-index='1') Описание товара
+                                        a.modal__btn.js-tabs__tab.f-left(href='#', data-index='2') Отзывы
+                                    .js-tabs__wrap
+                                        .js-tabs__content.active
+                                            .shower__detail-item
+                                                .detail
+                                                    h4.detail__title Технические характеристики:
+                                                    table.detail__table
+                                                        tbody
+                                                            tr
+                                                                td
+                                                                    a.s-icon.s-icon--question(href="")
+                                                                    | Форма:
+                                                                td.t-right Квадрат
+                                                            tr
+                                                                td
+                                                                    a.s-icon.s-icon--question(href="")
+                                                                    | Размеры:
+                                                                td.t-right 90 х 90 х 185 см
+                                            .shower__detail-item
+                                                .detail
+                                                    h4.detail__title Размеры и вес (нетто):
+                                                    table.detail__table
+                                                        tbody
+                                                            tr
+                                                                td
+                                                                    a.s-icon.s-icon--question(href="")
+                                                                    | Вес:
+                                                                td.t-right 51,5 кг
+                                                            tr
+                                                                td Высота:
+                                                                td.t-right 8,0 см
+                                                            tr
+                                                                td Ширина:
+                                                                td.t-right 51,0 см
+                                                            tr
+                                                                td Глубина:
+                                                                td.t-right 188,0 см
+                                            .shower__detail-item
+                                                .detail
+                                                    h4.detail__title Дополнительная информация:
+                                                    table.detail__table
+                                                        tbody
+                                                            tr
+                                                                td Страна производства:
+                                                                td.t-right Россия
+                                                            tr
+                                                                td Срок службы:
+                                                                td.t-right 20 лет
+                                                            tr
+                                                                td Гарантийный срок:
+                                                                td.t-right 24 месяца
+                                            .shower__detail-item
+                                                .detail
+                                                    h4.detail__title Размеры и вес (нетто):
+                                                    table.detail__table
+                                                        tbody
+                                                            tr
+                                                                td Вес:
+                                                                td.t-right 51,5 кг
+                                                            tr
+                                                                td Высота:
+                                                                td.t-right 8,0 см
+                                                            tr
+                                                                td Ширина:
+                                                                td.t-right 51,0 см
+                                                            tr
+                                                                td Глубина:
+                                                                td.t-right 188,0 см
+                                            .shower__detail-item
+                                                .detail
+                                                    h4.detail__title Дополнительная информация:
+                                                    table.detail__table
+                                                        tbody
+                                                            tr
+                                                                td Страна производства:
+                                                                td.t-right Россия
+                                                            tr
+                                                                td Срок службы:
+                                                                td.t-right 20 лет
+                                                            tr
+                                                                td Гарантийный срок:
+                                                                td.t-right 24 месяца
+
+                                        .js-tabs__content
+                                        .js-tabs__content
+

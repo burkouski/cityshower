@@ -42,15 +42,33 @@
 
 .page
   padding 0 0 48px 0
+.page__static
+  padding 18px 0 30px
 .page__aside
   width 301px
 .page__content--right
   width 909px
 .page__aside-item
   margin 0 0 36px 0
-.page__title
+.page__heading
   margin 0 0 13px 0
+.page__title
+  margin 0
   font-size 20px
+  text-transform uppercase
+.page__title--blue
+  margin 0 0 0 5px
+  color #739ac5
+.page__subtitle
+  &:before
+    position relative
+    top 2px
+    margin 0 9px 0 0
+ .page__subtitle--blue
+  margin 0 0 0 5px
+  color #739ac5
+
+
 .pagination
   padding 15px 0 0 0
   border-top 1px solid #dedede
@@ -234,11 +252,14 @@
   padding 15px 21px 15px 108px
   border 1px solid #b2b2b2
   background rgba(255,255,255,0.5)
+  text-decoration none
   &:before
     position absolute
     top 50%
     left 15px
     margin-top -22px
+  &:hover
+    background rgba(255,255,255,1)
 .cart__label
   color #739ac5
   text-transform uppercase
@@ -359,8 +380,8 @@
 
 
 .popular
-  padding 70px 0 25px
-  background url("../img/bg/dot1-bg.png") no-repeat left top
+  padding 70px 0 70px
+  background url("../img/bg/dot1-bg.png") no-repeat left bottom
 .populat__title
   padding 0 0 20px 0
   border-bottom 1px solid #b8b8b8
@@ -395,16 +416,16 @@
 .carousel__wrap
   overflow hidden
 .carousel__items-wrap
+  position relative
   width 10000px
 .popular__item
   float left
-  width 403px
-  margin 0 15px 0 0
+  width 408px
+  padding  0 15px 0 0
+  border-right 1px solid #b8b8b8
 .carousel__ctrl-wrap
   position relative
   top 1px
-  padding 0 0 0 5px
-  background #ffffff
 .carousel__ctrl
   display inline-block
   width 37px
@@ -449,7 +470,7 @@
   text-transform uppercase
   &:hover
     background red
-.product-stock
+.stock
   position relative
   display inline-block
   padding 0 0 0 13px
@@ -459,9 +480,9 @@
     position absolute
     top 5px
     left 0
-.product-stock--instock
+.stock--instock
   color #63b137
-.product-stock--outstock
+.stock--outstock
   color #e9542a
 .product-preview
   position relative
@@ -518,7 +539,7 @@
     text-decoration none
 
 .masters
-  margin 0 0 75px 0
+  margin -90px 0 75px 0
   padding 120px 0 70px
   background url("../img/bg/masters-bg.png") no-repeat
   background-size cover
@@ -540,6 +561,11 @@
 .master-preview
   padding 15px
   background #ffffff
+  border 1px solid #ffffff
+  &:hover
+    border 1px solid #739ac5
+.master-preview--special
+  background rgba(254,239,211, 0.5)
 .master-preview__img-wrap
   height 147px
   margin 0 0 8px 0
@@ -630,6 +656,10 @@
 
 
 .modal
+  position relative
+  display none
+  padding 30px 0 0 0
+.modal__wrap
   padding 0 28px 14px 28px
   background white
 .modal__bar
@@ -648,11 +678,28 @@
     background #739ac5
     color #ffffff
     text-decoration none
+.modal__close
+  position absolute
+  right 0px
+  top 0
+  display block
+  color #ffffff
+  line-height 20px
+  cursor pointer
+  &:after
+    position relative
+    top 4px
+    margin 0 0 0 10px
 
 .wform__group
   margin 13px 0 0 0
   &:first-child
     margin 0
+.wform__title
+  margin 0 0 17px 0
+  color #739ac5
+  font-size 14px
+  text-transform uppercase
 .wform__group--bid
   margin 25px 0 0 0
 .wform--login
@@ -699,6 +746,9 @@
   margin 0 0 5px 0
   font-size 13px
   font-weight 300
+.wform__label--inline
+  display inline-block
+  margin-right 23px
 .wform__notice
   color #a0a0a0
   font-size 13px
@@ -720,6 +770,13 @@
     background #739ac5
     color #ffffff
     text-decoration none
+.wform__upload
+  display none
+.wform__mess
+  color #739ac5
+  font-size 13px
+  text-transform uppercase
+
 
 .pseudo-check__label
   position relative
@@ -897,6 +954,8 @@
   padding 8px 0
   border-top 1px solid #b8b8b8
   border-bottom 1px solid #b8b8b8
+.sort-bar__wrap--noborder
+  border none
 .sort-bar__label
   margin 0 20px 0 0
   font-size 13px
@@ -984,10 +1043,6 @@
   font-weight 600
 .shower__title-label
   left 8px
-.shower__meta-item
-  display inline-block
-  vertical-align top
-  margin 0 32px 0 0
 .shower__code
   font-size 12px
 .shower__bar
@@ -1001,10 +1056,6 @@
   color #acacac
   font-size 16px
   text-decoration line-through
-.shower__review-item
-  display inline-block
-  vertical-align top
-  margin 0 0 0 10px
 .shower__btnbar-item
   margin 20px 0 0 0
 .shower__pricebar-item
@@ -1031,7 +1082,8 @@
     background #739ac5
     color #ffffff
 .shower__cond-item
-  padding 10px 0
+  height 50px
+  padding 12px 0 0 0
 .shower__cond-label
 .shower__cond-desc
   display inline-block
@@ -1040,8 +1092,42 @@
   position relative
   width 127px
   padding 0 0 0 42px
+  &:before
+    position absolute
+    top 50%
+    left 0px
+    margin -17px 0 0 0
 .shower__cond-desc
   width 490px
+.shower__cond-bar
+  margin 0 0 22px 0
+.shower__features
+  border-top 1px solid #b8b8b8
+  line-height 45px
+.shower__features-label
+  display inline-block
+  margin 0 14px 0 0
+  text-transform uppercase
+.shower__features-list
+  display inline-block
+.shower__detail
+  padding 0 12px 12px 12px
+  border 1px solid #b8b8b8
+.shower__detail-item
+  margin 20px 0 0 0
+  &:first-child
+    margin 0
+
+.meta-bar__meta-item
+  display inline-block
+  vertical-align top
+  margin 0 32px 0 0
+.review-bar__item
+  display inline-block
+  vertical-align top
+  margin 0 0 0 10px
+
+
 .gallery__img-wrap
   height 512px
   line-height 512px
@@ -1079,6 +1165,350 @@
   font-size 20px
   font-weight 600
   text-transform uppercase
+.similar__ctrl-wrap
+  position relative
+  top 1px
+  padding 0 0 0 4px
+  background white
+.detail__title
+  margin 0 0 6px 0
+  font-size 13px
+
+.masters-page
+  overflow hidden
+.masters-page__wrap
+  margin 0 0 0 -23px
+.masters-page__item
+  float left
+  width 310px
+  margin 0 0 15px 0
+  padding 0 23px
+  border-left 1px solid #b8b8b8
+.masters-page__special
+  outline  3px solid #ff9600
+
+.master__aside
+  width 272px
+.master__aside-item
+  margin 14px 0 0 0
+  &:first-child
+    margin 0
+.master__content
+  width 622px
+.master__wrap
+  margin 0 0 35px 0
+.master__title
+  margin 0 0 9px 0
+  padding 0 0 14px 0
+  border-bottom 1px solid #b8b8b8
+  color #44444d
+  font-size 20px
+.master__address
+  display inline-block
+  color #555
+  font-size 16px
+  font-weight 300
+  line-height 22px
+.master__bar
+  margin 0 0 30px 0
+.master__desc
+  margin 0 0 20px 0
+.master__ava
+  max-width 100%
+.master__phone
+  margin 0 0 20px 0
+.master__phone-item
+  margin 0 0 0 28px
+  font-weight bold
+  text-transform uppercase
+  &:first-child
+    margin 0
+.master__service-title
+  margin 0
+  text-transform uppercase
+.master__service-wrap
+  margin 0 0 0 -20px
+.master__service-item
+  display inline-block
+  width 190px
+  margin 14px 0 0 20px
+.master__service
+  margin 0
+.master__detail
+  padding 0 26px 26px
+  border 1px solid #b8b8b8
+.portfolio__bar
+  margin 0 0 20px 0
+.portfolio__sort-item
+  display inline-block
+  margin 0 0 0 9px
+  padding 0 0 0 9px
+  border-left 1px solid #739ac5
+  color #739ac5
+  font-size 13px
+  text-decoration underline
+  cursor pointer
+  &:hover
+  &.active
+    color #555555
+    text-decoration none
+  &:first-child
+    margin 0
+    padding 0
+    border none
+.portfolio__wrap
+  margin 0 0 0 -18px
+  font-size 0
+.portfolio__item
+  width 200px
+  margin 0 0 18px 18px
+.accardion
+  margin 0 0 35px 0
+.accardion__item
+  margin 6px 0 0 0
+  padding 0 18px
+  border 1px solid #b8b8b8
+  &:first-child
+    margin 0
+.accardion__title
+  margin 0
+  padding 15px 0
+  color #739ac5
+  font-size 16px
+  cursor pointer
+.accardion__content
+  padding 0 0 22px 0
+
+.action__wrap
+  margin 0 0 0 -28px
+.action__item
+  width 288px
+  margin 0 0 16px 28px
+.action__img-wrap
+  margin 0 0 8px 0
+  font-size 0
+.action__lnk
+  display block
+  margin 0 0 8px 0
+  color #737373
+  text-decoration none
+  &:hover
+    text-decoration underline
+.action__discont
+  color #739ac5
+  font-weight bold
+  text-transform uppercase
+.action__date
+  position relative
+  padding 0 0 0 22px
+  font-size 12px
+  &:before
+    position absolute
+    left 0
+    top 50%
+    margin -8px 0 0 0
+
+.vacancies__wrap
+  margin 33px 0 33px -95px
+.vacancies__item
+  display inline-block
+  vertical-align top
+  width 560px
+  margin 0 0 0 95px
+  font-size 13px
+.vacancies__item-wrap
+  padding 0 8px
+  border-left 3px solid #739ac5
+.vacancies__title
+  margin 0 0 15px 0
+.vacancies__more-wrap
+  margin 3px 0 0 0
+.vacancies__more-lnk
+  display inline-block
+  border-bottom 1px dashed #739ac5
+  color #739ac5
+  text-decoration none
+  &:hover
+    border-bottom 1px dashed #ffffff
+
+.cart-page__img
+  max-width 100px
+.cart-page__product-name
+  font-size 16px
+.cart-page__product-size
+.cart-page__product-code
+  font-size 12px
+.cart-page__label
+  margin 0 0 0 10px
+.cart-page__counter
+  display inline-block
+  margin 0 20px 0 0
+.counter__minus
+.counter__plus
+  position relative
+  top 2px
+.counter__count
+  display inline-block
+  width 40px
+  padding 0 5px
+.cart-page__delete-lnk
+  color #d41f1f
+  font-size 12px
+  text-decoration underline
+  &:hover
+    text-decoration none
+.cart-page__price
+  display inline-block
+  color #739ac5
+  font-size 24px
+  font-weight bold
+.cart-page__curency
+  margin 0 0 0 6px
+  font-size 14px
+  font-weight normal
+.cart-page__total-label
+  display inline-block
+  margin 0 10px 0 0
+  font-size 18px
+  text-transform uppercase
+.cart-page__wrap
+  margin 0 0 60px 0
+.cart-page__table
+  margin 0 0 23px 0
+  tr
+    border 1px solid #b8b8b8
+    background none
+  td
+    padding 10px
+
+
+
+.checkout__part-left
+  width 894px
+.checkout__inline-group
+  margin 0 0 0 -56px
+.checkout__part-right
+  width 302px
+.checkout__group-inline
+  display inline-block
+  width 260px
+  margin 0 0 0 54px
+.checkout__group
+  margin 35px 0  0 0
+  &:first-child
+    margin 0
+
+.ourweb__select
+  width 263px
+  margin 0 0 15px 0
+.ourweb__page-title
+  margin 0 0 25px 0
+  color #739ac5
+  font-size 16px
+  text-transform uppercase
+.blue
+  margin 0 0 0 4px
+  color #739ac5
+.ourweb__page-wrap
+  margin 0 0 0 -80px
+.ourweb__item
+  display inline-block
+  width 357px
+  margin 0 0 40px 80px
+  padding  0 0 0 13px
+  border-left 3px solid #739ac5
+  font-size 13px
+.ourweb__item-title
+  margin 0 0 15px 0
+  color #000
+  font-size 13px
+  text-transform uppercase
+.ourweb__item-part
+  width 48%
+.ourweb__contacts-title
+  font-weight bold
+.ourweb__item-wrap
+  margin 0 0 15px 0
+.ourweb__map-title
+  color #739ac5
+  font-size 16px
+
+.services__wrap
+  margin 0 0 0 -90px
+  padding 15px 0 0 0
+.services__part
+  display inline-block
+  width 350px
+  margin 0 0 0 90px
+.services__item
+  margin 0 0 40px 0
+.services__title
+  margin 0 0 18px 0
+  color #739ac5
+  font-size 16px
+  text-transform uppercase
+.services__list-item
+  margin 6px 0 0 0
+  &:first-child
+    margin 0
+.services__list-lnk
+  color #555555
+.news__item
+  width 230px
+.news-preview__img-wrap
+  position relative
+  text-align center
+  font-size 0
+.news-preview__img
+  max-width 100%
+.news-preview__label
+  position absolute
+  top 0px
+  left 0px
+.news-preview__wrap
+  position relative
+  padding 10px 7px 5px
+  border-right 1px solid #dfdfdf
+  border-bottom 1px solid #dfdfdf
+  border-left 1px solid #dfdfdf
+  &:after,
+  &:before
+    border-left: 24px solid transparent
+    border-right: 24px solid transparent
+    border-bottom: 24px solid #fff
+    top -23px
+    content ''
+    left 50%
+    margin-left -24px
+    position: absolute
+.news-preview__title
+  margin 0 0 16px 0
+  color #1e1e1e
+  font-size 14px
+  text-align center
+.news-preview__desc
+  margin 0 0 10px 0
+  font-size 12px
+.news-preview__more-lnk
+  font-size 12px
+.news-preview__date
+  font-size 11px
+.news__item
+  margin-bottom 22px
+.color-label
+  display inline-block
+  vertical-align top
+  padding 0 15px
+  color #ffffff
+  font-size 11px
+  text-transform uppercase
+  line-height 28px
+.color-label--yellow
+  background #e0b625
+.color-label--pink
+  background #c92b9e
+.color-label--green
+  background #2bc948
 
 .review-btn
   display inline-block
@@ -1127,3 +1557,13 @@
     top 50%
     left 7px
     margin -12px 0 0 0
+.request-btn
+  display inline-block
+  width 100%
+  background #739ac5
+  color white
+  line-height 43px
+  text-align center
+  text-decoration none
+  text-transform uppercase
+

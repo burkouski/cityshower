@@ -37,24 +37,24 @@ block header_bottom
                                 |Цвет задних стенок: черный
                             a.maze__btn.maze__btn--small.maze__btn--usual(href='#') Заказать
 block main
-    section.popular.carousel.js-bvs__carousel
+    section.popular.carousel.js-carousel
         .container
             h3.populat__title Популярные товары
             .popular__bar.clearfix
                 .popular__bar-item.f-left
-                    .popular__sort-btn Хиты продаж
+                    .popular__sort-btn.js-sort-tab(data-label='hit')  Хиты продаж
                 .popular__bar-item.f-left
-                    .popular__sort-btn Новинки
+                    .popular__sort-btn.js-sort-tab(data-label='new')  Новинки
                 .popular__bar-item.f-left
-                    .popular__sort-btn Акционные
+                    .popular__sort-btn.js-sort-tab(data-label='discount')  Акционные
                 .popular__bar-item.f-right
                     .carousel__ctrl-wrap
-                        span.carousel__ctrl.carousel__ctrl--left
-                            i.carousel__ctrl-ico.s-icon.s-icon--ctrll.js-carousel__ctrl--left
-                        span.carousel__ctrl.carousel__ctrl--right
-                            i.carousel__ctrl-ico.s-icon.s-icon--ctrlr.js-carousel__ctrl--right
+                        span.carousel__ctrl.carousel__ctrl--left.js-carousel__ctrl--left
+                            i.carousel__ctrl-ico.s-icon.s-icon--ctrll
+                        span.carousel__ctrl.carousel__ctrl--right.js-carousel__ctrl--right
+                            i.carousel__ctrl-ico.s-icon.s-icon--ctrlr
             .carousel__wrap
-                .carousel__items-wrap.clearfix
+                .carousel__items-wrap.js-carousel__wrap.clearfix
                     for item in [1,2,3]
                         .popular__item.js-carousel__slide.js-sort-tab__content(data-label='hit')
                             .product-preview.t-center
@@ -63,7 +63,7 @@ block main
                                     a(href='')
                                         img.product-preview__img(src='./img/product/product1.jpg')
                                 .product-preview__meta.clearfix
-                                    span.product-stock.product-stock--instock.bs-icon.bs-icon--instock.f-left В наличии
+                                    span.stock.stock--instock.bs-icon.bs-icon--instock.f-left В наличии
                                     .product-compare
                                         .pseudo-check
                                             input#compare1.pseudo-check__input(type='checkbox')
@@ -96,7 +96,7 @@ block main
                                     a(href='')
                                         img.product-preview__img(src='./img/product/product1.jpg')
                                 .product-preview__meta.clearfix
-                                    span.product-stock.product-stock--instock.bs-icon.bs-icon--instock.f-left В наличии
+                                    span.stock.stock--instock.bs-icon.bs-icon--instock.f-left В наличии
                                     .product-compare
                                         .pseudo-check
                                             input#compare1.pseudo-check__input(type='checkbox')
@@ -129,7 +129,7 @@ block main
                                     a(href='')
                                         img.product-preview__img(src='./img/product/product1.jpg')
                                 .product-preview__meta.clearfix
-                                    span.product-stock.product-stock--instock.bs-icon.bs-icon--instock.f-left В наличии
+                                    span.stock.stock--instock.bs-icon.bs-icon--instock.f-left В наличии
                                     .product-compare
                                         .pseudo-check
                                             input#compare1.pseudo-check__input(type='checkbox')
@@ -156,20 +156,22 @@ block main
                                     a.product-preview__review-lnk(href='#') 25 отзывов
             .popular__readmore-wrap.t-right
                 a.readmore(href='#') Весь каталог
-    section.masters.carousel.js-bvs__carousel
+    section.masters.carousel.js-carousel
         .container
             .masters-wrap.carousel__wrap
                 .masters__bar.clearfix
                     h3.masters__title.f-left Служба мастеров
                     .carousel__ctrl-wrap.f-right
-                        span.carousel__ctrl.carousel__ctrl--left
-                            i.carousel__ctrl-ico.s-icon.s-icon--ctrll.js-carousel__ctrl--left
-                        span.carousel__ctrl.carousel__ctrl--right
-                            i.carousel__ctrl-ico.s-icon.s-icon--ctrlr.js-carousel__ctrl--right
-                .carousel__items-wrap
-                    for item in [1,2,3,4]
-                        .masters__item
+                        span.carousel__ctrl.carousel__ctrl--left.js-carousel__ctrl--left
+                            i.carousel__ctrl-ico.s-icon.s-icon--ctrll
+                        span.carousel__ctrl.carousel__ctrl--right.js-carousel__ctrl--right
+                            i.carousel__ctrl-ico.s-icon.s-icon--ctrlr
+                .carousel__items-wrap.js-carousel__wrap
+                    for item in [1,2,3,4,5,6,7,8]
+                        .masters__item.js-carousel__slide
                             .master-preview
+                                h3.master-preview__title
+                                    a.master-preview__title-lnk(href='#') Иванов Иван Иванович
                                 .master-preview__img-wrap
                                     img.master-preview__img(src='./img/masters/master1.jpg')
                                 .master-preview__review-bar.clearfix

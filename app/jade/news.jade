@@ -1,0 +1,86 @@
+extends ./layout.jade
+block main
+    section.page
+        .container
+            .page__one-column.page__static
+                .news
+                    .page__heading
+                        h1.page__title Новости
+                    .news__wrap.js-masonry(data-masonry-options='{ "itemSelector": ".js-masonry__item","gutter": 22 }')
+                        for item in [1,2,3]
+                            .news__item.js-masonry__item
+                                .news-preview
+                                    .news-preview__img-wrap
+                                        a(href='#')
+                                            img.news-preview__img(src='./img/news/news1.jpg')
+                                        .color-label.color-label--yellow.news-preview__label Решение дня
+                                    .news-preview__wrap
+                                        h3.news-preview__title Свободное пространство для личностей!
+                                        .news-preview__desc Насладитесь удовольствием освежающего душа с безграничными возможностями и многогранным комфортом.
+                                        .news-preview__bar.clearfix
+                                            .news-preview__more-lnk.f-left
+                                                a(href='#') Читать дальше...
+                                            .news-preview__date.f-right 12.08.2015
+                            .news__item.js-masonry__item
+                                .news-preview
+                                    .news-preview__img-wrap
+                                        a(href='#')
+                                            img.news-preview__img(src='./img/news/news2.jpg')
+                                        .color-label.color-label--pink.news-preview__label Новости
+                                    .news-preview__wrap
+                                        h3.news-preview__title Время для размышлений
+                                        .news-preview__desc Почерпните свежую энергию и,
+                                            |полностью расслабившись, дайте
+                                            |себе толчок к новым идеям...
+                                        .news-preview__bar.clearfix
+                                            .news-preview__more-lnk.f-left
+                                                a(href='#') Читать дальше...
+                                            .news-preview__date.f-right 12.08.2015
+                            .news__item.js-masonry__item
+                                .news-preview
+                                    .news-preview__img-wrap
+                                        a(href='#')
+                                            img.news-preview__img(src='./img/news/news3.jpg')
+                                        .color-label.color-label--pink.news-preview__label Новости
+                                    .news-preview__wrap
+                                        h3.news-preview__title Свободное пространство для личностей!
+                                        .news-preview__desc Насладитесь удовольствием
+                                            |освежающего душа с безграничными
+                                            |возможностями и многогранным
+                                            |комфортом.
+                                        .news-preview__bar.clearfix
+                                            .news-preview__more-lnk.f-left
+                                                a(href='#') Читать дальше...
+                                            .news-preview__date.f-right 12.08.2015
+                            .news__item.js-masonry__item
+                                .news-preview
+                                    .news-preview__img-wrap
+                                        a(href='#')
+                                            img.news-preview__img(src='./img/news/news4.jpg')
+                                        .color-label.color-label--green.news-preview__label Душевые кабины
+                                    .news-preview__wrap
+                                        h3.news-preview__title Помещение для комфортных ощущений
+                                        .news-preview__desc Используйте многосторонние
+                                            |возможности для создания комфорта
+                                            |в соответствии с габаритами Вашей
+                                            |ванны. Насладитесь удовольствием
+                                            |освежающего душа с безграничными
+                                            |возможностями и многогранным
+                                            |комфортом.
+                                        .news-preview__bar.clearfix
+                                            .news-preview__more-lnk.f-left
+                                                a(href='#') Читать дальше...
+                                            .news-preview__date.f-right 12.08.2015
+                            .news__item.js-masonry__item
+                                .news-preview
+                                    .news-preview__img-wrap
+                                        a(href='#')
+                                            img.news-preview__img(src='./img/news/news5.jpg')
+                                        .color-label.color-label--pink.news-preview__label Новости
+                                    .news-preview__wrap
+                                        h3.news-preview__title Время для размышлений копия
+                                        .news-preview__desc Почерпните свежую энергию и, полностью расслабившись, дайте себе толчок к новым идеям...
+                                        .news-preview__bar.clearfix
+                                            .news-preview__more-lnk.f-left
+                                                a(href='#') Читать дальше...
+                                            .news-preview__date.f-right 12.08.2015

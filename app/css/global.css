@@ -72,17 +72,17 @@ a:visited {
   background: url("../img/bg/sprite.png") no-repeat;
 }
 .s-icon--velcom {
-  background-position: -30px -140px;
+  background-position: -36px -140px;
   width: 15px;
   height: 15px;
 }
 .s-icon--mts {
-  background-position: -60px -140px;
+  background-position: -96px -140px;
   width: 15px;
   height: 15px;
 }
 .s-icon--life {
-  background-position: -15px -140px;
+  background-position: -111px -140px;
   width: 15px;
   height: 15px;
 }
@@ -92,22 +92,22 @@ a:visited {
   height: 14px;
 }
 .s-icon--mail {
-  background-position: -109px -87px;
+  background-position: -109px -89px;
   width: 16px;
   height: 11px;
 }
 .s-icon--skype {
-  background-position: -109px -72px;
+  background-position: -51px -140px;
   width: 15px;
   height: 15px;
 }
 .s-icon--pstar {
-  background-position: -88px -140px;
+  background-position: -139px -140px;
   width: 13px;
   height: 14px;
 }
 .s-icon--nstar {
-  background-position: -75px -140px;
+  background-position: -126px -140px;
   width: 13px;
   height: 14px;
 }
@@ -127,14 +127,29 @@ a:visited {
   height: 28px;
 }
 .s-icon--ctrll {
-  background-position: -163px 0px;
+  background-position: -118px -100px;
   width: 9px;
   height: 16px;
 }
 .s-icon--ctrlr {
-  background-position: -118px -100px;
+  background-position: -163px 0px;
   width: 9px;
   height: 16px;
+}
+.s-icon--question {
+  background-position: -109px -72px;
+  width: 17px;
+  height: 17px;
+}
+.s-icon--plus {
+  background-position: -66px -140px;
+  width: 15px;
+  height: 15px;
+}
+.s-icon--minus {
+  background-position: -81px -140px;
+  width: 15px;
+  height: 15px;
 }
 .bs-icon--cart:before {
   background-position: 0px -28px;
@@ -166,18 +181,23 @@ a:visited {
   width: 31px;
   height: 25px;
 }
+.bs-icon--calendar:before {
+  background-position: -20px -140px;
+  width: 16px;
+  height: 16px;
+}
 .bs-icon--delivery:before {
   background-position: -128px 0px;
   width: 35px;
   height: 35px;
 }
 .bs-icon--garanty:before {
-  background-position: -128px -35px;
+  background-position: -70px -28px;
   width: 35px;
   height: 35px;
 }
 .bs-icon--service:before {
-  background-position: -70px -28px;
+  background-position: -128px -35px;
   width: 35px;
   height: 35px;
 }
@@ -185,6 +205,11 @@ a:visited {
   background-position: -128px -70px;
   width: 29px;
   height: 30px;
+}
+.as-icon--close:after {
+  background-position: 0px -140px;
+  width: 20px;
+  height: 20px;
 }
 /*Футер к низу страницы*/
 html,
@@ -239,4 +264,31 @@ body {
 }
 .js-tabs__content.active {
   display: block;
+}
+table {
+  width: 100%;
+}
+tr {
+  background: #f3f3f3;
+}
+tr:nth-child(2n) {
+  background: #fff;
+}
+td {
+  padding: 4px;
+}
+input.error,
+textarea.error {
+  border-color: #f00;
+  outline: none;
+}
+label.error {
+  color: #f00;
+}
+.fixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }

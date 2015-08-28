@@ -1,0 +1,47 @@
+extends ./layout.jade
+block main
+    section.page
+        .container
+            .page__one-column.page__static
+                .faq
+                    .page__heading
+                        h1.page__title FAQ
+                    .faq__wrap
+                        .accardion
+                            .accardion__item
+                                h3.accardion__title Я нашел на Вашем сайте то, что искал. Как мне купить?
+                                .accardion__content Если Вы нашли тот товар, который искали, то у вас есть два способа покупки.
+                                    |Первый способ, вы можете добавить товар в корзину и оформить заказ, заполнив поле адреса доставки. Убедитесь, что Вы дошли до конца оформления заказа (не бросайте заказ на пол-пути). Мы в любом случае с Вами свяжемся для подтверждения заказа и сразу после этого отправим его в любую точку страны. Доставка в этих городах осуществляется до двери.
+                                    |Второй способ, позвоните по бесплатному телефону 8(800)333-13-24 и мы примем Ваш заказ.
+                            .accardion__item
+                                h3.accardion__title Я нашел на Вашем сайте то, что искал. Как мне купить?
+                            .accardion__item
+                                h3.accardion__title Я нашел на Вашем сайте то, что искал. Как мне купить?
+                            .accardion__item
+                                h3.accardion__title Я нашел на Вашем сайте то, что искал. Как мне купить?
+                            .accardion__item
+                                h3.accardion__title Я нашел на Вашем сайте то, что искал. Как мне купить?
+                    .wform
+                        form#faq-form
+                            h3.wform__title Задайте свой вопрос
+                            .wform__wrap.clearfix
+                                .wform__part.f-left
+                                    .wform__group
+                                        label.wform__label Ваше имя:
+                                        input.wform__input(type='text')
+                                .wform__part.f-right
+                                    .wform__group
+                                        label.wform__label Ваш e-mail:
+                                        input.wform__input(type='text', placeholder='gorodmasterov@gmail.com')
+                            .wform__group
+                                label.wform__label Вопрос:
+                                textarea.wform__textarea(placeholder='Пример текста...')
+                            .wform__group
+                                .wform__wrap.clearfix
+                                    .wform__part.f-left.t-right
+                                     .wform__notice Нажимая кнопку “Отправить”, Вы принимаете
+                                        a(href='#') Правила размещение коментариев.
+                                        |  Отзыв не будет опубликован, если он содержить ненормативную лексику, оскорблениия и угрозы
+                                    .wform__part.f-right
+                                        .wform__group
+                                            input.wform__submit(type='submit', value='Задать вопрос')
