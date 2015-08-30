@@ -72,42 +72,42 @@ a:visited {
   background: url("../img/bg/sprite.png") no-repeat;
 }
 .s-icon--velcom {
-  background-position: -36px -140px;
+  background-position: -105px -44px;
   width: 15px;
   height: 15px;
 }
 .s-icon--mts {
-  background-position: -96px -140px;
+  background-position: -15px -140px;
   width: 15px;
   height: 15px;
 }
 .s-icon--life {
-  background-position: -111px -140px;
+  background-position: -30px -140px;
   width: 15px;
   height: 15px;
 }
 .s-icon--phone {
-  background-position: -105px -49px;
+  background-position: -45px -140px;
   width: 15px;
   height: 14px;
 }
 .s-icon--mail {
-  background-position: -109px -89px;
+  background-position: -109px -87px;
   width: 16px;
   height: 11px;
 }
 .s-icon--skype {
-  background-position: -51px -140px;
+  background-position: -163px -125px;
   width: 15px;
   height: 15px;
 }
 .s-icon--pstar {
-  background-position: -139px -140px;
+  background-position: -73px -140px;
   width: 13px;
   height: 14px;
 }
 .s-icon--nstar {
-  background-position: -126px -140px;
+  background-position: -60px -140px;
   width: 13px;
   height: 14px;
 }
@@ -127,29 +127,34 @@ a:visited {
   height: 28px;
 }
 .s-icon--ctrll {
-  background-position: -118px -100px;
+  background-position: -178px -88px;
   width: 9px;
   height: 16px;
 }
 .s-icon--ctrlr {
-  background-position: -163px 0px;
+  background-position: -118px -100px;
   width: 9px;
   height: 16px;
 }
 .s-icon--question {
-  background-position: -109px -72px;
+  background-position: -163px -108px;
   width: 17px;
   height: 17px;
 }
 .s-icon--plus {
-  background-position: -66px -140px;
+  background-position: -109px -72px;
   width: 15px;
   height: 15px;
 }
 .s-icon--minus {
-  background-position: -81px -140px;
+  background-position: 0px -140px;
   width: 15px;
   height: 15px;
+}
+.s-icon--delete {
+  background-position: -163px 0px;
+  width: 24px;
+  height: 24px;
 }
 .bs-icon--cart:before {
   background-position: 0px -28px;
@@ -157,17 +162,17 @@ a:visited {
   height: 44px;
 }
 .bs-icon--home:before {
-  background-position: -105px -28px;
+  background-position: -163px -47px;
   width: 21px;
   height: 21px;
 }
 .bs-icon--instock:before {
-  background-position: -163px -34px;
+  background-position: -120px -44px;
   width: 8px;
   height: 8px;
 }
 .bs-icon--outstock:before {
-  background-position: -163px -42px;
+  background-position: -79px -63px;
   width: 8px;
   height: 8px;
 }
@@ -182,7 +187,7 @@ a:visited {
   height: 25px;
 }
 .bs-icon--calendar:before {
-  background-position: -20px -140px;
+  background-position: -105px -28px;
   width: 16px;
   height: 16px;
 }
@@ -192,14 +197,24 @@ a:visited {
   height: 35px;
 }
 .bs-icon--garanty:before {
-  background-position: -70px -28px;
+  background-position: -128px -35px;
   width: 35px;
   height: 35px;
 }
 .bs-icon--service:before {
-  background-position: -128px -35px;
+  background-position: -70px -28px;
   width: 35px;
   height: 35px;
+}
+.bs-icon--login:before {
+  background-position: -163px -24px;
+  width: 23px;
+  height: 23px;
+}
+.bs-icon--exit:before {
+  background-position: -163px -88px;
+  width: 15px;
+  height: 20px;
 }
 .as-icon--toggle:after {
   background-position: -128px -70px;
@@ -207,7 +222,7 @@ a:visited {
   height: 30px;
 }
 .as-icon--close:after {
-  background-position: 0px -140px;
+  background-position: -163px -68px;
   width: 20px;
   height: 20px;
 }

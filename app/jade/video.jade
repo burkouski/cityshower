@@ -1,0 +1,28 @@
+extends ./layout2.jade
+block main
+    section.page.page--static
+        .container
+            .page__two-columns.clearfix
+                aside.page__aside.f-left
+                    .board-menu
+                        ul.board-menu__list.unstyled-list
+                            li.board-menu__item
+                                a.board-menu_lnk(href='#') Профиль
+                            li.board-menu__item
+                                a.board-menu_lnk(href='#') Услуги
+                            li.board-menu__item
+                                a.board-menu_lnk(href='#') Портфолио
+                            li.board-menu__item.active
+                                a.board-menu_lnk(href='#') Видео
+                .page__content.page__content--right.f-right
+                    .wform
+                        form#service-form
+                            .wform__group.clearfix
+                                label.wform__label Ссылка на видео:
+                                input.wform__input(type='text', placeholder='https://www.youtube.com/watch?v=UVjGGTaDNtI')
+                            .wform__group
+                                .wform__wrap.clearfix
+                                    .wform__part.f-left
+                                        .wform__notice Внимание ! Все изменения появятся на сайте после проверки модератора
+                                    .wform__part.f-right
+                                        input.wform__submit(type='submit', value='СОХРАНИТЬ ИЗМЕНЕНИЯ')

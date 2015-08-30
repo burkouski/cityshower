@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html class="no-js html">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic,600,600italic&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <!--build:css ./css/vendor.css-->
+    <!--bower:css-->
+    <link rel="stylesheet" href="./bower_components/normalize.css/normalize.css">
+    <!--endbower-->
+    <link rel="stylesheet" href="./css/fancybox.css">
+    <link rel="stylesheet" href="./css/custom-select.css">
+    <!-- endbuild-->
+    <!--build:css ./css/combined.css-->
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/blocks.css">
+    <!-- endbuild-->
+    <script src="javascripts/vendor/modernizr-2.7.1.min.js"></script>
+  </head>
+  <body class="body"><!--[if lt IE 8]>
+    <p class="browsehappy">
+      You are using an <strong>outdated</strong> browser.
+      Please <a href="http://browsehappy.com/">upgrade your browser</a>
+      to improve your experience.
+    </p><![endif]-->
+    <div class="wrapper">
+      <header class="header header--nopad">
+        <div class="header__top clearfix">
+          <div class="container">
+            <div class="header__top-item f-left">
+              <div class="logo"><a href="/" class="logo__lnk"><img src="./img/logo2.png" alt="Город душевых кабин" class="logo__img"></a></div>
+            </div>
+            <div class="header__top-item f-left">
+              <div class="rating"><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--nstar"></i></div>
+            </div>
+            <div class="header__top-item f-right">
+              <ul class="auth-list unstyled-list">
+                <li class="auth-list__item"><a href="#user-modal" class="auth-list__lnk auth-list__lnk--logout bs-icon bs-icon--exit">Выйти</a></li>
+              </ul>
+            </div>
+            <div class="header__top-item f-right">
+              <h3 class="master-board__title">Иванов Иван Иванович</h3>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="page page--static">
+          <div class="container">
+            <div class="page__two-columns clearfix">
+              <aside class="page__aside f-left">
+                <div class="board-menu">
+                  <ul class="board-menu__list unstyled-list">
+                    <li class="board-menu__item"><a href="#" class="board-menu_lnk">Профиль</a></li>
+                    <li class="board-menu__item"><a href="#" class="board-menu_lnk">Услуги</a></li>
+                    <li class="board-menu__item active"><a href="#" class="board-menu_lnk">Портфолио</a></li>
+                    <li class="board-menu__item"><a href="#" class="board-menu_lnk">Видео</a></li>
+                  </ul>
+                </div>
+              </aside>
+              <div class="page__content page__content--right f-right">
+                <div class="wform">
+                  <form id="service-form">
+                    <div class="wform__wrap">
+                      <div class="wform__group wform__group--bid">
+                        <label class="wform__label">* Выберите город в котором вы работаете:</label>
+                        <ul class="wform__check-list unstyled-list">
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare1" type="checkbox" class="pseudo-check__input">
+                              <label for="compare1" class="pseudo-check__label">Минск (Центральный р-н)
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare2" type="checkbox" class="pseudo-check__input">
+                              <label for="compare2" class="pseudo-check__label">Минск (Центральный р-н)
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare3" type="checkbox" class="pseudo-check__input">
+                              <label for="compare3" class="pseudo-check__label">Минск (Центральный р-н)
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare4" type="checkbox" class="pseudo-check__input">
+                              <label for="compare4" class="pseudo-check__label">Минск (Центральный р-н)
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare1" type="checkbox" class="pseudo-check__input">
+                              <label for="compare1" class="pseudo-check__label">Минск (Центральный р-н)
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare1" type="checkbox" class="pseudo-check__input">
+                              <label for="compare1" class="pseudo-check__label">Минск (Центральный р-н)
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare1" type="checkbox" class="pseudo-check__input">
+                              <label for="compare1" class="pseudo-check__label">Минск (Центральный р-н)
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare1" type="checkbox" class="pseudo-check__input">
+                              <label for="compare1" class="pseudo-check__label">Минск (Центральный р-н)
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare1" type="checkbox" class="pseudo-check__input">
+                              <label for="#compare1" class="pseudo-check__label">Минск (Центральный р-н)
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare1" type="checkbox" class="pseudo-check__input">
+                              <label for="compare1" class="pseudo-check__label">Минск (Центральный р-н)
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="wform__group wform__group--bid t-center"><a href="#" class="wform__toggle">Другие города</a></div>
+                    </div>
+                    <div class="wform__group">
+                      <div class="wform__wrap clearfix">
+                        <div class="wform__part f-left">
+                          <div class="wform__notice">Внимание ! Все изменения появятся на сайте после проверки модератора</div>
+                        </div>
+                        <div class="wform__part f-right">
+                          <input type="submit" value="СОХРАНИТЬ ИЗМЕНЕНИЯ" class="wform__submit">
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <div class="footer-push"></div>
+    </div>
+    <footer class="footer clearfix">
+      <div class="container">
+        <div class="footer__item footer__item--item1 f-left">
+          <div class="footer__logo"><a class="footer__logo-lnk"><img src="./img/footer-logo.png" class="footer__logo-img"></a></div>
+          <div class="footer__desc">Город душевых кабин - продажа душевых кабин, а так же услуги по сантехническим работам</div>
+          <div class="footer__cprg">© Город душевых кабин 2014-2015</div>
+        </div>
+        <div class="footer__item footer__item--item2 f-left">
+          <h4 class="footer__title">Контакты:</h4>
+          <div class="contacts-blk">
+            <div class="contacts-blk__item">
+              <div class="contacts-blk__label">Интернет - магазин:</div>
+              <div class="contacts-blk__phone"><span class="contacts-blk__phone-label">Velcom</span><span>+375 (29) 777 - 22 - 33</span></div>
+              <div class="contacts-blk__phone"><span class="contacts-blk__phone-label">Velcom</span><span>+375 (29) 777 - 22 - 33</span></div>
+            </div>
+            <div class="contacts-blk__item">
+              <div class="contacts-blk__label">Служба мастеров:</div>
+              <div class="contacts-blk__phone"><span class="contacts-blk__phone-label">Velcom</span><span>+375 (29) 777 - 22 - 33</span></div>
+              <div class="contacts-blk__phone"><span class="contacts-blk__phone-label">Velcom</span><span>+375 (29) 777 - 22 - 33</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__item footer__item--item3 f-left">
+          <h4 class="footer__title">Клиенту:</h4>
+          <ul class="footer-list unstyled-list">
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">Каталог</a></li>
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">Служба доставки</a></li>
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">Акции</a></li>
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">Доставка</a></li>
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">Гарантия обслуживания</a></li>
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">Ремонт душевых кабин</a></li>
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">Замена запчастей по гарантии</a></li>
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer__item footer__item--item4 f-right">
+          <h4 class="footer__title">О компании:</h4>
+          <ul class="footer-list unstyled-list">
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">О магазине</a></li>
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">Наша сеть</a></li>
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">Сотрудничество</a></li>
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">Вакансии</a></li>
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">Размещение рекламы</a></li>
+            <li class="footer-list__item"><a href="" class="footer-list__lnk">Новости</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div id="callback-modal" class="modal">
+      <div class="modal__wrap">
+        <div class="modal__close as-icon as-icon--close js-modal__close">Закрыть</div>
+        <div class="modal__bar clearfix"><span class="modal__btn f-left active">Заказать звонок</span></div>
+        <div class="wform wform--login">
+          <form id="callback-form">
+            <div class="wform__wrap">
+              <div class="wform__group">
+                <input type="text" placeholder="*Введите Ваше Имя" name="name" class="wform__input">
+              </div>
+              <div class="wform__group">
+                <input type="text" placeholder="*Контактный телефон" name="phone" class="wform__input">
+              </div>
+              <div class="wform__group">
+                <textarea placeholder="Коментарий" name="comment" class="wform__textarea"></textarea>
+              </div>
+              <div class="wform__group">
+                <input type="submit" placeholder="Позвоните мне" class="wform__submit">
+              </div>
+              <div class="wform__group">
+                <div class="wform__mess t-center">В ближайшее время консультант перезвонит Вам</div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="user-modal" class="modal">
+      <div class="modal__wrap">
+        <div class="modal__close as-icon as-icon--close js-modal__close">Закрыть</div>
+        <div class="js-tabs">
+          <div class="modal__bar clearfix"><a href="#" data-index="0" class="modal__btn js-tabs__tab f-left active">Вход</a><a href="#" data-index="1" class="modal__btn js-tabs__tab f-left">Регистрация</a></div>
+          <div class="js-tabs__wrap">
+            <div class="js-tabs__content active">
+              <div class="wform wform--login">
+                <form id="login-form">
+                  <div class="wform__wrap">
+                    <div class="wform__group">
+                      <input type="text" placeholder="Ник или E-mail" class="wform__input">
+                    </div>
+                    <div class="wform__group">
+                      <input type="password" placeholder="Пароль" class="wform__input">
+                    </div>
+                    <div class="wform__group">
+                      <input type="submit" placeholder="Войти" class="wform__submit wform__submit--static">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="js-tabs__content">
+              <div class="wform wform--registration">
+                <form id="registration-form">
+                  <div class="wform__wrap clearfix">
+                    <div class="wform__part f-left">
+                      <div class="wform__group">
+                        <label class="wform__label">Зарегестрироваться в качестве:</label>
+                        <select class="wform__select">
+                          <option>Специалист</option>
+                          <option>Пользователь</option>
+                        </select>
+                      </div>
+                      <div class="wform__group">
+                        <label class="wform__label">Ваши фамилия и имя (или название компании):</label>
+                        <input type="text" placeholder="Пароль" name="name" class="wform__input">
+                        <div class="wform__notice">Используется как заголовок вашей карточки</div>
+                      </div>
+                      <div class="wform__group">
+                        <label class="wform__label">Ваши преимущества:</label>
+                        <textarea placeholder="Текст описания" name="desc" class="wform__textarea"></textarea>
+                      </div>
+                      <div class="wform__group">
+                        <label class="wform__label">*Ваш номер телефона:</label>
+                        <input type="text" placeholder="+375 28 895-39-12" name="phone" class="wform__input">
+                      </div>
+                      <div class="wform__group">
+                        <label class="wform__label">*Ваш e-mail:</label>
+                        <input type="text" placeholder="goroddushevihkabin@gmail.com" class="wform__input">
+                      </div>
+                      <div class="wform__group">
+                        <label class="wform__label">*Пароль:</label>
+                        <input type="password" placeholder="*****************" name="pass" class="wform__input">
+                      </div>
+                      <div class="wform__group">
+                        <label class="wform__label">*Пароль ещё раз:</label>
+                        <input type="password" placeholder="*****************" name="pass2" class="wform__input">
+                      </div>
+                      <div class="wform__group">
+                        <div class="wform__part f-left"><img src="./img/captcha.png"></div>
+                        <div class="wform__part f-right">
+                          <label class="wform__label">* Введите текст с картинки:</label>
+                          <input type="text" name="captcha" class="wform__input">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wform__part f-right">
+                      <div class="wform__group wform__group--bid">
+                        <label class="wform__label">* Выберите город в котором вы работаете:</label>
+                        <ul class="wform__check-list unstyled-list">
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare1" type="checkbox" class="pseudo-check__input">
+                              <label for="compare1" class="pseudo-check__label">Минск (Центральный р-н)
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare2" type="checkbox" class="pseudo-check__input">
+                              <label for="compare2" class="pseudo-check__label">Минск (Центральный р-н)
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare3" type="checkbox" class="pseudo-check__input">
+                              <label for="compare3" class="pseudo-check__label">Минск (Центральный р-н)
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare4" type="checkbox" class="pseudo-check__input">
+                              <label for="compare4" class="pseudo-check__label">Минск (Центральный р-н)
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare1" type="checkbox" class="pseudo-check__input">
+                              <label for="compare1" class="pseudo-check__label">Минск (Центральный р-н)
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare1" type="checkbox" class="pseudo-check__input">
+                              <label for="compare1" class="pseudo-check__label">Минск (Центральный р-н)
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare1" type="checkbox" class="pseudo-check__input">
+                              <label for="compare1" class="pseudo-check__label">Минск (Центральный р-н)
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare1" type="checkbox" class="pseudo-check__input">
+                              <label for="compare1" class="pseudo-check__label">Минск (Центральный р-н)
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare1" type="checkbox" class="pseudo-check__input">
+                              <label for="#compare1" class="pseudo-check__label">Минск (Центральный р-н)
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare1" type="checkbox" class="pseudo-check__input">
+                              <label for="compare1" class="pseudo-check__label">Минск (Центральный р-н)
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="wform__group wform__group--bid t-center"><a href="#" class="wform__toggle">Другие города</a></div>
+                      <div class="wform__group wform__group--bid">
+                        <label class="wform__label">* Выберите услуги, которые Вы оказываете:</label>
+                        <ul class="wform__check-list unstyled-list">
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare1" type="checkbox" class="pseudo-check__input">
+                              <label for="compare1" class="pseudo-check__label">Услуга 1
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare1" type="checkbox" class="pseudo-check__input">
+                              <label for="compare1" class="pseudo-check__label">Услуга 1
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare1" type="checkbox" class="pseudo-check__input">
+                              <label for="#compare1" class="pseudo-check__label">Услуга 1
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare1" type="checkbox" class="pseudo-check__input">
+                              <label for="compare1" class="pseudo-check__label">Услуга 1
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare1" type="checkbox" class="pseudo-check__input">
+                              <label for="compare1" class="pseudo-check__label">Услуга 1
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare1" type="checkbox" class="pseudo-check__input">
+                              <label for="compare1" class="pseudo-check__label">Услуга 1
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare1" type="checkbox" class="pseudo-check__input">
+                              <label for="compare1" class="pseudo-check__label">Услуга 1
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare1" type="checkbox" class="pseudo-check__input">
+                              <label for="compare1" class="pseudo-check__label">Услуга 1
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare1" type="checkbox" class="pseudo-check__input">
+                              <label for="compare1" class="pseudo-check__label">Услуга 1
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="wform__check-item">
+                            <div class="pseudo-check">
+                              <input id="compare1" type="checkbox" class="pseudo-check__input">
+                              <label for="compare1" class="pseudo-check__label">Услуга 1
+                                <div class="pseudo-check__bg pseudo-check__bg--big"></div>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="wform__group wform__group--bid t-center"><a href="#" class="wform__toggle">Другие города</a></div>
+                      <div class="wform__group wform__group--bid">
+                        <div class="wform__rules t-center"><span>Регестрируясь, вы соглашаетесь с</span><a href="#" class="wform__rules-lnk">правилами</a></div>
+                        <input type="submit" value="Зарегистрироваться" class="wform__submit">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!--build:js ./js/vendor.js-->
+  <!--bower:js-->
+  <script src="./bower_components/jquery/jquery.js"></script>
+  <!--endbower-->
+  <script src="./js/vendor/fancybox.js"></script>
+  <script src="./js/vendor/bvsTabs.js"></script>
+  <script src="./js/vendor/bvsCarousel.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.js"></script>
+  <!--script(src="./js/vendor/masonry.js")-->
+  <script src="./js/vendor/jquery.custom-select.min.js"></script>
+  <script src="./js/vendor/jquery.validate.js"></script>
+  <!-- endbuild-->
+  <!--build:js ./js/combined.js-->
+  <script src="./js/main.js"></script>
+  <script src="./js/plugins.js"></script>
+  <script src="./js/validation.js"></script>
+  <!-- endbuild-->
+  <!--[if lt IE 10]-->
+  <script>(src="/js/vendor/jquery-placeholder.js")</script>
+  <!--[endif]-->
+</html>

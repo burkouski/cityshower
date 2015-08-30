@@ -60,23 +60,23 @@ block main
                             .product-preview.t-center
                                 span.product-label.product-preview__status-label.s-icon.s-icon--blabel Хиты продаж
                                 .product-preview__img-wrap
-                                    a(href='')
+                                    a(href='./shower.html')
                                         img.product-preview__img(src='./img/product/product1.jpg')
                                 .product-preview__meta.clearfix
                                     span.stock.stock--instock.bs-icon.bs-icon--instock.f-left В наличии
                                     .product-compare
                                         .pseudo-check
                                             input#compare1.pseudo-check__input(type='checkbox')
-                                            label.pseudo-check__label(for='#compare1') Сравнить
-                                                .pseudo-check__bg
+                                            label.pseudo-check__label(for='compare1') Услуга 1
+                                                .pseudo-check__bg.pseudo-check__bg
                                 h3.product-preview__title
-                                    a.product-preview__lnk(href='/') Охладители Symphony Ice cube
-                                .product-preview__rating
-                                    i.product-star.s-icon.s-icon--pstar
-                                    i.product-star.s-icon.s-icon--pstar
-                                    i.product-star.s-icon.s-icon--pstar
-                                    i.product-star.s-icon.s-icon--pstar
-                                    i.product-star.s-icon.s-icon--nstar
+                                    a.product-preview__lnk(href='./shower.html') Охладители Symphony Ice cube
+                                .product-preview__rating.rating
+                                    i.rating__star.s-icon.s-icon--pstar
+                                    i.rating__star.s-icon.s-icon--pstar
+                                    i.rating__star.s-icon.s-icon--pstar
+                                    i.rating__star.s-icon.s-icon--pstar
+                                    i.rating__star.s-icon.s-icon--nstar
                                 .product-preview__feature.product-feature
                                     img.product-feature__img(src='./img/feature/f1.png', title='Особенность')
                                     img.product-feature__img(src='./img/feature/f2.png', title='Особенность')
@@ -91,9 +91,9 @@ block main
                     for item in [1,2,3]
                         .popular__item.js-carousel__slide.js-sort-tab__content(data-label='new')
                             .product-preview.t-center
-                                span.product-label.product-preview__status-label.s-icon.s-icon--glabel Хиты продаж
+                                span.product-label.product-preview__status-label.s-icon.s-icon--glabel Новинка
                                 .product-preview__img-wrap
-                                    a(href='')
+                                    a(href='./shower.html')
                                         img.product-preview__img(src='./img/product/product1.jpg')
                                 .product-preview__meta.clearfix
                                     span.stock.stock--instock.bs-icon.bs-icon--instock.f-left В наличии
@@ -103,13 +103,13 @@ block main
                                             label.pseudo-check__label(for='#compare1') Сравнить
                                                 .pseudo-check__bg
                                 h3.product-preview__title
-                                    a.product-preview__lnk(href='/') Охладители Symphony Ice cube
+                                    a.product-preview__lnk(href='./shower.html') Охладители Symphony Ice cube
                                 .product-preview__rating
-                                    i.product-star.s-icon.s-icon--pstar
-                                    i.product-star.s-icon.s-icon--pstar
-                                    i.product-star.s-icon.s-icon--pstar
-                                    i.product-star.s-icon.s-icon--pstar
-                                    i.product-star.s-icon.s-icon--nstar
+                                    i.rating__star.s-icon.s-icon--pstar
+                                    i.rating__star.s-icon.s-icon--pstar
+                                    i.rating__star.s-icon.s-icon--pstar
+                                    i.rating__star.s-icon.s-icon--pstar
+                                    i.rating__star.s-icon.s-icon--nstar
                                 .product-preview__feature.product-feature
                                     img.product-feature__img(src='./img/feature/f1.png', title='Особенность')
                                     img.product-feature__img(src='./img/feature/f2.png', title='Особенность')
@@ -124,9 +124,9 @@ block main
                     for item in [1,2,3]
                         .popular__item.js-carousel__slide.js-sort-tab__content(data-label='discount')
                             .product-preview.t-center
-                                span.product-label.product-preview__status-label.s-icon.s-icon--rlabel Хиты продаж
+                                span.product-label.product-preview__status-label.s-icon.s-icon--rlabel Акция
                                 .product-preview__img-wrap
-                                    a(href='')
+                                    a(href='./shower.html')
                                         img.product-preview__img(src='./img/product/product1.jpg')
                                 .product-preview__meta.clearfix
                                     span.stock.stock--instock.bs-icon.bs-icon--instock.f-left В наличии
@@ -136,13 +136,13 @@ block main
                                             label.pseudo-check__label(for='#compare1') Сравнить
                                                 .pseudo-check__bg
                                 h3.product-preview__title
-                                    a.product-preview__lnk(href='/') Охладители Symphony Ice cube
+                                    a.product-preview__lnk(href='./shower.html') Охладители Symphony Ice cube
                                 .product-preview__rating
-                                    i.product-star.s-icon.s-icon--pstar
-                                    i.product-star.s-icon.s-icon--pstar
-                                    i.product-star.s-icon.s-icon--pstar
-                                    i.product-star.s-icon.s-icon--pstar
-                                    i.product-star.s-icon.s-icon--nstar
+                                    i.rating__star.s-icon.s-icon--pstar
+                                    i.rating__star.s-icon.s-icon--pstar
+                                    i.rating__star.s-icon.s-icon--pstar
+                                    i.rating__star.s-icon.s-icon--pstar
+                                    i.rating__star.s-icon.s-icon--nstar
                                 .product-preview__feature.product-feature
                                     img.product-feature__img(src='./img/feature/f1.png', title='Особенность')
                                     img.product-feature__img(src='./img/feature/f2.png', title='Особенность')
@@ -176,11 +176,11 @@ block main
                                     img.master-preview__img(src='./img/masters/master1.jpg')
                                 .master-preview__review-bar.clearfix
                                     .product-preview__rating.f-left
-                                        i.product-star.s-icon.s-icon--pstar
-                                        i.product-star.s-icon.s-icon--pstar
-                                        i.product-star.s-icon.s-icon--pstar
-                                        i.product-star.s-icon.s-icon--pstar
-                                        i.product-star.s-icon.s-icon--nstar
+                                        i.rating__star.s-icon.s-icon--pstar
+                                        i.rating__star.s-icon.s-icon--pstar
+                                        i.rating__star.s-icon.s-icon--pstar
+                                        i.rating__star.s-icon.s-icon--pstar
+                                        i.rating__star.s-icon.s-icon--nstar
                                     a.product-preview__review-lnk.f-right(href='#') 25 отзывов
                                 .master-preview__desc Идейные соображения высшего порядка, а также укрепление и развитие структуры требуют от нас анализа системы обучения кадров, соответствует...
                                 .master-preview__btn-wrap.clearfix

@@ -1,0 +1,116 @@
+extends ./layout2.jade
+block main
+    section.page.page--static
+        .container
+            .page__two-columns.clearfix
+
+                aside.page__aside.f-left
+                    .board-menu
+                        ul.board-menu__list.unstyled-list
+                            li.board-menu__item.active
+                                a.board-menu_lnk(href='#') Профиль
+                            li.board-menu__item
+                                a.board-menu_lnk(href='#') Услуги
+                            li.board-menu__item
+                                a.board-menu_lnk(href='#') Портфолио
+                            li.board-menu__item
+                                a.board-menu_lnk(href='#') Видео
+                .page__content.page__content--right.f-right
+                    .wform
+                        form#profile-form
+                            .master__wrap.clearfix
+                                aside.master__aside.f-left
+                                    .master__aside-item
+                                        .master__ava-wrap
+                                            img.master__ava(src='./img/masters/master-ava.jpg')
+                                    .master__aside-item
+                                        .wform__upload-wrap
+                                            label.wform__ava-upload-label(for='upload') Загрузить
+                                                input#upload.wform__upload(type='file')
+                                .master__content.f-right
+                                    .wform__group.clearfix
+                                        .wform__two-third.f-left
+                                            label.wform__label Ваши фамилия и имя (или название компании):
+                                            input.wform__input(type='text', placeholder='Пароль', name='name')
+                                        .wform__one-third.f-right
+                                            a.master-board__add-link(href='#')
+                                                i Сменить пароль
+                                    .wform__group.clearfix
+                                        .wform__two-third.f-left
+                                            label.wform__label *Ваши № телефонов:
+                                            input.wform__input(type='text', placeholder='+375 28 895-39-12', name='phone')
+                                        .wform__one-third.f-right
+                                            a.master-board__add-link(href='#')
+                                                i Добавить ещё номер
+                                    .wform__group.clearfix
+                                        .wform__two-third.f-left
+                                            label.wform__label *Ваш e-mail:
+                                            input.wform__input(type='text', placeholder='goroddushevihkabin@gmail.com')
+                                        .wform__one-third.f-right
+                                            a.master-board__add-link(href='#')
+                                                i Сменить e-mail
+                                    .wform__group.clearfix
+                                        label.wform__label *Ваши № телефонов:
+                                        textarea.wform__textarea(placeholder='Коментарий', name='comment')
+                            .master-board__service
+                                .wform__group.wform__group--bid
+                                    label.wform__label * Выберите город в котором вы работаете:
+                                    ul.wform__check-list.unstyled-list
+                                        li.wform__check-item
+                                            .pseudo-check
+                                                input#compare1.pseudo-check__input(type='checkbox')
+                                                label.pseudo-check__label(for='compare1') Минск (Центральный р-н)
+                                                    .pseudo-check__bg.pseudo-check__bg--big
+                                        li.wform__check-item
+                                            .pseudo-check
+                                                input#compare2.pseudo-check__input(type='checkbox')
+                                                label.pseudo-check__label(for='compare2') Минск (Центральный р-н)
+                                                    .pseudo-check__bg.pseudo-check__bg--big
+                                        li.wform__check-item
+                                            .pseudo-check
+                                                input#compare3.pseudo-check__input(type='checkbox')
+                                                label.pseudo-check__label(for='compare3') Минск (Центральный р-н)
+                                                    .pseudo-check__bg.pseudo-check__bg--big
+                                        li.wform__check-item
+                                            .pseudo-check
+                                                input#compare4.pseudo-check__input(type='checkbox')
+                                                label.pseudo-check__label(for='compare4') Минск (Центральный р-н)
+                                                    .pseudo-check__bg.pseudo-check__bg--big
+                                        li.wform__check-item
+                                            .pseudo-check
+                                                input#compare1.pseudo-check__input(type='checkbox')
+                                                label.pseudo-check__label(for='compare1') Минск (Центральный р-н)
+                                                    .pseudo-check__bg.pseudo-check__bg--big
+                                        li.wform__check-item
+                                            .pseudo-check
+                                                input#compare1.pseudo-check__input(type='checkbox')
+                                                label.pseudo-check__label(for='compare1') Минск (Центральный р-н)
+                                                    .pseudo-check__bg.pseudo-check__bg--big
+                                        li.wform__check-item
+                                            .pseudo-check
+                                                input#compare1.pseudo-check__input(type='checkbox')
+                                                label.pseudo-check__label(for='compare1') Минск (Центральный р-н)
+                                                    .pseudo-check__bg.pseudo-check__bg--big
+                                        li.wform__check-item
+                                            .pseudo-check
+                                                input#compare1.pseudo-check__input(type='checkbox')
+                                                label.pseudo-check__label(for='compare1') Минск (Центральный р-н)
+                                                    .pseudo-check__bg.pseudo-check__bg--big
+                                        li.wform__check-item
+                                            .pseudo-check
+                                                input#compare1.pseudo-check__input(type='checkbox')
+                                                label.pseudo-check__label(for='#compare1') Минск (Центральный р-н)
+                                                    .pseudo-check__bg.pseudo-check__bg--big
+                                        li.wform__check-item
+                                            .pseudo-check
+                                                input#compare1.pseudo-check__input(type='checkbox')
+                                                label.pseudo-check__label(for='compare1') Минск (Центральный р-н)
+                                                    .pseudo-check__bg.pseudo-check__bg--big
+                                .wform__group.wform__group--bid.t-center
+                                    a.wform__toggle(href='#') Другие города
+                            .wform__group
+                                .wform__wrap.clearfix
+                                    .wform__part.f-left
+                                        .wform__notice Внимание ! Все изменения появятся на сайте после проверки модератора
+                                    .wform__part.f-right
+                                        input.wform__submit(type='submit', value='СОХРАНИТЬ ИЗМЕНЕНИЯ')

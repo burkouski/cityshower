@@ -1,0 +1,47 @@
+extends ./layout2.jade
+block main
+    section.page.page--static
+        .container
+            .page__two-columns.clearfix
+                aside.page__aside.f-left
+                    .board-menu
+                        ul.board-menu__list.unstyled-list
+                            li.board-menu__item
+                                a.board-menu_lnk(href='#') Профиль
+                            li.board-menu__item
+                                a.board-menu_lnk(href='#') Услуги
+                            li.board-menu__item.active
+                                a.board-menu_lnk(href='#') Портфолио
+                            li.board-menu__item
+                                a.board-menu_lnk(href='#') Видео
+                .page__content.page__content--right.f-right
+                    .wform
+                        form#portfolio-form
+                            .portfolio-form
+                                .portfolio-form__heading.clearfix
+                                    .portfolio-form__heading-item.f-left Категории портфолио:
+                                    .portfolio-form__heading-item.f-left
+                                        a.add-category-btn(href='#') Добавить категорию
+
+                                .portfolio-form__bar.clearfix
+                                    .portfolio__sort-item Установка душевых кабин
+                                    .portfolio__sort-item Установка биде
+                                    .portfolio__sort-item Ремонт кабин
+                                    .portfolio__sort-item Установка труб
+                                    .portfolio__sort-item Установка раковин
+                                    .portfolio__sort-item.portfolio__sort-item--red.f-right Удалить эту категорию
+                                .portfolio-form__wrap
+                                    for item in [1,2,3,4,5,6,7,8]
+                                        .portfolio-form__item.f-left
+                                            a.portfolio-form__delete-item.s-icon.s-icon--delete(href='#')
+                                            a(href='#')
+                                                img.portfolio__thumb(src='./img/portfolio/port1.jpg')
+                                .wform__group
+                                    label.wform__ava-upload-label(for='upload') +   Добавить фотографии
+                                        input#upload.wform__upload(type='file')
+                                .wform__group
+                                    .wform__wrap.clearfix
+                                        .wform__part.f-left
+                                            .wform__notice Внимание ! Все изменения появятся на сайте после проверки модератора
+                                        .wform__part.f-right
+                                            input.wform__submit(type='submit', value='СОХРАНИТЬ ИЗМЕНЕНИЯ')
