@@ -118,3 +118,29 @@ $('#faq-form').validate({
     }
 
 });
+
+$('#vacancies-form').validate({
+
+    rules: {
+
+        name: {
+            required: true
+        },
+        phone: {
+            required: true,
+            phone: true,
+        },
+
+    },
+    messages: {
+        name: "Как к вам обращаться?",
+        phone: {
+            required: "Как с вами связаться?",
+            phone: "формат +375291111111"
+        }
+    },
+    submitHandler: function (form) {
+
+    }
+
+});
