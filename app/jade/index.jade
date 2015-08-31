@@ -4,14 +4,33 @@ block header_bottom
     .header__bottom
         .container
             .maze.clearfix
-                .maze__item.maze__item.f-left
-                    .maze__blk(style='background-image: url(./img/maze/maze1.jpg)')
-                        .maze__text.maze__text--med.f-right
-                            h3.maze__title.maze__title--big Взгляд в будущее
-                            .maze__desc.maze__desc--big На нашем сайте теперь вы может
-                                |заказать самые новые модели
-                                |душевых кабин
-                            a.maze__btn.maze__btn--usual(href='#') Заказать
+                .maze__item.maze__item.f-left.main-slider.js-slider
+                    .main-slider__wrap
+                        .maze__blk.main-slider__slide.js-slider__slide(data-index='0',style='background-image: url(./img/maze/maze1.jpg)')
+                            .maze__text.maze__text--med.f-right
+                                h3.maze__title.maze__title--big Взгляд в будущее
+                                .maze__desc.maze__desc--big На нашем сайте теперь вы может
+                                    |заказать самые новые модели
+                                    |душевых кабин
+                                a.maze__btn.maze__btn--usual(href='#') Заказать
+                        .maze__blk.main-slider__slide.js-slider__slide(data-index='1',style='background-image: url(./img/maze/maze1.jpg)')
+                            .maze__text.maze__text--med.f-right
+                                h3.maze__title.maze__title--big Взгляд в будущее
+                                .maze__desc.maze__desc--big На нашем сайте теперь вы может
+                                    |заказать самые новые модели
+                                    |душевых кабин
+                                a.maze__btn.maze__btn--usual(href='#') Заказать
+                        .maze__blk.main-slider__slide.js-slider__slide(data-index='2',style='background-image: url(./img/maze/maze1.jpg)')
+                            .maze__text.maze__text--med.f-right
+                                h3.maze__title.maze__title--big Взгляд в будущее
+                                .maze__desc.maze__desc--big На нашем сайте теперь вы может
+                                    |заказать самые новые модели
+                                    |душевых кабин
+                                a.maze__btn.maze__btn--usual(href='#') Заказать
+                        ul.main-slider__ctrl-list.unstyled-list
+                            li.main-slider__ctrl.js-slider__ctrl.active(data-index='0')
+                            li.main-slider__ctrl.js-slider__ctrl(data-index='1')
+                            li.main-slider__ctrl.js-slider__ctrl(data-index='2')
                 .maze__item.maze__item.f-right
                     .clearfix
                         .maze__blk.maze__blk--hh.maze__blk--hw.maze__blk--sp.f-left(style='background-image: url(./img/maze/maze2.jpg)')
@@ -64,10 +83,10 @@ block main
                                         img.product-preview__img(src='./img/product/product1.jpg')
                                 .product-preview__meta.clearfix
                                     span.stock.stock--instock.bs-icon.bs-icon--instock.f-left В наличии
-                                    .product-compare
+                                    .product-compare.f-right
                                         .pseudo-check
-                                            input#compare1.pseudo-check__input(type='checkbox')
-                                            label.pseudo-check__label(for='compare1') Услуга 1
+                                            input.pseudo-check__input(type='checkbox', id='compare'+ item)
+                                            label.pseudo-check__label(for='compare'+item) Сравнить
                                                 .pseudo-check__bg.pseudo-check__bg
                                 h3.product-preview__title
                                     a.product-preview__lnk(href='./shower.html') Охладители Symphony Ice cube
@@ -88,7 +107,7 @@ block main
                                     a.product-btn.product-preview__btn(href='/') Купить.
                                 .product-preview__review-wrap
                                     a.product-preview__review-lnk(href='#') 25 отзывов
-                    for item in [1,2,3]
+                    for item in [4,5,6]
                         .popular__item.js-carousel__slide.js-sort-tab__content(data-label='new')
                             .product-preview.t-center
                                 span.product-label.product-preview__status-label.s-icon.s-icon--glabel Новинка
@@ -97,10 +116,10 @@ block main
                                         img.product-preview__img(src='./img/product/product1.jpg')
                                 .product-preview__meta.clearfix
                                     span.stock.stock--instock.bs-icon.bs-icon--instock.f-left В наличии
-                                    .product-compare
+                                    .product-compare.f-right
                                         .pseudo-check
-                                            input#compare1.pseudo-check__input(type='checkbox')
-                                            label.pseudo-check__label(for='#compare1') Сравнить
+                                            input.pseudo-check__input(type='checkbox', id='compare'+ item)
+                                            label.pseudo-check__label(for='compare'+item) Сравнить
                                                 .pseudo-check__bg
                                 h3.product-preview__title
                                     a.product-preview__lnk(href='./shower.html') Охладители Symphony Ice cube
@@ -121,7 +140,7 @@ block main
                                     a.product-btn.product-preview__btn(href='/') Купить.
                                 .product-preview__review-wrap
                                     a.product-preview__review-lnk(href='#') 25 отзывов
-                    for item in [1,2,3]
+                    for item in [7,8,9]
                         .popular__item.js-carousel__slide.js-sort-tab__content(data-label='discount')
                             .product-preview.t-center
                                 span.product-label.product-preview__status-label.s-icon.s-icon--rlabel Акция
@@ -130,10 +149,10 @@ block main
                                         img.product-preview__img(src='./img/product/product1.jpg')
                                 .product-preview__meta.clearfix
                                     span.stock.stock--instock.bs-icon.bs-icon--instock.f-left В наличии
-                                    .product-compare
+                                    .product-compare.f-right
                                         .pseudo-check
-                                            input#compare1.pseudo-check__input(type='checkbox')
-                                            label.pseudo-check__label(for='#compare1') Сравнить
+                                            input.pseudo-check__input(type='checkbox', id='compare'+ item)
+                                            label.pseudo-check__label(for='compare'+item) Сравнить
                                                 .pseudo-check__bg
                                 h3.product-preview__title
                                     a.product-preview__lnk(href='./shower.html') Охладители Symphony Ice cube
@@ -158,6 +177,7 @@ block main
                 a.readmore(href='#') Весь каталог
     section.masters.carousel.js-carousel
         .container
+            .masters__man
             .masters-wrap.carousel__wrap
                 .masters__bar.clearfix
                     h3.masters__title.f-left Служба мастеров
@@ -184,8 +204,50 @@ block main
                                     a.product-preview__review-lnk.f-right(href='#') 25 отзывов
                                 .master-preview__desc Идейные соображения высшего порядка, а также укрепление и развитие структуры требуют от нас анализа системы обучения кадров, соответствует...
                                 .master-preview__btn-wrap.clearfix
-                                    a.master-preview__callbtn.f-left(href='#') Оставить заявку
+                                    a.master-preview__callbtn.f-left.js-modal(href='#request-modal') Оставить заявку
                                     a.master-preview__readmore.f-right(href='#') Подробнее
+                .popular__readmore-wrap.t-right
+                    a.readmore(href='#') Все мастера
+        #request-modal.modal
+            .modal__wrap
+                .modal__close.as-icon.as-icon--close.js-modal__close Закрыть
+                .modal__bar.clearfix
+                    span.modal__btn.active.f-left Оставит заявку
+                .wform.wform--request
+                    form#request-form
+                        .wform__group Заказы обрабатываются ежедневно с 9.00 до 21.00
+                        .wform__group
+                            label.wform__label Вопрос:
+                            textarea.wform__textarea(placeholder='Пример текста...', name='question')
+                            .wform__notice Опишите вашу задачу, укажите примерный бюджет заказа
+                        .wform__group
+                            .wform__wrap.clearfix
+                                .wform__part.f-left
+                                    label.wform__upload-label.wform__upload-label--file.as-icon.as-icon--file(for='upload') Прикрепить файл
+                                    input#upload.wform__upload(type='file')
+                        .wform__group
+                            .wform__wrap.clearfix
+                                .wform__part.f-left
+                                    .wform__group
+                                        label.wform__label * Ваше имя:
+                                        input.wform__input(type='text', placeholder='Пароль', name='name')
+                                    .wform__group
+                                        label.wform__label *Ваш e-mail:
+                                        input.wform__input(type='text', placeholder='goroddushevihkabin@gmail.com')
+                                .wform__part.f-right
+                                    .wform__group
+                                        label.wform__label *Ваш номер телефона:
+                                        input.wform__input(type='text', placeholder='+375 28 895-39-12', name='phone')
+                                    .wform__group
+                                        label.wform__label Город:
+                                        input.wform__input(type='text', placeholder='Минск', name='city')
+                        .wform__group
+                            .wform__wrap.clearfix
+                                .wform__part.f-left
+                                    .wform__notice.t-right Оставте заявку и наши специалисты ответят Вам в ближайшее время
+                                .wform__part.f-right
+                                    input.wform__submit(type='submit', value='Оставить заявку')
+
     section.benefits
         .container
             h3.benefits__title Преимущества

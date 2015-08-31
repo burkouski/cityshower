@@ -51,6 +51,7 @@
   vertical-align  middle
 .page
   padding 0 0 48px 0
+  background url("../img/bg/dot3-bg.png") no-repeat right top, url("../img/bg/dot2-bg.png") no-repeat -67px top
 .page--static
   padding 18px 0 30px
 .page__aside
@@ -204,7 +205,8 @@
 .auth-list__lnk--login
   padding 0 9px 0 35px
   border-right 1px solid #9eb8d5
-
+  &:before
+    margin -12px 0 0 0
 .auth-list__lnk--registration
   padding 0 0 0 10px
   border-left 1px solid #eff3f8
@@ -239,6 +241,7 @@
   text-align center
   line-height 29px
   cursor pointer
+  &.active
   &:hover
     background #d6d6d6
     &:after,
@@ -398,7 +401,7 @@
 
 .popular
   padding 70px 0 70px
-  background url("../img/bg/dot1-bg.png") no-repeat left bottom
+  background url("../img/bg/dot1-bg.png") no-repeat left bottom, url("../img/bg/dot3-bg.png") no-repeat right top
 .populat__title
   padding 0 0 20px 0
   border-bottom 1px solid #b8b8b8
@@ -561,6 +564,14 @@
   padding 120px 0 70px
   background url("../img/bg/masters-bg.png") no-repeat
   background-size cover
+.masters__man
+  position absolute
+  top -45px
+  right -95px
+  z-index 2
+  width 265px
+  height 584px
+  background url("../img/bg/man-bg.png")
 .masters__title
   margin 0
   color #ffffff
@@ -624,7 +635,15 @@
   text-transform uppercase
   &:hover
     text-decoration none
-
+.master-preview__title
+  margin 0 0 22px 0
+  font-size 16px
+  text-align center
+.master-preview__title-lnk
+  color #555
+  text-decoration none
+  &:hover
+    color #739ac5
 
 .benefits
   margin 0 0 0 20px
@@ -743,6 +762,7 @@
   border 1px solid #7b7b7b
   resize vertical
 .wform__submit
+  display inline-block
   width 100%
   height 42px
   background #739ac5
@@ -751,6 +771,7 @@
   outline none
   color #fff
   text-transform uppercase
+  text-decoration none
 .wform__submit--static
   width 188px
 .wform__rules
@@ -811,6 +832,22 @@
   &:hover
     background #d0d0d0
     color white
+.wform__upload-label
+  position relative
+  display inline-block
+  width 100%
+  padding 0 31px 0 11px
+  border-radius 5px
+  background #739ac5
+  color #ffffff
+  line-height 29px
+  cursor pointer
+  &:after
+    position absolute
+    top 50%
+    right 11px
+    margin -8px 0 0 0
+
 
 
 
@@ -820,6 +857,7 @@
   padding 0 0 0 19px
   color #888
   font-size 13px
+  cursor pointer
 .pseudo-check__bg
   position absolute
   top 50%
@@ -865,24 +903,35 @@
 .breadcrumbs__lnk--active
     color #010002
 
-
+.cat-menu
+  border-bottom 1px solid #d0d0d0
 .cat-menu__heading
   position relative
-  margin 0
+  margin 0px 0 0px 0
   padding 0 45px 0 15px
-  background #739ac5
-  color #ffffff
-  font-weight bold
+  border-right 1px solid #d0d0d0
+  border-top 1px solid #d0d0d0
+  border-left 1px solid #d0d0d0
+  background #fff
+  color #000
+  font-weight normal
   font-size 13px
   text-transform uppercase
   text-decoration underline
   line-height 40px
   text-decoration none
+  cursor pointer
   &:after
     position absolute
     top 50%
     right 13px
     margin -15px 0 0
+  &:hover
+  &.active
+    background #739ac5
+    border-color #739ac5
+    color #ffffff
+    font-weight bold
 .cat-menu__list
   border-right 1px solid #d0d0d0
   border-bottom 1px solid #d0d0d0
@@ -956,7 +1005,8 @@
 
 .filter
   padding 15px 17px
-  border 1px solid #d0d0d0
+  border-left 1px solid #d0d0d0
+  border-right 1px solid #d0d0d0
 .filter__item
   margin 12px 0 0 0
   &:first-child
@@ -1228,7 +1278,29 @@
   border-left 1px solid #b8b8b8
 .masters-page__special
   outline  3px solid #ff9600
-
+.masters-page__search-wrap
+  position relative
+  width 720px
+.masters-page__search
+  width 100%
+  height 40px
+  padding 0 75px 0 15px
+  border 1px solid #dcdcdc
+  border-radius 8px
+.masters-page__search-submit
+  position absolute
+  top 50%
+  right 13px
+  margin -12px 0 0 0
+  border none
+  font-size 0
+.masters-page__search-delete
+  position absolute
+  right 53px
+  top 50%
+  margin -4px 0 0 0
+.masters-page__add-wrap
+  width 172px
 .master__aside
   width 272px
 .master__aside-item
@@ -1328,6 +1400,7 @@
   font-size 16px
   cursor pointer
 .accardion__content
+  display none
   padding 0 0 22px 0
 
 .action__wrap
@@ -1691,3 +1764,49 @@
     background #739ac5
     color #ffffff
 
+.main-slider__wrap
+
+  position relative
+  width 610px
+  height 372px
+  overflow hidden
+.main-slider__slide
+  position absolute
+  left -100%
+  overflow hidden
+  &:first-child
+    left 0
+.main-slider__ctrl-list
+  position absolute
+  bottom 10px
+  width 100%
+  padding 0 25px
+  text-align right
+.main-slider__ctrl
+  display inline-block
+  background #fff
+  width 8px
+  height 8px
+  margin 0 0 0 6px
+  &:hover
+  &.active
+    background #0094cc
+.addmaster-btn
+  display inline-block
+  width 100%
+  border-radius 5px
+  background #739ac5
+  color #ffffff
+  line-height 40px
+  text-align center
+  text-decoration none
+  &:hover
+    background #3190FA
+
+.back-lnk.f-right
+  font-size 13px
+  font-weight normal
+  text-transform uppercase
+  text-decoration none
+  &:hover
+    color #555

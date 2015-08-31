@@ -2,38 +2,42 @@ extends ./layout.jade
 block main
     section.page
         .container
-            .page__one-column.page__static
+            .page__one-column.page--static
                 .vacancies
                     .page__heading
                         h1.page__title Купить душевую кабинку со скидкой на распрадаже
                     .page__content
                         p Город душевых кабин , крупная компания. Мы всегда рады новым целеустремленным сотрудникам. На данный момент у нас открыт следующие вакансии:
                     .vacancies__wrap
-                        .vacancies__item
+                        .vacancies__item.js-other
                             .vacancies__item-wrap
                                 h5.vacancies__title Директор направления
                                 span Обязанности:
                                 ul.unstyled-list
-                                    li - Руководство торговой командой (супервайзеры, торговые представители, маркировщики, менеджеры по продажам)
-                                    li - Работа с таможенными органами, оформление таможенных деклараций, контроль отгрузки товара.
+                                    li.js-other__item - Руководство торговой командой (супервайзеры, торговые представители, маркировщики, менеджеры по продажам)
+                                    li.js-other__item - Работа с таможенными органами, оформление таможенных деклараций, контроль отгрузки товара.
+                                    li.js-other__item - Руководство торговой командой (супервайзеры, торговые представители, маркировщики, менеджеры по продажам)
+                                    li.js-other__item - Работа с таможенными органами, оформление таможенных деклараций, контроль отгрузки товара.
                             .vacancies__more-wrap.t-center
-                                a.vacancies__more-lnk(href='#') подробнее
-                        .vacancies__item
+                                a.vacancies__more-lnk.js-other__show(href='#', data-count='2') подробнее
+                        .vacancies__item.js-other
                             .vacancies__item-wrap
                                 h5.vacancies__title Директор направления
                                 span Обязанности:
                                 ul.unstyled-list
-                                    li - Руководство торговой командой (супервайзеры, торговые представители, маркировщики, менеджеры по продажам)
-                                    li - Работа с таможенными органами, оформление таможенных деклараций, контроль отгрузки товара.
+                                    li.js-other__item - Руководство торговой командой (супервайзеры, торговые представители, маркировщики, менеджеры по продажам)
+                                    li.js-other__item - Работа с таможенными органами, оформление таможенных деклараций, контроль отгрузки товара.
+                                    li.js-other__item - Руководство торговой командой (супервайзеры, торговые представители, маркировщики, менеджеры по продажам)
+                                    li.js-other__item - Работа с таможенными органами, оформление таможенных деклараций, контроль отгрузки товара.
                             .vacancies__more-wrap.t-center
-                                a.vacancies__more-lnk(href='#') подробнее
+                                a.vacancies__more-lnk.js-other__show(href='#', data-count='2') подробнее
                     .wform
                         form#vacancies-form
                             h3.wform__title Оставить заявку
                             .wform__wrap.clearfix
                                 .wform__part.f-left
                                     .wform__group
-                                        label.wform__label Ваши фамилия и имя:
+                                        label.wform__label * Ваши  ФИО::
                                         input.wform__input(type='text', placeholder='Пароль', name='name')
                                     .wform__group
                                         .wform__group
@@ -41,7 +45,7 @@ block main
                                             input.wform__input(type='text', placeholder='+375 28 895-39-12', name='phone')
                                     .wform__group
                                         .wform__group
-                                            label.wform__label *Ваш e-mail:
+                                            label.wform__label Ваш e-mail:
                                             input.wform__input(type='text', placeholder='goroddushevihkabin@gmail.com')
                                     .wform__group
                                         .wform__upload-wrap
@@ -53,7 +57,7 @@ block main
                                         textarea.wform__textarea(placeholder='Текст описания', name='desc')
                                 .wform__part.f-right
                                     .wform__group
-                                        label.wform__label * Выберите город в котором вы работаете:
+                                        label.wform__label * Выберите вакансии которые вас интересуют:
                                         ul.wform__check-list.unstyled-list
                                             li.wform__check-item
                                                 .pseudo-check

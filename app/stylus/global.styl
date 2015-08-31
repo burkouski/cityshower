@@ -72,6 +72,10 @@ a
   sprite($s-minus)
 .s-icon--delete
   sprite($s-delete)
+.s-icon--search
+  sprite($s-search)
+.s-icon--crossg
+  sprite($s-crossg)
 .bs-icon--cart
   &:before
     sprite($s-cart)
@@ -114,6 +118,9 @@ a
 .as-icon--close
   &:after
     sprite($s-close)
+.as-icon--file
+  &:after
+    sprite($s-file)
 /*Футер к низу страницы*/
 html
 body
@@ -130,6 +137,7 @@ body
 .footer
   height footerHeight
 .container
+  position relative
   width containerWidth
   margin 0 auto
 .f-left
@@ -175,3 +183,6 @@ label.error
   top 0
   z-index 2
   box-shadow 0 0 10px rgba(0,0,0,0.5)
+
+.man-bg
+  background url("../img/bg/man-bg.png") no-repeat right center

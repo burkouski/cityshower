@@ -89,7 +89,7 @@ html.no-js.html
                                     .dept__phone.js-tabs__content skype
                                 .dept__item
                                     ul.dept__phone-list.unstyled-list
-                                        li.dept__phone-icon.js-tabs__tab(data-index='0')
+                                        li.dept__phone-icon.js-tabs__tab.active(data-index='0')
                                             i.s-icon.s-icon--velcom
                                         li.dept__phone-icon.js-tabs__tab(data-index='1')
                                             i.s-icon.s-icon--mts
@@ -230,9 +230,9 @@ html.no-js.html
                                 form#login-form
                                     .wform__wrap
                                         .wform__group
-                                            input.wform__input(type='text', placeholder='Ник или E-mail')
+                                            input.wform__input(type='text', placeholder='Ник или E-mail', name='email')
                                         .wform__group
-                                            input.wform__input(type='password', placeholder='Пароль')
+                                            input.wform__input(type='password', placeholder='Пароль', name='pass')
                                         .wform__group
                                             input.wform__submit.wform__submit--static(type='submit', placeholder='Войти')
                         .js-tabs__content
@@ -243,12 +243,15 @@ html.no-js.html
                                             .wform__group
                                                 label.wform__label Зарегестрироваться в качестве:
                                                 select.wform__select
-                                                    option Специалист
-                                                    option Пользователь
+                                                    option(value='1') Специалист
+                                                    option(value='2') Компания
                                             .wform__group
                                                 label.wform__label Ваши фамилия и имя (или название компании):
-                                                input.wform__input(type='text', placeholder='Пароль', name='name')
+                                                input.wform__input(type='text', placeholder='Иван Иванов', name='name')
                                                 .wform__notice Используется как заголовок вашей карточки
+                                            .wform__group
+                                                label.wform__upload-label.t-center(for='upload') Загрузите фотографию или логотип
+                                                input#upload.wform__upload(type='file')
                                             .wform__group
                                                 label.wform__label Ваши преимущества:
                                                 textarea.wform__textarea(placeholder='Текст описания', name='desc')
@@ -257,10 +260,10 @@ html.no-js.html
                                                 input.wform__input(type='text', placeholder='+375 28 895-39-12', name='phone')
                                             .wform__group
                                                 label.wform__label *Ваш e-mail:
-                                                input.wform__input(type='text', placeholder='goroddushevihkabin@gmail.com')
+                                                input.wform__input(type='text', placeholder='goroddushevihkabin@gmail.com', name='email')
                                             .wform__group
                                                 label.wform__label *Пароль:
-                                                input.wform__input(type='password', placeholder='*****************', name='pass')
+                                                input.wform__input#password(type='password', placeholder='*****************', name='pass')
                                             .wform__group
                                                 label.wform__label *Пароль ещё раз:
                                                 input.wform__input(type='password', placeholder='*****************', name='pass2')
@@ -271,116 +274,44 @@ html.no-js.html
                                                     label.wform__label * Введите текст с картинки:
                                                     input.wform__input(type='text', name='captcha')
                                         .wform__part.f-right
-                                            .wform__group.wform__group--bid
-                                                label.wform__label * Выберите город в котором вы работаете:
-                                                ul.wform__check-list.unstyled-list
-                                                    li.wform__check-item
-                                                        .pseudo-check
-                                                            input#compare1.pseudo-check__input(type='checkbox')
-                                                            label.pseudo-check__label(for='compare1') Минск (Центральный р-н)
-                                                                .pseudo-check__bg.pseudo-check__bg--big
-                                                    li.wform__check-item
-                                                        .pseudo-check
-                                                            input#compare2.pseudo-check__input(type='checkbox')
-                                                            label.pseudo-check__label(for='compare2') Минск (Центральный р-н)
-                                                                .pseudo-check__bg.pseudo-check__bg--big
-                                                    li.wform__check-item
-                                                        .pseudo-check
-                                                            input#compare3.pseudo-check__input(type='checkbox')
-                                                            label.pseudo-check__label(for='compare3') Минск (Центральный р-н)
-                                                                .pseudo-check__bg.pseudo-check__bg--big
-                                                    li.wform__check-item
-                                                        .pseudo-check
-                                                            input#compare4.pseudo-check__input(type='checkbox')
-                                                            label.pseudo-check__label(for='compare4') Минск (Центральный р-н)
-                                                                .pseudo-check__bg.pseudo-check__bg--big
-                                                    li.wform__check-item
-                                                        .pseudo-check
-                                                            input#compare1.pseudo-check__input(type='checkbox')
-                                                            label.pseudo-check__label(for='compare1') Минск (Центральный р-н)
-                                                                .pseudo-check__bg.pseudo-check__bg--big
-                                                    li.wform__check-item
-                                                        .pseudo-check
-                                                            input#compare1.pseudo-check__input(type='checkbox')
-                                                            label.pseudo-check__label(for='compare1') Минск (Центральный р-н)
-                                                                .pseudo-check__bg.pseudo-check__bg--big
-                                                    li.wform__check-item
-                                                        .pseudo-check
-                                                            input#compare1.pseudo-check__input(type='checkbox')
-                                                            label.pseudo-check__label(for='compare1') Минск (Центральный р-н)
-                                                                .pseudo-check__bg.pseudo-check__bg--big
-                                                    li.wform__check-item
-                                                        .pseudo-check
-                                                            input#compare1.pseudo-check__input(type='checkbox')
-                                                            label.pseudo-check__label(for='compare1') Минск (Центральный р-н)
-                                                                .pseudo-check__bg.pseudo-check__bg--big
-                                                    li.wform__check-item
-                                                        .pseudo-check
-                                                            input#compare1.pseudo-check__input(type='checkbox')
-                                                            label.pseudo-check__label(for='#compare1') Минск (Центральный р-н)
-                                                                .pseudo-check__bg.pseudo-check__bg--big
-                                                    li.wform__check-item
-                                                        .pseudo-check
-                                                            input#compare1.pseudo-check__input(type='checkbox')
-                                                            label.pseudo-check__label(for='compare1') Минск (Центральный р-н)
-                                                                .pseudo-check__bg.pseudo-check__bg--big
-                                            .wform__group.wform__group--bid.t-center
-                                                a.wform__toggle(href='#') Другие города
-                                            .wform__group.wform__group--bid
-                                                label.wform__label * Выберите услуги, которые Вы оказываете:
-                                                ul.wform__check-list.unstyled-list
-                                                    li.wform__check-item
-                                                        .pseudo-check
-                                                            input#compare1.pseudo-check__input(type='checkbox')
-                                                            label.pseudo-check__label(for='compare1') Услуга 1
-                                                                .pseudo-check__bg.pseudo-check__bg--big
-                                                    li.wform__check-item
-                                                        .pseudo-check
-                                                            input#compare1.pseudo-check__input(type='checkbox')
-                                                            label.pseudo-check__label(for='compare1') Услуга 1
-                                                                .pseudo-check__bg.pseudo-check__bg--big
-                                                    li.wform__check-item
-                                                        .pseudo-check
-                                                            input#compare1.pseudo-check__input(type='checkbox')
-                                                            label.pseudo-check__label(for='#compare1') Услуга 1
-                                                                .pseudo-check__bg.pseudo-check__bg--big
-                                                    li.wform__check-item
-                                                        .pseudo-check
-                                                            input#compare1.pseudo-check__input(type='checkbox')
-                                                            label.pseudo-check__label(for='compare1') Услуга 1
-                                                                .pseudo-check__bg.pseudo-check__bg--big
-                                                    li.wform__check-item
-                                                        .pseudo-check
-                                                            input#compare1.pseudo-check__input(type='checkbox')
-                                                            label.pseudo-check__label(for='compare1') Услуга 1
-                                                                .pseudo-check__bg.pseudo-check__bg--big
-                                                    li.wform__check-item
-                                                        .pseudo-check
-                                                            input#compare1.pseudo-check__input(type='checkbox')
-                                                            label.pseudo-check__label(for='compare1') Услуга 1
-                                                                .pseudo-check__bg.pseudo-check__bg--big
-                                                    li.wform__check-item
-                                                        .pseudo-check
-                                                            input#compare1.pseudo-check__input(type='checkbox')
-                                                            label.pseudo-check__label(for='compare1') Услуга 1
-                                                                .pseudo-check__bg.pseudo-check__bg--big
-                                                    li.wform__check-item
-                                                        .pseudo-check
-                                                            input#compare1.pseudo-check__input(type='checkbox')
-                                                            label.pseudo-check__label(for='compare1') Услуга 1
-                                                                .pseudo-check__bg.pseudo-check__bg--big
-                                                    li.wform__check-item
-                                                        .pseudo-check
-                                                            input#compare1.pseudo-check__input(type='checkbox')
-                                                            label.pseudo-check__label(for='compare1') Услуга 1
-                                                                .pseudo-check__bg.pseudo-check__bg--big
-                                                    li.wform__check-item
-                                                        .pseudo-check
-                                                            input#compare1.pseudo-check__input(type='checkbox')
-                                                            label.pseudo-check__label(for='compare1') Услуга 1
-                                                                .pseudo-check__bg.pseudo-check__bg--big
-                                            .wform__group.wform__group--bid.t-center
-                                                a.wform__toggle(href='#') Другие города
+                                            .js-other
+                                                .wform__group.wform__group--bid
+                                                    label.wform__label * Выберите город в котором вы работаете:
+                                                    ul.wform__check-list.unstyled-list
+                                                        for item in [1,2,3,4,5,6,7,8,9,10]
+                                                            li.wform__check-item.js-other__item
+                                                                .pseudo-check
+                                                                    input.pseudo-check__input(type='checkbox', id='city'+item)
+                                                                    label.pseudo-check__label(for='city'+item) Минск (Центральный р-н)
+                                                                        .pseudo-check__bg.pseudo-check__bg--big
+                                                        for item in [1,2,3,4,5,6,7,8,9,10]
+                                                            li.wform__check-item.js-other__item
+                                                                .pseudo-check
+                                                                    input.pseudo-check__input(type='checkbox', id='city'+item)
+                                                                    label.pseudo-check__label(for='city'+item) Минск (Центральный р-н)
+                                                                        .pseudo-check__bg.pseudo-check__bg--big
+
+                                                .wform__group.wform__group--bid.t-center
+                                                    a.wform__toggle.js-other__show(href='#', data-count='10') Другие города
+                                            .js-other
+                                                .wform__group.wform__group--bid
+                                                    label.wform__label * Выберите услуги, которые Вы оказываете:
+                                                    ul.wform__check-list.unstyled-list
+                                                        for item in [1,2,3,4,5,6,7,8,9,10]
+                                                            li.wform__check-item.js-other__item
+                                                                .pseudo-check
+                                                                    input.pseudo-check__input(type='checkbox', id='service'+item)
+                                                                    label.pseudo-check__label(for='service'+item)= 'Услуга' + item
+                                                                        .pseudo-check__bg.pseudo-check__bg--big
+                                                        for item in [1,2,3,4,5,6,7,8,9,10]
+                                                            li.wform__check-item.js-other__item
+                                                                .pseudo-check
+                                                                    input.pseudo-check__input(type='checkbox', id='service'+item)
+                                                                    label.pseudo-check__label(for='service'+item)= 'Услуга' + item
+                                                                        .pseudo-check__bg.pseudo-check__bg--big
+
+                                                .wform__group.wform__group--bid.t-center
+                                                    a.wform__toggle.js-other__show(href='#', data-count='10') Другие услуги
                                             .wform__group.wform__group--bid
                                                 .wform__rules.t-center
                                                     span Регестрируясь, вы соглашаетесь с
@@ -396,12 +327,12 @@ html.no-js.html
     script(src='./js/vendor/fancybox.js')
     script(src='./js/vendor/bvsTabs.js')
     script(src='./js/vendor/bvsCarousel.js')
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.js" )
     //script(src="./js/vendor/masonry.js")
     script(src='./js/vendor/jquery.custom-select.min.js')
     script(src='./js/vendor/jquery.validate.js')
     // endbuild
-
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.js" )
+    script(src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js")
     //build:js ./js/combined.js
     script(src='./js/main.js')
     script(src='./js/plugins.js')
