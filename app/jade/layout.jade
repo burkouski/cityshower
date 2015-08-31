@@ -200,6 +200,9 @@ html.no-js.html
                             a.footer-list__lnk(href='') Новости
         #callback-modal.modal
             .modal__wrap
+                select(name='')
+                    option(value='1') Специалист
+                    option(value='2') Компания
                 .modal__close.as-icon.as-icon--close.js-modal__close Закрыть
                 .modal__bar.clearfix
                     span.modal__btn.f-left.active Заказать звонок
@@ -219,6 +222,9 @@ html.no-js.html
                                 .wform__mess.t-center В ближайшее время консультант перезвонит Вам
         #user-modal.modal
             .modal__wrap
+                select(name='')
+                    option(value='1') Специалист
+                    option(value='2') Компания
                 .modal__close.as-icon.as-icon--close.js-modal__close Закрыть
                 .js-tabs
                     .modal__bar.clearfix
@@ -242,7 +248,7 @@ html.no-js.html
                                         .wform__part.f-left
                                             .wform__group
                                                 label.wform__label Зарегестрироваться в качестве:
-                                                select.wform__select
+                                                select.wform__select(name='')
                                                     option(value='1') Специалист
                                                     option(value='2') Компания
                                             .wform__group
@@ -274,7 +280,7 @@ html.no-js.html
                                                     label.wform__label * Введите текст с картинки:
                                                     input.wform__input(type='text', name='captcha')
                                         .wform__part.f-right
-                                            .js-other
+                                            .wform__group.js-other
                                                 .wform__group.wform__group--bid
                                                     label.wform__label * Выберите город в котором вы работаете:
                                                     ul.wform__check-list.unstyled-list
@@ -293,7 +299,7 @@ html.no-js.html
 
                                                 .wform__group.wform__group--bid.t-center
                                                     a.wform__toggle.js-other__show(href='#', data-count='10') Другие города
-                                            .js-other
+                                            .wform__group.js-other
                                                 .wform__group.wform__group--bid
                                                     label.wform__label * Выберите услуги, которые Вы оказываете:
                                                     ul.wform__check-list.unstyled-list

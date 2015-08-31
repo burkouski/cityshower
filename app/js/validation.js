@@ -49,7 +49,7 @@ $('#login-form').validate({
 
 });
 
-$('#registration-form').validate({
+$('#registration-form2').validate({
 
     rules: {
         name: {
@@ -119,6 +119,28 @@ $('#faq-form').validate({
 
 });
 
+$('#review-form').validate({
+
+    rules: {
+
+        name: {
+            required: true
+        },
+        review: {
+            required: true
+        }
+
+    },
+    messages: {
+
+        name: "Введите вашe имя!",
+        review: "Оствьте отзыв!"
+    },
+    submitHandler: function (form) {
+
+    }
+
+});
 $('#vacancies-form').validate({
 
     rules: {
@@ -142,5 +164,7 @@ $('#vacancies-form').validate({
     submitHandler: function (form) {
 
     }
+
+
 
 });

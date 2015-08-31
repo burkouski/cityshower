@@ -72,42 +72,42 @@ a:visited {
   background: url("../img/bg/sprite.png") no-repeat;
 }
 .s-icon--velcom {
-  background-position: -109px -72px;
+  background-position: -197px 0px;
   width: 15px;
   height: 15px;
 }
 .s-icon--mts {
-  background-position: -15px -153px;
+  background-position: -145px -143px;
   width: 15px;
   height: 15px;
 }
 .s-icon--life {
-  background-position: -163px -110px;
+  background-position: -197px -15px;
   width: 15px;
   height: 15px;
 }
 .s-icon--phone {
-  background-position: -45px -153px;
+  background-position: -197px -60px;
   width: 15px;
   height: 14px;
 }
 .s-icon--mail {
-  background-position: -163px -140px;
+  background-position: -109px -88px;
   width: 16px;
   height: 11px;
 }
 .s-icon--skype {
-  background-position: -163px -125px;
+  background-position: -197px -30px;
   width: 15px;
   height: 15px;
 }
 .s-icon--pstar {
-  background-position: -73px -153px;
+  background-position: -197px -88px;
   width: 13px;
   height: 14px;
 }
 .s-icon--nstar {
-  background-position: -60px -153px;
+  background-position: -197px -74px;
   width: 13px;
   height: 14px;
 }
@@ -127,44 +127,69 @@ a:visited {
   height: 28px;
 }
 .s-icon--ctrll {
-  background-position: -118px -100px;
+  background-position: -197px -118px;
   width: 9px;
   height: 16px;
 }
 .s-icon--ctrlr {
-  background-position: 0px -168px;
+  background-position: -197px -102px;
   width: 9px;
   height: 16px;
 }
 .s-icon--question {
-  background-position: -163px -61px;
+  background-position: -110px -28px;
   width: 17px;
   height: 17px;
 }
 .s-icon--plus {
-  background-position: -30px -153px;
+  background-position: -197px -45px;
   width: 15px;
   height: 15px;
 }
 .s-icon--minus {
-  background-position: 0px -153px;
+  background-position: -145px -128px;
   width: 15px;
   height: 15px;
 }
 .s-icon--delete {
-  background-position: -27px -128px;
+  background-position: -168px -55px;
   width: 24px;
   height: 24px;
 }
 .s-icon--search {
-  background-position: 0px -128px;
+  background-position: -168px -30px;
   width: 27px;
   height: 25px;
 }
 .s-icon--crossg {
-  background-position: -114px -51px;
+  background-position: -197px -143px;
   width: 9px;
   height: 9px;
+}
+.s-icon--fb {
+  background-position: -128px -80px;
+  width: 40px;
+  height: 40px;
+}
+.s-icon--vk {
+  background-position: -128px 0px;
+  width: 40px;
+  height: 40px;
+}
+.s-icon--tw {
+  background-position: -128px -40px;
+  width: 40px;
+  height: 40px;
+}
+.s-icon--od {
+  background-position: -70px -28px;
+  width: 40px;
+  height: 40px;
+}
+.s-icon--gp {
+  background-position: 0px -128px;
+  width: 40px;
+  height: 40px;
 }
 .bs-icon--cart:before {
   background-position: 0px -28px;
@@ -172,72 +197,72 @@ a:visited {
   height: 44px;
 }
 .bs-icon--home:before {
-  background-position: -163px 0px;
+  background-position: -168px -102px;
   width: 21px;
   height: 21px;
 }
 .bs-icon--instock:before {
-  background-position: -87px -63px;
+  background-position: -197px -169px;
   width: 8px;
   height: 8px;
 }
 .bs-icon--outstock:before {
-  background-position: -79px -63px;
+  background-position: -197px -161px;
   width: 8px;
   height: 8px;
 }
 .bs-icon--addcart:before {
-  background-position: -128px -100px;
+  background-position: -87px -100px;
   width: 33px;
   height: 25px;
 }
 .bs-icon--click:before {
-  background-position: -87px -100px;
+  background-position: 0px -168px;
   width: 31px;
   height: 25px;
 }
 .bs-icon--calendar:before {
-  background-position: -163px -94px;
+  background-position: -109px -72px;
   width: 16px;
   height: 16px;
 }
 .bs-icon--delivery:before {
-  background-position: -128px -35px;
+  background-position: -110px -128px;
   width: 35px;
   height: 35px;
 }
 .bs-icon--garanty:before {
-  background-position: -128px 0px;
+  background-position: -75px -128px;
   width: 35px;
   height: 35px;
 }
 .bs-icon--service:before {
-  background-position: -70px -28px;
+  background-position: -40px -128px;
   width: 35px;
   height: 35px;
 }
 .bs-icon--login:before {
-  background-position: -105px -28px;
+  background-position: -168px -79px;
   width: 23px;
   height: 23px;
 }
 .bs-icon--exit:before {
-  background-position: -163px -41px;
+  background-position: -168px -143px;
   width: 15px;
   height: 20px;
 }
 .as-icon--toggle:after {
-  background-position: -128px -70px;
+  background-position: -168px 0px;
   width: 29px;
   height: 30px;
 }
 .as-icon--close:after {
-  background-position: -163px -21px;
+  background-position: -168px -123px;
   width: 20px;
   height: 20px;
 }
 .as-icon--file:after {
-  background-position: -163px -78px;
+  background-position: -110px -45px;
   width: 16px;
   height: 16px;
 }
@@ -264,6 +289,13 @@ body {
   position: relative;
   width: 1240px;
   margin: 0 auto;
+}
+.container--white {
+  background: #fff;
+}
+.wrapper {
+  min-width: 1240px;
+  overflow: hidden;
 }
 .f-left {
   float: left;

@@ -125,7 +125,7 @@
       </header>
       <main class="main">
         <section class="page">
-          <div class="container">
+          <div class="container container--white">
             <div class="page__one-column">
               <div class="breadcrumbs">
                 <ul class="breadcrumbs__list unstyled-list">
@@ -140,38 +140,44 @@
                 <div class="shower__wrap clearfix">
                   <aside class="shower__aside f-left">
                     <div class="shower__aside-item">
-                      <div class="shower__gallery gallery">
-                        <div class="gallery__img-wrap"><img src="./img/gallery/gal1.jpg" class="gallery__img"></div>
+                      <div class="shower__gallery gallery js-tabs">
+                        <div class="gallery__img-wrap">
+                          <div class="js-tabs__wrap">
+                            <div class="js-tabs__content active"><a href="./img/gallery/gal1.jpg" class="js-lightbox"><img src="./img/gallery/gal1.jpg" class="gallery__img"></a></div>
+                            <div class="js-tabs__content"><a href="./img/gallery/gal1.jpg" class="js-lightbox"><img src="./img/gallery/gal1.jpg" class="gallery__img"></a></div>
+                            <div class="js-tabs__content"><a href="./img/gallery/gal1.jpg" class="js-lightbox"><img src="./img/gallery/gal1.jpg" class="gallery__img"></a></div>
+                          </div>
+                        </div>
                         <div class="gallery__corusel">
-                          <div class="carousel__wrap"><span class="carousel__ctrl carousel__ctrl--long f-left"><i class="carousel__ctrl-ico s-icon s-icon--ctrll js-carousel__ctrl--left"></i></span>
+                          <div class="carousel__wrap"><span class="carousel__ctrl carousel__ctrl--long f-left js-carousel__ctrl--left"><i class="carousel__ctrl-ico s-icon s-icon--ctrll"></i></span>
                             <div class="gallery__corusel-wrap">
                               <div class="carousel__items-wrap clearfix">
-                                <div class="gallery__thumb"><img src="./img/gallery/gal1.jpg" class="gallery__thumb-img"></div>
-                                <div class="gallery__thumb"><img src="./img/gallery/gal1.jpg" class="gallery__thumb-img"></div>
-                                <div class="gallery__thumb"><img src="./img/gallery/gal1.jpg" class="gallery__thumb-img"></div>
+                                <div data-index="0" class="gallery__thumb js-tabs__tab"><img src="./img/gallery/gal1.jpg" class="gallery__thumb-img"></div>
+                                <div data-index="1" class="gallery__thumb js-tabs__tab"><img src="./img/gallery/gal1.jpg" class="gallery__thumb-img"></div>
+                                <div data-index="2" class="gallery__thumb js-tabs__tab"><img src="./img/gallery/gal1.jpg" class="gallery__thumb-img"></div>
                               </div>
-                            </div><span class="carousel__ctrl carousel__ctrl--long f-right"><i class="carousel__ctrl-ico s-icon s-icon--ctrlr js-carousel__ctrl--right"></i></span>
+                            </div><span class="carousel__ctrl carousel__ctrl--long f-right js-carousel__ctrl--right"><i class="carousel__ctrl-ico s-icon s-icon--ctrlr"></i></span>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="shower__aside-item">
                       <div class="similar">
-                        <div class="similar__wrap carousel js-bvs__carousel">
+                        <div class="similar__wrap carousel js-carousel">
                           <div class="similar__title clearfix">ПОХОЖИЕ ТОВАРЫ
-                            <div class="similar__ctrl-wrap f-right"><span class="carousel__ctrl carousel__ctrl--left"><i class="carousel__ctrl-ico s-icon s-icon--ctrll js-carousel__ctrl--left"></i></span><span class="carousel__ctrl carousel__ctrl--right"><i class="carousel__ctrl-ico s-icon s-icon--ctrlr js-carousel__ctrl--right"></i></span></div>
+                            <div class="similar__ctrl-wrap f-right"><span class="carousel__ctrl carousel__ctrl--left js-carousel__ctrl--left"><i class="carousel__ctrl-ico s-icon s-icon--ctrll"></i></span><span class="carousel__ctrl carousel__ctrl--right js-carousel__ctrl--right"><i class="carousel__ctrl-ico s-icon s-icon--ctrlr"></i></span></div>
                           </div>
                           <div class="carousel__wrap similar__item-wrap">
-                            <div class="carousel__items-wrap clearfix">
+                            <div class="carousel__items-wrap js-carousel__wrap clearfix">
                               <div data-label="hit" class="similar__item js-carousel__slide js-sort-tab__content">
                                 <div class="product-preview t-center"><span class="product-label product-preview__status-label s-icon s-icon--blabel">Хиты продаж</span>
                                   <div class="product-preview__img-wrap"><a href=""><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
-                                  <div class="product-preview__meta clearfix"><span class="product-stock product-stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
+                                  <div class="product-preview__meta clearfix"><span class="stock stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
                                     <div class="product-compare">
                                       <div class="pseudo-check">
-                                        <input id="compare1" type="checkbox" class="pseudo-check__input">
-                                        <label for="#compare1" class="pseudo-check__label">Сравнить
-                                          <div class="pseudo-check__bg"></div>
+                                        <input type="checkbox" id="compare1" class="pseudo-check__input">
+                                        <label for="compare1" class="pseudo-check__label">Сравнить
+                                          <div class="pseudo-check__bg pseudo-check__bg"></div>
                                         </label>
                                       </div>
                                     </div>
@@ -187,12 +193,12 @@
                               <div data-label="hit" class="similar__item js-carousel__slide js-sort-tab__content">
                                 <div class="product-preview t-center"><span class="product-label product-preview__status-label s-icon s-icon--blabel">Хиты продаж</span>
                                   <div class="product-preview__img-wrap"><a href=""><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
-                                  <div class="product-preview__meta clearfix"><span class="product-stock product-stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
+                                  <div class="product-preview__meta clearfix"><span class="stock stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
                                     <div class="product-compare">
                                       <div class="pseudo-check">
-                                        <input id="compare1" type="checkbox" class="pseudo-check__input">
-                                        <label for="#compare1" class="pseudo-check__label">Сравнить
-                                          <div class="pseudo-check__bg"></div>
+                                        <input type="checkbox" id="compare2" class="pseudo-check__input">
+                                        <label for="compare2" class="pseudo-check__label">Сравнить
+                                          <div class="pseudo-check__bg pseudo-check__bg"></div>
                                         </label>
                                       </div>
                                     </div>
@@ -208,12 +214,12 @@
                               <div data-label="hit" class="similar__item js-carousel__slide js-sort-tab__content">
                                 <div class="product-preview t-center"><span class="product-label product-preview__status-label s-icon s-icon--blabel">Хиты продаж</span>
                                   <div class="product-preview__img-wrap"><a href=""><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
-                                  <div class="product-preview__meta clearfix"><span class="product-stock product-stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
+                                  <div class="product-preview__meta clearfix"><span class="stock stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
                                     <div class="product-compare">
                                       <div class="pseudo-check">
-                                        <input id="compare1" type="checkbox" class="pseudo-check__input">
-                                        <label for="#compare1" class="pseudo-check__label">Сравнить
-                                          <div class="pseudo-check__bg"></div>
+                                        <input type="checkbox" id="compare3" class="pseudo-check__input">
+                                        <label for="compare3" class="pseudo-check__label">Сравнить
+                                          <div class="pseudo-check__bg pseudo-check__bg"></div>
                                         </label>
                                       </div>
                                     </div>
@@ -247,7 +253,7 @@
                       <div class="meta-bar__bar-item f-right">
                         <div class="review-bar">
                           <div class="review-bar__item"><a href="#" class="review-lnk">25 отзывов</a></div>
-                          <div class="review-bar__item"><a href="#" class="review-btn">Оставить отзыв</a></div>
+                          <div class="review-bar__item"><a href="#review-modal" class="review-btn js-modal">Оставить отзыв</a></div>
                         </div>
                       </div>
                     </div>
@@ -408,21 +414,84 @@
                           </div>
                           <div class="js-tabs__content">
                             <div class="review">
-                              <div class="review__meta clearfix">
-                                <div class="review__meta-item f-left">
-                                  <div class="review__autor">Маша</div>
+                              <div class="review__item">
+                                <div class="review__meta clearfix">
+                                  <div class="review__meta-item f-left">
+                                    <div class="review__autor">Маша</div>
+                                  </div>
+                                  <div class="review__meta-item f-right">
+                                    <div class="review__date">27 февраля 2014 в 00:00</div>
+                                  </div>
                                 </div>
-                                <div class="review__meta-item f-right">
-                                  <div class="review__date">27 февраля 2014 в 00:00</div>
-                                </div>
+                                <div class="review__text"> Душевая кабина – относительно новый сантехнический продукт, который предлагает нам отечественный рынок. На западе душевая кабина, как правило, является не столько заменой ванны, как ее дополнением. В большинстве же российских квартир с небольшими метражами ванных комнат, возможности установить и ванну, и душевую кабину, к сожалению, практически нет. Поэтому</div>
                               </div>
-                              <div class="review__text"> Душевая кабина – относительно новый сантехнический продукт, который предлагает нам отечественный рынок. На западе душевая кабина, как правило, является не столько заменой ванны, как ее дополнением. В большинстве же российских квартир с небольшими метражами ванных комнат, возможности установить и ванну, и душевую кабину, к сожалению, практически нет. Поэтому</div>
+                              <div class="review__item">
+                                <div class="review__meta clearfix">
+                                  <div class="review__meta-item f-left">
+                                    <div class="review__autor">Маша</div>
+                                  </div>
+                                  <div class="review__meta-item f-right">
+                                    <div class="review__date">27 февраля 2014 в 00:00</div>
+                                  </div>
+                                </div>
+                                <div class="review__text"> Душевая кабина – относительно новый сантехнический продукт, который предлагает нам отечественный рынок. На западе душевая кабина, как правило, является не столько заменой ванны, как ее дополнением. В большинстве же российских квартир с небольшими метражами ванных комнат, возможности установить и ванну, и душевую кабину, к сожалению, практически нет. Поэтому</div>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+            <div id="review-modal" class="modal">
+              <div class="modal__wrap">
+                <div class="modal__close as-icon as-icon--close js-modal__close">Закрыть</div>
+                <div class="modal__bar clearfix"><span class="modal__btn active f-left">Оставит заявку</span></div>
+                <div class="wform wform--request">
+                  <form id="review-form">
+                    <div class="wform__group">
+                      <div class="social"><span class="social__label">* Вход</span>
+                        <ul class="social__list unstyled-list">
+                          <li class="social__item"><a href="#" class="social__lnk s-icon s-icon--fb"></a></li>
+                          <li class="social__item"><a href="#" class="social__lnk s-icon s-icon--vk"></a></li>
+                          <li class="social__item"><a href="#" class="social__lnk s-icon s-icon--tw"></a></li>
+                          <li class="social__item"><a href="#" class="social__lnk s-icon s-icon--od"></a></li>
+                          <li class="social__item"><a href="#" class="social__lnk s-icon s-icon--gp"></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="wform__group">
+                      <label class="wform__label">* Отзыв:</label>
+                      <textarea placeholder="Пример текста..." name="review" class="wform__textarea"></textarea>
+                    </div>
+                    <div class="wform__group">
+                      <div class="wform__wrap clearfix">
+                        <div class="wform__part f-left">
+                          <label class="wform__label">* Ваше имя:</label>
+                          <input type="text" placeholder="Иван Иванов" name="name" class="wform__input">
+                        </div>
+                        <div class="wform__part f-right">
+                          <div class="review__rating-wrap"><span class="review__rating-label">Оцениете:</span>
+                            <div class="review__rating rating"><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--nstar"></i></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wform__group">
+                      <div class="wform__wrap clearfix">
+                        <div class="wform__part f-left">
+                          <input type="submit" value="Оставить заявку" class="wform__submit">
+                        </div>
+                        <div class="wform__part f-right">
+                          <div class="wform__notice">Нажимая кнопку “Отправить”, Вы принимаете<a href="#">Правила размещение коментариев.</a>Отзыв не будет опубликован, если он содержить ненормативную
+                            лексику, оскорблениия и угрозы
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -481,6 +550,10 @@
     </footer>
     <div id="callback-modal" class="modal">
       <div class="modal__wrap">
+        <select name="">
+          <option value="1">Специалист</option>
+          <option value="2">Компания</option>
+        </select>
         <div class="modal__close as-icon as-icon--close js-modal__close">Закрыть</div>
         <div class="modal__bar clearfix"><span class="modal__btn f-left active">Заказать звонок</span></div>
         <div class="wform wform--login">
@@ -508,6 +581,10 @@
     </div>
     <div id="user-modal" class="modal">
       <div class="modal__wrap">
+        <select name="">
+          <option value="1">Специалист</option>
+          <option value="2">Компания</option>
+        </select>
         <div class="modal__close as-icon as-icon--close js-modal__close">Закрыть</div>
         <div class="js-tabs">
           <div class="modal__bar clearfix"><a href="#" data-index="0" class="modal__btn js-tabs__tab f-left active">Вход</a><a href="#" data-index="1" class="modal__btn js-tabs__tab f-left">Регистрация</a></div>
@@ -536,7 +613,7 @@
                     <div class="wform__part f-left">
                       <div class="wform__group">
                         <label class="wform__label">Зарегестрироваться в качестве:</label>
-                        <select class="wform__select">
+                        <select name="" class="wform__select">
                           <option value="1">Специалист</option>
                           <option value="2">Компания</option>
                         </select>
@@ -579,7 +656,7 @@
                       </div>
                     </div>
                     <div class="wform__part f-right">
-                      <div class="js-other">
+                      <div class="wform__group js-other">
                         <div class="wform__group wform__group--bid">
                           <label class="wform__label">* Выберите город в котором вы работаете:</label>
                           <ul class="wform__check-list unstyled-list">
@@ -747,7 +824,7 @@
                         </div>
                         <div class="wform__group wform__group--bid t-center"><a href="#" data-count="10" class="wform__toggle js-other__show">Другие города</a></div>
                       </div>
-                      <div class="js-other">
+                      <div class="wform__group js-other">
                         <div class="wform__group wform__group--bid">
                           <label class="wform__label">* Выберите услуги, которые Вы оказываете:</label>
                           <ul class="wform__check-list unstyled-list">

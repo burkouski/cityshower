@@ -52,7 +52,7 @@ $(function(){
 
     );
 
-    var slideQuantity = $('.js-slider__wrap').eq(0).find('.js-slider__slide').length;
+    var slideQuantity = $('.js-slider').eq(0).find('.js-slider__slide').length;
     curSlider = 0,
         nextSlide = 1,
         prevSlide =slideQuantity -1;

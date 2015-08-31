@@ -1,7 +1,7 @@
 extends ./layout.jade
 block main
     section.page
-        .container
+        .container.container--white
             .page__one-column
                 .breadcrumbs
                     ul.breadcrumbs__list.unstyled-list
@@ -19,34 +19,43 @@ block main
                     .shower__wrap.clearfix
                         aside.shower__aside.f-left
                             .shower__aside-item
-                                .shower__gallery.gallery
+                                .shower__gallery.gallery.js-tabs
                                     .gallery__img-wrap
-                                        img.gallery__img(src='./img/gallery/gal1.jpg')
+                                        .js-tabs__wrap
+                                            .js-tabs__content.active
+                                                a.js-lightbox(href='./img/gallery/gal1.jpg')
+                                                    img.gallery__img(src='./img/gallery/gal1.jpg')
+                                            .js-tabs__content
+                                                a.js-lightbox(href='./img/gallery/gal1.jpg')
+                                                    img.gallery__img(src='./img/gallery/gal1.jpg')
+                                            .js-tabs__content
+                                                a.js-lightbox(href='./img/gallery/gal1.jpg')
+                                                    img.gallery__img(src='./img/gallery/gal1.jpg')
                                     .gallery__corusel
                                         .carousel__wrap
-                                            span.carousel__ctrl.carousel__ctrl--long.f-left
-                                                i.carousel__ctrl-ico.s-icon.s-icon--ctrll.js-carousel__ctrl--left
+                                            span.carousel__ctrl.carousel__ctrl--long.f-left.js-carousel__ctrl--left
+                                                i.carousel__ctrl-ico.s-icon.s-icon--ctrll
                                             .gallery__corusel-wrap
                                                 .carousel__items-wrap.clearfix
-                                                    .gallery__thumb
+                                                    .gallery__thumb.js-tabs__tab(data-index='0')
                                                         img.gallery__thumb-img(src='./img/gallery/gal1.jpg')
-                                                    .gallery__thumb
+                                                    .gallery__thumb.js-tabs__tab(data-index='1')
                                                         img.gallery__thumb-img(src='./img/gallery/gal1.jpg')
-                                                    .gallery__thumb
+                                                    .gallery__thumb.js-tabs__tab(data-index='2')
                                                         img.gallery__thumb-img(src='./img/gallery/gal1.jpg')
-                                            span.carousel__ctrl.carousel__ctrl--long.f-right
-                                                i.carousel__ctrl-ico.s-icon.s-icon--ctrlr.js-carousel__ctrl--right
+                                            span.carousel__ctrl.carousel__ctrl--long.f-right.js-carousel__ctrl--right
+                                                i.carousel__ctrl-ico.s-icon.s-icon--ctrlr
                             .shower__aside-item
                                 .similar
-                                    .similar__wrap.carousel.js-bvs__carousel
+                                    .similar__wrap.carousel.js-carousel
                                         .similar__title.clearfix ПОХОЖИЕ ТОВАРЫ
                                             .similar__ctrl-wrap.f-right
-                                                span.carousel__ctrl.carousel__ctrl--left
-                                                    i.carousel__ctrl-ico.s-icon.s-icon--ctrll.js-carousel__ctrl--left
-                                                span.carousel__ctrl.carousel__ctrl--right
-                                                    i.carousel__ctrl-ico.s-icon.s-icon--ctrlr.js-carousel__ctrl--right
+                                                span.carousel__ctrl.carousel__ctrl--left.js-carousel__ctrl--left
+                                                    i.carousel__ctrl-ico.s-icon.s-icon--ctrll
+                                                span.carousel__ctrl.carousel__ctrl--right.js-carousel__ctrl--right
+                                                    i.carousel__ctrl-ico.s-icon.s-icon--ctrlr
                                         .carousel__wrap.similar__item-wrap
-                                            .carousel__items-wrap.clearfix
+                                            .carousel__items-wrap.js-carousel__wrap.clearfix
                                                 for item in [1,2,3]
                                                     .similar__item.js-carousel__slide.js-sort-tab__content(data-label='hit')
                                                         .product-preview.t-center
@@ -55,12 +64,12 @@ block main
                                                                 a(href='')
                                                                     img.product-preview__img(src='./img/product/product1.jpg')
                                                             .product-preview__meta.clearfix
-                                                                span.product-stock.product-stock--instock.bs-icon.bs-icon--instock.f-left В наличии
+                                                                span.stock.stock--instock.bs-icon.bs-icon--instock.f-left В наличии
                                                                 .product-compare
                                                                     .pseudo-check
-                                                                        input#compare1.pseudo-check__input(type='checkbox')
-                                                                        label.pseudo-check__label(for='#compare1') Сравнить
-                                                                            .pseudo-check__bg
+                                                                        input.pseudo-check__input(type='checkbox', id='compare'+ item)
+                                                                        label.pseudo-check__label(for='compare'+item) Сравнить
+                                                                            .pseudo-check__bg.pseudo-check__bg
                                                             h3.product-preview__title
                                                                 a.product-preview__lnk(href='/') Охладители Symphony Ice cube
                                                             .product-preview__rating
@@ -102,7 +111,7 @@ block main
                                         .review-bar__item
                                             a.review-lnk(href='#') 25 отзывов
                                         .review-bar__item
-                                            a.review-btn(href='#') Оставить отзыв
+                                            a.review-btn.js-modal(href='#review-modal') Оставить отзыв
                             .shower__desc Душевая кабина – относительно новый сантехнический продукт, который предлагает нам отечественный рынок. На западе душевая кабина, как правило, является не столько заменой ванны, как ее дополнением. В большинстве же российских квартир с небольшими метражами ванных комнат, возможности установить и ванну, и душевую кабину, к сожалению, практически нет. Поэтому
                             .shower__pricebar.clearfix
                                 .shower__pricebar-item.f-left
@@ -233,11 +242,66 @@ block main
                                             .shower__desc Душевая кабина – относительно новый сантехнический продукт, который предлагает нам отечественный рынок. На западе душевая кабина, как правило, является не столько заменой ванны, как ее дополнением. В большинстве же российских квартир с небольшими метражами ванных комнат, возможности установить и ванну, и душевую кабину, к сожалению, практически нет. Поэтому
                                         .js-tabs__content
                                             .review
-                                                .review__meta.clearfix
-                                                    .review__meta-item.f-left
-                                                        .review__autor Маша
-                                                    .review__meta-item.f-right
-                                                        .review__date 27 февраля 2014 в 00:00
-                                                .review__text  Душевая кабина – относительно новый сантехнический продукт, который предлагает нам отечественный рынок. На западе душевая кабина, как правило, является не столько заменой ванны, как ее дополнением. В большинстве же российских квартир с небольшими метражами ванных комнат, возможности установить и ванну, и душевую кабину, к сожалению, практически нет. Поэтому
+                                                .review__item
+                                                    .review__meta.clearfix
+                                                        .review__meta-item.f-left
+                                                            .review__autor Маша
+                                                        .review__meta-item.f-right
+                                                            .review__date 27 февраля 2014 в 00:00
+                                                    .review__text  Душевая кабина – относительно новый сантехнический продукт, который предлагает нам отечественный рынок. На западе душевая кабина, как правило, является не столько заменой ванны, как ее дополнением. В большинстве же российских квартир с небольшими метражами ванных комнат, возможности установить и ванну, и душевую кабину, к сожалению, практически нет. Поэтому
+                                                .review__item
+                                                    .review__meta.clearfix
+                                                        .review__meta-item.f-left
+                                                            .review__autor Маша
+                                                        .review__meta-item.f-right
+                                                            .review__date 27 февраля 2014 в 00:00
+                                                    .review__text  Душевая кабина – относительно новый сантехнический продукт, который предлагает нам отечественный рынок. На западе душевая кабина, как правило, является не столько заменой ванны, как ее дополнением. В большинстве же российских квартир с небольшими метражами ванных комнат, возможности установить и ванну, и душевую кабину, к сожалению, практически нет. Поэтому
+            #review-modal.modal
+                .modal__wrap
+                    .modal__close.as-icon.as-icon--close.js-modal__close Закрыть
+                    .modal__bar.clearfix
+                        span.modal__btn.active.f-left Оставит заявку
+                    .wform.wform--request
+                        form#review-form
+                            .wform__group
+                                .social
+                                    span.social__label * Вход
+                                    ul.social__list.unstyled-list
+                                        li.social__item
+                                            a.social__lnk.s-icon.s-icon--fb(href='#')
+                                        li.social__item
+                                            a.social__lnk.s-icon.s-icon--vk(href='#')
+                                        li.social__item
+                                            a.social__lnk.s-icon.s-icon--tw(href='#')
+                                        li.social__item
+                                            a.social__lnk.s-icon.s-icon--od(href='#')
+                                        li.social__item
+                                            a.social__lnk.s-icon.s-icon--gp(href='#')
+                            .wform__group
+                                label.wform__label * Отзыв:
+                                textarea.wform__textarea(placeholder='Пример текста...', name='review')
+                            .wform__group
+                                .wform__wrap.clearfix
+                                    .wform__part.f-left
+                                        label.wform__label * Ваше имя:
+                                        input.wform__input(type='text', placeholder='Иван Иванов', name='name')
+                                    .wform__part.f-right
+                                        .review__rating-wrap
+                                            span.review__rating-label Оцениете:
+                                            .review__rating.rating
+                                                i.rating__star.s-icon.s-icon--pstar
+                                                i.rating__star.s-icon.s-icon--pstar
+                                                i.rating__star.s-icon.s-icon--pstar
+                                                i.rating__star.s-icon.s-icon--pstar
+                                                i.rating__star.s-icon.s-icon--nstar
+                            .wform__group
+                                .wform__wrap.clearfix
+                                    .wform__part.f-left
+                                        input.wform__submit(type='submit', value='Оставить заявку')
+                                    .wform__part.f-right
+                                        .wform__notice Нажимая кнопку “Отправить”, Вы принимаете
+                                            a(href='#') Правила размещение коментариев.
+                                            |Отзыв не будет опубликован, если он содержить ненормативную
+                                            |лексику, оскорблениия и угрозы
 
 

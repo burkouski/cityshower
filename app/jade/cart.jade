@@ -1,7 +1,7 @@
 extends ./layout.jade
 block main
     section.page
-        .container
+        .container.container--white
             .page__one-column.page__static
                 .cart-page
                     .page__heading
@@ -54,8 +54,8 @@ block main
                                         h3.wform__title Доставка
                                         .wform__group
                                             .pseudo-check
-                                                input#compare1.pseudo-check__input(type='checkbox')
-                                                label.pseudo-check__label(for='compare1') Курьером -
+                                                input#delivery1.pseudo-check__input(type='checkbox')
+                                                label.pseudo-check__label(for='delivery1') Курьером -
                                                     span.blue  0 руб
                                                     .pseudo-check__bg.pseudo-check__bg--big
                                         .wform__group
@@ -63,16 +63,16 @@ block main
                                             input.wform__input(type='text', placeholder='Улица, дом, квартира', name='address')
                                         .wform__group
                                             .pseudo-check
-                                                input#compare1.pseudo-check__input(type='checkbox')
-                                                label.pseudo-check__label(for='compare1') Самовывоз со склада -
+                                                input#delivery2.pseudo-check__input(type='checkbox')
+                                                label.pseudo-check__label(for='delivery2') Самовывоз со склада -
                                                     span.blue  0 руб
                                                     .pseudo-check__bg.pseudo-check__bg--big
                                     .checkout__group
                                         h3.wform__title Способы оплаты
                                         .wform__group
                                             .pseudo-check
-                                                input#compare1.pseudo-check__input(type='checkbox')
-                                                label.pseudo-check__label(for='compare1') Минск (Центральный р-н)
+                                                input#payment.pseudo-check__input(type='checkbox')
+                                                label.pseudo-check__label(for='payment') Наличными
                                                     .pseudo-check__bg.pseudo-check__bg--big
                                         .wform__group
                                             span Общая стоимость заказа: 16 500 000 руб.

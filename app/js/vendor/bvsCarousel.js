@@ -9,14 +9,14 @@
 
 
             $(slider).on('click', ".js-carousel__ctrl--right", function () {
-                if ($(slider).find('.js-carousel__slide:visible').length < 6) return false;
+                if ($(slider).find('.js-carousel__slide:visible').length < 2) return false;
                 right_carusel(slider);
                 console.log('true')
                 return false;
             });
 
             $(slider).on('click', ".js-carousel__ctrl--left", function () {
-                if ($(slider).find('.js-carousel__slide:visible').length < 6) return false;
+                if ($(slider).find('.js-carousel__slide:visible').length < 2) return false;
                 left_carusel(slider);
                 console.log('true')
                 return false;
