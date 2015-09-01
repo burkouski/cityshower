@@ -49,7 +49,7 @@ $('#login-form').validate({
 
 });
 
-$('#registration-form2').validate({
+$('#registration-form').validate({
 
     rules: {
         name: {
