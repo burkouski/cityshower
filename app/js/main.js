@@ -171,5 +171,27 @@ $(function(){
         $('.js-price__trigger').removeClass('active');
         $(this).addClass('active');
         $('.js-price').text($(this).attr('data-price'));
+    });
+
+    $('.js-addinput').on('change', function(){
+        var _this = $(this);
+        console.log(_this.val());
+        if (_this.val() == 2) {
+            //alert(true);
+            $('.js-addinput__wrap').addClass('wform__group').append('<label class="wform__label">Ваш УНП</label>').append('<input class="wform__input" name="unp" type="text" placeholder="1945678"/>');
+        }
+        else {
+            $('.js-addinput__wrap').removeClass('wform__group');
+            $('.js-addinput__wrap .wform__input').remove();
+            $('.js-addinput__wrap .wform__label').remove();
+        }
+    })
+
+    $('.js-review__btn').on('click', function(e){
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $(".js-review").offset().top -130
+        }, 1000);
+        $('.js-review__tab').trigger('click');
     })
 });

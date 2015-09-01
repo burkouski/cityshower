@@ -877,8 +877,8 @@
   line-height: 25px;
 }
 .modal {
-  position: relative;
   display: none;
+  position: relative;
   padding: 30px 0 0 0;
 }
 .modal__wrap {
@@ -2314,6 +2314,9 @@
 }
 .review__meta-item:first-child {
   margin: 0;
+}
+.review__backward {
+  margin: 10px 0 0 0;
 }
 .social {
   line-height: 50px;

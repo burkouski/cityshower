@@ -55,6 +55,9 @@ $('#registration-form').validate({
         name: {
             required: true
         },
+        unp: {
+            required: true
+        },
         phone: {
             required: true,
             phone: true,
@@ -76,6 +79,7 @@ $('#registration-form').validate({
     },
     messages: {
         name: "Введите ваш e-mail",
+        unp: 'Введите ваш УНП',
         pass: {
             required: "Введите ваш пароль",
         },
@@ -94,7 +98,34 @@ $('#registration-form').validate({
 
     }
 });
+$('#request-form').validate({
 
+    rules: {
+        name: {
+            required: true
+        },
+
+        phone: {
+            required: true,
+            phone: true
+        },
+        email: {
+            required: true
+        }
+
+    },
+    messages: {
+        name: "Введите ваш e-mail",
+        phone: {
+            required: "Как с вами связаться?",
+            phone: "формат +375291111111"
+        },
+        email: "Введите ваш e-mail",
+    },
+    submitHandler: function (form) {
+
+    }
+});
 $('#profile-form').validate({
 
     rules: {

@@ -124,7 +124,7 @@ block main
                                 .meta-bar__bar-item.f-right
                                     .review-bar
                                         .review-bar__item
-                                            a.review-lnk(href='#') 25 отзывов
+                                            a.review-lnk.js-review__btn(href='#') 25 отзывов
                                         .review-bar__item
                                             a.review-btn.js-modal(href='#review-modal') Оставить отзыв
                             .shower__desc Душевая кабина – относительно новый сантехнический продукт, который предлагает нам отечественный рынок. На западе душевая кабина, как правило, является не столько заменой ванны, как ее дополнением. В большинстве же российских квартир с небольшими метражами ванных комнат, возможности установить и ванну, и душевую кабину, к сожалению, практически нет. Поэтому
@@ -165,12 +165,12 @@ block main
                                     img.product-feature__img(src='./img/feature/f3.png', title='Особенность')
                                     img.product-feature__img(src='./img/feature/f4.png', title='Особенность')
                                     img.product-feature__img(src='./img/feature/f5.png', title='Особенность')
-                            .shower__detail
+                            .shower__detail.js-review
                                 .js-tabs
                                     .modal__bar.clearfix
                                         a.modal__btn.js-tabs__tab.f-left.active(href='#', data-index='0') Характеристики
                                         a.modal__btn.js-tabs__tab.f-left(href='#', data-index='1') Описание товара
-                                        a.modal__btn.js-tabs__tab.f-left(href='#', data-index='2') Отзывы
+                                        a.modal__btn.js-tabs__tab.f-left.js-review__tab(href='#', data-index='2') Отзывы
                                     .js-tabs__wrap
                                         .js-tabs__content.active
                                             .shower__detail-item

@@ -180,7 +180,12 @@
     cursor: pointer;
 }
 
-.b-custom-select__dropdown,
-.b-custom-select__dropdown__inner {
-    width: 263px !important;
+.b-custom-select__dropdown
+ {
+    width: 265px !important;
 }
+.b-custom-select__dropdown__inner {
+    width: 283px !important;
+}
+
+
