@@ -111,7 +111,7 @@ $(function(){
             _this.find('.js-other__item:gt('+count+')').hide();
             showBtn.on('click', function(e){
                 e.preventDefault();
-                _this.find('.js-other__item:gt('+count+')').show();
+                _this.find('.js-other__item:gt('+count+')').show(300);
                 $(this).hide();
             })
         }
@@ -129,19 +129,44 @@ $(function(){
             }
         })
     });
-    $('.js-toggle__trigger').on('click', function(){
-        if ($(this).hasClass('active')) {
-            $(this).parent('.js-toggle').find('> .js-toggle__item').hide();
-            $(this).removeClass('active')
+
+    $('.js-seo__content').each(function(){
+        $(this).find('p:gt(0)').hide();
+    });
+    $('.js-seo__btn').on('click', function(e){
+        e.preventDefault();
+        var _this = $(this);
+        if(_this.hasClass('active')) {
+            _this.parents('.js-seo').find('p:gt(0)').hide(300);
+            _this.removeClass('active').text('Подробнее')
         }
         else {
-            $(this).parent('.js-toggle').find('> .js-toggle__item').show();
-            $(this).addClass('active')
+            _this.parents('.js-seo').find('p:gt(0)').show(300);
+            _this.addClass('active').text('Скрыть')
+        }
+    });
+
+    $('.js-toggle__trigger').on('click', function(e){
+        e.preventDefault();
+        if ($(this).hasClass('active')) {
+            $(this).parent('.js-toggle').find('> .js-toggle__item').hide(300);
+            $(this).removeClass('active');
+        }
+        else {
+            $(this).parent('.js-toggle').find('> .js-toggle__item').show(300);
+            $(this).addClass('active');
         }
     });
 
     $('.js-accardion__trigger').on('click', function(){
         $('.js-accardion__content').hide(300);
         $(this).parent('.js-accardion__item').find('.js-accardion__content').show(300);
+    });
+
+    $('.js-price__trigger').on('click', function(e){
+        e.preventDefault();
+        $('.js-price__trigger').removeClass('active');
+        $(this).addClass('active');
+        $('.js-price').text($(this).attr('data-price'));
     })
 });

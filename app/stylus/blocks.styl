@@ -453,6 +453,8 @@
   position relative
   top 1px
 .carousel__ctrl
+  position relative
+  z-index 2
   display inline-block
   width 37px
   height 37px
@@ -467,6 +469,7 @@
 .carousel__ctrl--long
   height 83px
   margin 0
+  background white
   line-height 83px
 .product-feature__img
   margin 0 5px
@@ -686,19 +689,26 @@
   margin 0 0 20px 0
 .seo__text
   margin 0 0 60px 0
-
+.seo__text--small
+  margin 0 0 19px 0
 .seo__readmore-lnk
   display inline-block
   height 55px
   padding 0 50px
   border 1px solid #b8b8b8
   border-radius 5px
+  color #555555
   text-transform uppercase
   line-height 55px
   font-weight 300
+  text-decoration none
+  cursor pointer
   &:hover
     background #b8b8b8
-
+    color white
+.seo__readmore-lnk--small
+  height 25px
+  line-height 25px
 
 .modal
   position relative
@@ -955,21 +965,22 @@
       color #739ac5
 .cat-menu__item--parent
   position relative
-  &:before
-    content ''
-    position absolute
-    top 12px
-    left 16px
-    display block
-    background url("../img/bg/sprite.png") no-repeat
-    sprite($s-plus)
-  &.active
+  .cat-menu__link
     &:before
-      sprite($s-minus)
-    .cat-menu__sublist
-      height auto
-      padding 13px 15px 13px 45px
-      border-top 1px solid #d0d0d0
+      content ''
+      position absolute
+      top 12px
+      left 16px
+      display block
+      background url("../img/bg/sprite.png") no-repeat
+      sprite($s-plus)
+    &.active
+      &:before
+        sprite($s-minus)
+  .cat-menu__sublist
+    height auto
+    padding 13px 15px 13px 45px
+    border-top 1px solid #d0d0d0
 
 .cat-menu__link
   display block
@@ -1014,19 +1025,24 @@
       background #739ac5
 
 .filter
+  margin 0 0 -1px 0
   padding 15px 17px
-  border-left 1px solid #d0d0d0
-  border-right 1px solid #d0d0d0
+  border 1px solid #d0d0d0
+  /*border-right 1px solid #d0d0d0*/
 .filter__item
   margin 12px 0 0 0
   &:first-child
     margin 0
+.filter__sub-title
+  margin 18px 0 0 0
+  color #739ac5
+  font-weight normal
+  text-transform uppercase
 .filter__label
   margin 0 0 12px 0
   color #000000
   font-size 14px
   font-weight 300
-  text-transform uppercase
 .filter__input
   width 107px
   height 40px
@@ -1233,9 +1249,12 @@
 .gallery__img-wrap
   height 512px
   line-height 512px
+  font-size 0
+  text-align center
 .gallery__img
   max-width 100%
   max-height 100%
+  vertical-align middle
 .gallery__corusel-wrap
   float left
   width 513px
@@ -1248,6 +1267,7 @@
   height 73px
   margin 0 5px 0 0
   overflow hidden
+  cursor pointer
 .gallery__thumb-img
   max-width 100%
 
@@ -1275,7 +1295,9 @@
 .detail__title
   margin 0 0 6px 0
   font-size 13px
-
+.detail__desc
+  margin 0 10px 0 0
+  vertical-align bottom
 .masters-page
   overflow hidden
 .masters-page__wrap
@@ -1735,6 +1757,9 @@
     top 50%
     left 7px
     margin -12px 0 0 0
+  &:hover
+    background gray
+    color #ffffff
 .click-btn
   position relative
   display block
@@ -1833,9 +1858,16 @@
   padding 12px 0 0 0
   line-height 51px
 .review__rating-label
-  margin 0 25px 0 0
+  margin 0 10px 0 0
 .review__rating
   display inline-block
+.review__text
+  padding 0 10px
+.review__meta-item
+  margin 0 0 0 25px
+  &:first-child
+    margin 0
+
 
 .social
   line-height 50px

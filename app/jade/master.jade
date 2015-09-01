@@ -17,90 +17,62 @@ block main
                             span.breadcrumbs__lnk.breadcrumbs__lnk--active  Охладители
                 aside.page__aside.f-left
                     .page__aside-item
-                        .cat-menu
-                            h3.cat-menu__heading.as-icon.as-icon--toggle Служба мастеров
-                            .filter
-                                .filter__item
-                                    h5.filter__label Производитель
-                                    .filter__wrap
-                                        .filter__select-wrap
-                                            .filter__select-item
-                                                select.filter__select.js-select(name='')
-                                                    option(value="1") Любой
-                                                    option(value="2") Grado
-                                                    option(value="3") Akvali
-                                                    option(value="4") Radawei
-                                                    option(value="2") Grado
-                                                    option(value="3") Akvali
-                                                    option(value="4") Radawei
-                                                    option(value="2") Grado
-                                                    option(value="3") Akvali
-                                                    option(value="4") Radawei
-                                .filter__item
-                                    h5.filter__label Производитель:
-                            h3.cat-menu__heading Служба мастеров
-                            .filter
-                                .filter__wrap
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                            h3.cat-menu__heading Служба мастеров
-                            .filter
-                                .filter__wrap
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                            h3.cat-menu__heading Служба мастеров
-                            .filter
-                                .filter__wrap
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
+                        .cat-menu.js-toggle
+                            h3.cat-menu__heading.as-icon.as-icon--toggle.active.js-toggle__trigger Служба мастеров
+                            .js-toggle__item
+                                .filter
+                                    .filter__item
+                                        h5.filter__label Производитель
+                                        .filter__wrap
+                                            .filter__select-wrap
+                                                .filter__select-item
+                                                    select.filter__select.js-select(name='')
+                                                        option(value="1") Любой
+                                                        option(value="2") Grado
+                                                        option(value="3") Akvali
+                                                        option(value="4") Radawei
+                                                        option(value="2") Grado
+                                                        option(value="3") Akvali
+                                                        option(value="4") Radawei
+                                                        option(value="2") Grado
+                                                        option(value="3") Akvali
+                                                        option(value="4") Radawei
+                                        h5.filter__sub-title ВЫБЕРИТЕ УСЛУГУ:
+                                .js-toggle
+                                    h3.cat-menu__heading.js-toggle__trigger Сантехнические работы
+                                    .filter.js-toggle__item
+                                        .filter__wrap
+                                        for item in [1,2,3,4]
+                                            .pseudo-check.filter__check
+                                                input.pseudo-check__input(type='checkbox',id='sant'+item)
+                                                label.pseudo-check__label.filter__check-label(for='sant'+item) Установка душевых кабин
+                                                    .pseudo-check__bg.pseudo-check__bg--big
+
+                                .js-toggle
+                                    h3.cat-menu__heading.js-toggle__trigger Водоснобжение
+                                    .filter.js-toggle__item
+                                        .filter__wrap
+                                        for item in [1,2,3,4]
+                                            .pseudo-check.filter__check
+                                                input.pseudo-check__input(type='checkbox',id='water'+item)
+                                                label.pseudo-check__label.filter__check-label(for='water'+item) Установка душевых кабин
+                                                    .pseudo-check__bg.pseudo-check__bg--big
+                                .js-toggle
+                                    h3.cat-menu__heading.js-toggle__trigger Очистка воды
+                                    .filter.js-toggle__item
+                                        .filter__wrap
+                                        for item in [1,2,3,4]
+                                            .pseudo-check.filter__check
+                                                input.pseudo-check__input(type='checkbox',id='clean'+item)
+                                                label.pseudo-check__label.filter__check-label(for='clean'+item) Установка душевых кабин
+                                                    .pseudo-check__bg.pseudo-check__bg--big
                 .page__content.page__content--right.f-right
                     .master
                         .masters-page__bar.clearfix
                             .masters-page__search-wrap.f-left
                                 input.masters-page__search(type='text', placeholder='поиск мастера')
-                                input.masters-page__search-submit(type='submit')
+                                input.masters-page__search-submit.s-icon.s-icon--search(type='submit')
+                                a.masters-page__search-delete.s-icon.s-icon--crossg(href='#')
                             .masters-page__add-wrap.f-right
                                 a.addmaster-btn(href='#') Добавить мастера
                         .master__wrap.clearfix
@@ -162,3 +134,43 @@ block main
                                                     .portfolio__item.f-left
                                                         a(href='#')
                                                             img.portfolio__thumb(src='./img/portfolio/port1.jpg')
+                                    .js-tabs__content
+                                        .review
+                                            .review__item
+                                                a.review-btn.js-modal(href='#review-modal') Оставить отзыв
+                                            .review__item
+                                                .review__meta.clearfix
+                                                    .review__meta-item.f-left
+                                                        .review__autor Маша
+                                                    .review__meta-item.f-left
+                                                        span.review__rating-label Рейтинг:
+                                                        .review__rating.rating
+                                                            i.rating__star.s-icon.s-icon--pstar
+                                                            i.rating__star.s-icon.s-icon--pstar
+                                                            i.rating__star.s-icon.s-icon--pstar
+                                                            i.rating__star.s-icon.s-icon--pstar
+                                                            i.rating__star.s-icon.s-icon--nstar
+                                                    .review__meta-item.f-right
+                                                        .review__date 27 февраля 2014 в 00:00
+                                                .review__text  Душевая кабина – относительно новый сантехнический продукт, который предлагает нам отечественный рынок. На западе душевая кабина, как правило, является не столько заменой ванны, как ее дополнением. В большинстве же российских квартир с небольшими метражами ванных комнат, возможности установить и ванну, и душевую кабину, к сожалению, практически нет. Поэтому
+                                                    .review__backward.t-right
+                                                        a(href='#') Ответить
+                                            .review__item
+                                                .review__meta.clearfix
+                                                    .review__meta-item.f-left
+                                                        .review__autor Маша
+                                                    .review__meta-item.f-left
+                                                        span.review__rating-label Рейтинг:
+                                                        .review__rating.rating
+                                                            i.rating__star.s-icon.s-icon--pstar
+                                                            i.rating__star.s-icon.s-icon--pstar
+                                                            i.rating__star.s-icon.s-icon--pstar
+                                                            i.rating__star.s-icon.s-icon--pstar
+                                                            i.rating__star.s-icon.s-icon--nstar
+                                                    .review__meta-item.f-right
+                                                        .review__date 27 февраля 2014 в 00:00
+                                                .review__text  Душевая кабина – относительно новый сантехнический продукт, который предлагает нам отечественный рынок. На западе душевая кабина, как правило, является не столько заменой ванны, как ее дополнением. В большинстве же российских квартир с небольшими метражами ванных комнат, возможности установить и ванну, и душевую кабину, к сожалению, практически нет. Поэтому
+                                                    .review__backward.t-right
+                                                        a(href='#') Ответить
+                                    .js-tabs__content
+                                        iframe(width="855" height="315" src="https://www.youtube.com/embed/G68LVbwl5tc" frameborder="0" allowfullscreen)

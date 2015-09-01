@@ -26,23 +26,38 @@ block main
                                                 a.js-lightbox(href='./img/gallery/gal1.jpg')
                                                     img.gallery__img(src='./img/gallery/gal1.jpg')
                                             .js-tabs__content
-                                                a.js-lightbox(href='./img/gallery/gal1.jpg')
-                                                    img.gallery__img(src='./img/gallery/gal1.jpg')
+                                                a.js-lightbox(href='./img/product/product1.jpg')
+                                                    img.gallery__img(src='./img/product/product1.jpg')
                                             .js-tabs__content
                                                 a.js-lightbox(href='./img/gallery/gal1.jpg')
                                                     img.gallery__img(src='./img/gallery/gal1.jpg')
-                                    .gallery__corusel
+                                            .js-tabs__content
+                                                a.js-lightbox(href='./img/product/product1.jpg')
+                                                    img.gallery__img(src='./img/product/product1.jpg')
+                                            .js-tabs__content
+                                                a.js-lightbox(href='./img/gallery/gal1.jpg')
+                                                    img.gallery__img(src='./img/gallery/gal1.jpg')
+                                            .js-tabs__content
+                                                a.js-lightbox(href='./img/product/product1.jpg')
+                                                    img.gallery__img(src='./img/product/product1.jpg')
+                                    .gallery__corusel.js-carousel
                                         .carousel__wrap
                                             span.carousel__ctrl.carousel__ctrl--long.f-left.js-carousel__ctrl--left
                                                 i.carousel__ctrl-ico.s-icon.s-icon--ctrll
                                             .gallery__corusel-wrap
-                                                .carousel__items-wrap.clearfix
-                                                    .gallery__thumb.js-tabs__tab(data-index='0')
+                                                .carousel__items-wrap.js-carousel__wrap.clearfix
+                                                    .gallery__thumb.js-tabs__tab.js-carousel__slide(data-index='0')
                                                         img.gallery__thumb-img(src='./img/gallery/gal1.jpg')
-                                                    .gallery__thumb.js-tabs__tab(data-index='1')
+                                                    .gallery__thumb.js-tabs__tab.js-carousel__slide(data-index='1')
+                                                        img.gallery__thumb-img(src='./img/product/product1.jpg')
+                                                    .gallery__thumb.js-tabs__tab.js-carousel__slide(data-index='2')
                                                         img.gallery__thumb-img(src='./img/gallery/gal1.jpg')
-                                                    .gallery__thumb.js-tabs__tab(data-index='2')
+                                                    .gallery__thumb.js-tabs__tab.js-carousel__slide(data-index='3')
+                                                        img.gallery__thumb-img(src='./img/product/product1.jpg')
+                                                    .gallery__thumb.js-tabs__tab.js-carousel__slide(data-index='4')
                                                         img.gallery__thumb-img(src='./img/gallery/gal1.jpg')
+                                                    .gallery__thumb.js-tabs__tab.js-carousel__slide(data-index='5')
+                                                        img.gallery__thumb-img(src='./img/product/product1.jpg')
                                             span.carousel__ctrl.carousel__ctrl--long.f-right.js-carousel__ctrl--right
                                                 i.carousel__ctrl-ico.s-icon.s-icon--ctrlr
                             .shower__aside-item
@@ -116,15 +131,15 @@ block main
                             .shower__pricebar.clearfix
                                 .shower__pricebar-item.f-left
                                     .shower__price
-                                        span.shower__price-new 8 500 000 руб.
+                                        span.shower__price-new.js-price 8 500 000 руб.
                                         span.shower__price-old 10 500 000 руб.
                                     .shower__size
                                         .shower__size-label Выберите размер, см
                                         .shower__size-wrap
                                             .shower__size-item
-                                                a.shower__size-btn(href='#') 90*90
+                                                a.shower__size-btn.js-price__trigger.active(href='#', data-price='8 500 000 руб') 90*90
                                             .shower__size-item
-                                                a.shower__size-btn(href='#') 100*100
+                                                a.shower__size-btn.js-price__trigger(href='#', data-price='9 500 000 руб') 100*100
                                 .shower__pricebar-item.f-right
                                     .shower__btnbar
                                         .shower__btnbar-item
@@ -165,12 +180,12 @@ block main
                                                         tbody
                                                             tr
                                                                 td
-                                                                    a.s-icon.s-icon--question(href="")
+                                                                    a.detail__desc.s-icon.s-icon--question(href="")
                                                                     | Форма:
                                                                 td.t-right Квадрат
                                                             tr
                                                                 td
-                                                                    a.s-icon.s-icon--question(href="")
+                                                                    a.detail__desc.s-icon.s-icon--question(href="")
                                                                     | Размеры:
                                                                 td.t-right 90 х 90 х 185 см
                                             .shower__detail-item
@@ -180,7 +195,7 @@ block main
                                                         tbody
                                                             tr
                                                                 td
-                                                                    a.s-icon.s-icon--question(href="")
+                                                                    a.detail__desc.s-icon.s-icon--question(href="")
                                                                     | Вес:
                                                                 td.t-right 51,5 кг
                                                             tr
@@ -243,19 +258,41 @@ block main
                                         .js-tabs__content
                                             .review
                                                 .review__item
-                                                    .review__meta.clearfix
-                                                        .review__meta-item.f-left
-                                                            .review__autor Маша
-                                                        .review__meta-item.f-right
-                                                            .review__date 27 февраля 2014 в 00:00
-                                                    .review__text  Душевая кабина – относительно новый сантехнический продукт, который предлагает нам отечественный рынок. На западе душевая кабина, как правило, является не столько заменой ванны, как ее дополнением. В большинстве же российских квартир с небольшими метражами ванных комнат, возможности установить и ванну, и душевую кабину, к сожалению, практически нет. Поэтому
+                                                    a.review-btn.js-modal(href='#review-modal') Оставить отзыв
                                                 .review__item
                                                     .review__meta.clearfix
                                                         .review__meta-item.f-left
                                                             .review__autor Маша
+                                                        .review__meta-item.f-left
+                                                            span.review__rating-label Рейтинг:
+                                                            .review__rating.rating
+                                                                i.rating__star.s-icon.s-icon--pstar
+                                                                i.rating__star.s-icon.s-icon--pstar
+                                                                i.rating__star.s-icon.s-icon--pstar
+                                                                i.rating__star.s-icon.s-icon--pstar
+                                                                i.rating__star.s-icon.s-icon--nstar
                                                         .review__meta-item.f-right
                                                             .review__date 27 февраля 2014 в 00:00
                                                     .review__text  Душевая кабина – относительно новый сантехнический продукт, который предлагает нам отечественный рынок. На западе душевая кабина, как правило, является не столько заменой ванны, как ее дополнением. В большинстве же российских квартир с небольшими метражами ванных комнат, возможности установить и ванну, и душевую кабину, к сожалению, практически нет. Поэтому
+                                                        .review__backward.t-right
+                                                            a(href='#') Ответить
+                                                .review__item
+                                                    .review__meta.clearfix
+                                                        .review__meta-item.f-left
+                                                            .review__autor Маша
+                                                        .review__meta-item.f-left
+                                                            span.review__rating-label Рейтинг:
+                                                            .review__rating.rating
+                                                                i.rating__star.s-icon.s-icon--pstar
+                                                                i.rating__star.s-icon.s-icon--pstar
+                                                                i.rating__star.s-icon.s-icon--pstar
+                                                                i.rating__star.s-icon.s-icon--pstar
+                                                                i.rating__star.s-icon.s-icon--nstar
+                                                        .review__meta-item.f-right
+                                                            .review__date 27 февраля 2014 в 00:00
+                                                    .review__text  Душевая кабина – относительно новый сантехнический продукт, который предлагает нам отечественный рынок. На западе душевая кабина, как правило, является не столько заменой ванны, как ее дополнением. В большинстве же российских квартир с небольшими метражами ванных комнат, возможности установить и ванну, и душевую кабину, к сожалению, практически нет. Поэтому
+                                                        .review__backward.t-right
+                                                            a(href='#') Ответить
             #review-modal.modal
                 .modal__wrap
                     .modal__close.as-icon.as-icon--close.js-modal__close Закрыть
