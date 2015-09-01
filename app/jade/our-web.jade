@@ -6,18 +6,24 @@ block main
                 .ourweb
                     .page__heading
                         h1.page__title Наша сеть
-                    .ourweb__select
-                        select.filter__select.js-select(name='')
-                            option(value="1") Любой
-                            option(value="2") Grado
-                            option(value="3") Akvali
-                            option(value="4") Radawei
-                            option(value="2") Grado
-                            option(value="3") Akvali
-                            option(value="4") Radawei
-                            option(value="2") Grado
-                            option(value="3") Akvali
-                            option(value="4") Radawei
+                    .ourweb__wrap.clearfix
+                        .ourweb__select.f-left
+                            select.filter__select.js-select(name='')
+                                option(value="1") Любой
+                                option(value="2") Grado
+                                option(value="3") Akvali
+                                option(value="4") Radawei
+                                option(value="2") Grado
+                                option(value="3") Akvali
+                                option(value="4") Radawei
+                                option(value="2") Grado
+                                option(value="3") Akvali
+                                option(value="4") Radawei
+                        .f-right
+                            h3.ourweb__page-title.ourweb__page-title--inline Служба мастеров:
+                            h5.ourweb__item-title.ourweb__item-title--inline ТЦ Green, г. Минск , ул. Притицкого 25
+                            .ourweb__contacts-item.ourweb__contacts-item--inline ПН-ПТ: c 9:00 до 19:00
+                            .ourweb__contacts-item.ourweb__contacts-item--inline +375 33 698-95-84
                     .ourweb__wrap
                         .ourweb__page-item
                             h3.ourweb__page-title Шоу-рум:
@@ -38,24 +44,7 @@ block main
                                                     .ourweb__contacts-item +375 33 698-95-84
                                         .ourweb__item-text Дополнительная ифнормация
                         .ourweb__page-item
-                            h3.ourweb__page-title Служба мастеров:
-                            .ourweb__page-wrap
-                                .ourweb__item
-                                    h5.ourweb__item-title ТЦ Green, г. Минск , ул. Притицкого 25
-                                    .ourweb__item-wrap.clearfix
-                                        .ourweb__item-part.f-left
-                                            .ourweb__contacts
-                                                .ourweb__contacts-title Режим работы:
-                                                .ourweb__contacts-item ПН-ПТ: c 9:00 до 19:00
-                                                .ourweb__contacts-item СБ-ВС: c 9:00  до 21:00
-                                        .ourweb__item-part.f-right
-                                            .ourweb__contacts
-                                                .ourweb__contacts-title Контакты:
-                                                .ourweb__contacts-item +375 33 698-95-84
-                                                .ourweb__contacts-item +375 33 698-95-84
-                                    .ourweb__item-text Дополнительная ифнормация
-
-                        .ourweb__page-item
                             .ourweb__map
                                 h5.ourweb__map-title Мы на картах:
                                 .ourweb__map-wrap
+                                    script(type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=8iBSXG3pM_yOJjc1fSOwJtdcVn_oZ1XE&width=100%&height=450")

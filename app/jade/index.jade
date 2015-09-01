@@ -182,11 +182,11 @@ block main
                 .masters__bar.clearfix
                     h3.masters__title.f-left Служба мастеров
                     .carousel__ctrl-wrap.f-right
-                        span.carousel__ctrl.carousel__ctrl--left.js-carousel__ctrl--left
+                        span.carousel__ctrl.carousel__ctrl--gray.carousel__ctrl--left.js-carousel__ctrl--left
                             i.carousel__ctrl-ico.s-icon.s-icon--ctrll
-                        span.carousel__ctrl.carousel__ctrl--right.js-carousel__ctrl--right
+                        span.carousel__ctrl.carousel__ctrl--gray.carousel__ctrl--right.js-carousel__ctrl--right
                             i.carousel__ctrl-ico.s-icon.s-icon--ctrlr
-                .carousel__items-wrap.js-carousel__wrap
+                .carousel__items-wrap.clearfix.js-carousel__wrap
                     for item in [1,2,3,4,5,6,7,8]
                         .masters__item.js-carousel__slide
                             .master-preview
@@ -206,8 +206,8 @@ block main
                                 .master-preview__btn-wrap.clearfix
                                     a.master-preview__callbtn.f-left.js-modal(href='#request-modal') Оставить заявку
                                     a.master-preview__readmore.f-right(href='#') Подробнее
-                .popular__readmore-wrap.t-right
-                    a.readmore(href='#') Все мастера
+                .masters__readmore-wrap.t-right
+                    a.readmore.readmore--white(href='#') Все мастера
         #request-modal.modal
             .modal__wrap
                 .modal__close.as-icon.as-icon--close.js-modal__close Закрыть

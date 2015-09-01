@@ -17,19 +17,19 @@ block main
                 .page__content.page__content--right.f-right
                     .wform
                         form#service-form
-                                .wform__wrap
-                                    .wform__group.wform__group--bid
+                                .wform__wrap.js-other
+                                    .wform__group.wform__group--big
                                         label.wform__label Выберите услуги, которые вы оказываете:
                                         ul.wform__check-list.unstyled-list
-                                            for item in [1,2,3,4,5,6,7,8,9,10]
-                                                li.wform__check-item
+                                            for item in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+                                                li.wform__check-item.js-other__item
                                                     .pseudo-check
                                                         input.pseudo-check__input(type='checkbox', id='service'+item)
                                                         label.pseudo-check__label(for='service'+item) Наименование услуги
                                                             .pseudo-check__bg.pseudo-check__bg--big
                                     .wform__group.wform__group--bid.t-center
-                                        a.wform__toggle(href='#') Другие города
-                                .wform__group
+                                        a.wform__toggle.js-other__show(href='#', data-count='8') Другие города
+                                .wform__group.wform__group--big
                                     .wform__wrap.clearfix
                                         .wform__part.f-left
                                             .wform__notice Внимание ! Все изменения появятся на сайте после проверки модератора

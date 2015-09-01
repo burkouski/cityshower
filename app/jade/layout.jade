@@ -200,14 +200,11 @@ html.no-js.html
                             a.footer-list__lnk(href='') Новости
         #callback-modal.modal
             .modal__wrap
-                select(name='')
-                    option(value='1') Специалист
-                    option(value='2') Компания
                 .modal__close.as-icon.as-icon--close.js-modal__close Закрыть
                 .modal__bar.clearfix
                     span.modal__btn.f-left.active Заказать звонок
 
-                .wform.wform--login
+                .wform.wform--callback
                     form#callback-form
                         .wform__wrap
                             .wform__group
@@ -222,9 +219,6 @@ html.no-js.html
                                 .wform__mess.t-center В ближайшее время консультант перезвонит Вам
         #user-modal.modal
             .modal__wrap
-                select(name='')
-                    option(value='1') Специалист
-                    option(value='2') Компания
                 .modal__close.as-icon.as-icon--close.js-modal__close Закрыть
                 .js-tabs
                     .modal__bar.clearfix
@@ -281,7 +275,7 @@ html.no-js.html
                                                     input.wform__input(type='text', name='captcha')
                                         .wform__part.f-right
                                             .wform__group.js-other
-                                                .wform__group.wform__group--bid
+                                                .wform__group.wform__group--big
                                                     label.wform__label * Выберите город в котором вы работаете:
                                                     ul.wform__check-list.unstyled-list
                                                         for item in [1,2,3,4,5,6,7,8,9,10]
@@ -297,10 +291,10 @@ html.no-js.html
                                                                     label.pseudo-check__label(for='city'+item) Минск (Центральный р-н)
                                                                         .pseudo-check__bg.pseudo-check__bg--big
 
-                                                .wform__group.wform__group--bid.t-center
+                                                .wform__group.wform__group--big.t-center
                                                     a.wform__toggle.js-other__show(href='#', data-count='10') Другие города
                                             .wform__group.js-other
-                                                .wform__group.wform__group--bid
+                                                .wform__group.wform__group--big
                                                     label.wform__label * Выберите услуги, которые Вы оказываете:
                                                     ul.wform__check-list.unstyled-list
                                                         for item in [1,2,3,4,5,6,7,8,9,10]
@@ -316,9 +310,9 @@ html.no-js.html
                                                                     label.pseudo-check__label(for='service'+item)= 'Услуга' + item
                                                                         .pseudo-check__bg.pseudo-check__bg--big
 
-                                                .wform__group.wform__group--bid.t-center
+                                                .wform__group.wform__group--big.t-center
                                                     a.wform__toggle.js-other__show(href='#', data-count='10') Другие услуги
-                                            .wform__group.wform__group--bid
+                                            .wform__group.wform__group--big
                                                 .wform__rules.t-center
                                                     span Регестрируясь, вы соглашаетесь с
                                                     a.wform__rules-lnk(href='#') правилами

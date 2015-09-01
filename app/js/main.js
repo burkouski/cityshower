@@ -12,14 +12,16 @@ $(function(){
         $('#user-modal .js-tabs__tab').eq(1).trigger('click')
     })
 
+    if ($('.main-nav').length > 0) {
+        var stickyEl = $('.main-nav'),
+            stickyElPos = stickyEl.offset().top;
+        $(window).on('scroll', function(){
+            var scrollPos = $(window).scrollTop();
+            if (scrollPos >= stickyElPos) stickyEl.addClass('fixed');
+            else stickyEl.removeClass('fixed');
+        });
+    }
 
-    var stickyEl = $('.main-nav'),
-        stickyElPos = stickyEl.offset().top;
-    $(window).on('scroll', function(){
-        var scrollPos = $(window).scrollTop();
-        if (scrollPos >= stickyElPos) stickyEl.addClass('fixed');
-        else stickyEl.removeClass('fixed');
-    });
 
     $(".js-sort-tab").click(function(){
             var tab = $(".js-sort-tab"),
@@ -104,7 +106,8 @@ $(function(){
             count = showBtn.attr('data-count')-1,
             el = _this.find('.js-other__item'),
             elLength = el.length;
-        if(elLength <= count) {
+        console.log(showBtn, count);
+        if(elLength <= count+1) {
             showBtn.hide()
         }
         else {

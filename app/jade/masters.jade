@@ -51,12 +51,19 @@ block main
                                 .js-toggle
                                     h3.cat-menu__heading.js-toggle__trigger Водоснобжение
                                     .filter.js-toggle__item
-                                        .filter__wrap
+                                        .filter__wrap.js-other
                                             for item in [1,2,3,4]
-                                                .pseudo-check.filter__check
+                                                .pseudo-check.filter__check.js-other__item
                                                     input.pseudo-check__input(type='checkbox',id='water'+item)
                                                     label.pseudo-check__label.filter__check-label(for='water'+item) Установка душевых кабин
                                                         .pseudo-check__bg.pseudo-check__bg--big
+                                            for item in [1,2,3,4]
+                                                .pseudo-check.filter__check.js-other__item
+                                                    input.pseudo-check__input(type='checkbox',id='water'+item)
+                                                    label.pseudo-check__label.filter__check-label(for='water'+item) Установка душевых кабин
+                                                        .pseudo-check__bg.pseudo-check__bg--big
+                                            .filter__item
+                                                a.js-other__show(href='#',data-count='4') Еще
                                 .js-toggle
                                     h3.cat-menu__heading.js-toggle__trigger Очистка воды
                                     .filter.js-toggle__item
@@ -66,6 +73,8 @@ block main
                                                     input.pseudo-check__input(type='checkbox',id='clean'+item)
                                                     label.pseudo-check__label.filter__check-label(for='clean'+item) Установка душевых кабин
                                                         .pseudo-check__bg.pseudo-check__bg--big
+                                                .filter__item
+                                                    a.js-other__show(href='#',data-count='4') Еще
                 .page__content.page__content--right.f-right
                     .masters-page
                         .masters-page__bar.clearfix
@@ -121,44 +130,44 @@ block main
                                         .master-preview__btn-wrap.clearfix
                                             a.master-preview__callbtn.f-left.js-modal(href='#request-modal') Оставить заявку
                                             a.master-preview__readmore.f-right(href='#') Подробнее
-                            #request-modal.modal
-                                .modal__wrap
-                                    .modal__close.as-icon.as-icon--close.js-modal__close Закрыть
-                                    .modal__bar.clearfix
-                                        span.modal__btn.active.f-left Оставит заявку
-                                    .wform.wform--request
-                                        form#request-form
-                                            .wform__group Заказы обрабатываются ежедневно с 9.00 до 21.00
-                                            .wform__group
-                                                label.wform__label Вопрос:
-                                                textarea.wform__textarea(placeholder='Пример текста...', name='question')
-                                                .wform__notice Опишите вашу задачу, укажите примерный бюджет заказа
-                                            .wform__group
-                                                .wform__wrap.clearfix
-                                                    .wform__part.f-left
-                                                        label.wform__upload-label.wform__upload-label--file.as-icon.as-icon--file(for='upload') Прикрепить файл
-                                                        input#upload.wform__upload(type='file')
-                                            .wform__group
-                                                .wform__wrap.clearfix
-                                                    .wform__part.f-left
-                                                        .wform__group
-                                                            label.wform__label * Ваше имя:
-                                                            input.wform__input(type='text', placeholder='Пароль', name='name')
-                                                        .wform__group
-                                                            label.wform__label *Ваш e-mail:
-                                                            input.wform__input(type='text', placeholder='goroddushevihkabin@gmail.com')
-                                                    .wform__part.f-right
-                                                        .wform__group
-                                                            label.wform__label *Ваш номер телефона:
-                                                            input.wform__input(type='text', placeholder='+375 28 895-39-12', name='phone')
-                                                        .wform__group
-                                                            label.wform__label Город:
-                                                            input.wform__input(type='text', placeholder='Минск', name='city')
-                                            .wform__group
-                                                .wform__wrap.clearfix
-                                                    .wform__part.f-left
-                                                        .wform__notice.t-right Оставте заявку и наши специалисты ответят Вам в ближайшее время
-                                                    .wform__part.f-right
-                                                        input.wform__submit(type='submit', value='Оставить заявку')
                         include ./include/pagination.jade
+            #request-modal.modal
+                .modal__wrap
+                    .modal__close.as-icon.as-icon--close.js-modal__close Закрыть
+                    .modal__bar.clearfix
+                        span.modal__btn.active.f-left Оставит заявку
+                    .wform.wform--request
+                        form#request-form
+                            .wform__group Заказы обрабатываются ежедневно с 9.00 до 21.00
+                            .wform__group
+                                label.wform__label Вопрос:
+                                textarea.wform__textarea(placeholder='Пример текста...', name='question')
+                                .wform__notice Опишите вашу задачу, укажите примерный бюджет заказа
+                            .wform__group
+                                .wform__wrap.clearfix
+                                    .wform__part.f-left
+                                        label.wform__upload-label.wform__upload-label--file.as-icon.as-icon--file(for='upload') Прикрепить файл
+                                        input#upload.wform__upload(type='file')
+                            .wform__group
+                                .wform__wrap.clearfix
+                                    .wform__part.f-left
+                                        .wform__group
+                                            label.wform__label * Ваше имя:
+                                            input.wform__input(type='text', placeholder='Пароль', name='name')
+                                        .wform__group
+                                            label.wform__label *Ваш e-mail:
+                                            input.wform__input(type='text', placeholder='goroddushevihkabin@gmail.com')
+                                    .wform__part.f-right
+                                        .wform__group
+                                            label.wform__label *Ваш номер телефона:
+                                            input.wform__input(type='text', placeholder='+375 28 895-39-12', name='phone')
+                                        .wform__group
+                                            label.wform__label Город:
+                                            input.wform__input(type='text', placeholder='Минск', name='city')
+                            .wform__group
+                                .wform__wrap.clearfix
+                                    .wform__part.f-left
+                                        .wform__notice.t-right Оставте заявку и наши специалисты ответят Вам в ближайшее время
+                                    .wform__part.f-right
+                                        input.wform__submit(type='submit', value='Оставить заявку')
 

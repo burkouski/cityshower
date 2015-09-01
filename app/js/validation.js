@@ -93,9 +93,57 @@ $('#registration-form2').validate({
     submitHandler: function (form) {
 
     }
-
 });
 
+$('#profile-form').validate({
+
+    rules: {
+        name: {
+            required: true
+        },
+        phone: {
+            required: true,
+            phone: true
+        },
+        email: {
+            required: true
+        }
+
+
+    },
+    messages: {
+        name: "Введите ваш e-mail",
+        phone: {
+            required: "Как с вами связаться?",
+            phone: "формат +375291111111"
+        },
+        email: "Введите ваш e-mail",
+    },
+    submitHandler: function (form) {
+
+    }
+});
+$('#order-form').validate({
+
+    rules: {
+        login: {
+            required: true
+        },
+        pass: {
+            required: true,
+            phone: true
+        },
+
+    },
+    messages: {
+        login: "Введите ваш ник или e-mail",
+
+        pass: "Введите ваш пароль",
+    },
+    submitHandler: function (form) {
+
+    }
+});
 $('#faq-form').validate({
 
     rules: {

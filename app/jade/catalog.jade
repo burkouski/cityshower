@@ -209,7 +209,7 @@ block main
                                 .sort-bar__clear.f-right
                                     a.sort-bar__param.sort-bar__param--clear(href='#') Сбросить всё
                         .catalog__wrap.clearfix
-                            for item in [1,2,3,4,5,6,7,8,9,10,11,12]
+                            for item in [10,11,12]
                                 .catalog__item
                                     .product-preview.t-center
                                         span.product-label.product-preview__status-label.s-icon.s-icon--blabel Хиты продаж
@@ -220,8 +220,41 @@ block main
                                             span.stock.stock--instock.bs-icon.bs-icon--instock.f-left В наличии
                                             .product-compare.f-right
                                                 .pseudo-check
-                                                    input#compare1.pseudo-check__input(type='checkbox')
-                                                    label.pseudo-check__label(for='#compare1') Сравнить
+                                                    input.pseudo-check__input(type='checkbox', id='compare'+item)
+                                                    label.pseudo-check__label(for='#compare'+item) Сравнить
+                                                        .pseudo-check__bg
+                                        h3.product-preview__title
+                                            a.product-preview__lnk(href='./shower.html') Охладители Symphony Ice cube
+                                        .product-preview__rating
+                                            i.rating__star.s-icon.s-icon--pstar
+                                            i.rating__star.s-icon.s-icon--pstar
+                                            i.rating__star.s-icon.s-icon--pstar
+                                            i.rating__star.s-icon.s-icon--pstar
+                                            i.rating__star.s-icon.s-icon--nstar
+                                        .product-preview__feature.product-feature
+                                            img.product-feature__img(src='./img/feature/f1.png', title='Особенность')
+                                            img.product-feature__img(src='./img/feature/f2.png', title='Особенность')
+                                            img.product-feature__img(src='./img/feature/f3.png', title='Особенность')
+                                            img.product-feature__img(src='./img/feature/f4.png', title='Особенность')
+                                            img.product-feature__img(src='./img/feature/f5.png', title='Особенность')
+                                        .product-preview__price 17 270 000 руб.
+                                        .product-preview__btn-wrap
+                                            a.product-btn.product-preview__btn.js-modal(href='#order-modal') Заказать.
+                                        .product-preview__review-wrap
+                                            a.product-preview__review-lnk(href='#') 25 отзывов
+                            for item in [1,2,3,4,5,6,7,8,9]
+                                .catalog__item
+                                    .product-preview.t-center
+                                        span.product-label.product-preview__status-label.s-icon.s-icon--blabel Хиты продаж
+                                        .product-preview__img-wrap
+                                            a(href='./shower.html')
+                                                img.product-preview__img(src='./img/product/product1.jpg')
+                                        .product-preview__meta.clearfix
+                                            span.stock.stock--instock.bs-icon.bs-icon--instock.f-left В наличии
+                                            .product-compare.f-right
+                                                .pseudo-check
+                                                    input.pseudo-check__input(type='checkbox', id='compare'+item)
+                                                    label.pseudo-check__label(for='#compare'+item) Сравнить
                                                         .pseudo-check__bg
                                         h3.product-preview__title
                                             a.product-preview__lnk(href='./shower.html') Охладители Symphony Ice cube
@@ -243,3 +276,19 @@ block main
                                         .product-preview__review-wrap
                                             a.product-preview__review-lnk(href='#') 25 отзывов
                             include ./include/pagination.jade
+            #order-modal.modal
+                .modal__wrap
+                    .modal__close.as-icon.as-icon--close.js-modal__close Закрыть
+                    .modal__bar
+                    .wform.wform--order
+                        form#order-form
+                            .wform__group
+                                .wform__notice Данного товара сейчас нет в наличии, но вы можете
+                                    |оставить свои контактные данные, и Вам обязательно
+                                    |перезвоним и сообщим, когда данный товар появится.
+                            .wform__group
+                                input.wform__input(type='text', placeholder='Ник или E-mail', name='login')
+                            .wform__group
+                                input.wform__input(type='password', placeholder='Пароль', name='pass')
+                            .wform__group
+                                input.wform__submit(type='submit', placeholder='Оставить заявку')

@@ -571,6 +571,9 @@
   background: #739ac5;
   border: 1px solid #739ac5;
 }
+.carousel__ctrl--gray {
+  background: #b8b8b8;
+}
 .carousel__ctrl--long {
   height: 83px;
   margin: 0;
@@ -595,9 +598,10 @@
 .product-btn {
   display: inline-block;
   padding: 0 47px;
-  background: #739ac5;
+  background: #fff;
+  border: 2px solid #555;
   border-radius: 5px;
-  color: #fff;
+  color: #555;
   font-size: 13px;
   font-weight: bold;
   line-height: 37px;
@@ -605,7 +609,9 @@
   text-transform: uppercase;
 }
 .product-btn:hover {
-  background: #f00;
+  border: 2px solid #739ac5;
+  background: #739ac5;
+  color: #fff;
 }
 .stock {
   position: relative;
@@ -695,6 +701,9 @@
 .readmore:hover {
   text-decoration: none;
 }
+.readmore--white {
+  color: #fff;
+}
 .masters {
   margin: -90px 0 75px 0;
   padding: 120px 0 70px;
@@ -727,6 +736,9 @@
   float: left;
   width: 255px;
   margin: 0 20px 0 0;
+}
+.masters__readmore-wrap {
+  margin: 25px 0 0 0;
 }
 .master-preview {
   padding: 15px;
@@ -924,11 +936,16 @@
   font-size: 14px;
   text-transform: uppercase;
 }
-.wform__group--bid {
+.wform__group--big {
   margin: 25px 0 0 0;
 }
-.wform--login {
+.wform--login,
+.wform--order {
   width: 405px;
+}
+.wform--request,
+.wform--review {
+  width: 800px;
 }
 .wform--registration {
   width: 890px;
@@ -961,6 +978,9 @@
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
+}
+.wform__submit:hover {
+  background: #3190fa;
 }
 .wform__submit--static {
   width: 188px;
@@ -1052,6 +1072,9 @@
   top: 50%;
   right: 11px;
   margin: -8px 0 0 0;
+}
+.wform__upload-label:hover {
+  background: #3190fa;
 }
 .wform__upload-label--inline {
   width: 160px;
@@ -1918,6 +1941,12 @@
   font-size: 16px;
   text-transform: uppercase;
 }
+.ourweb__page-title--inline,
+.ourweb__item-title--inline,
+.ourweb__contacts-item--inline {
+  display: inline;
+  margin-left: 10px !important;
+}
 .blue {
   margin: 0 0 0 4px;
   color: #739ac5;
@@ -1949,6 +1978,7 @@
   margin: 0 0 15px 0;
 }
 .ourweb__map-title {
+  margin: 0 0 5px 0;
   color: #739ac5;
   font-size: 16px;
 }
@@ -2184,6 +2214,9 @@
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+}
+.request-btn:hover {
+  background: #3190fa;
 }
 .add-category-btn {
   display: inline-block;

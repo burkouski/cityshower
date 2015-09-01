@@ -41,31 +41,42 @@ block main
                                 .js-toggle
                                     h3.cat-menu__heading.js-toggle__trigger Сантехнические работы
                                     .filter.js-toggle__item
-                                        .filter__wrap
-                                        for item in [1,2,3,4]
-                                            .pseudo-check.filter__check
-                                                input.pseudo-check__input(type='checkbox',id='sant'+item)
-                                                label.pseudo-check__label.filter__check-label(for='sant'+item) Установка душевых кабин
-                                                    .pseudo-check__bg.pseudo-check__bg--big
+                                        .filter__wrap.js-other
+                                            for item in [1,2,3,4]
+                                                .pseudo-check.filter__check.js-other__item
+                                                    input.pseudo-check__input(type='checkbox',id='sant'+item)
+                                                    label.pseudo-check__label.filter__check-label(for='sant'+item) Установка душевых кабин
+                                                        .pseudo-check__bg.pseudo-check__bg--big
+                                            .filter__item
+                                                a.js-other__show(href='#',data-count='4') Еще
 
                                 .js-toggle
                                     h3.cat-menu__heading.js-toggle__trigger Водоснобжение
                                     .filter.js-toggle__item
-                                        .filter__wrap
-                                        for item in [1,2,3,4]
-                                            .pseudo-check.filter__check
-                                                input.pseudo-check__input(type='checkbox',id='water'+item)
-                                                label.pseudo-check__label.filter__check-label(for='water'+item) Установка душевых кабин
-                                                    .pseudo-check__bg.pseudo-check__bg--big
+                                        .filter__wrap.js-other
+                                            for item in [1,2,3,4]
+                                                .pseudo-check.filter__check.js-other__item
+                                                    input.pseudo-check__input(type='checkbox',id='water'+item)
+                                                    label.pseudo-check__label.filter__check-label(for='water'+item) Установка душевых кабин
+                                                        .pseudo-check__bg.pseudo-check__bg--big
+                                            for item in [1,2,3,4]
+                                                .pseudo-check.filter__check.js-other__item
+                                                    input.pseudo-check__input(type='checkbox',id='water'+item)
+                                                    label.pseudo-check__label.filter__check-label(for='water'+item) Установка душевых кабин
+                                                        .pseudo-check__bg.pseudo-check__bg--big
+                                            .filter__item
+                                                a.js-other__show(href='#',data-count='4') Еще
                                 .js-toggle
                                     h3.cat-menu__heading.js-toggle__trigger Очистка воды
                                     .filter.js-toggle__item
-                                        .filter__wrap
-                                        for item in [1,2,3,4]
-                                            .pseudo-check.filter__check
-                                                input.pseudo-check__input(type='checkbox',id='clean'+item)
-                                                label.pseudo-check__label.filter__check-label(for='clean'+item) Установка душевых кабин
-                                                    .pseudo-check__bg.pseudo-check__bg--big
+                                        .filter__wrap.js-other
+                                            for item in [1,2,3,4]
+                                                .pseudo-check.filter__check.js-other__item
+                                                    input.pseudo-check__input(type='checkbox',id='clean'+item)
+                                                    label.pseudo-check__label.filter__check-label(for='clean'+item) Установка душевых кабин
+                                                        .pseudo-check__bg.pseudo-check__bg--big
+                                            .filter__item
+                                                a.js-other__show(href='#',data-count='4') Еще
                 .page__content.page__content--right.f-right
                     .master
                         .masters-page__bar.clearfix
@@ -81,7 +92,7 @@ block main
                                     .master__ava-wrap
                                         img.master__ava(src='./img/masters/master-ava.jpg')
                                 .master__aside-item
-                                    a.request-btn(href='#') Оставить заявку
+                                    a.request-btn.js-modal(href='#request-modal') Оставить заявку
                             .master__content.f-right
                                 h1.master__title.clearfix Иванов Иван Иванович
                                     span.master__address.f-right(href='#') Минск (Центральный р-н)
@@ -100,7 +111,7 @@ block main
                                             .review-bar__item
                                                 a.review-lnk(href='#') 25 отзывов
                                             .review-bar__item
-                                                a.review-btn(href='#') Оставить отзыв
+                                                a.review-btn.js-modal(href='#review-modal') Оставить отзыв
                                 .master__desc Описание своих преимуществ перед другими исполнителями. Квалифицированный специалист по сантехническим работам. Мастер выполнит все необходимые работы в точно оговоренные сроки и по низким ценам. Для пенсионеров и многодетных семей действуют скидки. На все виды произведенных работ предоставляется гарантия.
                                 .master__phone
                                     span.master__phone-item Телефоны:
@@ -108,12 +119,12 @@ block main
                                     span.master__phone-item +375 (44) 127-86-98
                                 .master__service
                                     h5.master__service-title Услуги:
-                                    .master__service-wrap
-                                        for item in [1,2,3,4,5,6,7,8,9]
-                                            .master__service-item
+                                    .master__service-wrap.js-other
+                                        for item in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+                                            .master__service-item.js-other__item
                                                 a(href='#') Установка душевых кабин
                                         .master__service-item
-                                            a(href='#').readmore Показать ещё
+                                            a(href='#', data-count='10').readmore.js-other__show Показать ещё
                         .master__detail
                             .js-tabs
                                 .modal__bar.clearfix
@@ -124,15 +135,31 @@ block main
                                     .js-tabs__content.active
                                         .portfolio
                                             .portfolio__bar
-                                                .portfolio__sort-item Установка душевых кабин
-                                                .portfolio__sort-item Установка биде
-                                                .portfolio__sort-item Ремонт кабин
-                                                .portfolio__sort-item Установка труб
-                                                .portfolio__sort-item Установка раковин
+                                                .portfolio__sort-item.js-sort-tab(data-label='cat1') Установка душевых кабин
+                                                .portfolio__sort-item.js-sort-tab(data-label='cat2') Установка биде
+                                                .portfolio__sort-item.js-sort-tab(data-label='cat3') Ремонт кабин
+                                                .portfolio__sort-item.js-sort-tab(data-label='cat4') Установка труб
+                                                .portfolio__sort-item.js-sort-tab(data-label='cat5') Установка раковин
                                             .portfolio__wrap.clearfix
-                                                for item in [1,2,3,4,5,6,7,8,9,10]
-                                                    .portfolio__item.f-left
-                                                        a(href='#')
+                                                for item in [1,2,3]
+                                                    .portfolio__item.js-sort-tab__content.f-left(data-label='cat1')
+                                                        a.js-lightbox(href='./img/portfolio/port1.jpg')
+                                                            img.portfolio__thumb(src='./img/portfolio/port1.jpg')
+                                                for item in [1,2,3,4,5]
+                                                    .portfolio__item.js-sort-tab__content.f-left(data-label='cat2')
+                                                        a.js-lightbox(href='./img/portfolio/port1.jpg')
+                                                            img.portfolio__thumb(src='./img/portfolio/port1.jpg')
+                                                for item in [1,2,3,4,5,6,7]
+                                                    .portfolio__item.js-sort-tab__content.f-left(data-label='cat3')
+                                                        a.js-lightbox(href='./img/portfolio/port1.jpg')
+                                                            img.portfolio__thumb(src='./img/portfolio/port1.jpg')
+                                                for item in [1,2,3,4,5,6,7,8,9]
+                                                    .portfolio__item.js-sort-tab__content.f-left(data-label='cat4')
+                                                        a.js-lightbox(href='./img/portfolio/port1.jpg')
+                                                            img.portfolio__thumb(src='./img/portfolio/port1.jpg')
+                                                for item in [1,2,3,4,5,6,7,8,9,10,11]
+                                                    .portfolio__item.js-sort-tab__content.f-left(data-label='cat5')
+                                                        a.js-lightbox(href='./img/portfolio/port1.jpg')
                                                             img.portfolio__thumb(src='./img/portfolio/port1.jpg')
                                     .js-tabs__content
                                         .review
@@ -174,3 +201,89 @@ block main
                                                         a(href='#') Ответить
                                     .js-tabs__content
                                         iframe(width="855" height="315" src="https://www.youtube.com/embed/G68LVbwl5tc" frameborder="0" allowfullscreen)
+            #review-modal.modal
+                .modal__wrap
+                    .modal__close.as-icon.as-icon--close.js-modal__close Закрыть
+                    .modal__bar.clearfix
+                        span.modal__btn.active.f-left Оставит заявку
+                    .wform.wform--review
+                        form#review-form
+                            .wform__group
+                                .social
+                                    span.social__label * Вход
+                                    ul.social__list.unstyled-list
+                                        li.social__item
+                                            a.social__lnk.s-icon.s-icon--fb(href='#')
+                                        li.social__item
+                                            a.social__lnk.s-icon.s-icon--vk(href='#')
+                                        li.social__item
+                                            a.social__lnk.s-icon.s-icon--tw(href='#')
+                                        li.social__item
+                                            a.social__lnk.s-icon.s-icon--od(href='#')
+                                        li.social__item
+                                            a.social__lnk.s-icon.s-icon--gp(href='#')
+                            .wform__group
+                                label.wform__label * Отзыв:
+                                textarea.wform__textarea(placeholder='Пример текста...', name='review')
+                            .wform__group
+                                .wform__wrap.clearfix
+                                    .wform__part.f-left
+                                        label.wform__label * Ваше имя:
+                                        input.wform__input(type='text', placeholder='Иван Иванов', name='name')
+                                    .wform__part.f-right
+                                        .review__rating-wrap
+                                            span.review__rating-label Оцениете:
+                                            .review__rating.rating
+                                                i.rating__star.s-icon.s-icon--pstar
+                                                i.rating__star.s-icon.s-icon--pstar
+                                                i.rating__star.s-icon.s-icon--pstar
+                                                i.rating__star.s-icon.s-icon--pstar
+                                                i.rating__star.s-icon.s-icon--nstar
+                            .wform__group
+                                .wform__wrap.clearfix
+                                    .wform__part.f-left
+                                        input.wform__submit(type='submit', value='Оставить заявку')
+                                    .wform__part.f-right
+                                        .wform__notice Нажимая кнопку “Отправить”, Вы принимаете
+                                            a(href='#') Правила размещение коментариев.
+                                            |Отзыв не будет опубликован, если он содержить ненормативную
+                                            |лексику, оскорблениия и угрозы
+            #request-modal.modal
+                .modal__wrap
+                    .modal__close.as-icon.as-icon--close.js-modal__close Закрыть
+                    .modal__bar.clearfix
+                        span.modal__btn.active.f-left Оставит заявку
+                    .wform.wform--request
+                        form#request-form
+                            .wform__group Заказы обрабатываются ежедневно с 9.00 до 21.00
+                            .wform__group
+                                label.wform__label Вопрос:
+                                textarea.wform__textarea(placeholder='Пример текста...', name='question')
+                                .wform__notice Опишите вашу задачу, укажите примерный бюджет заказа
+                            .wform__group
+                                .wform__wrap.clearfix
+                                    .wform__part.f-left
+                                        label.wform__upload-label.wform__upload-label--file.as-icon.as-icon--file(for='upload') Прикрепить файл
+                                        input#upload.wform__upload(type='file')
+                            .wform__group
+                                .wform__wrap.clearfix
+                                    .wform__part.f-left
+                                        .wform__group
+                                            label.wform__label * Ваше имя:
+                                            input.wform__input(type='text', placeholder='Пароль', name='name')
+                                        .wform__group
+                                            label.wform__label *Ваш e-mail:
+                                            input.wform__input(type='text', placeholder='goroddushevihkabin@gmail.com')
+                                    .wform__part.f-right
+                                        .wform__group
+                                            label.wform__label *Ваш номер телефона:
+                                            input.wform__input(type='text', placeholder='+375 28 895-39-12', name='phone')
+                                        .wform__group
+                                            label.wform__label Город:
+                                            input.wform__input(type='text', placeholder='Минск', name='city')
+                            .wform__group
+                                .wform__wrap.clearfix
+                                    .wform__part.f-left
+                                        .wform__notice.t-right Оставте заявку и наши специалисты ответят Вам в ближайшее время
+                                    .wform__part.f-right
+                                        input.wform__submit(type='submit', value='Оставить заявку')

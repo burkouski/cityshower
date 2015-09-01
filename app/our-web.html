@@ -131,19 +131,27 @@
                 <div class="page__heading">
                   <h1 class="page__title">Наша сеть</h1>
                 </div>
-                <div class="ourweb__select">
-                  <select name="" class="filter__select js-select">
-                    <option value="1">Любой</option>
-                    <option value="2">Grado</option>
-                    <option value="3">Akvali</option>
-                    <option value="4">Radawei</option>
-                    <option value="2">Grado</option>
-                    <option value="3">Akvali</option>
-                    <option value="4">Radawei</option>
-                    <option value="2">Grado</option>
-                    <option value="3">Akvali</option>
-                    <option value="4">Radawei</option>
-                  </select>
+                <div class="ourweb__wrap clearfix">
+                  <div class="ourweb__select f-left">
+                    <select name="" class="filter__select js-select">
+                      <option value="1">Любой</option>
+                      <option value="2">Grado</option>
+                      <option value="3">Akvali</option>
+                      <option value="4">Radawei</option>
+                      <option value="2">Grado</option>
+                      <option value="3">Akvali</option>
+                      <option value="4">Radawei</option>
+                      <option value="2">Grado</option>
+                      <option value="3">Akvali</option>
+                      <option value="4">Radawei</option>
+                    </select>
+                  </div>
+                  <div class="f-right">
+                    <h3 class="ourweb__page-title ourweb__page-title--inline">Служба мастеров:</h3>
+                    <h5 class="ourweb__item-title ourweb__item-title--inline">ТЦ Green, г. Минск , ул. Притицкого 25</h5>
+                    <div class="ourweb__contacts-item ourweb__contacts-item--inline">ПН-ПТ: c 9:00 до 19:00</div>
+                    <div class="ourweb__contacts-item ourweb__contacts-item--inline">+375 33 698-95-84</div>
+                  </div>
                 </div>
                 <div class="ourweb__wrap">
                   <div class="ourweb__page-item">
@@ -272,34 +280,11 @@
                     </div>
                   </div>
                   <div class="ourweb__page-item">
-                    <h3 class="ourweb__page-title">Служба мастеров:</h3>
-                    <div class="ourweb__page-wrap">
-                      <div class="ourweb__item">
-                        <h5 class="ourweb__item-title">ТЦ Green, г. Минск , ул. Притицкого 25</h5>
-                        <div class="ourweb__item-wrap clearfix">
-                          <div class="ourweb__item-part f-left">
-                            <div class="ourweb__contacts">
-                              <div class="ourweb__contacts-title">Режим работы:</div>
-                              <div class="ourweb__contacts-item">ПН-ПТ: c 9:00 до 19:00</div>
-                              <div class="ourweb__contacts-item">СБ-ВС: c 9:00  до 21:00</div>
-                            </div>
-                          </div>
-                          <div class="ourweb__item-part f-right">
-                            <div class="ourweb__contacts">
-                              <div class="ourweb__contacts-title">Контакты:</div>
-                              <div class="ourweb__contacts-item">+375 33 698-95-84</div>
-                              <div class="ourweb__contacts-item">+375 33 698-95-84</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="ourweb__item-text">Дополнительная ифнормация</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="ourweb__page-item">
                     <div class="ourweb__map">
                       <h5 class="ourweb__map-title">Мы на картах:</h5>
-                      <div class="ourweb__map-wrap"></div>
+                      <div class="ourweb__map-wrap">
+                        <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=8iBSXG3pM_yOJjc1fSOwJtdcVn_oZ1XE&amp;width=100%&amp;height=450"></script>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -360,13 +345,9 @@
     </footer>
     <div id="callback-modal" class="modal">
       <div class="modal__wrap">
-        <select name="">
-          <option value="1">Специалист</option>
-          <option value="2">Компания</option>
-        </select>
         <div class="modal__close as-icon as-icon--close js-modal__close">Закрыть</div>
         <div class="modal__bar clearfix"><span class="modal__btn f-left active">Заказать звонок</span></div>
-        <div class="wform wform--login">
+        <div class="wform wform--callback">
           <form id="callback-form">
             <div class="wform__wrap">
               <div class="wform__group">
@@ -391,10 +372,6 @@
     </div>
     <div id="user-modal" class="modal">
       <div class="modal__wrap">
-        <select name="">
-          <option value="1">Специалист</option>
-          <option value="2">Компания</option>
-        </select>
         <div class="modal__close as-icon as-icon--close js-modal__close">Закрыть</div>
         <div class="js-tabs">
           <div class="modal__bar clearfix"><a href="#" data-index="0" class="modal__btn js-tabs__tab f-left active">Вход</a><a href="#" data-index="1" class="modal__btn js-tabs__tab f-left">Регистрация</a></div>
@@ -467,7 +444,7 @@
                     </div>
                     <div class="wform__part f-right">
                       <div class="wform__group js-other">
-                        <div class="wform__group wform__group--bid">
+                        <div class="wform__group wform__group--big">
                           <label class="wform__label">* Выберите город в котором вы работаете:</label>
                           <ul class="wform__check-list unstyled-list">
                             <li class="wform__check-item js-other__item">
@@ -632,10 +609,10 @@
                             </li>
                           </ul>
                         </div>
-                        <div class="wform__group wform__group--bid t-center"><a href="#" data-count="10" class="wform__toggle js-other__show">Другие города</a></div>
+                        <div class="wform__group wform__group--big t-center"><a href="#" data-count="10" class="wform__toggle js-other__show">Другие города</a></div>
                       </div>
                       <div class="wform__group js-other">
-                        <div class="wform__group wform__group--bid">
+                        <div class="wform__group wform__group--big">
                           <label class="wform__label">* Выберите услуги, которые Вы оказываете:</label>
                           <ul class="wform__check-list unstyled-list">
                             <li class="wform__check-item js-other__item">
@@ -780,9 +757,9 @@
                             </li>
                           </ul>
                         </div>
-                        <div class="wform__group wform__group--bid t-center"><a href="#" data-count="10" class="wform__toggle js-other__show">Другие услуги</a></div>
+                        <div class="wform__group wform__group--big t-center"><a href="#" data-count="10" class="wform__toggle js-other__show">Другие услуги</a></div>
                       </div>
-                      <div class="wform__group wform__group--bid">
+                      <div class="wform__group wform__group--big">
                         <div class="wform__rules t-center"><span>Регестрируясь, вы соглашаетесь с</span><a href="#" class="wform__rules-lnk">правилами</a></div>
                         <input type="submit" value="Зарегистрироваться" class="wform__submit">
                       </div>

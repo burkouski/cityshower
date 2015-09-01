@@ -421,9 +421,9 @@
             <div class="masters-wrap carousel__wrap">
               <div class="masters__bar clearfix">
                 <h3 class="masters__title f-left">Служба мастеров</h3>
-                <div class="carousel__ctrl-wrap f-right"><span class="carousel__ctrl carousel__ctrl--left js-carousel__ctrl--left"><i class="carousel__ctrl-ico s-icon s-icon--ctrll"></i></span><span class="carousel__ctrl carousel__ctrl--right js-carousel__ctrl--right"><i class="carousel__ctrl-ico s-icon s-icon--ctrlr"></i></span></div>
+                <div class="carousel__ctrl-wrap f-right"><span class="carousel__ctrl carousel__ctrl--gray carousel__ctrl--left js-carousel__ctrl--left"><i class="carousel__ctrl-ico s-icon s-icon--ctrll"></i></span><span class="carousel__ctrl carousel__ctrl--gray carousel__ctrl--right js-carousel__ctrl--right"><i class="carousel__ctrl-ico s-icon s-icon--ctrlr"></i></span></div>
               </div>
-              <div class="carousel__items-wrap js-carousel__wrap">
+              <div class="carousel__items-wrap clearfix js-carousel__wrap">
                 <div class="masters__item js-carousel__slide">
                   <div class="master-preview">
                     <h3 class="master-preview__title"><a href="#" class="master-preview__title-lnk">Иванов Иван Иванович</a></h3>
@@ -513,7 +513,7 @@
                   </div>
                 </div>
               </div>
-              <div class="popular__readmore-wrap t-right"><a href="#" class="readmore">Все мастера</a></div>
+              <div class="masters__readmore-wrap t-right"><a href="#" class="readmore readmore--white">Все мастера</a></div>
             </div>
           </div>
           <div id="request-modal" class="modal">
@@ -660,13 +660,9 @@
     </footer>
     <div id="callback-modal" class="modal">
       <div class="modal__wrap">
-        <select name="">
-          <option value="1">Специалист</option>
-          <option value="2">Компания</option>
-        </select>
         <div class="modal__close as-icon as-icon--close js-modal__close">Закрыть</div>
         <div class="modal__bar clearfix"><span class="modal__btn f-left active">Заказать звонок</span></div>
-        <div class="wform wform--login">
+        <div class="wform wform--callback">
           <form id="callback-form">
             <div class="wform__wrap">
               <div class="wform__group">
@@ -691,10 +687,6 @@
     </div>
     <div id="user-modal" class="modal">
       <div class="modal__wrap">
-        <select name="">
-          <option value="1">Специалист</option>
-          <option value="2">Компания</option>
-        </select>
         <div class="modal__close as-icon as-icon--close js-modal__close">Закрыть</div>
         <div class="js-tabs">
           <div class="modal__bar clearfix"><a href="#" data-index="0" class="modal__btn js-tabs__tab f-left active">Вход</a><a href="#" data-index="1" class="modal__btn js-tabs__tab f-left">Регистрация</a></div>
@@ -767,7 +759,7 @@
                     </div>
                     <div class="wform__part f-right">
                       <div class="wform__group js-other">
-                        <div class="wform__group wform__group--bid">
+                        <div class="wform__group wform__group--big">
                           <label class="wform__label">* Выберите город в котором вы работаете:</label>
                           <ul class="wform__check-list unstyled-list">
                             <li class="wform__check-item js-other__item">
@@ -932,10 +924,10 @@
                             </li>
                           </ul>
                         </div>
-                        <div class="wform__group wform__group--bid t-center"><a href="#" data-count="10" class="wform__toggle js-other__show">Другие города</a></div>
+                        <div class="wform__group wform__group--big t-center"><a href="#" data-count="10" class="wform__toggle js-other__show">Другие города</a></div>
                       </div>
                       <div class="wform__group js-other">
-                        <div class="wform__group wform__group--bid">
+                        <div class="wform__group wform__group--big">
                           <label class="wform__label">* Выберите услуги, которые Вы оказываете:</label>
                           <ul class="wform__check-list unstyled-list">
                             <li class="wform__check-item js-other__item">
@@ -1080,9 +1072,9 @@
                             </li>
                           </ul>
                         </div>
-                        <div class="wform__group wform__group--bid t-center"><a href="#" data-count="10" class="wform__toggle js-other__show">Другие услуги</a></div>
+                        <div class="wform__group wform__group--big t-center"><a href="#" data-count="10" class="wform__toggle js-other__show">Другие услуги</a></div>
                       </div>
-                      <div class="wform__group wform__group--bid">
+                      <div class="wform__group wform__group--big">
                         <div class="wform__rules t-center"><span>Регестрируясь, вы соглашаетесь с</span><a href="#" class="wform__rules-lnk">правилами</a></div>
                         <input type="submit" value="Зарегистрироваться" class="wform__submit">
                       </div>

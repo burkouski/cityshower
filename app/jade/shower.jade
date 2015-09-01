@@ -80,7 +80,7 @@ block main
                                                                     img.product-preview__img(src='./img/product/product1.jpg')
                                                             .product-preview__meta.clearfix
                                                                 span.stock.stock--instock.bs-icon.bs-icon--instock.f-left В наличии
-                                                                .product-compare
+                                                                .product-compare.f-right
                                                                     .pseudo-check
                                                                         input.pseudo-check__input(type='checkbox', id='compare'+ item)
                                                                         label.pseudo-check__label(for='compare'+item) Сравнить
@@ -88,11 +88,11 @@ block main
                                                             h3.product-preview__title
                                                                 a.product-preview__lnk(href='/') Охладители Symphony Ice cube
                                                             .product-preview__rating
-                                                                i.product-star.s-icon.s-icon--pstar
-                                                                i.product-star.s-icon.s-icon--pstar
-                                                                i.product-star.s-icon.s-icon--pstar
-                                                                i.product-star.s-icon.s-icon--pstar
-                                                                i.product-star.s-icon.s-icon--nstar
+                                                                i.rating__star.s-icon.s-icon--pstar
+                                                                i.rating__star.s-icon.s-icon--pstar
+                                                                i.rating__star.s-icon.s-icon--pstar
+                                                                i.rating__star.s-icon.s-icon--pstar
+                                                                i.rating__star.s-icon.s-icon--nstar
                                                             .product-preview__feature.product-feature
                                                                 img.product-feature__img(src='./img/feature/f1.png', title='Особенность')
                                                                 img.product-feature__img(src='./img/feature/f2.png', title='Особенность')
@@ -298,7 +298,7 @@ block main
                     .modal__close.as-icon.as-icon--close.js-modal__close Закрыть
                     .modal__bar.clearfix
                         span.modal__btn.active.f-left Оставит заявку
-                    .wform.wform--request
+                    .wform.wform--review
                         form#review-form
                             .wform__group
                                 .social

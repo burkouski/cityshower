@@ -30,7 +30,7 @@ block main
                                 .master__content.f-right
                                     .wform__group.clearfix
                                         .wform__two-third.f-left
-                                            label.wform__label Ваши фамилия и имя (или название компании):
+                                            label.wform__label *Ваши фамилия и имя (или название компании):
                                             input.wform__input(type='text', placeholder='Пароль', name='name')
                                         .wform__one-third.f-right
                                             a.master-board__add-link(href='#')
@@ -50,64 +50,26 @@ block main
                                             a.master-board__add-link(href='#')
                                                 i Сменить e-mail
                                     .wform__group.clearfix
-                                        label.wform__label *Ваши № телефонов:
-                                        textarea.wform__textarea(placeholder='Коментарий', name='comment')
-                            .master-board__service
+                                        label.wform__label Ваши преимущества:
+                                        textarea.wform__textarea(placeholder='Квалифицированный специалист по сантехническим работам.', name='comment')
+                            .master-board__service.js-other
                                 .wform__group.wform__group--bid
                                     label.wform__label * Выберите город в котором вы работаете:
                                     ul.wform__check-list.unstyled-list
-                                        li.wform__check-item
-                                            .pseudo-check
-                                                input#compare1.pseudo-check__input(type='checkbox')
-                                                label.pseudo-check__label(for='compare1') Минск (Центральный р-н)
-                                                    .pseudo-check__bg.pseudo-check__bg--big
-                                        li.wform__check-item
-                                            .pseudo-check
-                                                input#compare2.pseudo-check__input(type='checkbox')
-                                                label.pseudo-check__label(for='compare2') Минск (Центральный р-н)
-                                                    .pseudo-check__bg.pseudo-check__bg--big
-                                        li.wform__check-item
-                                            .pseudo-check
-                                                input#compare3.pseudo-check__input(type='checkbox')
-                                                label.pseudo-check__label(for='compare3') Минск (Центральный р-н)
-                                                    .pseudo-check__bg.pseudo-check__bg--big
-                                        li.wform__check-item
-                                            .pseudo-check
-                                                input#compare4.pseudo-check__input(type='checkbox')
-                                                label.pseudo-check__label(for='compare4') Минск (Центральный р-н)
-                                                    .pseudo-check__bg.pseudo-check__bg--big
-                                        li.wform__check-item
-                                            .pseudo-check
-                                                input#compare1.pseudo-check__input(type='checkbox')
-                                                label.pseudo-check__label(for='compare1') Минск (Центральный р-н)
-                                                    .pseudo-check__bg.pseudo-check__bg--big
-                                        li.wform__check-item
-                                            .pseudo-check
-                                                input#compare1.pseudo-check__input(type='checkbox')
-                                                label.pseudo-check__label(for='compare1') Минск (Центральный р-н)
-                                                    .pseudo-check__bg.pseudo-check__bg--big
-                                        li.wform__check-item
-                                            .pseudo-check
-                                                input#compare1.pseudo-check__input(type='checkbox')
-                                                label.pseudo-check__label(for='compare1') Минск (Центральный р-н)
-                                                    .pseudo-check__bg.pseudo-check__bg--big
-                                        li.wform__check-item
-                                            .pseudo-check
-                                                input#compare1.pseudo-check__input(type='checkbox')
-                                                label.pseudo-check__label(for='compare1') Минск (Центральный р-н)
-                                                    .pseudo-check__bg.pseudo-check__bg--big
-                                        li.wform__check-item
-                                            .pseudo-check
-                                                input#compare1.pseudo-check__input(type='checkbox')
-                                                label.pseudo-check__label(for='#compare1') Минск (Центральный р-н)
-                                                    .pseudo-check__bg.pseudo-check__bg--big
-                                        li.wform__check-item
-                                            .pseudo-check
-                                                input#compare1.pseudo-check__input(type='checkbox')
-                                                label.pseudo-check__label(for='compare1') Минск (Центральный р-н)
-                                                    .pseudo-check__bg.pseudo-check__bg--big
+                                        for item in [1,2,3,4,5, 6]
+                                            li.wform__check-item.js-other__item
+                                                .pseudo-check
+                                                    input.pseudo-check__input(type='checkbox', id='city'+item)
+                                                    label.pseudo-check__label(for='sity'+item) Минск (Центральный р-н)
+                                                        .pseudo-check__bg.pseudo-check__bg--big
+                                        for item in [7,8,9,10,11, 12]
+                                            li.wform__check-item.js-other__item
+                                                .pseudo-check
+                                                    input.pseudo-check__input(type='checkbox', id='city'+item)
+                                                    label.pseudo-check__label(for='sity'+item) Минск (Центральный р-н)
+                                                        .pseudo-check__bg.pseudo-check__bg--big
                                 .wform__group.wform__group--bid.t-center
-                                    a.wform__toggle(href='#') Другие города
+                                    a.wform__toggle.js-other__show(href='#', data-count='6') Другие города
                             .wform__group
                                 .wform__wrap.clearfix
                                     .wform__part.f-left
