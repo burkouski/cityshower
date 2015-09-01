@@ -18,34 +18,35 @@ block main
                             span.breadcrumbs__lnk.breadcrumbs__lnk--active  Охладители
                 aside.page__aside.f-left
                     .page__aside-item
-                        .cat-menu
-                            h3.cat-menu__heading.as-icon.as-icon--toggle Каталог продукции
-                        ul.cat-menu__list.unstyled-list
-                            li.cat-menu__item.cat-menu__item--parent.active
-                                a.cat-menu__link(href='#') Душевые кабины, боксы и уголки
-                                ul.cat-menu__sublist.unstyled-list
-                                    li.cat-menu__subitem
-                                        a.cat-menu__sublink(href='#') Душевые кабины
-                                    li.cat-menu__subitem
-                                        a.cat-menu__sublink(href='#') Душевые боксы
-                                    li.cat-menu__subitem
-                                        a.cat-menu__sublink(href='#') Душевые уголки
-                            li.cat-menu__item
-                                a.cat-menu__link(href='#') Душевые двери
-                            li.cat-menu__item
-                                a.cat-menu__link(href='#') Душевые поддоны
-                            li.cat-menu__item.cat-menu__item--parent
-                                a.cat-menu__link(href='#') Аксессуары к душевым кабинам
-                                ul.cat-menu__sublist.unstyled-list
-                                    li.cat-menu__subitem
-                                        a.cat-menu__sublink(href='#') Душевые кабины
-                                    li.cat-menu__subitem
-                                        a.cat-menu__sublink(href='#') Душевые боксы
-                                    li.cat-menu__subitem
-                                        a.cat-menu__sublink(href='#') Душевые уголки
+                        .cat-menu.js-toggle
+                            h3.cat-menu__heading.as-icon.as-icon--toggle.active.js-toggle__trigger Каталог продукции
+                            .js-toggle__item
+                                ul.cat-menu__list.unstyled-list
+                                    li.cat-menu__item.cat-menu__item--parent.js-toggle
+                                        a.cat-menu__link.js-toggle__trigger(href='#') Душевые кабины, боксы и уголки
+                                        ul.cat-menu__sublist.js-toggle__item.unstyled-list
+                                            li.cat-menu__subitem
+                                                a.cat-menu__sublink(href='#') Душевые кабины
+                                            li.cat-menu__subitem
+                                                a.cat-menu__sublink(href='#') Душевые боксы
+                                            li.cat-menu__subitem
+                                                a.cat-menu__sublink(href='#') Душевые уголки
+                                    li.cat-menu__item
+                                        a.cat-menu__link(href='#') Душевые двери
+                                    li.cat-menu__item
+                                        a.cat-menu__link(href='#') Душевые поддоны
+                                    li.cat-menu__item.cat-menu__item--parent.js-toggle
+                                        a.cat-menu__link.js-toggle__trigger(href='#') Аксессуары к душевым кабинам
+                                        ul.cat-menu__sublist.unstyled-list.js-toggle__item
+                                            li.cat-menu__subitem
+                                                a.cat-menu__sublink(href='#') Душевые кабины
+                                            li.cat-menu__subitem
+                                                a.cat-menu__sublink(href='#') Душевые боксы
+                                            li.cat-menu__subitem
+                                                a.cat-menu__sublink(href='#') Душевые уголки
                     .page__aside-item
-                        .filter
-                            .filter__item
+                        .filter.js-other
+                            .filter__item.js-other__item
                                 h5.filter__label Производитель
                                 .filter__wrap
                                     .filter__select-wrap
@@ -64,7 +65,7 @@ block main
                                         .filter__select-add Нужно несколько?
                                             a(href='#') Добавить
 
-                            .filter__item
+                            .filter__item.js-other__item
                                 h5.filter__label Цена
                                 .filter__wrap
                                     .filter__group
@@ -72,140 +73,64 @@ block main
                                         input.filter__input(type='text')
                                         span.filter__input-label до
                                         input.filter__input(type='text')
-                            .filter__item
+                            .filter__item.js-other__item
                                 h5.filter__label Вид
                                 .filter__wrap
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                            .filter__item
+                                    for item in [1,2,3,4]
+                                        .pseudo-check.filter__check
+                                            input.pseudo-check__input(type='checkbox', id='view'+item)
+                                            label.pseudo-check__label.filter__check-label(for='view'+item)= 'Душевая кабина' + item
+                                                .pseudo-check__bg.pseudo-check__bg--big
+
+                            .filter__item.js-other__item
                                 h5.filter__label Форма поддона
                                 .filter__wrap
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                            .filter__item
+                                    for item in [1,2,3,4]
+                                        .pseudo-check.filter__check
+                                            input.pseudo-check__input(type='checkbox', id='form'+item)
+                                            label.pseudo-check__label.filter__check-label(for='form'+item)= 'Прямоугольник' + item
+                                                .pseudo-check__bg.pseudo-check__bg--big
+                            .filter__item.js-other__item
                                 h5.filter__label Тип поддона
                                 .filter__wrap
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                            .filter__item
+                                    for item in [1,2,3,4]
+                                        .pseudo-check.filter__check
+                                            input.pseudo-check__input(type='checkbox', id='type'+item)
+                                            label.pseudo-check__label.filter__check-label(for='type'+item)= 'Низкий' + item
+                                                .pseudo-check__bg.pseudo-check__bg--big
+                            .filter__item.js-other__item
                                 h5.filter__label Конструкция дверей
                                 .filter__wrap
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                            .filter__item
+                                    for item in [1,2,3,4]
+                                        .pseudo-check.filter__check
+                                            input.pseudo-check__input(type='checkbox', id='door'+item)
+                                            label.pseudo-check__label.filter__check-label(for='door'+item)= 'Раздвижные' + item
+                                                .pseudo-check__bg.pseudo-check__bg--big
+                            .filter__item.js-other__item
                                 h5.filter__label Исполнение стекла
                                 .filter__wrap
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                            .filter__item
+                                    for item in [1,2,3,4]
+                                        .pseudo-check.filter__check
+                                            input.pseudo-check__input(type='checkbox', id='wind'+item)
+                                            label.pseudo-check__label.filter__check-label(for='wind'+item)= 'Прозрачное' + item
+                                                .pseudo-check__bg.pseudo-check__bg--big
+                            .filter__item.js-other__item
                                 h5.filter__label Монтаж
                                 .filter__wrap
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                            .filter__item
+                                    for item in [1,2,3,4]
+                                        .pseudo-check.filter__check
+                                            input.pseudo-check__input(type='checkbox', id='plug'+item)
+                                            label.pseudo-check__label.filter__check-label(for='plug'+item)= 'В проем' + item
+                                                .pseudo-check__bg.pseudo-check__bg--big
+                            .filter__item.js-other__item
                                 h5.filter__label Материал стенок
                                 .filter__wrap
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                                    .pseudo-check.filter__check
-                                        input#compare1.pseudo-check__input(type='checkbox')
-                                        label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                            .pseudo-check__bg.pseudo-check__bg--big
-                            .filter__item
+                                    for item in [1,2,3,4]
+                                        .pseudo-check.filter__check
+                                            input.pseudo-check__input(type='checkbox', id='wall'+item)
+                                            label.pseudo-check__label.filter__check-label(for='wall'+item)= 'Пластик' + item
+                                                .pseudo-check__bg.pseudo-check__bg--big
+                            .filter__item.js-other__item
                                 h5.filter__label Высота
                                 .filter__wrap
                                     .filter__group
@@ -213,7 +138,7 @@ block main
                                         span.filter__input-label -
                                         input.filter__input(type='text')
                                         span.filter__input-label см
-                            .filter__item
+                            .filter__item.js-other__item
                                 h5.filter__label Ширин
                                 .filter__wrap
                                     .filter__group
@@ -221,7 +146,31 @@ block main
                                         span.filter__input-label -
                                         input.filter__input(type='text')
                                         span.filter__input-label см
-                            .filter__item
+                            .filter__item.js-other__item
+                                h5.filter__label Глубина
+                                .filter__wrap
+                                    .filter__group
+                                        input.filter__input(type='text')
+                                        span.filter__input-label -
+                                        input.filter__input(type='text')
+                                        span.filter__input-label см
+                            .filter__item.js-other__item
+                                h5.filter__label Высота
+                                .filter__wrap
+                                    .filter__group
+                                        input.filter__input(type='text')
+                                        span.filter__input-label -
+                                        input.filter__input(type='text')
+                                        span.filter__input-label см
+                            .filter__item.js-other__item
+                                h5.filter__label Ширин
+                                .filter__wrap
+                                    .filter__group
+                                        input.filter__input(type='text')
+                                        span.filter__input-label -
+                                        input.filter__input(type='text')
+                                        span.filter__input-label см
+                            .filter__item.js-other__item
                                 h5.filter__label Глубина
                                 .filter__wrap
                                     .filter__group
@@ -230,18 +179,18 @@ block main
                                         input.filter__input(type='text')
                                         span.filter__input-label см
                             .filter__item
-                                .filter__showall.t-center
-                                    a.filter__showall-lnk(href='#') Показать все параметры
+                                .filter__showall.t-center.js-other__show(data-count='12')
+                                    a.filter__showall-lnk.js-other__show(href='#') Показать все параметры
                     .page__aside-item
                 .page__content.page__content--right.f-right
                     .page__heading
                         h1.page__title Душевые кабины, боксы и уголки
-                    .seo
-                        .seo__text
-                            p Душевая кабина – относительно новый сантехнический продукт, который предлагает нам отечественный рынок. На западе душевая кабина, как правило, является не столько заменой ванны, как ее дополнением. В большинстве же российских квартир с небольшими метражами ванных комнат, возможности установить и ванну, и душевую кабину, к сожалению, практически нет. Поэтому многие принимают решение заменить ванну душевой кабиной, что позволит освободить дополнительное полезное пространство. Хотелось бы отметить, что в этом случае Вам необходимо учесть предпочтения всех членов вашей семьи, а также свыкнутся с мыслью, что понежиться в теплой водичке более не придется, но зато у Вас будет возможность комфортно принять душ, да не простой, а массажный, а то даже попариться в баньке или сауне – возможностей и разнообразных функций у современных кабин предостаточно.
+                    .seo.js-seo
+                        .seo__text.seo__text--small.js-seo__content
                             p Практически все душевые кабины оснащены системой гидромассажа, который осуществляется благодаря встроенными гидромассажными панелями. Эти прямоугольные стойки во все “рост” душевой кабины оснащены специальными форсунками – небольшими отверстиями, которые точечно распыляют воду с определенной интенсивностью. Эффект массажа достигается благодаря попеременным автоматическим включением и выключениям форсунок.
+                            p Душевая кабина – относительно новый сантехнический продукт, который предлагает нам отечественный рынок. На западе душевая кабина, как правило, является не столько заменой ванны, как ее дополнением. В большинстве же российских квартир с небольшими метражами ванных комнат, возможности установить и ванну, и душевую кабину, к сожалению, практически нет. Поэтому многие принимают решение заменить ванну душевой кабиной, что позволит освободить дополнительное полезное пространство. Хотелось бы отметить, что в этом случае Вам необходимо учесть предпочтения всех членов вашей семьи, а также свыкнутся с мыслью, что понежиться в теплой водичке более не придется, но зато у Вас будет возможность комфортно принять душ, да не простой, а массажный, а то даже попариться в баньке или сауне – возможностей и разнообразных функций у современных кабин предостаточно.
                         .seo__readmore-wrap.t-center
-                            a.seo__readmore-lnk Подробнее
+                            a.seo__readmore-lnk.seo__readmore-lnk--small.js-seo__btn Подробнее
                     .catalog
                         .sort-bar
                             .sort-bar__wrap.clearfix
@@ -265,23 +214,23 @@ block main
                                     .product-preview.t-center
                                         span.product-label.product-preview__status-label.s-icon.s-icon--blabel Хиты продаж
                                         .product-preview__img-wrap
-                                            a(href='')
+                                            a(href='./shower.html')
                                                 img.product-preview__img(src='./img/product/product1.jpg')
                                         .product-preview__meta.clearfix
-                                            span.product-stock.product-stock--instock.bs-icon.bs-icon--instock.f-left В наличии
-                                            .product-compare
+                                            span.stock.stock--instock.bs-icon.bs-icon--instock.f-left В наличии
+                                            .product-compare.f-right
                                                 .pseudo-check
                                                     input#compare1.pseudo-check__input(type='checkbox')
                                                     label.pseudo-check__label(for='#compare1') Сравнить
                                                         .pseudo-check__bg
                                         h3.product-preview__title
-                                            a.product-preview__lnk(href='/') Охладители Symphony Ice cube
+                                            a.product-preview__lnk(href='./shower.html') Охладители Symphony Ice cube
                                         .product-preview__rating
-                                            i.product-star.s-icon.s-icon--pstar
-                                            i.product-star.s-icon.s-icon--pstar
-                                            i.product-star.s-icon.s-icon--pstar
-                                            i.product-star.s-icon.s-icon--pstar
-                                            i.product-star.s-icon.s-icon--nstar
+                                            i.rating__star.s-icon.s-icon--pstar
+                                            i.rating__star.s-icon.s-icon--pstar
+                                            i.rating__star.s-icon.s-icon--pstar
+                                            i.rating__star.s-icon.s-icon--pstar
+                                            i.rating__star.s-icon.s-icon--nstar
                                         .product-preview__feature.product-feature
                                             img.product-feature__img(src='./img/feature/f1.png', title='Особенность')
                                             img.product-feature__img(src='./img/feature/f2.png', title='Особенность')

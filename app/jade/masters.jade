@@ -37,66 +37,35 @@ block main
                                                         option(value="2") Grado
                                                         option(value="3") Akvali
                                                         option(value="4") Radawei
+                                         h5.filter__sub-title ВЫБЕРИТЕ УСЛУГУ:
                                 .js-toggle
                                     h3.cat-menu__heading.js-toggle__trigger Сантехнические работы
                                     .filter.js-toggle__item
                                         .filter__wrap
-                                            .pseudo-check.filter__check
-                                                input#compare1.pseudo-check__input(type='checkbox')
-                                                label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                                    .pseudo-check__bg.pseudo-check__bg--big
-                                            .pseudo-check.filter__check
-                                                input#compare1.pseudo-check__input(type='checkbox')
-                                                label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                                    .pseudo-check__bg.pseudo-check__bg--big
-                                            .pseudo-check.filter__check
-                                                input#compare1.pseudo-check__input(type='checkbox')
-                                                label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                                    .pseudo-check__bg.pseudo-check__bg--big
-                                            .pseudo-check.filter__check
-                                                input#compare1.pseudo-check__input(type='checkbox')
-                                                label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                                    .pseudo-check__bg.pseudo-check__bg--big
+                                            for item in [1,2,3,4]
+                                                .pseudo-check.filter__check
+                                                    input.pseudo-check__input(type='checkbox',id='sant'+item)
+                                                    label.pseudo-check__label.filter__check-label(for='sant'+item) Установка душевых кабин
+                                                        .pseudo-check__bg.pseudo-check__bg--big
+
                                 .js-toggle
                                     h3.cat-menu__heading.js-toggle__trigger Водоснобжение
                                     .filter.js-toggle__item
                                         .filter__wrap
-                                            .pseudo-check.filter__check
-                                                input#compare1.pseudo-check__input(type='checkbox')
-                                                label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                                    .pseudo-check__bg.pseudo-check__bg--big
-                                            .pseudo-check.filter__check
-                                                input#compare1.pseudo-check__input(type='checkbox')
-                                                label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                                    .pseudo-check__bg.pseudo-check__bg--big
-                                            .pseudo-check.filter__check
-                                                input#compare1.pseudo-check__input(type='checkbox')
-                                                label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                                    .pseudo-check__bg.pseudo-check__bg--big
-                                            .pseudo-check.filter__check
-                                                input#compare1.pseudo-check__input(type='checkbox')
-                                                label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                                    .pseudo-check__bg.pseudo-check__bg--big
+                                            for item in [1,2,3,4]
+                                                .pseudo-check.filter__check
+                                                    input.pseudo-check__input(type='checkbox',id='water'+item)
+                                                    label.pseudo-check__label.filter__check-label(for='water'+item) Установка душевых кабин
+                                                        .pseudo-check__bg.pseudo-check__bg--big
                                 .js-toggle
                                     h3.cat-menu__heading.js-toggle__trigger Очистка воды
                                     .filter.js-toggle__item
                                         .filter__wrap
-                                            .pseudo-check.filter__check
-                                                input#compare1.pseudo-check__input(type='checkbox')
-                                                label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                                    .pseudo-check__bg.pseudo-check__bg--big
-                                            .pseudo-check.filter__check
-                                                input#compare1.pseudo-check__input(type='checkbox')
-                                                label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                                    .pseudo-check__bg.pseudo-check__bg--big
-                                            .pseudo-check.filter__check
-                                                input#compare1.pseudo-check__input(type='checkbox')
-                                                label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                                    .pseudo-check__bg.pseudo-check__bg--big
-                                            .pseudo-check.filter__check
-                                                input#compare1.pseudo-check__input(type='checkbox')
-                                                label.pseudo-check__label.filter__check-label(for='compare1') Услуга 1
-                                                    .pseudo-check__bg.pseudo-check__bg--big
+                                            for item in [1,2,3,4]
+                                                .pseudo-check.filter__check
+                                                    input.pseudo-check__input(type='checkbox',id='clean'+item)
+                                                    label.pseudo-check__label.filter__check-label(for='clean'+item) Установка душевых кабин
+                                                        .pseudo-check__bg.pseudo-check__bg--big
                 .page__content.page__content--right.f-right
                     .masters-page
                         .masters-page__bar.clearfix

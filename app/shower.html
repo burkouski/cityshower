@@ -144,17 +144,23 @@
                         <div class="gallery__img-wrap">
                           <div class="js-tabs__wrap">
                             <div class="js-tabs__content active"><a href="./img/gallery/gal1.jpg" class="js-lightbox"><img src="./img/gallery/gal1.jpg" class="gallery__img"></a></div>
+                            <div class="js-tabs__content"><a href="./img/product/product1.jpg" class="js-lightbox"><img src="./img/product/product1.jpg" class="gallery__img"></a></div>
                             <div class="js-tabs__content"><a href="./img/gallery/gal1.jpg" class="js-lightbox"><img src="./img/gallery/gal1.jpg" class="gallery__img"></a></div>
+                            <div class="js-tabs__content"><a href="./img/product/product1.jpg" class="js-lightbox"><img src="./img/product/product1.jpg" class="gallery__img"></a></div>
                             <div class="js-tabs__content"><a href="./img/gallery/gal1.jpg" class="js-lightbox"><img src="./img/gallery/gal1.jpg" class="gallery__img"></a></div>
+                            <div class="js-tabs__content"><a href="./img/product/product1.jpg" class="js-lightbox"><img src="./img/product/product1.jpg" class="gallery__img"></a></div>
                           </div>
                         </div>
-                        <div class="gallery__corusel">
+                        <div class="gallery__corusel js-carousel">
                           <div class="carousel__wrap"><span class="carousel__ctrl carousel__ctrl--long f-left js-carousel__ctrl--left"><i class="carousel__ctrl-ico s-icon s-icon--ctrll"></i></span>
                             <div class="gallery__corusel-wrap">
-                              <div class="carousel__items-wrap clearfix">
-                                <div data-index="0" class="gallery__thumb js-tabs__tab"><img src="./img/gallery/gal1.jpg" class="gallery__thumb-img"></div>
-                                <div data-index="1" class="gallery__thumb js-tabs__tab"><img src="./img/gallery/gal1.jpg" class="gallery__thumb-img"></div>
-                                <div data-index="2" class="gallery__thumb js-tabs__tab"><img src="./img/gallery/gal1.jpg" class="gallery__thumb-img"></div>
+                              <div class="carousel__items-wrap js-carousel__wrap clearfix">
+                                <div data-index="0" class="gallery__thumb js-tabs__tab js-carousel__slide"><img src="./img/gallery/gal1.jpg" class="gallery__thumb-img"></div>
+                                <div data-index="1" class="gallery__thumb js-tabs__tab js-carousel__slide"><img src="./img/product/product1.jpg" class="gallery__thumb-img"></div>
+                                <div data-index="2" class="gallery__thumb js-tabs__tab js-carousel__slide"><img src="./img/gallery/gal1.jpg" class="gallery__thumb-img"></div>
+                                <div data-index="3" class="gallery__thumb js-tabs__tab js-carousel__slide"><img src="./img/product/product1.jpg" class="gallery__thumb-img"></div>
+                                <div data-index="4" class="gallery__thumb js-tabs__tab js-carousel__slide"><img src="./img/gallery/gal1.jpg" class="gallery__thumb-img"></div>
+                                <div data-index="5" class="gallery__thumb js-tabs__tab js-carousel__slide"><img src="./img/product/product1.jpg" class="gallery__thumb-img"></div>
                               </div>
                             </div><span class="carousel__ctrl carousel__ctrl--long f-right js-carousel__ctrl--right"><i class="carousel__ctrl-ico s-icon s-icon--ctrlr"></i></span>
                           </div>
@@ -260,12 +266,12 @@
                     <div class="shower__desc">Душевая кабина – относительно новый сантехнический продукт, который предлагает нам отечественный рынок. На западе душевая кабина, как правило, является не столько заменой ванны, как ее дополнением. В большинстве же российских квартир с небольшими метражами ванных комнат, возможности установить и ванну, и душевую кабину, к сожалению, практически нет. Поэтому</div>
                     <div class="shower__pricebar clearfix">
                       <div class="shower__pricebar-item f-left">
-                        <div class="shower__price"><span class="shower__price-new">8 500 000 руб.</span><span class="shower__price-old">10 500 000 руб.</span></div>
+                        <div class="shower__price"><span class="shower__price-new js-price">8 500 000 руб.</span><span class="shower__price-old">10 500 000 руб.</span></div>
                         <div class="shower__size">
                           <div class="shower__size-label">Выберите размер, см</div>
                           <div class="shower__size-wrap">
-                            <div class="shower__size-item"><a href="#" class="shower__size-btn">90*90</a></div>
-                            <div class="shower__size-item"><a href="#" class="shower__size-btn">100*100</a></div>
+                            <div class="shower__size-item"><a href="#" data-price="8 500 000 руб" class="shower__size-btn js-price__trigger active">90*90</a></div>
+                            <div class="shower__size-item"><a href="#" data-price="9 500 000 руб" class="shower__size-btn js-price__trigger">100*100</a></div>
                           </div>
                         </div>
                       </div>
@@ -305,11 +311,11 @@
                                 <table class="detail__table">
                                   <tbody>
                                     <tr>
-                                      <td><a href="" class="s-icon s-icon--question"></a>Форма:</td>
+                                      <td><a href="" class="detail__desc s-icon s-icon--question"></a>Форма:</td>
                                       <td class="t-right">Квадрат</td>
                                     </tr>
                                     <tr>
-                                      <td><a href="" class="s-icon s-icon--question"></a>Размеры:</td>
+                                      <td><a href="" class="detail__desc s-icon s-icon--question"></a>Размеры:</td>
                                       <td class="t-right">90 х 90 х 185 см</td>
                                     </tr>
                                   </tbody>
@@ -322,7 +328,7 @@
                                 <table class="detail__table">
                                   <tbody>
                                     <tr>
-                                      <td><a href="" class="s-icon s-icon--question"></a>Вес:</td>
+                                      <td><a href="" class="detail__desc s-icon s-icon--question"></a>Вес:</td>
                                       <td class="t-right">51,5 кг</td>
                                     </tr>
                                     <tr>
@@ -414,27 +420,38 @@
                           </div>
                           <div class="js-tabs__content">
                             <div class="review">
+                              <div class="review__item"><a href="#review-modal" class="review-btn js-modal">Оставить отзыв</a></div>
                               <div class="review__item">
                                 <div class="review__meta clearfix">
                                   <div class="review__meta-item f-left">
                                     <div class="review__autor">Маша</div>
                                   </div>
+                                  <div class="review__meta-item f-left"><span class="review__rating-label">Рейтинг:</span>
+                                    <div class="review__rating rating"><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--nstar"></i></div>
+                                  </div>
                                   <div class="review__meta-item f-right">
                                     <div class="review__date">27 февраля 2014 в 00:00</div>
                                   </div>
                                 </div>
-                                <div class="review__text"> Душевая кабина – относительно новый сантехнический продукт, который предлагает нам отечественный рынок. На западе душевая кабина, как правило, является не столько заменой ванны, как ее дополнением. В большинстве же российских квартир с небольшими метражами ванных комнат, возможности установить и ванну, и душевую кабину, к сожалению, практически нет. Поэтому</div>
+                                <div class="review__text"> Душевая кабина – относительно новый сантехнический продукт, который предлагает нам отечественный рынок. На западе душевая кабина, как правило, является не столько заменой ванны, как ее дополнением. В большинстве же российских квартир с небольшими метражами ванных комнат, возможности установить и ванну, и душевую кабину, к сожалению, практически нет. Поэтому
+                                  <div class="review__backward t-right"><a href="#">Ответить</a></div>
+                                </div>
                               </div>
                               <div class="review__item">
                                 <div class="review__meta clearfix">
                                   <div class="review__meta-item f-left">
                                     <div class="review__autor">Маша</div>
                                   </div>
+                                  <div class="review__meta-item f-left"><span class="review__rating-label">Рейтинг:</span>
+                                    <div class="review__rating rating"><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--nstar"></i></div>
+                                  </div>
                                   <div class="review__meta-item f-right">
                                     <div class="review__date">27 февраля 2014 в 00:00</div>
                                   </div>
                                 </div>
-                                <div class="review__text"> Душевая кабина – относительно новый сантехнический продукт, который предлагает нам отечественный рынок. На западе душевая кабина, как правило, является не столько заменой ванны, как ее дополнением. В большинстве же российских квартир с небольшими метражами ванных комнат, возможности установить и ванну, и душевую кабину, к сожалению, практически нет. Поэтому</div>
+                                <div class="review__text"> Душевая кабина – относительно новый сантехнический продукт, который предлагает нам отечественный рынок. На западе душевая кабина, как правило, является не столько заменой ванны, как ее дополнением. В большинстве же российских квартир с небольшими метражами ванных комнат, возможности установить и ванну, и душевую кабину, к сожалению, практически нет. Поэтому
+                                  <div class="review__backward t-right"><a href="#">Ответить</a></div>
+                                </div>
                               </div>
                             </div>
                           </div>

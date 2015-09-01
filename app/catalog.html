@@ -138,31 +138,33 @@
               </div>
               <aside class="page__aside f-left">
                 <div class="page__aside-item">
-                  <div class="cat-menu">
-                    <h3 class="cat-menu__heading as-icon as-icon--toggle">Каталог продукции</h3>
+                  <div class="cat-menu js-toggle">
+                    <h3 class="cat-menu__heading as-icon as-icon--toggle active js-toggle__trigger">Каталог продукции</h3>
+                    <div class="js-toggle__item">
+                      <ul class="cat-menu__list unstyled-list">
+                        <li class="cat-menu__item cat-menu__item--parent js-toggle"><a href="#" class="cat-menu__link js-toggle__trigger">Душевые кабины, боксы и уголки</a>
+                          <ul class="cat-menu__sublist js-toggle__item unstyled-list">
+                            <li class="cat-menu__subitem"><a href="#" class="cat-menu__sublink">Душевые кабины</a></li>
+                            <li class="cat-menu__subitem"><a href="#" class="cat-menu__sublink">Душевые боксы</a></li>
+                            <li class="cat-menu__subitem"><a href="#" class="cat-menu__sublink">Душевые уголки</a></li>
+                          </ul>
+                        </li>
+                        <li class="cat-menu__item"><a href="#" class="cat-menu__link">Душевые двери</a></li>
+                        <li class="cat-menu__item"><a href="#" class="cat-menu__link">Душевые поддоны</a></li>
+                        <li class="cat-menu__item cat-menu__item--parent js-toggle"><a href="#" class="cat-menu__link js-toggle__trigger">Аксессуары к душевым кабинам</a>
+                          <ul class="cat-menu__sublist unstyled-list js-toggle__item">
+                            <li class="cat-menu__subitem"><a href="#" class="cat-menu__sublink">Душевые кабины</a></li>
+                            <li class="cat-menu__subitem"><a href="#" class="cat-menu__sublink">Душевые боксы</a></li>
+                            <li class="cat-menu__subitem"><a href="#" class="cat-menu__sublink">Душевые уголки</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                  <ul class="cat-menu__list unstyled-list">
-                    <li class="cat-menu__item cat-menu__item--parent active"><a href="#" class="cat-menu__link">Душевые кабины, боксы и уголки</a>
-                      <ul class="cat-menu__sublist unstyled-list">
-                        <li class="cat-menu__subitem"><a href="#" class="cat-menu__sublink">Душевые кабины</a></li>
-                        <li class="cat-menu__subitem"><a href="#" class="cat-menu__sublink">Душевые боксы</a></li>
-                        <li class="cat-menu__subitem"><a href="#" class="cat-menu__sublink">Душевые уголки</a></li>
-                      </ul>
-                    </li>
-                    <li class="cat-menu__item"><a href="#" class="cat-menu__link">Душевые двери</a></li>
-                    <li class="cat-menu__item"><a href="#" class="cat-menu__link">Душевые поддоны</a></li>
-                    <li class="cat-menu__item cat-menu__item--parent"><a href="#" class="cat-menu__link">Аксессуары к душевым кабинам</a>
-                      <ul class="cat-menu__sublist unstyled-list">
-                        <li class="cat-menu__subitem"><a href="#" class="cat-menu__sublink">Душевые кабины</a></li>
-                        <li class="cat-menu__subitem"><a href="#" class="cat-menu__sublink">Душевые боксы</a></li>
-                        <li class="cat-menu__subitem"><a href="#" class="cat-menu__sublink">Душевые уголки</a></li>
-                      </ul>
-                    </li>
-                  </ul>
                 </div>
                 <div class="page__aside-item">
-                  <div class="filter">
-                    <div class="filter__item">
+                  <div class="filter js-other">
+                    <div class="filter__item js-other__item">
                       <h5 class="filter__label">Производитель</h5>
                       <div class="filter__wrap">
                         <div class="filter__select-wrap">
@@ -184,7 +186,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="filter__item">
+                    <div class="filter__item js-other__item">
                       <h5 class="filter__label">Цена</h5>
                       <div class="filter__wrap">
                         <div class="filter__group"><span class="filter__input-label">от</span>
@@ -193,210 +195,182 @@
                         </div>
                       </div>
                     </div>
-                    <div class="filter__item">
+                    <div class="filter__item js-other__item">
                       <h5 class="filter__label">Вид</h5>
                       <div class="filter__wrap">
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="view1" class="pseudo-check__input">
+                          <label for="view1" class="pseudo-check__label filter__check-label">Душевая кабина1
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="view2" class="pseudo-check__input">
+                          <label for="view2" class="pseudo-check__label filter__check-label">Душевая кабина2
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="view3" class="pseudo-check__input">
+                          <label for="view3" class="pseudo-check__label filter__check-label">Душевая кабина3
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="view4" class="pseudo-check__input">
+                          <label for="view4" class="pseudo-check__label filter__check-label">Душевая кабина4
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                       </div>
                     </div>
-                    <div class="filter__item">
+                    <div class="filter__item js-other__item">
                       <h5 class="filter__label">Форма поддона</h5>
                       <div class="filter__wrap">
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="form1" class="pseudo-check__input">
+                          <label for="form1" class="pseudo-check__label filter__check-label">Прямоугольник1
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="form2" class="pseudo-check__input">
+                          <label for="form2" class="pseudo-check__label filter__check-label">Прямоугольник2
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="form3" class="pseudo-check__input">
+                          <label for="form3" class="pseudo-check__label filter__check-label">Прямоугольник3
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="form4" class="pseudo-check__input">
+                          <label for="form4" class="pseudo-check__label filter__check-label">Прямоугольник4
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                       </div>
                     </div>
-                    <div class="filter__item">
+                    <div class="filter__item js-other__item">
                       <h5 class="filter__label">Тип поддона</h5>
                       <div class="filter__wrap">
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="type1" class="pseudo-check__input">
+                          <label for="type1" class="pseudo-check__label filter__check-label">Низкий1
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="type2" class="pseudo-check__input">
+                          <label for="type2" class="pseudo-check__label filter__check-label">Низкий2
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="type3" class="pseudo-check__input">
+                          <label for="type3" class="pseudo-check__label filter__check-label">Низкий3
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="type4" class="pseudo-check__input">
+                          <label for="type4" class="pseudo-check__label filter__check-label">Низкий4
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                       </div>
                     </div>
-                    <div class="filter__item">
+                    <div class="filter__item js-other__item">
                       <h5 class="filter__label">Конструкция дверей</h5>
                       <div class="filter__wrap">
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="door1" class="pseudo-check__input">
+                          <label for="door1" class="pseudo-check__label filter__check-label">Раздвижные1
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="door2" class="pseudo-check__input">
+                          <label for="door2" class="pseudo-check__label filter__check-label">Раздвижные2
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="door3" class="pseudo-check__input">
+                          <label for="door3" class="pseudo-check__label filter__check-label">Раздвижные3
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="door4" class="pseudo-check__input">
+                          <label for="door4" class="pseudo-check__label filter__check-label">Раздвижные4
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                       </div>
                     </div>
-                    <div class="filter__item">
+                    <div class="filter__item js-other__item">
                       <h5 class="filter__label">Исполнение стекла</h5>
                       <div class="filter__wrap">
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="wind1" class="pseudo-check__input">
+                          <label for="wind1" class="pseudo-check__label filter__check-label">Прозрачное1
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="wind2" class="pseudo-check__input">
+                          <label for="wind2" class="pseudo-check__label filter__check-label">Прозрачное2
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="wind3" class="pseudo-check__input">
+                          <label for="wind3" class="pseudo-check__label filter__check-label">Прозрачное3
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="wind4" class="pseudo-check__input">
+                          <label for="wind4" class="pseudo-check__label filter__check-label">Прозрачное4
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                       </div>
                     </div>
-                    <div class="filter__item">
+                    <div class="filter__item js-other__item">
                       <h5 class="filter__label">Монтаж</h5>
                       <div class="filter__wrap">
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="plug1" class="pseudo-check__input">
+                          <label for="plug1" class="pseudo-check__label filter__check-label">В проем1
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="plug2" class="pseudo-check__input">
+                          <label for="plug2" class="pseudo-check__label filter__check-label">В проем2
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="plug3" class="pseudo-check__input">
+                          <label for="plug3" class="pseudo-check__label filter__check-label">В проем3
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="plug4" class="pseudo-check__input">
+                          <label for="plug4" class="pseudo-check__label filter__check-label">В проем4
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                       </div>
                     </div>
-                    <div class="filter__item">
+                    <div class="filter__item js-other__item">
                       <h5 class="filter__label">Материал стенок</h5>
                       <div class="filter__wrap">
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="wall1" class="pseudo-check__input">
+                          <label for="wall1" class="pseudo-check__label filter__check-label">Пластик1
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="wall2" class="pseudo-check__input">
+                          <label for="wall2" class="pseudo-check__label filter__check-label">Пластик2
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="wall3" class="pseudo-check__input">
+                          <label for="wall3" class="pseudo-check__label filter__check-label">Пластик3
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                         <div class="pseudo-check filter__check">
-                          <input id="compare1" type="checkbox" class="pseudo-check__input">
-                          <label for="compare1" class="pseudo-check__label filter__check-label">Услуга 1
-                            <div class="pseudo-check__bg pseudo-check__bg--big"></div>
-                          </label>
+                          <input type="checkbox" id="wall4" class="pseudo-check__input">
+                          <label for="wall4" class="pseudo-check__label filter__check-label">Пластик4
+                            <div class="pseudo-check__bg pseudo-check__bg--big"></div></label>
                         </div>
                       </div>
                     </div>
-                    <div class="filter__item">
+                    <div class="filter__item js-other__item">
                       <h5 class="filter__label">Высота</h5>
                       <div class="filter__wrap">
                         <div class="filter__group">
@@ -405,7 +379,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="filter__item">
+                    <div class="filter__item js-other__item">
                       <h5 class="filter__label">Ширин</h5>
                       <div class="filter__wrap">
                         <div class="filter__group">
@@ -414,7 +388,34 @@
                         </div>
                       </div>
                     </div>
-                    <div class="filter__item">
+                    <div class="filter__item js-other__item">
+                      <h5 class="filter__label">Глубина</h5>
+                      <div class="filter__wrap">
+                        <div class="filter__group">
+                          <input type="text" class="filter__input"><span class="filter__input-label">-</span>
+                          <input type="text" class="filter__input"><span class="filter__input-label">см</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter__item js-other__item">
+                      <h5 class="filter__label">Высота</h5>
+                      <div class="filter__wrap">
+                        <div class="filter__group">
+                          <input type="text" class="filter__input"><span class="filter__input-label">-</span>
+                          <input type="text" class="filter__input"><span class="filter__input-label">см</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter__item js-other__item">
+                      <h5 class="filter__label">Ширин</h5>
+                      <div class="filter__wrap">
+                        <div class="filter__group">
+                          <input type="text" class="filter__input"><span class="filter__input-label">-</span>
+                          <input type="text" class="filter__input"><span class="filter__input-label">см</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter__item js-other__item">
                       <h5 class="filter__label">Глубина</h5>
                       <div class="filter__wrap">
                         <div class="filter__group">
@@ -424,7 +425,7 @@
                       </div>
                     </div>
                     <div class="filter__item">
-                      <div class="filter__showall t-center"><a href="#" class="filter__showall-lnk">Показать все параметры</a></div>
+                      <div data-count="12" class="filter__showall t-center js-other__show"><a href="#" class="filter__showall-lnk js-other__show">Показать все параметры</a></div>
                     </div>
                   </div>
                 </div>
@@ -434,12 +435,12 @@
                 <div class="page__heading">
                   <h1 class="page__title">Душевые кабины, боксы и уголки</h1>
                 </div>
-                <div class="seo">
-                  <div class="seo__text">
-                    <p>Душевая кабина – относительно новый сантехнический продукт, который предлагает нам отечественный рынок. На западе душевая кабина, как правило, является не столько заменой ванны, как ее дополнением. В большинстве же российских квартир с небольшими метражами ванных комнат, возможности установить и ванну, и душевую кабину, к сожалению, практически нет. Поэтому многие принимают решение заменить ванну душевой кабиной, что позволит освободить дополнительное полезное пространство. Хотелось бы отметить, что в этом случае Вам необходимо учесть предпочтения всех членов вашей семьи, а также свыкнутся с мыслью, что понежиться в теплой водичке более не придется, но зато у Вас будет возможность комфортно принять душ, да не простой, а массажный, а то даже попариться в баньке или сауне – возможностей и разнообразных функций у современных кабин предостаточно.</p>
+                <div class="seo js-seo">
+                  <div class="seo__text seo__text--small js-seo__content">
                     <p>Практически все душевые кабины оснащены системой гидромассажа, который осуществляется благодаря встроенными гидромассажными панелями. Эти прямоугольные стойки во все “рост” душевой кабины оснащены специальными форсунками – небольшими отверстиями, которые точечно распыляют воду с определенной интенсивностью. Эффект массажа достигается благодаря попеременным автоматическим включением и выключениям форсунок.</p>
+                    <p>Душевая кабина – относительно новый сантехнический продукт, который предлагает нам отечественный рынок. На западе душевая кабина, как правило, является не столько заменой ванны, как ее дополнением. В большинстве же российских квартир с небольшими метражами ванных комнат, возможности установить и ванну, и душевую кабину, к сожалению, практически нет. Поэтому многие принимают решение заменить ванну душевой кабиной, что позволит освободить дополнительное полезное пространство. Хотелось бы отметить, что в этом случае Вам необходимо учесть предпочтения всех членов вашей семьи, а также свыкнутся с мыслью, что понежиться в теплой водичке более не придется, но зато у Вас будет возможность комфортно принять душ, да не простой, а массажный, а то даже попариться в баньке или сауне – возможностей и разнообразных функций у современных кабин предостаточно.</p>
                   </div>
-                  <div class="seo__readmore-wrap t-center"><a class="seo__readmore-lnk">Подробнее</a></div>
+                  <div class="seo__readmore-wrap t-center"><a class="seo__readmore-lnk seo__readmore-lnk--small js-seo__btn">Подробнее</a></div>
                 </div>
                 <div class="catalog">
                   <div class="sort-bar">
@@ -458,9 +459,9 @@
                   <div class="catalog__wrap clearfix">
                     <div class="catalog__item">
                       <div class="product-preview t-center"><span class="product-label product-preview__status-label s-icon s-icon--blabel">Хиты продаж</span>
-                        <div class="product-preview__img-wrap"><a href=""><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
-                        <div class="product-preview__meta clearfix"><span class="product-stock product-stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
-                          <div class="product-compare">
+                        <div class="product-preview__img-wrap"><a href="./shower.html"><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
+                        <div class="product-preview__meta clearfix"><span class="stock stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
+                          <div class="product-compare f-right">
                             <div class="pseudo-check">
                               <input id="compare1" type="checkbox" class="pseudo-check__input">
                               <label for="#compare1" class="pseudo-check__label">Сравнить
@@ -469,8 +470,8 @@
                             </div>
                           </div>
                         </div>
-                        <h3 class="product-preview__title"><a href="/" class="product-preview__lnk">Охладители Symphony Ice cube</a></h3>
-                        <div class="product-preview__rating"><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--nstar"></i></div>
+                        <h3 class="product-preview__title"><a href="./shower.html" class="product-preview__lnk">Охладители Symphony Ice cube</a></h3>
+                        <div class="product-preview__rating"><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--nstar"></i></div>
                         <div class="product-preview__feature product-feature"><img src="./img/feature/f1.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f2.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f3.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f4.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f5.png" title="Особенность" class="product-feature__img"></div>
                         <div class="product-preview__price">17 270 000 руб.</div>
                         <div class="product-preview__btn-wrap"><a href="/" class="product-btn product-preview__btn">Купить.</a></div>
@@ -479,9 +480,9 @@
                     </div>
                     <div class="catalog__item">
                       <div class="product-preview t-center"><span class="product-label product-preview__status-label s-icon s-icon--blabel">Хиты продаж</span>
-                        <div class="product-preview__img-wrap"><a href=""><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
-                        <div class="product-preview__meta clearfix"><span class="product-stock product-stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
-                          <div class="product-compare">
+                        <div class="product-preview__img-wrap"><a href="./shower.html"><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
+                        <div class="product-preview__meta clearfix"><span class="stock stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
+                          <div class="product-compare f-right">
                             <div class="pseudo-check">
                               <input id="compare1" type="checkbox" class="pseudo-check__input">
                               <label for="#compare1" class="pseudo-check__label">Сравнить
@@ -490,8 +491,8 @@
                             </div>
                           </div>
                         </div>
-                        <h3 class="product-preview__title"><a href="/" class="product-preview__lnk">Охладители Symphony Ice cube</a></h3>
-                        <div class="product-preview__rating"><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--nstar"></i></div>
+                        <h3 class="product-preview__title"><a href="./shower.html" class="product-preview__lnk">Охладители Symphony Ice cube</a></h3>
+                        <div class="product-preview__rating"><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--nstar"></i></div>
                         <div class="product-preview__feature product-feature"><img src="./img/feature/f1.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f2.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f3.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f4.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f5.png" title="Особенность" class="product-feature__img"></div>
                         <div class="product-preview__price">17 270 000 руб.</div>
                         <div class="product-preview__btn-wrap"><a href="/" class="product-btn product-preview__btn">Купить.</a></div>
@@ -500,9 +501,9 @@
                     </div>
                     <div class="catalog__item">
                       <div class="product-preview t-center"><span class="product-label product-preview__status-label s-icon s-icon--blabel">Хиты продаж</span>
-                        <div class="product-preview__img-wrap"><a href=""><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
-                        <div class="product-preview__meta clearfix"><span class="product-stock product-stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
-                          <div class="product-compare">
+                        <div class="product-preview__img-wrap"><a href="./shower.html"><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
+                        <div class="product-preview__meta clearfix"><span class="stock stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
+                          <div class="product-compare f-right">
                             <div class="pseudo-check">
                               <input id="compare1" type="checkbox" class="pseudo-check__input">
                               <label for="#compare1" class="pseudo-check__label">Сравнить
@@ -511,8 +512,8 @@
                             </div>
                           </div>
                         </div>
-                        <h3 class="product-preview__title"><a href="/" class="product-preview__lnk">Охладители Symphony Ice cube</a></h3>
-                        <div class="product-preview__rating"><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--nstar"></i></div>
+                        <h3 class="product-preview__title"><a href="./shower.html" class="product-preview__lnk">Охладители Symphony Ice cube</a></h3>
+                        <div class="product-preview__rating"><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--nstar"></i></div>
                         <div class="product-preview__feature product-feature"><img src="./img/feature/f1.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f2.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f3.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f4.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f5.png" title="Особенность" class="product-feature__img"></div>
                         <div class="product-preview__price">17 270 000 руб.</div>
                         <div class="product-preview__btn-wrap"><a href="/" class="product-btn product-preview__btn">Купить.</a></div>
@@ -521,9 +522,9 @@
                     </div>
                     <div class="catalog__item">
                       <div class="product-preview t-center"><span class="product-label product-preview__status-label s-icon s-icon--blabel">Хиты продаж</span>
-                        <div class="product-preview__img-wrap"><a href=""><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
-                        <div class="product-preview__meta clearfix"><span class="product-stock product-stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
-                          <div class="product-compare">
+                        <div class="product-preview__img-wrap"><a href="./shower.html"><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
+                        <div class="product-preview__meta clearfix"><span class="stock stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
+                          <div class="product-compare f-right">
                             <div class="pseudo-check">
                               <input id="compare1" type="checkbox" class="pseudo-check__input">
                               <label for="#compare1" class="pseudo-check__label">Сравнить
@@ -532,8 +533,8 @@
                             </div>
                           </div>
                         </div>
-                        <h3 class="product-preview__title"><a href="/" class="product-preview__lnk">Охладители Symphony Ice cube</a></h3>
-                        <div class="product-preview__rating"><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--nstar"></i></div>
+                        <h3 class="product-preview__title"><a href="./shower.html" class="product-preview__lnk">Охладители Symphony Ice cube</a></h3>
+                        <div class="product-preview__rating"><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--nstar"></i></div>
                         <div class="product-preview__feature product-feature"><img src="./img/feature/f1.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f2.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f3.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f4.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f5.png" title="Особенность" class="product-feature__img"></div>
                         <div class="product-preview__price">17 270 000 руб.</div>
                         <div class="product-preview__btn-wrap"><a href="/" class="product-btn product-preview__btn">Купить.</a></div>
@@ -542,9 +543,9 @@
                     </div>
                     <div class="catalog__item">
                       <div class="product-preview t-center"><span class="product-label product-preview__status-label s-icon s-icon--blabel">Хиты продаж</span>
-                        <div class="product-preview__img-wrap"><a href=""><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
-                        <div class="product-preview__meta clearfix"><span class="product-stock product-stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
-                          <div class="product-compare">
+                        <div class="product-preview__img-wrap"><a href="./shower.html"><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
+                        <div class="product-preview__meta clearfix"><span class="stock stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
+                          <div class="product-compare f-right">
                             <div class="pseudo-check">
                               <input id="compare1" type="checkbox" class="pseudo-check__input">
                               <label for="#compare1" class="pseudo-check__label">Сравнить
@@ -553,8 +554,8 @@
                             </div>
                           </div>
                         </div>
-                        <h3 class="product-preview__title"><a href="/" class="product-preview__lnk">Охладители Symphony Ice cube</a></h3>
-                        <div class="product-preview__rating"><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--nstar"></i></div>
+                        <h3 class="product-preview__title"><a href="./shower.html" class="product-preview__lnk">Охладители Symphony Ice cube</a></h3>
+                        <div class="product-preview__rating"><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--nstar"></i></div>
                         <div class="product-preview__feature product-feature"><img src="./img/feature/f1.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f2.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f3.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f4.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f5.png" title="Особенность" class="product-feature__img"></div>
                         <div class="product-preview__price">17 270 000 руб.</div>
                         <div class="product-preview__btn-wrap"><a href="/" class="product-btn product-preview__btn">Купить.</a></div>
@@ -563,9 +564,9 @@
                     </div>
                     <div class="catalog__item">
                       <div class="product-preview t-center"><span class="product-label product-preview__status-label s-icon s-icon--blabel">Хиты продаж</span>
-                        <div class="product-preview__img-wrap"><a href=""><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
-                        <div class="product-preview__meta clearfix"><span class="product-stock product-stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
-                          <div class="product-compare">
+                        <div class="product-preview__img-wrap"><a href="./shower.html"><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
+                        <div class="product-preview__meta clearfix"><span class="stock stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
+                          <div class="product-compare f-right">
                             <div class="pseudo-check">
                               <input id="compare1" type="checkbox" class="pseudo-check__input">
                               <label for="#compare1" class="pseudo-check__label">Сравнить
@@ -574,8 +575,8 @@
                             </div>
                           </div>
                         </div>
-                        <h3 class="product-preview__title"><a href="/" class="product-preview__lnk">Охладители Symphony Ice cube</a></h3>
-                        <div class="product-preview__rating"><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--nstar"></i></div>
+                        <h3 class="product-preview__title"><a href="./shower.html" class="product-preview__lnk">Охладители Symphony Ice cube</a></h3>
+                        <div class="product-preview__rating"><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--nstar"></i></div>
                         <div class="product-preview__feature product-feature"><img src="./img/feature/f1.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f2.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f3.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f4.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f5.png" title="Особенность" class="product-feature__img"></div>
                         <div class="product-preview__price">17 270 000 руб.</div>
                         <div class="product-preview__btn-wrap"><a href="/" class="product-btn product-preview__btn">Купить.</a></div>
@@ -584,9 +585,9 @@
                     </div>
                     <div class="catalog__item">
                       <div class="product-preview t-center"><span class="product-label product-preview__status-label s-icon s-icon--blabel">Хиты продаж</span>
-                        <div class="product-preview__img-wrap"><a href=""><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
-                        <div class="product-preview__meta clearfix"><span class="product-stock product-stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
-                          <div class="product-compare">
+                        <div class="product-preview__img-wrap"><a href="./shower.html"><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
+                        <div class="product-preview__meta clearfix"><span class="stock stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
+                          <div class="product-compare f-right">
                             <div class="pseudo-check">
                               <input id="compare1" type="checkbox" class="pseudo-check__input">
                               <label for="#compare1" class="pseudo-check__label">Сравнить
@@ -595,8 +596,8 @@
                             </div>
                           </div>
                         </div>
-                        <h3 class="product-preview__title"><a href="/" class="product-preview__lnk">Охладители Symphony Ice cube</a></h3>
-                        <div class="product-preview__rating"><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--nstar"></i></div>
+                        <h3 class="product-preview__title"><a href="./shower.html" class="product-preview__lnk">Охладители Symphony Ice cube</a></h3>
+                        <div class="product-preview__rating"><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--nstar"></i></div>
                         <div class="product-preview__feature product-feature"><img src="./img/feature/f1.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f2.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f3.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f4.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f5.png" title="Особенность" class="product-feature__img"></div>
                         <div class="product-preview__price">17 270 000 руб.</div>
                         <div class="product-preview__btn-wrap"><a href="/" class="product-btn product-preview__btn">Купить.</a></div>
@@ -605,9 +606,9 @@
                     </div>
                     <div class="catalog__item">
                       <div class="product-preview t-center"><span class="product-label product-preview__status-label s-icon s-icon--blabel">Хиты продаж</span>
-                        <div class="product-preview__img-wrap"><a href=""><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
-                        <div class="product-preview__meta clearfix"><span class="product-stock product-stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
-                          <div class="product-compare">
+                        <div class="product-preview__img-wrap"><a href="./shower.html"><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
+                        <div class="product-preview__meta clearfix"><span class="stock stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
+                          <div class="product-compare f-right">
                             <div class="pseudo-check">
                               <input id="compare1" type="checkbox" class="pseudo-check__input">
                               <label for="#compare1" class="pseudo-check__label">Сравнить
@@ -616,8 +617,8 @@
                             </div>
                           </div>
                         </div>
-                        <h3 class="product-preview__title"><a href="/" class="product-preview__lnk">Охладители Symphony Ice cube</a></h3>
-                        <div class="product-preview__rating"><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--nstar"></i></div>
+                        <h3 class="product-preview__title"><a href="./shower.html" class="product-preview__lnk">Охладители Symphony Ice cube</a></h3>
+                        <div class="product-preview__rating"><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--nstar"></i></div>
                         <div class="product-preview__feature product-feature"><img src="./img/feature/f1.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f2.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f3.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f4.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f5.png" title="Особенность" class="product-feature__img"></div>
                         <div class="product-preview__price">17 270 000 руб.</div>
                         <div class="product-preview__btn-wrap"><a href="/" class="product-btn product-preview__btn">Купить.</a></div>
@@ -626,9 +627,9 @@
                     </div>
                     <div class="catalog__item">
                       <div class="product-preview t-center"><span class="product-label product-preview__status-label s-icon s-icon--blabel">Хиты продаж</span>
-                        <div class="product-preview__img-wrap"><a href=""><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
-                        <div class="product-preview__meta clearfix"><span class="product-stock product-stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
-                          <div class="product-compare">
+                        <div class="product-preview__img-wrap"><a href="./shower.html"><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
+                        <div class="product-preview__meta clearfix"><span class="stock stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
+                          <div class="product-compare f-right">
                             <div class="pseudo-check">
                               <input id="compare1" type="checkbox" class="pseudo-check__input">
                               <label for="#compare1" class="pseudo-check__label">Сравнить
@@ -637,8 +638,8 @@
                             </div>
                           </div>
                         </div>
-                        <h3 class="product-preview__title"><a href="/" class="product-preview__lnk">Охладители Symphony Ice cube</a></h3>
-                        <div class="product-preview__rating"><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--nstar"></i></div>
+                        <h3 class="product-preview__title"><a href="./shower.html" class="product-preview__lnk">Охладители Symphony Ice cube</a></h3>
+                        <div class="product-preview__rating"><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--nstar"></i></div>
                         <div class="product-preview__feature product-feature"><img src="./img/feature/f1.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f2.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f3.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f4.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f5.png" title="Особенность" class="product-feature__img"></div>
                         <div class="product-preview__price">17 270 000 руб.</div>
                         <div class="product-preview__btn-wrap"><a href="/" class="product-btn product-preview__btn">Купить.</a></div>
@@ -647,9 +648,9 @@
                     </div>
                     <div class="catalog__item">
                       <div class="product-preview t-center"><span class="product-label product-preview__status-label s-icon s-icon--blabel">Хиты продаж</span>
-                        <div class="product-preview__img-wrap"><a href=""><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
-                        <div class="product-preview__meta clearfix"><span class="product-stock product-stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
-                          <div class="product-compare">
+                        <div class="product-preview__img-wrap"><a href="./shower.html"><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
+                        <div class="product-preview__meta clearfix"><span class="stock stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
+                          <div class="product-compare f-right">
                             <div class="pseudo-check">
                               <input id="compare1" type="checkbox" class="pseudo-check__input">
                               <label for="#compare1" class="pseudo-check__label">Сравнить
@@ -658,8 +659,8 @@
                             </div>
                           </div>
                         </div>
-                        <h3 class="product-preview__title"><a href="/" class="product-preview__lnk">Охладители Symphony Ice cube</a></h3>
-                        <div class="product-preview__rating"><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--nstar"></i></div>
+                        <h3 class="product-preview__title"><a href="./shower.html" class="product-preview__lnk">Охладители Symphony Ice cube</a></h3>
+                        <div class="product-preview__rating"><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--nstar"></i></div>
                         <div class="product-preview__feature product-feature"><img src="./img/feature/f1.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f2.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f3.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f4.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f5.png" title="Особенность" class="product-feature__img"></div>
                         <div class="product-preview__price">17 270 000 руб.</div>
                         <div class="product-preview__btn-wrap"><a href="/" class="product-btn product-preview__btn">Купить.</a></div>
@@ -668,9 +669,9 @@
                     </div>
                     <div class="catalog__item">
                       <div class="product-preview t-center"><span class="product-label product-preview__status-label s-icon s-icon--blabel">Хиты продаж</span>
-                        <div class="product-preview__img-wrap"><a href=""><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
-                        <div class="product-preview__meta clearfix"><span class="product-stock product-stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
-                          <div class="product-compare">
+                        <div class="product-preview__img-wrap"><a href="./shower.html"><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
+                        <div class="product-preview__meta clearfix"><span class="stock stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
+                          <div class="product-compare f-right">
                             <div class="pseudo-check">
                               <input id="compare1" type="checkbox" class="pseudo-check__input">
                               <label for="#compare1" class="pseudo-check__label">Сравнить
@@ -679,8 +680,8 @@
                             </div>
                           </div>
                         </div>
-                        <h3 class="product-preview__title"><a href="/" class="product-preview__lnk">Охладители Symphony Ice cube</a></h3>
-                        <div class="product-preview__rating"><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--nstar"></i></div>
+                        <h3 class="product-preview__title"><a href="./shower.html" class="product-preview__lnk">Охладители Symphony Ice cube</a></h3>
+                        <div class="product-preview__rating"><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--nstar"></i></div>
                         <div class="product-preview__feature product-feature"><img src="./img/feature/f1.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f2.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f3.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f4.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f5.png" title="Особенность" class="product-feature__img"></div>
                         <div class="product-preview__price">17 270 000 руб.</div>
                         <div class="product-preview__btn-wrap"><a href="/" class="product-btn product-preview__btn">Купить.</a></div>
@@ -689,9 +690,9 @@
                     </div>
                     <div class="catalog__item">
                       <div class="product-preview t-center"><span class="product-label product-preview__status-label s-icon s-icon--blabel">Хиты продаж</span>
-                        <div class="product-preview__img-wrap"><a href=""><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
-                        <div class="product-preview__meta clearfix"><span class="product-stock product-stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
-                          <div class="product-compare">
+                        <div class="product-preview__img-wrap"><a href="./shower.html"><img src="./img/product/product1.jpg" class="product-preview__img"></a></div>
+                        <div class="product-preview__meta clearfix"><span class="stock stock--instock bs-icon bs-icon--instock f-left">В наличии</span>
+                          <div class="product-compare f-right">
                             <div class="pseudo-check">
                               <input id="compare1" type="checkbox" class="pseudo-check__input">
                               <label for="#compare1" class="pseudo-check__label">Сравнить
@@ -700,8 +701,8 @@
                             </div>
                           </div>
                         </div>
-                        <h3 class="product-preview__title"><a href="/" class="product-preview__lnk">Охладители Symphony Ice cube</a></h3>
-                        <div class="product-preview__rating"><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--pstar"></i><i class="product-star s-icon s-icon--nstar"></i></div>
+                        <h3 class="product-preview__title"><a href="./shower.html" class="product-preview__lnk">Охладители Symphony Ice cube</a></h3>
+                        <div class="product-preview__rating"><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--pstar"></i><i class="rating__star s-icon s-icon--nstar"></i></div>
                         <div class="product-preview__feature product-feature"><img src="./img/feature/f1.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f2.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f3.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f4.png" title="Особенность" class="product-feature__img"><img src="./img/feature/f5.png" title="Особенность" class="product-feature__img"></div>
                         <div class="product-preview__price">17 270 000 руб.</div>
                         <div class="product-preview__btn-wrap"><a href="/" class="product-btn product-preview__btn">Купить.</a></div>
