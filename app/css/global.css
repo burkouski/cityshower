@@ -287,14 +287,15 @@ body {
 }
 .container {
   position: relative;
-  width: 1240px;
+  width: 1280px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 .container--white {
   background: #fff;
 }
 .wrapper {
-  min-width: 1240px;
+  min-width: 1280px;
   overflow: hidden;
 }
 .f-left {

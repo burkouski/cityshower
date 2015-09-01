@@ -22,31 +22,38 @@ block main
                             .js-toggle__item
                                 .filter
                                     .filter__item
-                                        h5.filter__label Производитель
+                                        h5.filter__label Выбирите город:
                                         .filter__wrap
                                             .filter__select-wrap
                                                 .filter__select-item
                                                     select.filter__select.js-select(name='')
-                                                        option(value="1") Любой
-                                                        option(value="2") Grado
-                                                        option(value="3") Akvali
-                                                        option(value="4") Radawei
-                                                        option(value="2") Grado
-                                                        option(value="3") Akvali
-                                                        option(value="4") Radawei
-                                                        option(value="2") Grado
-                                                        option(value="3") Akvali
-                                                        option(value="4") Radawei
+                                                        option(value="1") Минск (Центральный р-н)
+                                                        option(value="2") Минск (Центральный р-н)
+                                                        option(value="3") Минск (Центральный р-н)
+                                                        option(value="4") Минск (Центральный р-н)
+                                                        option(value="2") Минск (Центральный р-н)
+                                                        option(value="3") Минск (Центральный р-н)
+                                                        option(value="4") Минск (Центральный р-н)
+                                                        option(value="2") Минск (Центральный р-н)
+                                                        option(value="3") Минск (Центральный р-н)
+                                                        option(value="4") Минск (Центральный р-н)
                                          h5.filter__sub-title ВЫБЕРИТЕ УСЛУГУ:
                                 .js-toggle
                                     h3.cat-menu__heading.js-toggle__trigger Сантехнические работы
                                     .filter.js-toggle__item
-                                        .filter__wrap
+                                        .filter__wrap.js-other
                                             for item in [1,2,3,4]
-                                                .pseudo-check.filter__check
+                                                .pseudo-check.filter__check.js-other__item
                                                     input.pseudo-check__input(type='checkbox',id='sant'+item)
                                                     label.pseudo-check__label.filter__check-label(for='sant'+item) Установка душевых кабин
                                                         .pseudo-check__bg.pseudo-check__bg--big
+                                            for item in [1,2,3,4]
+                                                .pseudo-check.filter__check.js-other__item
+                                                    input.pseudo-check__input(type='checkbox',id='sant'+item)
+                                                    label.pseudo-check__label.filter__check-label(for='sant'+item) Установка душевых кабин
+                                                        .pseudo-check__bg.pseudo-check__bg--big
+                                            .filter__item
+                                                a.js-other__show(href='#',data-count='4') Еще
 
                                 .js-toggle
                                     h3.cat-menu__heading.js-toggle__trigger Водоснобжение
@@ -67,14 +74,17 @@ block main
                                 .js-toggle
                                     h3.cat-menu__heading.js-toggle__trigger Очистка воды
                                     .filter.js-toggle__item
-                                        .filter__wrap
+                                        .filter__wrap.js-other
                                             for item in [1,2,3,4]
-                                                .pseudo-check.filter__check
+                                                .pseudo-check.filter__check.js-other__item
                                                     input.pseudo-check__input(type='checkbox',id='clean'+item)
                                                     label.pseudo-check__label.filter__check-label(for='clean'+item) Установка душевых кабин
                                                         .pseudo-check__bg.pseudo-check__bg--big
-                                                .filter__item
-                                                    a.js-other__show(href='#',data-count='4') Еще
+                                            .filter__item
+                                                a.js-other__show(href='#',data-count='4') Еще
+                    .page__aside-item
+                        .banner
+                            img.banner__img(src='./img/banner/banner1.jpg')
                 .page__content.page__content--right.f-right
                     .masters-page
                         .masters-page__bar.clearfix

@@ -182,6 +182,8 @@ block main
                                 .filter__showall.t-center.js-other__show(data-count='12')
                                     a.filter__showall-lnk.js-other__show(href='#') Показать все параметры
                     .page__aside-item
+                        .banner
+                            img.banner__img(src='./img/banner/banner1.jpg')
                 .page__content.page__content--right.f-right
                     .page__heading
                         h1.page__title Душевые кабины, боксы и уголки
@@ -217,7 +219,7 @@ block main
                                             a(href='./shower.html')
                                                 img.product-preview__img(src='./img/product/product1.jpg')
                                         .product-preview__meta.clearfix
-                                            span.stock.stock--instock.bs-icon.bs-icon--instock.f-left В наличии
+                                            span.stock.stock--outstock.bs-icon.bs-icon--outstock.f-left В наличии
                                             .product-compare.f-right
                                                 .pseudo-check
                                                     input.pseudo-check__input(type='checkbox', id='compare'+item)
@@ -239,7 +241,7 @@ block main
                                             img.product-feature__img(src='./img/feature/f5.png', title='Особенность')
                                         .product-preview__price 17 270 000 руб.
                                         .product-preview__btn-wrap
-                                            a.product-btn.product-preview__btn.js-modal(href='#order-modal') Заказать.
+                                            a.product-btn.product-btn--order.product-preview__btn.js-modal(href='#order-modal') Заказать
                                         .product-preview__review-wrap
                                             a.product-preview__review-lnk(href='#') 25 отзывов
                             for item in [1,2,3,4,5,6,7,8,9]

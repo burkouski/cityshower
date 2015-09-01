@@ -56,17 +56,17 @@ block main
                                 .wform__group.wform__group--bid
                                     label.wform__label * Выберите город в котором вы работаете:
                                     ul.wform__check-list.unstyled-list
-                                        for item in [1,2,3,4,5, 6]
+                                        for item in [1,2,3,4,5,6]
                                             li.wform__check-item.js-other__item
                                                 .pseudo-check
                                                     input.pseudo-check__input(type='checkbox', id='city'+item)
-                                                    label.pseudo-check__label(for='sity'+item) Минск (Центральный р-н)
+                                                    label.pseudo-check__label(for='city'+item) Минск (Центральный р-н)
                                                         .pseudo-check__bg.pseudo-check__bg--big
                                         for item in [7,8,9,10,11, 12]
                                             li.wform__check-item.js-other__item
                                                 .pseudo-check
                                                     input.pseudo-check__input(type='checkbox', id='city'+item)
-                                                    label.pseudo-check__label(for='sity'+item) Минск (Центральный р-н)
+                                                    label.pseudo-check__label(for='city'+item) Минск (Центральный р-н)
                                                         .pseudo-check__bg.pseudo-check__bg--big
                                 .wform__group.wform__group--bid.t-center
                                     a.wform__toggle.js-other__show(href='#', data-count='6') Другие города
