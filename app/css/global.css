@@ -353,7 +353,7 @@ label.error {
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 20;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 .man-bg {
