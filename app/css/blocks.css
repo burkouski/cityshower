@@ -888,6 +888,7 @@
 .modal__wrap {
   padding: 0 28px 14px 28px;
   background: #fff;
+  border-radius: 7px;
 }
 .modal__bar {
   margin: 0 0 13px 0;
@@ -946,6 +947,9 @@
 .wform--login,
 .wform--order {
   width: 405px;
+}
+.wform--order {
+  padding: 12px 0 0 0;
 }
 .wform--request,
 .wform--review {
