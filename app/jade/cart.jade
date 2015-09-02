@@ -6,30 +6,31 @@ block main
                 .cart-page
                     .page__heading
                         h1.page__title Корзина
-                    .cart-page__wrap
+                    .cart-page__wrap.js-cart
                         table.cart-page__table
                             tbody
-                                tr
-                                    td.t-center
-                                        img.cart-page__img(src='./img/product/product1.jpg')
-                                    td
-                                        .cart-page__product-name Душевая кабина Домани Light High
-                                            span.product-label.cart-page__label.s-icon.s-icon--blabel Хиты продаж
-                                        .cart-page__product-size 120 х 80 см
-                                        .cart-page__product-code Код товара:
-                                            span.blue 100548
-                                    td.t-center
-                                        .cart-page__counter.counter
-                                            span.counter__minus.s-icon.s-icon--minus
-                                            span.counter__count 1
-                                            span.counter__plus.s-icon.s-icon--plus
-                                        a.cart-page__delete-lnk(href='#') Удалить товар
-                                    td.t-right
-                                        .cart-page__price 16 500 000
+                                for item in [1,2,3,4,5]
+                                    tr.js-cart__item
+                                        td.t-center
+                                            img.cart-page__img(src='./img/product/product1.jpg')
+                                        td
+                                            .cart-page__product-name Душевая кабина Домани Light High
+                                                span.product-label.cart-page__label.s-icon.s-icon--blabel Хиты продаж
+                                            .cart-page__product-size 120 х 80 см
+                                            .cart-page__product-code Код товара:
+                                                span.blue 100548
+                                        td.t-center
+                                            .cart-page__counter.counter.js-cart__counter
+                                                span.counter__minus.s-icon.s-icon--minus.js-cart__minus
+                                                span.counter__count.js-cart__count(data-price='10000') 1
+                                                span.counter__plus.s-icon.s-icon--plus.js-cart__plus
+                                            a.cart-page__delete-lnk(href='#') Удалить товар
+                                        td.t-right
+                                            span.cart-page__price.js-cart__subtotal(data-subtotal='10000') 10 000
                                             span.cart-page__curency руб
                         .cart-page__total.t-right
                             .cart-page__total-label Итого:
-                            .cart-page__price 16 500 000
+                            .cart-page__price.js-cart__total 16 500 000
                                 span.cart-page__curency руб
                     .checkout
                         .checkout__wrap.clearfix
@@ -75,6 +76,8 @@ block main
                                                 label.pseudo-check__label(for='payment') Наличными
                                                     .pseudo-check__bg.pseudo-check__bg--big
                                         .wform__group
-                                            span Общая стоимость заказа: 16 500 000 руб.
+                                            span Общая стоимость заказа:&nbsp;
+                                                span.js-cart__total 16 500 000
+                                                | &nbsp;руб.
                                     .checkout__group
                                         input.wform__submit(type='submit', value='Оформить заказ')

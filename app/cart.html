@@ -132,10 +132,10 @@
                 <div class="page__heading">
                   <h1 class="page__title">Корзина</h1>
                 </div>
-                <div class="cart-page__wrap">
+                <div class="cart-page__wrap js-cart">
                   <table class="cart-page__table">
                     <tbody>
-                      <tr>
+                      <tr class="js-cart__item">
                         <td class="t-center"><img src="./img/product/product1.jpg" class="cart-page__img"></td>
                         <td>
                           <div class="cart-page__product-name">Душевая кабина Домани Light High<span class="product-label cart-page__label s-icon s-icon--blabel">Хиты продаж</span></div>
@@ -143,17 +143,63 @@
                           <div class="cart-page__product-code">Код товара:<span class="blue">100548</span></div>
                         </td>
                         <td class="t-center">
-                          <div class="cart-page__counter counter"><span class="counter__minus s-icon s-icon--minus"></span><span class="counter__count">1</span><span class="counter__plus s-icon s-icon--plus"></span></div><a href="#" class="cart-page__delete-lnk">Удалить товар</a>
+                          <div class="cart-page__counter counter js-cart__counter"><span class="counter__minus s-icon s-icon--minus js-cart__minus"></span><span data-price="10000" class="counter__count js-cart__count">1</span><span class="counter__plus s-icon s-icon--plus js-cart__plus"></span></div><a href="#" class="cart-page__delete-lnk">Удалить товар</a>
                         </td>
-                        <td class="t-right">
-                          <div class="cart-page__price">16 500 000<span class="cart-page__curency">руб</span></div>
+                        <td class="t-right"><span data-subtotal="10000" class="cart-page__price js-cart__subtotal">10 000</span><span class="cart-page__curency">руб</span></td>
+                      </tr>
+                      <tr class="js-cart__item">
+                        <td class="t-center"><img src="./img/product/product1.jpg" class="cart-page__img"></td>
+                        <td>
+                          <div class="cart-page__product-name">Душевая кабина Домани Light High<span class="product-label cart-page__label s-icon s-icon--blabel">Хиты продаж</span></div>
+                          <div class="cart-page__product-size">120 х 80 см</div>
+                          <div class="cart-page__product-code">Код товара:<span class="blue">100548</span></div>
                         </td>
+                        <td class="t-center">
+                          <div class="cart-page__counter counter js-cart__counter"><span class="counter__minus s-icon s-icon--minus js-cart__minus"></span><span data-price="10000" class="counter__count js-cart__count">1</span><span class="counter__plus s-icon s-icon--plus js-cart__plus"></span></div><a href="#" class="cart-page__delete-lnk">Удалить товар</a>
+                        </td>
+                        <td class="t-right"><span data-subtotal="10000" class="cart-page__price js-cart__subtotal">10 000</span><span class="cart-page__curency">руб</span></td>
+                      </tr>
+                      <tr class="js-cart__item">
+                        <td class="t-center"><img src="./img/product/product1.jpg" class="cart-page__img"></td>
+                        <td>
+                          <div class="cart-page__product-name">Душевая кабина Домани Light High<span class="product-label cart-page__label s-icon s-icon--blabel">Хиты продаж</span></div>
+                          <div class="cart-page__product-size">120 х 80 см</div>
+                          <div class="cart-page__product-code">Код товара:<span class="blue">100548</span></div>
+                        </td>
+                        <td class="t-center">
+                          <div class="cart-page__counter counter js-cart__counter"><span class="counter__minus s-icon s-icon--minus js-cart__minus"></span><span data-price="10000" class="counter__count js-cart__count">1</span><span class="counter__plus s-icon s-icon--plus js-cart__plus"></span></div><a href="#" class="cart-page__delete-lnk">Удалить товар</a>
+                        </td>
+                        <td class="t-right"><span data-subtotal="10000" class="cart-page__price js-cart__subtotal">10 000</span><span class="cart-page__curency">руб</span></td>
+                      </tr>
+                      <tr class="js-cart__item">
+                        <td class="t-center"><img src="./img/product/product1.jpg" class="cart-page__img"></td>
+                        <td>
+                          <div class="cart-page__product-name">Душевая кабина Домани Light High<span class="product-label cart-page__label s-icon s-icon--blabel">Хиты продаж</span></div>
+                          <div class="cart-page__product-size">120 х 80 см</div>
+                          <div class="cart-page__product-code">Код товара:<span class="blue">100548</span></div>
+                        </td>
+                        <td class="t-center">
+                          <div class="cart-page__counter counter js-cart__counter"><span class="counter__minus s-icon s-icon--minus js-cart__minus"></span><span data-price="10000" class="counter__count js-cart__count">1</span><span class="counter__plus s-icon s-icon--plus js-cart__plus"></span></div><a href="#" class="cart-page__delete-lnk">Удалить товар</a>
+                        </td>
+                        <td class="t-right"><span data-subtotal="10000" class="cart-page__price js-cart__subtotal">10 000</span><span class="cart-page__curency">руб</span></td>
+                      </tr>
+                      <tr class="js-cart__item">
+                        <td class="t-center"><img src="./img/product/product1.jpg" class="cart-page__img"></td>
+                        <td>
+                          <div class="cart-page__product-name">Душевая кабина Домани Light High<span class="product-label cart-page__label s-icon s-icon--blabel">Хиты продаж</span></div>
+                          <div class="cart-page__product-size">120 х 80 см</div>
+                          <div class="cart-page__product-code">Код товара:<span class="blue">100548</span></div>
+                        </td>
+                        <td class="t-center">
+                          <div class="cart-page__counter counter js-cart__counter"><span class="counter__minus s-icon s-icon--minus js-cart__minus"></span><span data-price="10000" class="counter__count js-cart__count">1</span><span class="counter__plus s-icon s-icon--plus js-cart__plus"></span></div><a href="#" class="cart-page__delete-lnk">Удалить товар</a>
+                        </td>
+                        <td class="t-right"><span data-subtotal="10000" class="cart-page__price js-cart__subtotal">10 000</span><span class="cart-page__curency">руб</span></td>
                       </tr>
                     </tbody>
                   </table>
                   <div class="cart-page__total t-right">
                     <div class="cart-page__total-label">Итого:</div>
-                    <div class="cart-page__price">16 500 000<span class="cart-page__curency">руб</span></div>
+                    <div class="cart-page__price js-cart__total">16 500 000<span class="cart-page__curency">руб</span></div>
                   </div>
                 </div>
                 <div class="checkout">
@@ -214,7 +260,7 @@
                               </label>
                             </div>
                           </div>
-                          <div class="wform__group"><span>Общая стоимость заказа: 16 500 000 руб.</span></div>
+                          <div class="wform__group"><span>Общая стоимость заказа:&nbsp;<span class="js-cart__total">16 500 000</span>&nbsp;руб.</span></div>
                         </div>
                         <div class="checkout__group">
                           <input type="submit" value="Оформить заказ" class="wform__submit">

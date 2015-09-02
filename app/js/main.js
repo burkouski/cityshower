@@ -193,5 +193,67 @@ $(function(){
             scrollTop: $(".js-review").offset().top -130
         }, 1000);
         $('.js-review__tab').trigger('click');
-    })
+    });
+
+    if($('.js-cart').length > 0) {
+        //alert(true)
+        var cartItem = $('.js-cart__item'),
+            cartSubTotal = $('.js-cart__subtotal'),
+            cartTotal = $('.js-cart__total'),
+            counter = $('.js-cart__counter'),
+            minusBtn = $('.js-cart__minus'),
+            plusBtn = $('.js-cart__plus'),
+            countInput = $('.js-cart__count'),
+            countTotal = function() {
+                var total = 0;
+                cartItem.each(function(){
+                    var _this = $(this);
+                    total = total + parseInt(_this.find($(cartSubTotal)).attr('data-subtotal'));
+                });
+                cartTotal.text(addSpaces(total))
+            },
+            countSubTotal = function(item, price, count) {
+                var item = item;
+                item.attr('data-subtotal', price*count).text(addSpaces(price*count));
+                countTotal();
+            };
+
+        countTotal();
+
+        plusBtn.on('click', function(){
+            var _this = $(this),
+                _thisCounter = _this.parent($(counter)).find($(countInput)),
+                subtotalItem = _this.parents('.js-cart__item').find($(cartSubTotal)),
+                price = parseInt(_this.parent($(counter)).find($(countInput)).attr('data-price')),
+                count = parseInt(_thisCounter.text());
+            count = count + 1;
+            _thisCounter.text(addSpaces(count));
+            countSubTotal(subtotalItem,price,count);
+        });
+        minusBtn.on('click', function(){
+            var _this = $(this),
+                _thisCounter = _this.parent($(counter)).find($(countInput)),
+                subtotalItem = _this.parents('.js-cart__item').find($(cartSubTotal)),
+                price = parseInt(_this.parent($(counter)).find($(countInput)).attr('data-price')),
+                count = parseInt(_thisCounter.text());
+            if (count != 1) {
+                count = count - 1;
+                _thisCounter.text(addSpaces(count));
+                countSubTotal(subtotalItem,price,count);
+            }
+
+        })
+    }
 });
+
+function addSpaces(nStr){
+    nStr += '';
+    x = nStr.split('.');
+    x1 = x[0];
+    x2 = x.length > 1 ? '.' + x[1] : '';
+    var rgx = /(\d+)(\d{3})/;
+    while (rgx.test(x1)) {
+        x1 = x1.replace(rgx, '$1' + ' ' + '$2');
+    }
+    return x1 + x2;
+}
