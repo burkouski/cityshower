@@ -143,7 +143,7 @@ $('#profile-form').validate({
 
     },
     messages: {
-        name: "Введите ваш e-mail",
+        name: "Введите ваш имя",
         phone: {
             required: "Как с вами связаться?",
             phone: "формат +375291111111"
@@ -157,19 +157,19 @@ $('#profile-form').validate({
 $('#order-form').validate({
 
     rules: {
-        login: {
+        name: {
             required: true
         },
-        pass: {
+        phone: {
             required: true,
             phone: true
         },
 
     },
-    messages: {
-        login: "Введите ваш ник или e-mail",
-
-        pass: "Введите ваш пароль",
+    name: "Введите ваш имя",
+    phone: {
+        required: "Как с вами связаться?",
+        phone: "формат +375291111111"
     },
     submitHandler: function (form) {
 

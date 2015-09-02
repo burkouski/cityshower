@@ -241,7 +241,7 @@ block main
                                             img.product-feature__img(src='./img/feature/f5.png', title='Особенность')
                                         .product-preview__price 17 270 000 руб.
                                         .product-preview__btn-wrap
-                                            a.product-btn.product-btn--order.product-preview__btn.js-modal(href='#order-modal') Заказать
+                                            a.product-btn.product-btn--order.product-preview__btn.js-modal(href='#order-modal') Заявка
                                         .product-preview__review-wrap
                                             a.product-preview__review-lnk(href='#') 25 отзывов
                             for item in [1,2,3,4,5,6,7,8,9]
@@ -288,8 +288,8 @@ block main
                                     |оставить свои контактные данные, и Вам обязательно
                                     |перезвоним и сообщим, когда данный товар появится.
                             .wform__group
-                                input.wform__input(type='text', placeholder='Ник или E-mail', name='login')
+                                input.wform__input(type='text', placeholder='Ваше имя', name='name')
                             .wform__group
-                                input.wform__input(type='password', placeholder='Пароль', name='pass')
+                                input.wform__input(type='password', placeholder='Ваш № телефона', name='phone')
                             .wform__group
-                                input.wform__submit(type='submit', placeholder='Оставить заявку')
+                                input.wform__submit(type='submit', value='Оставить заявку')
